@@ -1,0 +1,45 @@
+{
+	"cli": true,
+	"target": "directory",
+	"adapterName": "lorawan",
+	"title": "LoRaWAN",
+	"description": "converts the desired lora gateway data to a ioBroker structure",
+	"keywords": [
+		"LoRaWAN"
+	],
+	"contributors": [
+		"J-Paul0815"
+	],
+	"expert": "yes",
+	"features": [
+		"adapter"
+	],
+	"adminFeatures": [],
+	"type": "protocols",
+	"startMode": "daemon",
+	"connectionType": "cloud",
+	"dataSource": "push",
+	"connectionIndicator": "yes",
+	"language": "JavaScript",
+	"nodeVersion": "18",
+	"adminUi": "json",
+	"tools": [
+		"ESLint",
+		"type checking"
+	],
+	"releaseScript": "yes",
+	"devServer": "yes",
+	"devServerPort": 8081,
+	"indentation": "Tab",
+	"quotes": "double",
+	"es6class": "yes",
+	"authorName": "BenAhrdt",
+	"authorGithub": "BenAhrdt",
+	"authorEmail": "bsahrdt@gmail.com",
+	"gitRemoteProtocol": "HTTPS",
+	"gitCommit": "yes",
+	"defaultBranch": "main",
+	"license": "MIT License",
+	"dependabot": "yes",
+	"creatorVersion": "2.6.0"
+}
