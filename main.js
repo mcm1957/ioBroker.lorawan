@@ -1,7 +1,5 @@
 "use strict";
 
-import mqttClientClass from "./lib/modules/mqttclient";
-
 /*
  * Created with @iobroker/create-adapter v2.6.0
  */
@@ -9,7 +7,7 @@ import mqttClientClass from "./lib/modules/mqttclient";
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
-const mqttClient = require("./lib/modules/mqttclient");
+//const mqttClientClass = require("./lib/modules/mqttclient");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -31,7 +29,7 @@ class Lorawan extends utils.Adapter {
 		this.on("unload", this.onUnload.bind(this));
 
 		// declare mqtt CLient
-		this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883","hafi-ttn-lorawan@ttn","NNSXS.NAQOKKEE7MFB6WDT3UE33SXKA3XMCH55CIZKP6I.PX6EPNLLYIBMDECHRR34IB2GJ2BODULD2LESDRZC3CH7CRUNIKSA");
+	//	this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883","hafi-ttn-lorawan@ttn","NNSXS.NAQOKKEE7MFB6WDT3UE33SXKA3XMCH55CIZKP6I.PX6EPNLLYIBMDECHRR34IB2GJ2BODULD2LESDRZC3CH7CRUNIKSA");
 	}
 
 	/**
