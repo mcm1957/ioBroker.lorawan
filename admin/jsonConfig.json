@@ -2,15 +2,34 @@
 	"i18n": true,
 	"type": "panel",
 	"items": {
-		"option1": {
-			"type": "text",
-			"label": "option1",
-			"newLine": true
-		},
-		"option2": {
-			"type": "text",
-			"label": "option2",
-			"newLine": true
+		"statesTable":{
+			"type":"table",
+			"sm":12,
+			"items":[
+				{
+					"type": "text",
+					"attr": "application",
+					"title": "application",
+					"tooltip": "applicationTooltip",
+					"default": "",
+					"sm":12
+				},{
+					"type": "text",
+					"attr": "username",
+					"title": "username",
+					"tooltip": "usernameTooltip",
+					"default": "",
+					"sm":12
+				},
+				{
+					"type": "password",
+					"attr": "password",
+					"title": "password",
+					"tooltip": "passwordTooltip",
+					"default": "",
+					"sm":12
+				}
+			]
 		}
 	}
 }

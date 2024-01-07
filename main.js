@@ -8,6 +8,7 @@
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
 const mqttClientClass = require("./lib/modules/mqttclient");
+const messagehandlerClass = require("./lib/modules/messagehandler");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -36,89 +37,25 @@ class Lorawan extends utils.Adapter {
 	async onReady() {
 		// Initialize your adapter here
 	// declare mqtt CLient
-		this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883",this.config.option1,this.config.option2);
-	/*	this.mqttClient =  new mqttClientClass(this,"192.168.2.56","1883","","");
+		// @ts-ignore
+		this.messagehandler = new messagehandlerClass(this);
+		this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883",this.config.statesTable[0]);
+		/*	this.mqttClient =  new mqttClientClass(this,"192.168.2.56","1883","","");
 		setTimeout(() => {
 			this.mqttClient?.publish("R/c0619ab24727/keepalive",null);
 		}, 1000);*/
 		// Reset the connection indicator during startup
 		this.setState("info.connection", false, true);
 
-		// The adapters config (in the instance object everything under the attribute "native") is accessible via
-		// this.config:
-		this.log.info("config option1: " + this.config.option1);
-		this.log.info("config option2: " + this.config.option2);
 
 	}
 
-	async handleMessage(topic,value){
-		value = JSON.parse(value);
-		const stateId = this.generateDeviceString(value.end_device_ids);
-		// Generate internal folder for the smoothed values values
-		await this.setObjectNotExistsAsync(this.gernerateObjectString(value.end_device_ids,"application"),{
-			"type": "folder",
-			"common": {
-				"name": "application"
-			},
-			native : {},
-		});
-		await this.setObjectNotExistsAsync(this.gernerateObjectString(value.end_device_ids,"devices"),{
-			"type": "channel",
-			"common": {
-				"name": "devices"
-			},
-			native : {},
-		});
-		await this.setObjectNotExistsAsync(this.gernerateObjectString(value.end_device_ids,"device"),{
-			"type": "device",
-			"common": {
-				"name": `addr. ${value.end_device_ids.dev_addr}`
-			},
-			native : {},
-		});
-		try{
-			for(const endpoint in value["uplink_message"]["decoded_payload"]){
-				// @ts-ignore
-				await this.setObjectNotExistsAsync(`${stateId}.${endpoint}`,{
-					type: "state",
-					common: {
-						name: "",
-						type: "number",
-						role: "value",
-						read: true,
-						write: false
-					},
-					native: {},
-				});
-				await this.setStateAsync(`${this.gernerateObjectString(value.end_device_ids,"device")}.${endpoint}`,JSON.stringify(value["uplink_message"]["decoded_payload"][endpoint]),true);
-			}
-		}
-		catch(e){
-			this.log.warn(e);
-		}
+	async handleMessage(application,topic,message){
+		this.messagehandler?.handleMessage(application,topic,message);
 	}
 
-	gernerateObjectString(end_device_ids,resolvetype){
-		switch(resolvetype){
-			case "application":
-				return end_device_ids.application_ids.application_id;
 
-			case "devices":
-				return `${end_device_ids.application_ids.application_id}.devices`;
 
-			case "device":
-				return `${end_device_ids.application_ids.application_id}.devices.${end_device_ids.dev_eui}`;
-		}
-	}
-
-	generateDeviceString(end_device_ids){
-		this.log.debug(JSON.stringify(end_device_ids));
-		return `${end_device_ids.application_ids.application_id}.devices.${end_device_ids.dev_eui}`;
-	}
-
-	generateStateString(topic){
-		return topic.replace(/\//g, ".");
-	}
 	/**
 	 * Is called when adapter shuts down - callback has to be called under any circumstances!
 	 * @param {() => void} callback
