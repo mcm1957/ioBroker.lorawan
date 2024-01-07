@@ -12,7 +12,7 @@
 ## lorawan adapter for ioBroker
 converts the desired lora device data to an ioBroker structure.
 
-Adapter was created in collaboration with Joerg Froehner J-Paul0815(at)hafenmeister.com
+Adapter was created in collaboration with Joerg Froehner J-Paul0815@hafenmeister.com
 
 ## Changelog
 <!--
