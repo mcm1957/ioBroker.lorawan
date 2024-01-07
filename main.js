@@ -7,7 +7,7 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
-//const mqttClientClass = require("./lib/modules/mqttclient");
+const mqttClientClass = require("./lib/modules/mqttclient");
 
 // Load your modules here, e.g.:
 // const fs = require("fs");
@@ -28,8 +28,6 @@ class Lorawan extends utils.Adapter {
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
 
-		// declare mqtt CLient
-	//	this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883","hafi-ttn-lorawan@ttn","NNSXS.NAQOKKEE7MFB6WDT3UE33SXKA3XMCH55CIZKP6I.PX6EPNLLYIBMDECHRR34IB2GJ2BODULD2LESDRZC3CH7CRUNIKSA");
 	}
 
 	/**
@@ -37,7 +35,12 @@ class Lorawan extends utils.Adapter {
 	 */
 	async onReady() {
 		// Initialize your adapter here
-
+	// declare mqtt CLient
+		this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883",this.config.option1,this.config.option2);
+	/*	this.mqttClient =  new mqttClientClass(this,"192.168.2.56","1883","","");
+		setTimeout(() => {
+			this.mqttClient?.publish("R/c0619ab24727/keepalive",null);
+		}, 1000);*/
 		// Reset the connection indicator during startup
 		this.setState("info.connection", false, true);
 
@@ -46,52 +49,38 @@ class Lorawan extends utils.Adapter {
 		this.log.info("config option1: " + this.config.option1);
 		this.log.info("config option2: " + this.config.option2);
 
-		/*
-		For every state in the system there has to be also an object of type state
-		Here a simple template for a boolean variable named "testVariable"
-		Because every adapter instance uses its own unique namespace variable names can't collide with other adapters variables
-		*/
-		await this.setObjectNotExistsAsync("testVariable", {
-			type: "state",
-			common: {
-				name: "testVariable",
-				type: "boolean",
-				role: "indicator",
-				read: true,
-				write: true,
-			},
-			native: {},
-		});
-
-		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
-		this.subscribeStates("testVariable");
-		// You can also add a subscription for multiple states. The following line watches all states starting with "lights."
-		// this.subscribeStates("lights.*");
-		// Or, if you really must, you can also watch all states. Don't do this if you don't need to. Otherwise this will cause a lot of unnecessary load on the system:
-		// this.subscribeStates("*");
-
-		/*
-			setState examples
-			you will notice that each setState will cause the stateChange event to fire (because of above subscribeStates cmd)
-		*/
-		// the variable testVariable is set to true as command (ack=false)
-		await this.setStateAsync("testVariable", true);
-
-		// same thing, but the value is flagged "ack"
-		// ack should be always set to true if the value is received from or acknowledged from the target system
-		await this.setStateAsync("testVariable", { val: true, ack: true });
-
-		// same thing, but the state is deleted after 30s (getState will return null afterwards)
-		await this.setStateAsync("testVariable", { val: true, ack: true, expire: 30 });
-
-		// examples for the checkPassword/checkGroup functions
-		let result = await this.checkPasswordAsync("admin", "iobroker");
-		this.log.info("check user admin pw iobroker: " + result);
-
-		result = await this.checkGroupAsync("admin", "admin");
-		this.log.info("check group user admin group admin: " + result);
 	}
 
+	async handleMessage(topic,value){
+		const stateId = this.generateStateString(topic);
+		value = JSON.parse(value);
+		try{
+			if(typeof value === "object"){
+				for(const endpoint in value["uplink_message"]["decoded_payload"]){
+					// @ts-ignore
+					await this.setObjectNotExistsAsync(`${stateId}.${endpoint}`,{
+						type: "state",
+						common: {
+							name: "last values and times",
+							type: "json",
+							role: "value",
+							read: true,
+							write: false
+						},
+						native: {},
+					});
+					await this.setStateAsync(`${stateId}.${endpoint}`,JSON.stringify(value["uplink_message"]["decoded_payload"][endpoint]),true);
+				}
+			}
+		}
+		catch(e){
+			this.log.warn(e);
+		}
+	}
+
+	generateStateString(topic){
+		return topic.replace(/\//g, ".");
+	}
 	/**
 	 * Is called when adapter shuts down - callback has to be called under any circumstances!
 	 * @param {() => void} callback

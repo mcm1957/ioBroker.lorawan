@@ -3,7 +3,7 @@
 	"type": "panel",
 	"items": {
 		"option1": {
-			"type": "checkbox",
+			"type": "text",
 			"label": "option1",
 			"newLine": true
 		},
