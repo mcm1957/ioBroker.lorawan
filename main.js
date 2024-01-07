@@ -52,30 +52,68 @@ class Lorawan extends utils.Adapter {
 	}
 
 	async handleMessage(topic,value){
-		const stateId = this.generateStateString(topic);
 		value = JSON.parse(value);
+		const stateId = this.generateDeviceString(value.end_device_ids);
+		// Generate internal folder for the smoothed values values
+		await this.setObjectNotExistsAsync(this.gernerateObjectString(value.end_device_ids,"application"),{
+			"type": "folder",
+			"common": {
+				"name": "application"
+			},
+			native : {},
+		});
+		await this.setObjectNotExistsAsync(this.gernerateObjectString(value.end_device_ids,"devices"),{
+			"type": "channel",
+			"common": {
+				"name": "devices"
+			},
+			native : {},
+		});
+		await this.setObjectNotExistsAsync(this.gernerateObjectString(value.end_device_ids,"device"),{
+			"type": "device",
+			"common": {
+				"name": `addr. ${value.end_device_ids.dev_addr}`
+			},
+			native : {},
+		});
 		try{
-			if(typeof value === "object"){
-				for(const endpoint in value["uplink_message"]["decoded_payload"]){
-					// @ts-ignore
-					await this.setObjectNotExistsAsync(`${stateId}.${endpoint}`,{
-						type: "state",
-						common: {
-							name: "last values and times",
-							type: "json",
-							role: "value",
-							read: true,
-							write: false
-						},
-						native: {},
-					});
-					await this.setStateAsync(`${stateId}.${endpoint}`,JSON.stringify(value["uplink_message"]["decoded_payload"][endpoint]),true);
-				}
+			for(const endpoint in value["uplink_message"]["decoded_payload"]){
+				// @ts-ignore
+				await this.setObjectNotExistsAsync(`${stateId}.${endpoint}`,{
+					type: "state",
+					common: {
+						name: "",
+						type: "number",
+						role: "value",
+						read: true,
+						write: false
+					},
+					native: {},
+				});
+				await this.setStateAsync(`${this.gernerateObjectString(value.end_device_ids,"device")}.${endpoint}`,JSON.stringify(value["uplink_message"]["decoded_payload"][endpoint]),true);
 			}
 		}
 		catch(e){
 			this.log.warn(e);
 		}
+	}
+
+	gernerateObjectString(end_device_ids,resolvetype){
+		switch(resolvetype){
+			case "application":
+				return end_device_ids.application_ids.application_id;
+
+			case "devices":
+				return `${end_device_ids.application_ids.application_id}.devices`;
+
+			case "device":
+				return `${end_device_ids.application_ids.application_id}.devices.${end_device_ids.dev_eui}`;
+		}
+	}
+
+	generateDeviceString(end_device_ids){
+		this.log.debug(JSON.stringify(end_device_ids));
+		return `${end_device_ids.application_ids.application_id}.devices.${end_device_ids.dev_eui}`;
 	}
 
 	generateStateString(topic){
