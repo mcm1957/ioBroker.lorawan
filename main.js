@@ -50,9 +50,9 @@ class Lorawan extends utils.Adapter {
 			this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
 		}, 1000);*/
 		// Reset the connection indicator during startup
-		/*	setTimeout(() => {
+		setTimeout(() => {
 			this.mqttClient[0]?.publish("v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/down/push",JSON.stringify({"downlinks":[{"f_port": 128,"frm_payload":"Pw==","priority": "NORMAL"}]}));
-		}, 5000);*/
+		}, 5000);
 		this.setState("info.connection", false, true);
 	}
 
