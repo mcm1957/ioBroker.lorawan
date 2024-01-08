@@ -7,7 +7,6 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
-const axios = require("axios").default;
 const mqttClientClass = require("./lib/modules/mqttclient");
 const messagehandlerClass = require("./lib/modules/messagehandler");
 
@@ -51,17 +50,10 @@ class Lorawan extends utils.Adapter {
 			this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
 		}, 1000);*/
 		// Reset the connection indicator during startup
-		setTimeout(() => {
+		/*	setTimeout(() => {
 			this.mqttClient[0]?.publish("v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/down/push",JSON.stringify({"downlinks":[{"f_port": 128,"frm_payload":"Pw==","priority": "NORMAL"}]}));
-		}, 5000);
-		this.setState("info.connection", false, true);
-
-	/*	setTimeout(async () => {
-			const myUrl = `https://eu1.cloud.thethings.network/api/v3/as/applications/hafi-ttn-lorawan/devices/eui-lobaro-modbus/down/push`;
-			const result = await axios.post(myUrl);
-			//const result = await axios.get("http://192.168.2.50:8080/rest/1/projects/EnergieMonitoring/devices/84/hist/values");
-			this.log.debug(JSON.stringify(result.data));
 		}, 5000);*/
+		this.setState("info.connection", false, true);
 	}
 
 
