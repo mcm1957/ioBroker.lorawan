@@ -8,26 +8,38 @@
 			"items":[
 				{
 					"type": "text",
-					"attr": "application",
-					"title": "application",
-					"tooltip": "applicationTooltip",
-					"default": "",
-					"sm":12
-				},{
+					"attr": "ipUrl",
+					"title": "ipUrl",
+					"tooltip": "ipUrlTooltip",
+					"default": ""
+				},
+				{
+					"type": "text",
+					"attr": "port",
+					"title": "port",
+					"tooltip": "portTooltip",
+					"default": ""
+				},
+				{
 					"type": "text",
 					"attr": "username",
 					"title": "username",
 					"tooltip": "usernameTooltip",
-					"default": "",
-					"sm":12
+					"default": ""
 				},
 				{
 					"type": "password",
 					"attr": "password",
 					"title": "password",
 					"tooltip": "passwordTooltip",
-					"default": "",
-					"sm":12
+					"default": ""
+				},
+				{
+					"type": "checkbox",
+					"attr": "ssl",
+					"title": "SSL",
+					"tooltip": "sslTooltip",
+					"default": false
 				}
 			]
 		}

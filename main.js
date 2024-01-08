@@ -7,6 +7,7 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
+const axios = require("axios").default;
 const mqttClientClass = require("./lib/modules/mqttclient");
 const messagehandlerClass = require("./lib/modules/messagehandler");
 
@@ -28,7 +29,7 @@ class Lorawan extends utils.Adapter {
 		// this.on("objectChange", this.onObjectChange.bind(this));
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
-
+		this.mqttClient = {};
 	}
 
 	/**
@@ -36,22 +37,31 @@ class Lorawan extends utils.Adapter {
 	 */
 	async onReady() {
 		// Initialize your adapter here
-	// declare mqtt CLient
+		// declare mqtt CLient
+
 		// @ts-ignore
 		this.messagehandler = new messagehandlerClass(this);
-		this.mqttClient =  new mqttClientClass(this,"eu1.cloud.thethings.network","8883",this.config.statesTable[0]);
-		/*	this.mqttClient =  new mqttClientClass(this,"192.168.2.56","1883","","");
+
+		// Set all mqtt clients
+		for(const configurationIndex in this.config.statesTable){
+			this.mqttClient[configurationIndex] =  new mqttClientClass(this,this.config.statesTable[configurationIndex]);
+		}
+		/*
 		setTimeout(() => {
-			this.mqttClient?.publish("R/c0619ab24727/keepalive",null);
+			this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
 		}, 1000);*/
 		// Reset the connection indicator during startup
+		setTimeout(() => {
+			this.mqttClient[0]?.publish("v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/down/push",JSON.stringify({"downlinks":[{"f_port": 128,"frm_payload":"Pw==","priority": "NORMAL"}]}));
+		}, 5000);
 		this.setState("info.connection", false, true);
 
-
-	}
-
-	async handleMessage(application,topic,message){
-		this.messagehandler?.handleMessage(application,topic,message);
+	/*	setTimeout(async () => {
+			const myUrl = `https://eu1.cloud.thethings.network/api/v3/as/applications/hafi-ttn-lorawan/devices/eui-lobaro-modbus/down/push`;
+			const result = await axios.post(myUrl);
+			//const result = await axios.get("http://192.168.2.50:8080/rest/1/projects/EnergieMonitoring/devices/84/hist/values");
+			this.log.debug(JSON.stringify(result.data));
+		}, 5000);*/
 	}
 
 
