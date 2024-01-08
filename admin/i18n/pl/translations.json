@@ -1,5 +1,9 @@
 {
-	"lorawan adapter settings": "Ustawienia adaptera dla lorawan",
-	"option1": "opcja 1",
-	"option2": "Opcja 2"
+    "lorawan adapter settings": "Ustawienia adaptera dla Lorawan",
+    "ServersettingsHeader": "Ustawienia serwera",
+    "Serverinformation": "Skonfiguruj główne ustawienia komunikacji z serwerem",
+    "AuthenticationHeader": "Ustawienia uwierzytelniania",
+    "AuthenticationInformationrmation": "Ustaw uwierzytelnianie dla swojego serwera (jeśli to konieczne)",
+    "OriginHeader": "Ustawienia oryginalności",
+    "OriginInformation": "Ustaw pochodzenie oczekiwanych danych"
 }

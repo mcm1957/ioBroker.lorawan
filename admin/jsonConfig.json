@@ -2,46 +2,88 @@
 	"i18n": true,
 	"type": "panel",
 	"items": {
-		"statesTable":{
-			"type":"table",
-			"sm":12,
-			"items":[
-				{
-					"type": "text",
-					"attr": "ipUrl",
-					"title": "ipUrl",
-					"tooltip": "ipUrlTooltip",
-					"default": ""
-				},
-				{
-					"type": "text",
-					"attr": "port",
-					"title": "port",
-					"tooltip": "portTooltip",
-					"default": ""
-				},
-				{
-					"type": "text",
-					"attr": "username",
-					"title": "username",
-					"tooltip": "usernameTooltip",
-					"default": ""
-				},
-				{
-					"type": "password",
-					"attr": "password",
-					"title": "password",
-					"tooltip": "passwordTooltip",
-					"default": ""
-				},
-				{
-					"type": "checkbox",
-					"attr": "ssl",
-					"title": "SSL",
-					"tooltip": "sslTooltip",
-					"default": false
-				}
-			]
+        "ServersettingsHeader": {
+            "newLine": true,
+            "type": "header",
+            "text": "ServersettingsHeader",
+            "size": 3
+        },
+        "Serverinformation":{
+            "newLine":true,
+            "type": "staticText",
+            "label": "Serverinformation"
+        },
+		"ipUrl":{
+            "newLine": true,
+			"type": "text",
+			"label": "ipUrl",
+			"tooltip": "ipUrlTooltip",
+			"default": "",
+			"sm": 4
+		},
+		"port":{
+			"type": "number",
+			"label": "port",
+			"tooltip": "portTooltip",
+			"default": 8883,
+			"sm": 1
+		},
+		"ssl":{
+			"type": "checkbox",
+			"label": "SSL",
+			"tooltip": "sslTooltip",
+			"default": true
+		},
+		"AuthenticationHeader": {
+            "newLine": true,
+            "type": "header",
+            "text": "AuthenticationHeader",
+            "size": 3
+        },
+        "AuthenticationInformation":{
+            "newLine":true,
+            "type": "staticText",
+            "label": "AuthenticationInformation"
+        },
+		"username":{
+            "newLine":true,
+			"type": "text",
+			"label": "username",
+			"tooltip": "usernameTooltip",
+			"default": "",
+			"sm": 4
+		},
+		"password":{
+			"type": "password",
+			"label": "password",
+			"tooltip": "passwordTooltip",
+			"repeat": true,
+			"default": "",
+			"sm": 6
+		},
+		"OriginHeader": {
+            "newLine": true,
+            "type": "header",
+            "text": "OriginHeader",
+            "size": 3
+        },
+        "OriginInformation":{
+            "newLine":true,
+            "type": "staticText",
+            "label": "OriginInformation"
+        },
+		"ttn":{
+            "newLine":true,
+			"type": "checkbox",
+			"label": "Ttn",
+			"tooltip": "ttnTooltip",
+			"default": true
+		},
+		"chirpstack":{
+			"type": "checkbox",
+			"label": "Chirpstack",
+			"tooltip": "chirpstackTooltip",
+			"default": false
 		}
 	}
 }

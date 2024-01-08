@@ -1,108 +1,114 @@
 {
-	"common": {
-		"name": "lorawan",
-		"version": "0.0.1",
-		"news": {
-			"0.0.1": {
-				"en": "initial release",
-				"de": "Erstveröffentlichung",
-				"ru": "Начальная версия",
-				"pt": "lançamento inicial",
-				"nl": "Eerste uitgave",
-				"fr": "Première version",
-				"it": "Versione iniziale",
-				"es": "Versión inicial",
-				"pl": "Pierwsze wydanie",
-				"uk": "Початкова версія",
-				"zh-cn": "首次出版"
-			}
-		},
-		"title": "LoRaWAN",
-		"titleLang": {
-			"en": "LoRaWAN",
-			"de": "LoRaWAN",
-			"ru": "ЛоРаВАН",
-			"pt": "LoRaWAN",
-			"nl": "LoRaWAN",
-			"fr": "LoRaWAN",
-			"it": "LoRaWAN",
-			"es": "LoRaWAN",
-			"pl": "LoRaWAN",
-			"uk": "LoRaWAN",
-			"zh-cn": "洛拉万"
-		},
-		"desc": {
-			"en": "converts the desired lora gateway data to a ioBroker structure",
-			"de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
-			"ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
-			"pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
-			"nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
-			"fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
-			"it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
-			"es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
-			"pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
-			"uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
-			"zh-cn": "将所需的lora网关数据转换为ioBroker结构"
-		},
-		"authors": [
-			"BenAhrdt <bsahrdt@gmail.com>"
-		],
-		"keywords": [
-			"LoRaWAN"
-		],
-		"license": "MIT",
-		"platform": "Javascript/Node.js",
-		"main": "main.js",
-		"icon": "lorawan.png",
-		"enabled": true,
-		"extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
-		"readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
-		"loglevel": "info",
-		"tier": 3,
-		"mode": "daemon",
-		"type": "protocols",
-		"compact": true,
-		"connectionType": "cloud",
-		"dataSource": "push",
-		"adminUI": {
-			"config": "json"
-		},
-		"dependencies": [
-			{
-				"js-controller": ">=3.3.22"
-			}
-		],
-		"globalDependencies": [
-			{
-				"admin": ">=5.1.13"
-			}
-		]
-	},
-	"native": {
-		"statesTable": []
-	},
-	"objects": [],
-	"instanceObjects": [
-		{
-			"_id": "info",
-			"type": "channel",
-			"common": {
-				"name": "Information"
-			},
-			"native": {}
-		},
-		{
-			"_id": "info.connection",
-			"type": "state",
-			"common": {
-				"role": "indicator.connected",
-				"name": "Device or service connected",
-				"type": "boolean",
-				"read": true,
-				"write": false,
-				"def": false
-			},
-			"native": {}
-		}
-	]
+    "common": {
+        "name": "lorawan",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "LoRaWAN",
+        "titleLang": {
+            "en": "LoRaWAN",
+            "de": "LoRaWAN",
+            "ru": "ЛоРаВАН",
+            "pt": "LoRaWAN",
+            "nl": "LoRaWAN",
+            "fr": "LoRaWAN",
+            "it": "LoRaWAN",
+            "es": "LoRaWAN",
+            "pl": "LoRaWAN",
+            "uk": "LoRaWAN",
+            "zh-cn": "洛拉万"
+        },
+        "desc": {
+            "en": "converts the desired lora gateway data to a ioBroker structure",
+            "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
+            "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
+            "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
+            "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
+            "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
+            "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
+            "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
+            "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
+            "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
+            "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
+        },
+        "authors": [
+            "BenAhrdt <bsahrdt@gmail.com>"
+        ],
+        "keywords": [
+            "LoRaWAN"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "lorawan.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
+        "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "protocols",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "push",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "ipUrl": "",
+        "port": 8883,
+        "username": "",
+        "password": "",
+        "ssl": true,
+        "ttn": true,
+        "chirpstack": false
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
 }

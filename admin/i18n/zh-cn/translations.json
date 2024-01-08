@@ -1,5 +1,9 @@
 {
-	"lorawan adapter settings": "lorawan的适配器设置",
-	"option1": "选项1",
-	"option2": "选项2"
+    "lorawan adapter settings": "lorawan 的适配器设置",
+    "ServersettingsHeader": "服务器设置",
+    "Serverinformation": "设置服务器的主要通信设置",
+    "AuthenticationHeader": "身份验证设置",
+    "AuthenticationInformationrmation": "设置服务器的身份验证（如果需要）",
+    "OriginHeader": "原始设置",
+    "OriginInformation": "设置预期数据的来源"
 }
