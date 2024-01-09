@@ -35,22 +35,24 @@ class Lorawan extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 	async onReady() {
-		// Initialize your adapter here
+		// create new messagehandler
 		this.messagehandler = new messagehandlerClass(this);
 
 		// Set all mqtt clients
 		this.mqttClient =  new mqttClientClass(this,this.config);
+
+		// Subscribe all States
+		this.subscribeStatesAsync("*");
 		/*
 		setTimeout(() => {
 			this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
 		}, 1000);*/
 		// Reset the connection indicator during startup
-		setTimeout(() => {
+		/*setTimeout(() => {
 			this.mqttClient?.publish("v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/down/push",JSON.stringify({"downlinks":[{"f_port": 128,"frm_payload":"Pw==","priority": "NORMAL"}]}));
 		}, 5000);
-		this.setState("info.connection", false, true);
+		this.setState("info.connection", false, true);*/
 	}
-
 
 	/**
 	 * Is called when adapter shuts down - callback has to be called under any circumstances!
@@ -92,16 +94,27 @@ class Lorawan extends utils.Adapter {
 	 * @param {string} id
 	 * @param {ioBroker.State | null | undefined} state
 	 */
-	onStateChange(id, state) {
+	async onStateChange(id, state) {
 		if (state) {
-			// The state was changed
-			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
+			// The state was changed => only states with ack = false will be processed, others will be ignored
+			if(!state.ack){
+				const downlinkTopic = this.messagehandler?.getDownlinkTopic(id,"/down/push");
+				//const downlinkTopic = await this.messagehandler?.getTtnDownlinkTopicFromTopicState(id,"/down/push");
+				this.mqttClient?.publish(downlinkTopic,JSON.stringify(this.messagehandler?.ttn.writeableData.firmware.downlink));
+			}
 		} else {
 			// The state was deleted
 			this.log.info(`state ${id} deleted`);
 		}
 	}
 
+	/*	getStringprefix(source,searchstring,times){
+		let position = 0;
+		for(let index = 0; index < times ; index++){
+			position = source.indexOf(searchstring,position) + 1;
+		}
+		return source.substring(0,position-1);
+	}*/
 	// If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
 	// /**
 	//  * Some message was sent to this instance over message box. Used by email, pushover, text2speech, ...
