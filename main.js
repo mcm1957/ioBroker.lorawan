@@ -29,6 +29,7 @@ class Lorawan extends utils.Adapter {
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
 		this.mqttClient = {};
+		this.changeInfo = {};
 	}
 
 	/**
@@ -41,8 +42,13 @@ class Lorawan extends utils.Adapter {
 		// Set all mqtt clients
 		this.mqttClient =  new mqttClientClass(this,this.config);
 
-		// Subscribe all States
-		this.subscribeStatesAsync("*");
+		// Subscribe all States (given from messagehandler)
+		this.subscibeableStates = this.messagehandler.getSubscribeableStates(undefined);
+		if(this.subscibeableStates){
+			for(const subscibeableState of Object.values(this.subscibeableStates)){
+				this.subscribeStatesAsync(`*.${subscibeableState}`);
+			}
+		}
 		/*
 		setTimeout(() => {
 			this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
@@ -96,16 +102,60 @@ class Lorawan extends utils.Adapter {
 	 */
 	async onStateChange(id, state) {
 		if (state) {
+		//	this.log.debug(`state ${id} chnged: val: ${state.val} - ack: ${state.ack}`);
 			// The state was changed => only states with ack = false will be processed, others will be ignored
 			if(!state.ack){
-				const downlinkTopic = this.messagehandler?.getDownlinkTopic(id,"/down/push");
-				//const downlinkTopic = await this.messagehandler?.getTtnDownlinkTopicFromTopicState(id,"/down/push");
-				this.mqttClient?.publish(downlinkTopic,JSON.stringify(this.messagehandler?.ttn.writeableData.firmware.downlink));
+				// get information of the changing state
+				// @ts-ignore
+				this.changeInfo = this.getChangeInfo(id);
+				let appending = "";
+				if(this.changeInfo.changedState === this.messagehandler?.ttn.subscribeableStates.push){
+					// @ts-ignore
+					appending = this.messagehandler?.ttn.subscribeableStates.push;
+					const downlinkTopic = this.messagehandler?.getDownlinkTopic(this.changeInfo,`/down/${appending}`);
+					//this.sendDownlink(downlinkTopic,JSON.stringify(state.val));
+					this.sendDownlink(downlinkTopic,state.val);
+					this.setStateAsync(id,state.val,true);
+				}
+				else if(this.changeInfo.changedState === this.messagehandler?.ttn.subscribeableStates.replace){
+					// @ts-ignore
+					appending = this.messagehandler?.ttn.subscribeableStates.replace;
+					const downlinkTopic = this.messagehandler?.getDownlinkTopic(this.changeInfo,`/down/${appending}`);
+					this.sendDownlink(downlinkTopic,state.val);
+					this.setStateAsync(id,state.val,true);
+				}
 			}
 		} else {
 			// The state was deleted
 			this.log.info(`state ${id} deleted`);
 		}
+	}
+
+	sendDownlink(topic,message){
+		this.mqttClient?.publish(topic,message);
+	}
+
+	getChangeInfo(id){
+		// Select datahandling in case of origin
+		if(this.config.ttn){
+			return this.getTtnChangeInfo(id);
+		}
+		else if(this.config.chirpstack){
+			//	 this.handleChirpstack(topic,message);
+		}
+	}
+
+	getTtnChangeInfo(id){
+		id = id.substring(this.namespace.length + 1,id.length);
+		const idElements = id.split(".");
+		const changeInfo = {
+			applicationId : idElements[0],
+			dev_uid : idElements[3],
+			device_id : idElements[2],
+			changedState : idElements[idElements.length - 1],
+			allElements : idElements
+		};
+		return changeInfo;
 	}
 
 	/*	getStringprefix(source,searchstring,times){
