@@ -37,7 +37,7 @@ class Lorawan extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 	async onReady() {
-/*
+	/*
 		let a = {b:"",c:"2"};
 		a.val = JSON.parse(JSON.stringify(a));
 		this.log.debug(JSON.stringify(a));
@@ -49,7 +49,7 @@ class Lorawan extends utils.Adapter {
 
 		// Set all mqtt clients
 		this.mqttClient =  new mqttClientClass(this,this.config);
-/*
+		/*
 		// Subscribe all States (given from messagehandler)
 		this.subscibeableStates = this.messagehandler.getSubscribeableStates(undefined);
 		if(this.subscibeableStates){
@@ -113,7 +113,7 @@ class Lorawan extends utils.Adapter {
 	 */
 	async onStateChange(id, state) {
 		if (state) {
-	//		this.log.debug(`state ${id} changed: val: ${state.val} - ack: ${state.ack}`);
+		//		this.log.debug(`state ${id} changed: val: ${state.val} - ack: ${state.ack}`);
 			// The state was changed => only states with ack = false will be processed, others will be ignored
 			if(!state.ack){
 				// get information of the changing state
@@ -142,7 +142,7 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
-	sendDownlink(topic,message){;
+	sendDownlink(topic,message){
 		this.mqttClient?.publish(topic,message);
 	}
 
