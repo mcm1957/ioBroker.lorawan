@@ -1,5 +1,6 @@
 "use strict";
 
+
 /*
  * Created with @iobroker/create-adapter v2.6.0
  */
@@ -36,12 +37,19 @@ class Lorawan extends utils.Adapter {
 	 * Is called when databases are connected and adapter received configuration.
 	 */
 	async onReady() {
+/*
+		let a = {b:"",c:"2"};
+		a.val = JSON.parse(JSON.stringify(a));
+		this.log.debug(JSON.stringify(a));
+		delete a.val;
+		this.log.debug(JSON.stringify(a));
+		return;*/
 		// create new messagehandler
 		this.messagehandler = new messagehandlerClass(this);
 
 		// Set all mqtt clients
 		this.mqttClient =  new mqttClientClass(this,this.config);
-
+/*
 		// Subscribe all States (given from messagehandler)
 		this.subscibeableStates = this.messagehandler.getSubscribeableStates(undefined);
 		if(this.subscibeableStates){
@@ -49,6 +57,9 @@ class Lorawan extends utils.Adapter {
 				this.subscribeStatesAsync(`*.${subscibeableState}`);
 			}
 		}
+*/
+		this.subscribeStatesAsync(`*.push`);
+		this.subscribeStatesAsync(`*.replace`);
 		/*
 		setTimeout(() => {
 			this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
@@ -102,24 +113,24 @@ class Lorawan extends utils.Adapter {
 	 */
 	async onStateChange(id, state) {
 		if (state) {
-		//	this.log.debug(`state ${id} chnged: val: ${state.val} - ack: ${state.ack}`);
+	//		this.log.debug(`state ${id} changed: val: ${state.val} - ack: ${state.ack}`);
 			// The state was changed => only states with ack = false will be processed, others will be ignored
 			if(!state.ack){
 				// get information of the changing state
 				// @ts-ignore
 				this.changeInfo = this.getChangeInfo(id);
 				let appending = "";
-				if(this.changeInfo.changedState === this.messagehandler?.ttn.subscribeableStates.push){
+				if(this.changeInfo.changedState === "push"){
 					// @ts-ignore
-					appending = this.messagehandler?.ttn.subscribeableStates.push;
+					appending = "push";
 					const downlinkTopic = this.messagehandler?.getDownlinkTopic(this.changeInfo,`/down/${appending}`);
 					//this.sendDownlink(downlinkTopic,JSON.stringify(state.val));
 					this.sendDownlink(downlinkTopic,state.val);
 					this.setStateAsync(id,state.val,true);
 				}
-				else if(this.changeInfo.changedState === this.messagehandler?.ttn.subscribeableStates.replace){
+				else if(this.changeInfo.changedState === "replace"){
 					// @ts-ignore
-					appending = this.messagehandler?.ttn.subscribeableStates.replace;
+					appending = "replace";
 					const downlinkTopic = this.messagehandler?.getDownlinkTopic(this.changeInfo,`/down/${appending}`);
 					this.sendDownlink(downlinkTopic,state.val);
 					this.setStateAsync(id,state.val,true);
@@ -131,7 +142,7 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
-	sendDownlink(topic,message){
+	sendDownlink(topic,message){;
 		this.mqttClient?.publish(topic,message);
 	}
 
