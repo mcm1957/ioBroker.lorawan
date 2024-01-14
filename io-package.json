@@ -98,7 +98,8 @@
     "password": "",
     "ssl": true,
     "ttn": true,
-    "chirpstack": false
+    "chirpstack": false,
+    "downlinkConfigAccordion": {}
   },
   "objects": [],
   "instanceObjects": [

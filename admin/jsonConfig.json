@@ -1,89 +1,237 @@
 {
 	"i18n": true,
-	"type": "panel",
-	"items": {
-        "ServersettingsHeader": {
-            "newLine": true,
-            "type": "header",
-            "text": "ServersettingsHeader",
-            "size": 3
-        },
-        "Serverinformation":{
-            "newLine":true,
-            "type": "staticText",
-            "label": "Serverinformation"
-        },
-		"ipUrl":{
-            "newLine": true,
-			"type": "text",
-			"label": "ipUrl",
-			"tooltip": "ipUrlTooltip",
-			"default": "",
-			"sm": 4
+	"type": "tabs",
+	"items":{
+        "mainTab":{
+            "type": "panel",
+            "label": "mainSettings",
+			"items": {
+				"ServersettingsHeader": {
+					"newLine": true,
+					"type": "header",
+					"text": "ServersettingsHeader",
+					"size": 3
+				},
+				"Serverinformation":{
+					"newLine":true,
+					"type": "staticText",
+					"label": "Serverinformation"
+				},
+				"ipUrl":{
+					"newLine": true,
+					"type": "text",
+					"label": "ipUrl",
+					"tooltip": "ipUrlTooltip",
+					"default": "",
+					"sm": 4
+				},
+				"port":{
+					"type": "number",
+					"label": "port",
+					"tooltip": "portTooltip",
+					"default": 8883,
+					"sm": 1
+				},
+				"ssl":{
+					"type": "checkbox",
+					"label": "SSL",
+					"tooltip": "sslTooltip",
+					"default": true
+				},
+				"AuthenticationHeader": {
+					"newLine": true,
+					"type": "header",
+					"text": "AuthenticationHeader",
+					"size": 3
+				},
+				"AuthenticationInformation":{
+					"newLine":true,
+					"type": "staticText",
+					"label": "AuthenticationInformation"
+				},
+				"username":{
+					"newLine":true,
+					"type": "text",
+					"label": "username",
+					"tooltip": "usernameTooltip",
+					"default": "",
+					"sm": 4
+				},
+				"password":{
+					"type": "password",
+					"label": "password",
+					"tooltip": "passwordTooltip",
+					"repeat": true,
+					"default": "",
+					"sm": 6
+				},
+				"OriginHeader": {
+					"newLine": true,
+					"type": "header",
+					"text": "OriginHeader",
+					"size": 3
+				},
+				"OriginInformation":{
+					"newLine":true,
+					"type": "staticText",
+					"label": "OriginInformation"
+				},
+				"ttn":{
+					"newLine":true,
+					"type": "checkbox",
+					"label": "Ttn",
+					"tooltip": "ttnTooltip",
+					"default": true
+				},
+				"chirpstack":{
+					"type": "checkbox",
+					"label": "Chirpstack",
+					"tooltip": "chirpstackTooltip",
+					"default": false
+				}
+			}
 		},
-		"port":{
-			"type": "number",
-			"label": "port",
-			"tooltip": "portTooltip",
-			"default": 8883,
-			"sm": 1
-		},
-		"ssl":{
-			"type": "checkbox",
-			"label": "SSL",
-			"tooltip": "sslTooltip",
-			"default": true
-		},
-		"AuthenticationHeader": {
-            "newLine": true,
-            "type": "header",
-            "text": "AuthenticationHeader",
-            "size": 3
-        },
-        "AuthenticationInformation":{
-            "newLine":true,
-            "type": "staticText",
-            "label": "AuthenticationInformation"
-        },
-		"username":{
-            "newLine":true,
-			"type": "text",
-			"label": "username",
-			"tooltip": "usernameTooltip",
-			"default": "",
-			"sm": 4
-		},
-		"password":{
-			"type": "password",
-			"label": "password",
-			"tooltip": "passwordTooltip",
-			"repeat": true,
-			"default": "",
-			"sm": 6
-		},
-		"OriginHeader": {
-            "newLine": true,
-            "type": "header",
-            "text": "OriginHeader",
-            "size": 3
-        },
-        "OriginInformation":{
-            "newLine":true,
-            "type": "staticText",
-            "label": "OriginInformation"
-        },
-		"ttn":{
-            "newLine":true,
-			"type": "checkbox",
-			"label": "Ttn",
-			"tooltip": "ttnTooltip",
-			"default": true
-		},
-		"chirpstack":{
-			"type": "checkbox",
-			"label": "Chirpstack",
-			"tooltip": "chirpstackTooltip",
-			"default": false
+		"downlinkConfigTab":{
+            "type": "panel",
+            "label": "downlinkConfig",
+			"items": {
+				"downlinkConfigAccordion":{
+					"type":"accordion",
+					"titleAttr": "name",
+					"sm":12,
+					"items":[
+						{
+							"type": "text",
+							"attr": "name",
+							"label": "name",
+							"tooltip": "nameTooltip",
+							"default": "",
+							"sm":2
+						},
+						{
+							"type": "number",
+							"attr": "port",
+							"label": "port",
+							"tooltip": "portTooltip",
+							"default": 2,
+							"sm":2
+						},
+						{
+							"type": "text",
+							"attr": "priority",
+							"label": "priority",
+							"tooltip": "priorityTooltip",
+							"default": "NORMAL",
+							"sm":2
+						},
+						{
+							"type": "select",
+							"attr": "type",
+							"label": "type",
+							"tooltip": "typeTooltip",
+							"options": [
+								{"label":"boolean","value":"boolean"},
+								{"label":"number","value":"number"},
+								{"label":"ASCII","value":"ascii"},
+								{"label":"String","value":"string"}
+							],
+							"default": "boolean",
+							"sm":2
+						},
+						{
+							"type": "checkbox",
+							"attr": "confirmed",
+							"label": "confirmed",
+							"tooltip": "confirmedTooltip",
+							"default": false,
+							"sm":2
+						},
+						{
+							"newLine": true,
+							"type": "text",
+							"attr": "front",
+							"label": "front",
+							"tooltip": "frontTooltip",
+							"default": "03",
+							"hidden": "data.type === 'boolean'",
+							"sm":2
+						},
+						{
+							"type": "text",
+							"attr": "end",
+							"label": "end",
+							"tooltip": "endTooltip",
+							"default": "11",
+							"hidden": "data.type === 'boolean'",
+							"sm":2
+						},
+						{
+							"type": "select",
+							"attr": "length",
+							"label": "length",
+							"tooltip": "lengthTooltip",
+							"options": [
+								{"label":"2","value":2},
+								{"label":"4","value":4},
+								{"label":"6","value":6},
+								{"label":"8","value":8}
+							],
+							"default": 2,
+							"hidden": "data.type === 'boolean'",
+							"sm":2
+						},
+						{
+							"newLine": true,
+							"type": "text",
+							"attr": "on",
+							"label": "on",
+							"tooltip": "onTooltip",
+							"default": "11",
+							"hidden": "data.type !== 'boolean'",
+							"sm":2
+						},
+						{
+							"type": "text",
+							"attr": "off",
+							"label": "off",
+							"tooltip": "offTooltip",
+							"default": "11",
+							"hidden": "data.type !== 'boolean'",
+							"sm":2
+						},
+						{
+							"type": "number",
+							"attr": "multiplyfaktor",
+							"label": "multiplyfaktor",
+							"tooltip": "multiplyfaktorTooltip",
+							"default": "1",
+							"hidden": "data.type !== 'number'",
+							"sm":2
+						},
+						{
+							"type": "text",
+							"attr": "unit",
+							"label": "unit",
+							"tooltip": "unitTooltip",
+							"default": "",
+							"hidden": "data.type === 'boolean' || data.type === 'string'",
+							"sm":2
+						},
+						{
+							"type": "autocomplete",
+							"attr": "deviceType",
+							"label": "deviceType",
+							"tooltip": "deviceTypeTooltip",
+							"options": [
+								{"label":"all","value":"all"}
+							],
+							"default": "all",
+							"freeSolo": true,
+							"sm":2
+						}
+					]
+				}
+			}
 		}
 	}
 }
