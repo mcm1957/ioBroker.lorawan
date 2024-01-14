@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "news": {
+      "0.0.3": {
+        "en": "first config for downlinks inputed",
+        "de": "erste config für downlinks eingegeben",
+        "ru": "первая настройка для входных ссылок",
+        "pt": "primeiro config para downlinks inseridos",
+        "nl": "eerste configuratie voor downlinks ingevoerd",
+        "fr": "première configuration pour les liaisons descendantes entrée",
+        "it": "prima configurazione per downlink in ingresso",
+        "es": "primer config para downlinks",
+        "pl": "pierwszy config dla downlinks nieznany",
+        "uk": "перший конфігурація для вхідних посилань",
+        "zh-cn": "输入下行链路的第一个配置"
+      },
       "0.0.2": {
         "en": "initial release",
         "de": "erstausstrahlung",
