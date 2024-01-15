@@ -5,5 +5,13 @@
 	"AuthenticationHeader": "Authenticationsettings",
 	"AuthenticationInformationrmation": "Set the authentication for your server (if needed)",
 	"OriginHeader": "Origensettings",
-	"OriginInformation": "Set the origin of the expected data"
+	"OriginInformation": "Set the origin of the expected data",
+	"mainSettings": "Main Settings",
+	"ipUrl": "url or ip of the server you want connect to",
+	"port": "port",
+	"SSL": "SSL",
+	"AuthenticationInformation": "insert your logindata",
+	"username": "username",
+	"password": "password",
+	"downlinkConfig": "Donwlinkkonfiguration"
 }

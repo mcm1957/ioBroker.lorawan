@@ -1,6 +1,4 @@
 "use strict";
-
-
 /*
  * Created with @iobroker/create-adapter v2.6.0
  */
@@ -11,9 +9,6 @@ const utils = require("@iobroker/adapter-core");
 const mqttClientClass = require("./lib/modules/mqttclient");
 const messagehandlerClass = require("./lib/modules/messagehandler");
 const downlinkConfigClass = require("./lib/modules/downlinkConfig");
-
-// Load your modules here, e.g.:
-// const fs = require("fs");
 
 class Lorawan extends utils.Adapter {
 
@@ -30,8 +25,6 @@ class Lorawan extends utils.Adapter {
 		// this.on("objectChange", this.onObjectChange.bind(this));
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
-		this.mqttClient = {};
-		// @ts-ignore
 	}
 
 	/**
@@ -64,7 +57,6 @@ class Lorawan extends utils.Adapter {
 			hex 2 number:
 			parseInt(hexdata,16);
 
-
 			return Math.abs(dec).toString(16);
 			// force 4 Digits
 			//return ('0000' + dec.toString(16).toUpperCase()).slice(-4);
@@ -72,24 +64,6 @@ class Lorawan extends utils.Adapter {
 			// return ('00' + dec.toString(16).toUpperCase()).slice(-2);
 
 	*/
-			/*
-			let a = {b:"",c:"2"};
-			a.val = JSON.parse(JSON.stringify(a));
-			this.log.debug(JSON.stringify(a));
-			delete a.val;
-			this.log.debug(JSON.stringify(a));
-			return;*/
-			//00b1006400018b27104a0000
-			// ALEAZAABiycQSgAA
-
-
-			/*	const base_64 = "Pw==";
-			const hex = Buffer.from(base_64, "base64").toString("hex");
-			this.log.debug(hex);
-			const newBase64 = Buffer.from(hex, "hex").toString("base64");
-			this.log.debug(newBase64);
-			return*/
-
 			// create downlinkConfigs
 			this.downlinkConfig = new downlinkConfigClass(this);
 
@@ -98,48 +72,19 @@ class Lorawan extends utils.Adapter {
 
 			// Set all mqtt clients
 			this.mqttClient =  new mqttClientClass(this,this.config);
-			/*
-			// Subscribe all States (given from messagehandler)
-			this.subscibeableStates = this.messagehandler.getSubscribeableStates(undefined);
-			if(this.subscibeableStates){
-				for(const subscibeableState of Object.values(this.subscibeableStates)){
-					this.subscribeStatesAsync(`*.${subscibeableState}`);
-				}
-			}
-	*/
-			//	this.subscribeStatesAsync(`*.push`);
-			//	this.subscribeStatesAsync(`*.replace`);
-			/*
-			setTimeout(() => {
-				this.mqttClient[1]?.publish("R/c0619ab24727/keepalive",null);
-			}, 1000);*/
-			// Reset the connection indicator during startup
-			/*setTimeout(() => {
-				this.mqttClient?.publish("v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/down/push",JSON.stringify({"downlinks":[{"f_port": 128,"frm_payload":"Pw==","priority": "NORMAL"}]}));
-			}, 5000);
-			this.setState("info.connection", false, true);*/
-			//await this.getAdapterObjects();
 
-			//this.assignAdapterconfigs();
+			// Merge the configed and standard profile of downlinks
+			this.downlinkConfig.addAndMergeDownlinks();
 
-			this.addAndMergeDownlinks();
+			// generate new configed downlinkstates on allready existing devices at adapter startup
+			await this.messagehandler.generateDownlinkstatesAtStatup();
 
 			//Subscribe all configuration and control states
-			this.subscribeStatesAsync("*downlink.configuration.*");
+			this.subscribeStatesAsync("*.configuration.*");
 			this.subscribeStatesAsync("*downlink.control.*");
 		}
 		catch(error){
-			this.log.error(`error at ${activeFunction}: ` + error);
-		}
-	}
-
-	addAndMergeDownlinks(){
-		// @ts-ignore
-		for(const downlinkConfig of Object.values(this.downlinkConfig.internalDownlinks)){
-			this.downlinkConfig?.addDownlinkConfigByType(downlinkConfig);
-		}
-		for(const downlinkConfig of Object.values(this.config.downlinkConfigAccordion)){
-			this.downlinkConfig?.addDownlinkConfigByType(downlinkConfig);
+			this.log.error(`error at ${activeFunction}: ` + error.stack);
 		}
 	}
 
@@ -149,12 +94,7 @@ class Lorawan extends utils.Adapter {
 	 */
 	onUnload(callback) {
 		try {
-			// Here you must clear all timeouts or intervals that may still be active
-			// clearTimeout(timeout1);
-			// clearTimeout(timeout2);
-			// ...
-			// clearInterval(interval1);
-
+			this.mqttClient?.destroy();
 			callback();
 		} catch (e) {
 			callback();
@@ -190,35 +130,42 @@ class Lorawan extends utils.Adapter {
 				//this.log.debug(`state ${id} changed: val: ${state.val} - ack: ${state.ack}`);
 				// The state was changed => only states with ack = false will be processed, others will be ignored
 				if(!state.ack){
-					// get information of the changing state
-					// @ts-ignore
-					const changeInfo = await this.getChangeInfo(id);
-					let appending = "push";
-					// @ts-ignore
-					if(changeInfo.changedState === "push"){
-						const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-						//this.sendDownlink(downlinkTopic,JSON.stringify(state.val));
-						this.sendDownlink(downlinkTopic,state.val);
-						this.setStateAsync(id,state.val,true);
-					}
-					// @ts-ignore
-					else if(changeInfo.changedState === "replace"){
-						appending = "replace";
-						const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-						this.sendDownlink(downlinkTopic,state.val);
-						this.setStateAsync(id,state.val,true);
-					}
-					else{
-						const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+					// Check for downlink in id
+					if(id.indexOf("downlink") !== -1){
+						// get information of the changing state
 						// @ts-ignore
-						const downlinkConfig = this.downlinkConfig?.getDownlinkConfig(changeInfo);
-						if(downlinkConfig !== undefined){
-							const downlink = this.messagehandler?.getDownlink(downlinkConfig,state);
-							if(downlink !== undefined){
-								this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
-							}
+						const changeInfo = await this.getChangeInfo(id);
+						let appending = "push";
+						// @ts-ignore
+						if(changeInfo.changedState === "push"){
+							const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+							//this.sendDownlink(downlinkTopic,JSON.stringify(state.val));
+							this.sendDownlink(downlinkTopic,state.val);
 							this.setStateAsync(id,state.val,true);
 						}
+						// @ts-ignore
+						else if(changeInfo.changedState === "replace"){
+							appending = "replace";
+							const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+							this.sendDownlink(downlinkTopic,state.val);
+							this.setStateAsync(id,state.val,true);
+						}
+						else{
+							const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+							// @ts-ignore
+							const downlinkConfig = this.downlinkConfig?.getDownlinkConfig(changeInfo);
+							if(downlinkConfig !== undefined){
+								const downlink = this.messagehandler?.getDownlink(downlinkConfig,state);
+								if(downlink !== undefined){
+									this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
+								}
+								this.setStateAsync(id,state.val,true);
+							}
+						}
+					}
+					// State is from configuration path
+					else{
+						this.setStateAsync(id,state.val,true);
 					}
 				}
 			} else {
@@ -254,9 +201,7 @@ class Lorawan extends utils.Adapter {
 	async getTtnChangeInfo(id){
 		const activeFunction = "getTtnChangeInfo";
 		try{
-			if(id.indexOf(this.namespace) !== -1){
-				id = id.substring(this.namespace.length + 1,id.length);
-			}
+			id = this.removeNamespace(id);
 			const idElements = id.split(".");
 			const changeInfo = {
 				applicationId : idElements[0],
@@ -279,13 +224,14 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
-	/*	getStringprefix(source,searchstring,times){
-		let position = 0;
-		for(let index = 0; index < times ; index++){
-			position = source.indexOf(searchstring,position) + 1;
+	removeNamespace(id){
+		if(id.indexOf(this.namespace) !== -1){
+			id = id.substring(this.namespace.length + 1,id.length);
 		}
-		return source.substring(0,position-1);
-	}*/
+		return id;
+	}
+
+
 	// If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
 	// /**
 	//  * Some message was sent to this instance over message box. Used by email, pushover, text2speech, ...
