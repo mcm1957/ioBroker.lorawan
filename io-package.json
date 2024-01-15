@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "news": {
+      "0.0.4": {
+        "en": "implements buttons and standard downlink control ind json (push / replace)",
+        "de": "implementiert tasten und standard-downlink-steuerung ind json (push / ersetzen)",
+        "ru": "реализует кнопки и стандартный нисходящий контрольный джсон (push / заменить)",
+        "pt": "implementa botões e padrão downlink control ind json (push / substituir)",
+        "nl": "implementeert knoppen en standaard downlink control ind json (push / replace)",
+        "fr": "implémente boutons et standard de contrôle de liaison descendante json (pousser / remplacer)",
+        "it": "implementa pulsanti e controllo standard downlink ind json (push / sostituire)",
+        "es": "implementa botones y control de enlace estándar json (push / reemplazar)",
+        "pl": "implementuje przyciski i standardową kontrolę łącza w dół ind json (push / replacement)",
+        "uk": "реалізує кнопки та стандартний контроль за допомогою перемикача json (push / заміна)",
+        "zh-cn": "执行按钮和标准下行链路控制 ind json(推/替换)"
+      },
       "0.0.3": {
         "en": "first config for downlinks inputed",
         "de": "erste config für downlinks eingegeben",

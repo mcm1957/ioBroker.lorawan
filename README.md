@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner J-Paul0815@hafenmeister
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.4 (2024-01-15)
 * (BenAhrdt) implements buttons and standard downlink control ind json (push / replace)
 
 ### 0.0.3 (2024-01-14)
