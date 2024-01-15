@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "news": {
+      "0.0.5": {
+        "en": "delete not configed states at startup",
+        "de": "nicht konfiszierte staaten beim start löschen",
+        "ru": "удалить не настроенные состояния при запуске",
+        "pt": "excluir estados não configurados na inicialização",
+        "nl": "verwijderde niet-geconfigeerde toestanden bij opstarten",
+        "fr": "supprimer les états non configurés au démarrage",
+        "it": "delete not configed stati all'avvio",
+        "es": "eliminar estados no confiados al inicio",
+        "pl": "usuń nieskonfigurowane stany przy starcie",
+        "uk": "видалити не налаштовані стани при запуску",
+        "zh-cn": "删除启动时未配置状态"
+      },
       "0.0.4": {
         "en": "implements buttons and standard downlink control ind json (push / replace)",
         "de": "implementiert tasten und standard-downlink-steuerung ind json (push / ersetzen)",
