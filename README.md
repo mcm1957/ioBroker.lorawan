@@ -20,7 +20,7 @@ Adapter was created in collaboration with Joerg Froehner J-Paul0815@hafenmeister
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* (BenAhrdt) insert whole translation for config
+* (BenAhrdt) insert whole translation for config and move some functions
 
 ### 0.0.5 (2024-01-15)
 * (BenAhrdt) delete not configed states at startup

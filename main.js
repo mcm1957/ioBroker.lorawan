@@ -8,7 +8,7 @@
 const utils = require("@iobroker/adapter-core");
 const mqttClientClass = require("./lib/modules/mqttclient");
 const messagehandlerClass = require("./lib/modules/messagehandler");
-const downlinkConfigClass = require("./lib/modules/downlinkConfig");
+const downlinkConfighandlerClass = require("./lib/modules/downlinkConfighandler");
 
 class Lorawan extends utils.Adapter {
 
@@ -65,7 +65,7 @@ class Lorawan extends utils.Adapter {
 
 	*/
 			// create downlinkConfigs
-			this.downlinkConfig = new downlinkConfigClass(this);
+			this.downlinkConfighandler = new downlinkConfighandlerClass(this);
 
 			// create new messagehandler
 			this.messagehandler = new messagehandlerClass(this);
@@ -74,7 +74,7 @@ class Lorawan extends utils.Adapter {
 			this.mqttClient =  new mqttClientClass(this,this.config);
 
 			// Merge the configed and standard profile of downlinks
-			this.downlinkConfig.addAndMergeDownlinks();
+			this.downlinkConfighandler.addAndMergeDownlinks();
 
 			// generate new configed downlinkstates on allready existing devices at adapter startup
 			await this.messagehandler.generateDownlinkstatesAtStatup();
@@ -138,7 +138,7 @@ class Lorawan extends utils.Adapter {
 						let appending = "push";
 						// @ts-ignore
 						if(changeInfo.changedState === "push"){
-							const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 							//this.sendDownlink(downlinkTopic,JSON.stringify(state.val));
 							this.sendDownlink(downlinkTopic,state.val);
 							this.setStateAsync(id,state.val,true);
@@ -146,16 +146,16 @@ class Lorawan extends utils.Adapter {
 						// @ts-ignore
 						else if(changeInfo.changedState === "replace"){
 							appending = "replace";
-							const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 							this.sendDownlink(downlinkTopic,state.val);
 							this.setStateAsync(id,state.val,true);
 						}
 						else{
-							const downlinkTopic = this.messagehandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 							// @ts-ignore
-							const downlinkConfig = this.downlinkConfig?.getDownlinkConfig(changeInfo);
+							const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 							if(downlinkConfig !== undefined){
-								const downlink = this.messagehandler?.getDownlink(downlinkConfig,state);
+								const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state);
 								if(downlink !== undefined){
 									this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
 								}
