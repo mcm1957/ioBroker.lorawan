@@ -1,167 +1,173 @@
 {
-  "common": {
-    "name": "lorawan",
-    "version": "0.0.5",
-    "news": {
-      "0.0.5": {
-        "en": "delete not configed states at startup",
-        "de": "nicht konfiszierte staaten beim start löschen",
-        "ru": "удалить не настроенные состояния при запуске",
-        "pt": "excluir estados não configurados na inicialização",
-        "nl": "verwijderde niet-geconfigeerde toestanden bij opstarten",
-        "fr": "supprimer les états non configurés au démarrage",
-        "it": "delete not configed stati all'avvio",
-        "es": "eliminar estados no confiados al inicio",
-        "pl": "usuń nieskonfigurowane stany przy starcie",
-        "uk": "видалити не налаштовані стани при запуску",
-        "zh-cn": "删除启动时未配置状态"
-      },
-      "0.0.4": {
-        "en": "implements buttons and standard downlink control ind json (push / replace)",
-        "de": "implementiert tasten und standard-downlink-steuerung ind json (push / ersetzen)",
-        "ru": "реализует кнопки и стандартный нисходящий контрольный джсон (push / заменить)",
-        "pt": "implementa botões e padrão downlink control ind json (push / substituir)",
-        "nl": "implementeert knoppen en standaard downlink control ind json (push / replace)",
-        "fr": "implémente boutons et standard de contrôle de liaison descendante json (pousser / remplacer)",
-        "it": "implementa pulsanti e controllo standard downlink ind json (push / sostituire)",
-        "es": "implementa botones y control de enlace estándar json (push / reemplazar)",
-        "pl": "implementuje przyciski i standardową kontrolę łącza w dół ind json (push / replacement)",
-        "uk": "реалізує кнопки та стандартний контроль за допомогою перемикача json (push / заміна)",
-        "zh-cn": "执行按钮和标准下行链路控制 ind json(推/替换)"
-      },
-      "0.0.3": {
-        "en": "first config for downlinks inputed",
-        "de": "erste config für downlinks eingegeben",
-        "ru": "первая настройка для входных ссылок",
-        "pt": "primeiro config para downlinks inseridos",
-        "nl": "eerste configuratie voor downlinks ingevoerd",
-        "fr": "première configuration pour les liaisons descendantes entrée",
-        "it": "prima configurazione per downlink in ingresso",
-        "es": "primer config para downlinks",
-        "pl": "pierwszy config dla downlinks nieznany",
-        "uk": "перший конфігурація для вхідних посилань",
-        "zh-cn": "输入下行链路的第一个配置"
-      },
-      "0.0.2": {
-        "en": "initial release",
-        "de": "erstausstrahlung",
-        "ru": "первоначальный выпуск",
-        "pt": "lançamento inicial",
-        "nl": "eerste release",
-        "fr": "libération initiale",
-        "it": "rilascio iniziale",
-        "es": "liberación inicial",
-        "pl": "początkowe zwolnienie",
-        "uk": "початковий реліз",
-        "zh-cn": "初步释放"
-      },
-      "0.0.1": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Начальная версия",
-        "pt": "lançamento inicial",
-        "nl": "Eerste uitgave",
-        "fr": "Première version",
-        "it": "Versione iniziale",
-        "es": "Versión inicial",
-        "pl": "Pierwsze wydanie",
-        "uk": "Початкова версія",
-        "zh-cn": "首次出版"
-      }
+    "common": {
+        "name": "lorawan",
+        "version": "0.0.5",
+        "news": {
+            "0.0.5": {
+                "en": "delete not configed states at startup",
+                "de": "nicht konfiszierte staaten beim start löschen",
+                "ru": "удалить не настроенные состояния при запуске",
+                "pt": "excluir estados não configurados na inicialização",
+                "nl": "verwijderde niet-geconfigeerde toestanden bij opstarten",
+                "fr": "supprimer les états non configurés au démarrage",
+                "it": "delete not configed stati all'avvio",
+                "es": "eliminar estados no confiados al inicio",
+                "pl": "usuń nieskonfigurowane stany przy starcie",
+                "uk": "видалити не налаштовані стани при запуску",
+                "zh-cn": "删除启动时未配置状态"
+            },
+            "0.0.4": {
+                "en": "implements buttons and standard downlink control ind json (push / replace)",
+                "de": "implementiert tasten und standard-downlink-steuerung ind json (push / ersetzen)",
+                "ru": "реализует кнопки и стандартный нисходящий контрольный джсон (push / заменить)",
+                "pt": "implementa botões e padrão downlink control ind json (push / substituir)",
+                "nl": "implementeert knoppen en standaard downlink control ind json (push / replace)",
+                "fr": "implémente boutons et standard de contrôle de liaison descendante json (pousser / remplacer)",
+                "it": "implementa pulsanti e controllo standard downlink ind json (push / sostituire)",
+                "es": "implementa botones y control de enlace estándar json (push / reemplazar)",
+                "pl": "implementuje przyciski i standardową kontrolę łącza w dół ind json (push / replacement)",
+                "uk": "реалізує кнопки та стандартний контроль за допомогою перемикача json (push / заміна)",
+                "zh-cn": "执行按钮和标准下行链路控制 ind json(推/替换)"
+            },
+            "0.0.3": {
+                "en": "first config for downlinks inputed",
+                "de": "erste config für downlinks eingegeben",
+                "ru": "первая настройка для входных ссылок",
+                "pt": "primeiro config para downlinks inseridos",
+                "nl": "eerste configuratie voor downlinks ingevoerd",
+                "fr": "première configuration pour les liaisons descendantes entrée",
+                "it": "prima configurazione per downlink in ingresso",
+                "es": "primer config para downlinks",
+                "pl": "pierwszy config dla downlinks nieznany",
+                "uk": "перший конфігурація для вхідних посилань",
+                "zh-cn": "输入下行链路的第一个配置"
+            },
+            "0.0.2": {
+                "en": "initial release",
+                "de": "erstausstrahlung",
+                "ru": "первоначальный выпуск",
+                "pt": "lançamento inicial",
+                "nl": "eerste release",
+                "fr": "libération initiale",
+                "it": "rilascio iniziale",
+                "es": "liberación inicial",
+                "pl": "początkowe zwolnienie",
+                "uk": "початковий реліз",
+                "zh-cn": "初步释放"
+            },
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "LoRaWAN",
+        "titleLang": {
+            "en": "LoRaWAN",
+            "de": "LoRaWAN",
+            "ru": "ЛоРаВАН",
+            "pt": "LoRaWAN",
+            "nl": "LoRaWAN",
+            "fr": "LoRaWAN",
+            "it": "LoRaWAN",
+            "es": "LoRaWAN",
+            "pl": "LoRaWAN",
+            "uk": "LoRaWAN",
+            "zh-cn": "洛拉万"
+        },
+        "desc": {
+            "en": "converts the desired lora gateway data to a ioBroker structure",
+            "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
+            "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
+            "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
+            "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
+            "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
+            "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
+            "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
+            "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
+            "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
+            "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
+        },
+        "authors": [
+            "BenAhrdt <bsahrdt@gmail.com>"
+        ],
+        "keywords": [
+            "LoRaWAN"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "lorawan.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
+        "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "protocols",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "push",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
     },
-    "title": "LoRaWAN",
-    "titleLang": {
-      "en": "LoRaWAN",
-      "de": "LoRaWAN",
-      "ru": "ЛоРаВАН",
-      "pt": "LoRaWAN",
-      "nl": "LoRaWAN",
-      "fr": "LoRaWAN",
-      "it": "LoRaWAN",
-      "es": "LoRaWAN",
-      "pl": "LoRaWAN",
-      "uk": "LoRaWAN",
-      "zh-cn": "洛拉万"
-    },
-    "desc": {
-      "en": "converts the desired lora gateway data to a ioBroker structure",
-      "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
-      "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
-      "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
-      "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
-      "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
-      "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
-      "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
-      "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
-      "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
-      "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
-    },
-    "authors": [
-      "BenAhrdt <bsahrdt@gmail.com>"
+    "encryptedNative": [
+        "password"
     ],
-    "keywords": [
-      "LoRaWAN"
+    "protectedNative": [
+        "password"
     ],
-    "license": "MIT",
-    "platform": "Javascript/Node.js",
-    "main": "main.js",
-    "icon": "lorawan.png",
-    "enabled": true,
-    "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
-    "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
-    "loglevel": "info",
-    "tier": 3,
-    "mode": "daemon",
-    "type": "protocols",
-    "compact": true,
-    "connectionType": "cloud",
-    "dataSource": "push",
-    "adminUI": {
-      "config": "json"
+    "native": {
+        "ipUrl": "",
+        "port": 8883,
+        "username": "",
+        "password": "",
+        "ssl": true,
+        "ttn": true,
+        "chirpstack": false,
+        "downlinkConfigAccordion": {}
     },
-    "dependencies": [
-      {
-        "js-controller": ">=3.3.22"
-      }
-    ],
-    "globalDependencies": [
-      {
-        "admin": ">=5.1.13"
-      }
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
     ]
-  },
-  "native": {
-    "ipUrl": "",
-    "port": 8883,
-    "username": "",
-    "password": "",
-    "ssl": true,
-    "ttn": true,
-    "chirpstack": false,
-    "downlinkConfigAccordion": {}
-  },
-  "objects": [],
-  "instanceObjects": [
-    {
-      "_id": "info",
-      "type": "channel",
-      "common": {
-        "name": "Information"
-      },
-      "native": {}
-    },
-    {
-      "_id": "info.connection",
-      "type": "state",
-      "common": {
-        "role": "indicator.connected",
-        "name": "Device or service connected",
-        "type": "boolean",
-        "read": true,
-        "write": false,
-        "def": false
-      },
-      "native": {}
-    }
-  ]
 }

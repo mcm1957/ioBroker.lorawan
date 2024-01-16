@@ -79,13 +79,13 @@
 				"ttn":{
 					"newLine":true,
 					"type": "checkbox",
-					"label": "Ttn",
+					"label": "ttn",
 					"tooltip": "ttnTooltip",
 					"default": true
 				},
 				"chirpstack":{
 					"type": "checkbox",
-					"label": "Chirpstack",
+					"label": "chirpstack",
 					"tooltip": "chirpstackTooltip",
 					"default": false
 				}
@@ -112,8 +112,8 @@
 						{
 							"type": "number",
 							"attr": "port",
-							"label": "port",
-							"tooltip": "portTooltip",
+							"label": "portDownlink",
+							"tooltip": "portDownlinkTooltip",
 							"default": 2,
 							"sm":2
 						},
