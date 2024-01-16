@@ -48,5 +48,6 @@
     "unit": "eenheid",
     "unitTooltip": "voer de eenheid voor uw waarde in",
     "deviceType": "soort apparaat",
-    "deviceTypeTooltip": "voer de naam van het apparaattype in, deze configuratie is geldig. (bijv. Dragino XY komt ook overeen met Dragino)"
+    "deviceTypeTooltip": "voer de naam van het apparaattype in, deze configuratie is geldig. (bijv. Dragino XY komt ook overeen met Dragino)",
+    "nameTooltip": "voer de naam van de staat in voor deze downlink"
 }

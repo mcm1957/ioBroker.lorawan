@@ -48,5 +48,6 @@
     "unit": "单元",
     "unitTooltip": "插入您的值的单位",
     "deviceType": "设备类型",
-    "deviceTypeTooltip": "插入设备类型的名称，此配置有效。 （例如，Dragino XY 也匹配 Dragino）"
+    "deviceTypeTooltip": "插入设备类型的名称，此配置有效。 （例如，Dragino XY 也匹配 Dragino）",
+    "nameTooltip": "为此下行链接插入州名称"
 }

@@ -48,5 +48,6 @@
     "unit": "unité",
     "unitTooltip": "insérez l'unité pour votre valeur",
     "deviceType": "type d'appareil",
-    "deviceTypeTooltip": "insérez le nom du type d'appareil, cette configuration est valide. (par exemple, Dragino XY correspond également à Dragino)"
+    "deviceTypeTooltip": "insérez le nom du type d'appareil, cette configuration est valide. (par exemple, Dragino XY correspond également à Dragino)",
+    "nameTooltip": "insérez le nom de l'état, pour ce lien descendant"
 }

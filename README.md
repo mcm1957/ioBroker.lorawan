@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner J-Paul0815@hafenmeister
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) more functions
+
 ### 0.0.6 (2024-01-16)
 * (BenAhrdt) insert whole translation for config and move some functions
 

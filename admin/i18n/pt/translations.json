@@ -48,5 +48,6 @@
     "unit": "unidade",
     "unitTooltip": "insira a unidade para seu valor",
     "deviceType": "tipo de dispositivo",
-    "deviceTypeTooltip": "insira o nome do tipo de dispositivo, esta configuração é válida. (por exemplo, Dragino XY também corresponde a Dragino)"
+    "deviceTypeTooltip": "insira o nome do tipo de dispositivo, esta configuração é válida. (por exemplo, Dragino XY também corresponde a Dragino)",
+    "nameTooltip": "insira o nome do estado, para este downlink"
 }

@@ -48,5 +48,6 @@
     "unit": "jednostka",
     "unitTooltip": "wstaw jednostkę swojej wartości",
     "deviceType": "rodzaj urządzenia",
-    "deviceTypeTooltip": "wstaw nazwę typu urządzenia, ta konfiguracja jest prawidłowa. (np. Dragino XY pasuje również do Dragino)"
+    "deviceTypeTooltip": "wstaw nazwę typu urządzenia, ta konfiguracja jest prawidłowa. (np. Dragino XY pasuje również do Dragino)",
+    "nameTooltip": "wstaw nazwę stanu dla tego łącza pobierania"
 }
