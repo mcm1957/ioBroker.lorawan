@@ -178,7 +178,7 @@
 								{"label":"6","value":6},
 								{"label":"8","value":8}
 							],
-							"default": 2,
+							"default": 8,
 							"hidden": "data.type === 'boolean' || data.type === 'button'",
 							"sm":2
 						},
