@@ -20,7 +20,7 @@ Adapter was created in collaboration with Joerg Froehner J-Paul0815@hafenmeister
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* (BenAhrdt) more functions
+* (BenAhrdt) hex to Upper case, more units for decoded payload values
 
 ### 0.0.6 (2024-01-16)
 * (BenAhrdt) insert whole translation for config and move some functions
