@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner J-Paul0815@hafenmeister
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.7 (2024-01-17)
 * (BenAhrdt) hex to Upper case, more units for decoded payload values
 
 ### 0.0.6 (2024-01-16)
