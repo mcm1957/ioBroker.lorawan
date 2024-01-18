@@ -3,7 +3,7 @@
     "mainSettings": "Configurações principais",
     "ServersettingsHeader": "Configurações do servidor",
     "Serverinformation": "Defina as principais configurações de comunicação para o seu servidor",
-    "ipUrl": "url ou ip do servidor ao qual você deseja se conectar",
+    "ipUrl": "url ou ip do servidor",
     "ipUrlTooltip": "insira o endereço IP ou o URL ao qual deseja se conectar",
     "port": "porta",
     "portTooltip": "insira a porta para a conexão",
@@ -23,6 +23,7 @@
     "chirpstackTooltip": "habilitar o uso do chirpstackTooltip",
     "downlinkConfig": "Configuração Donwlink",
     "name": "nome",
+    "nameTooltip": "insira o nome do estado, para este downlink",
     "portDownlink": "porta",
     "portDownlinkTooltip": "insira a porta que deseja enviar no downlink",
     "priority": "prioridade",
@@ -49,5 +50,6 @@
     "unitTooltip": "insira a unidade para seu valor",
     "deviceType": "tipo de dispositivo",
     "deviceTypeTooltip": "insira o nome do tipo de dispositivo, esta configuração é válida. (por exemplo, Dragino XY também corresponde a Dragino)",
-    "nameTooltip": "insira o nome do estado, para este downlink"
+    "origin": "origem",
+    "originTooltip": "selecione a origem dos seus dados"
 }

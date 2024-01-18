@@ -74,7 +74,7 @@ class Lorawan extends utils.Adapter {
 			this.mqttClient =  new mqttClientClass(this,this.config);
 
 			// Merge the configed and standard profile of downlinks
-			this.downlinkConfighandler.addAndMergeDownlinks();
+			this.downlinkConfighandler.addAndMergeDownlinkConfigs();
 
 			// generate new configed downlinkstates on allready existing devices at adapter startup
 			await this.messagehandler.generateDownlinkstatesAtStatup();
@@ -82,6 +82,81 @@ class Lorawan extends utils.Adapter {
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*.configuration.*");
 			this.subscribeStatesAsync("*downlink.control.*");
+
+			this.fakeMessage = {
+				"deduplicationId":"655e5d71-a625-4332-833c-2700fcacefc2",
+				"time":"2024-01-17T21:08:41.551292+00:00",
+				"deviceInfo":{
+					"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
+					"tenantName":"ChirpStack",
+					"applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915",
+					"applicationName":"Mclimate_Vicki",
+					"deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8",
+					"deviceProfileName":"Mclimate_Vicki",
+					"deviceName":"MClimate_Vicki_Heizkoerperventil_001",
+					"devEui":"70b3d52dd300ed31",
+					"deviceClassEnabled":"CLASS_A",
+					"tags":{
+					}
+				},
+				"devAddr":"01343968",
+				"adr":true,
+				"dr":5,
+				"fCnt":8702,
+				"fPort":2,
+				"confirmed":false,
+				"data":"GAGBDItw9vYR0DA=",
+				"object":{
+					"attachedBackplate":true,
+					"batteryVoltage":3.3,
+					"relativeHumidity":43.75,
+					"childLock":false,
+					"brokenSensor":false,
+					"calibrationFailed":false,
+					"sensorTemperature":19.53,
+					"motorPosition":502.0,
+					"highMotorConsumption":false,
+					"reason":81.0,
+					"perceiveAsOnline":true,
+					"targetTemperature":12.0,
+					"lowMotorConsumption":false,
+					"operationalMode":1.0,
+					"openWindow":false,
+					"motorRange":502.0
+				},
+				"rxInfo":[
+					{
+						"gatewayId":"50313953530a4750",
+						"uplinkId":56321,
+						"gwTime":"2024-01-17T21:08:41.551292+00:00",
+						"nsTime":"2024-01-17T21:08:41.570017809+00:00",
+						"rssi":-74,
+						"snr":11.0,
+						"channel":4,
+						"location":{
+							"latitude":53.55485739669679,
+							"longitude":9.921609163284304
+						},
+						"context":"albPhA==",
+						"metadata":{
+							"region_config_id":"eu868",
+							"region_common_name":"EU868"
+						},
+						"crcStatus":"CRC_OK"
+					}
+				],
+				"txInfo":{
+					"frequency":867300000,
+					"modulation":{
+						"lora":{
+							"bandwidth":125000,
+							"spreadingFactor":7,
+							"codeRate":"CR_4_5"
+						}
+					}
+				}
+			};
+			//await this.messagehandler.handleMessage("a/up", this.fakeMessage);
 		}
 		catch(error){
 			this.log.error(`error at ${activeFunction}: ` + error.stack);
@@ -135,31 +210,47 @@ class Lorawan extends utils.Adapter {
 						// get information of the changing state
 						// @ts-ignore
 						const changeInfo = await this.getChangeInfo(id);
-						let appending = "push";
-						// @ts-ignore
-						if(changeInfo.changedState === "push"){
-							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-							//this.sendDownlink(downlinkTopic,JSON.stringify(state.val));
-							this.sendDownlink(downlinkTopic,state.val);
-							this.setStateAsync(id,state.val,true);
-						}
-						// @ts-ignore
-						else if(changeInfo.changedState === "replace"){
-							appending = "replace";
-							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-							this.sendDownlink(downlinkTopic,state.val);
-							this.setStateAsync(id,state.val,true);
-						}
-						else{
-							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-							// @ts-ignore
-							const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
-							if(downlinkConfig !== undefined){
-								const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state);
-								if(downlink !== undefined){
-									this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
-								}
+						if(this.config.origin === "ttn"){
+							let appending = "push";
+							if(changeInfo?.changedState === "push"){
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								this.sendDownlink(downlinkTopic,state.val);
 								this.setStateAsync(id,state.val,true);
+							}
+							else if(changeInfo?.changedState === "replace"){
+								appending = "replace";
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								this.sendDownlink(downlinkTopic,state.val);
+								this.setStateAsync(id,state.val,true);
+							}
+							else{
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
+								if(downlinkConfig !== undefined){
+									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
+									if(downlink !== undefined){
+										this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
+									}
+									this.setStateAsync(id,state.val,true);
+								}
+							}
+						}
+						else if(this.config.origin === "chirpstack"){
+							if(changeInfo?.changedState === "push"){
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
+								this.sendDownlink(downlinkTopic,state.val);
+								this.setStateAsync(id,state.val,true);
+							}
+							else{
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
+								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
+								if(downlinkConfig !== undefined){
+									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
+									if(downlink !== undefined){
+										this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
+									}
+									this.setStateAsync(id,state.val,true);
+								}
 							}
 						}
 					}
@@ -184,22 +275,6 @@ class Lorawan extends utils.Adapter {
 
 	async getChangeInfo(id){
 		const activeFunction = "getChangeInfo";
-		try{
-			// Select datahandling in case of origin
-			if(this.config.ttn){
-				return await this.getTtnChangeInfo(id);
-			}
-			else if(this.config.chirpstack){
-				//	 this.handleChirpstack(topic,message);
-			}
-		}
-		catch(error){
-			this.log.error(`error at ${activeFunction}: ` + error);
-		}
-	}
-
-	async getTtnChangeInfo(id){
-		const activeFunction = "getTtnChangeInfo";
 		try{
 			id = this.removeNamespace(id);
 			const idElements = id.split(".");

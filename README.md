@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) first implementation of chirpstack
+
 ### 0.0.7 (2024-01-17)
 * (BenAhrdt) hex to Upper case, more units for decoded payload values
 

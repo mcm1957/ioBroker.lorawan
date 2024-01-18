@@ -3,7 +3,7 @@
     "mainSettings": "主要设置",
     "ServersettingsHeader": "服务器设置",
     "Serverinformation": "设置服务器的主要通信设置",
-    "ipUrl": "您要连接的服务器的 url 或 ip",
+    "ipUrl": "服务器的 url 或 ip",
     "ipUrlTooltip": "输入ip地址，或者你想要连接的url",
     "port": "港口",
     "portTooltip": "输入连接的端口",
@@ -23,6 +23,7 @@
     "chirpstackTooltip": "启用使用 chirpstackTooltip",
     "downlinkConfig": "下行链路配置",
     "name": "姓名",
+    "nameTooltip": "为此下行链接插入州名称",
     "portDownlink": "港口",
     "portDownlinkTooltip": "输入你要下行发送的端口",
     "priority": "优先事项",
@@ -49,5 +50,6 @@
     "unitTooltip": "插入您的值的单位",
     "deviceType": "设备类型",
     "deviceTypeTooltip": "插入设备类型的名称，此配置有效。 （例如，Dragino XY 也匹配 Dragino）",
-    "nameTooltip": "为此下行链接插入州名称"
+    "origin": "起源",
+    "originTooltip": "选择您的数据来源"
 }

@@ -76,18 +76,17 @@
 					"type": "staticText",
 					"label": "OriginInformation"
 				},
-				"ttn":{
-					"newLine":true,
-					"type": "checkbox",
-					"label": "ttn",
-					"tooltip": "ttnTooltip",
-					"default": true
-				},
-				"chirpstack":{
-					"type": "checkbox",
-					"label": "chirpstack",
-					"tooltip": "chirpstackTooltip",
-					"default": false
+				"origin":{
+					"newLine": true,
+					"type": "select",
+					"label": "origin",
+					"tooltip": "originTooltip",
+					"options": [
+						{"label":"TTN","value":"ttn"},
+						{"label":"Chirpstack","value":"chirpstack"}
+					],
+					"default": "ttn",
+					"sm":1
 				}
 			}
 		},

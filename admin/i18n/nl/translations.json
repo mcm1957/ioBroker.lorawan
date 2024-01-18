@@ -3,7 +3,7 @@
     "mainSettings": "Belangrijkste instellingen",
     "ServersettingsHeader": "Serverinstellingen",
     "Serverinformation": "Stel de belangrijkste communicatie-instellingen in op uw server",
-    "ipUrl": "url of ip van de server waarmee u verbinding wilt maken",
+    "ipUrl": "url of ip van de server",
     "ipUrlTooltip": "voer het ip-adres in, of de url waarmee u verbinding wilt maken",
     "port": "haven",
     "portTooltip": "voer de poort voor de verbinding in",
@@ -23,6 +23,7 @@
     "chirpstackTooltip": "schakel het gebruik van chirpstackTooltip in",
     "downlinkConfig": "Donwlink-configuratie",
     "name": "naam",
+    "nameTooltip": "voer de naam van de staat in voor deze downlink",
     "portDownlink": "haven",
     "portDownlinkTooltip": "voer de poort in die u in de downlink wilt verzenden",
     "priority": "prioriteit",
@@ -49,5 +50,6 @@
     "unitTooltip": "voer de eenheid voor uw waarde in",
     "deviceType": "soort apparaat",
     "deviceTypeTooltip": "voer de naam van het apparaattype in, deze configuratie is geldig. (bijv. Dragino XY komt ook overeen met Dragino)",
-    "nameTooltip": "voer de naam van de staat in voor deze downlink"
+    "origin": "oorsprong",
+    "originTooltip": "selecteer de herkomst van uw gegevens"
 }

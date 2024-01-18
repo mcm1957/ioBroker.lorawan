@@ -3,7 +3,7 @@
     "mainSettings": "Ustawienia główne",
     "ServersettingsHeader": "Ustawienia serwera",
     "Serverinformation": "Skonfiguruj główne ustawienia komunikacji z serwerem",
-    "ipUrl": "adres URL lub IP serwera, z którym chcesz się połączyć",
+    "ipUrl": "url lub ip serwera",
     "ipUrlTooltip": "wprowadź adres IP lub adres URL, z którym chcesz się połączyć",
     "port": "Port",
     "portTooltip": "wprowadź port połączenia",
@@ -23,6 +23,7 @@
     "chirpstackTooltip": "włącz użycie chirpstackTooltip",
     "downlinkConfig": "Konfiguracja Donwlink",
     "name": "nazwa",
+    "nameTooltip": "wstaw nazwę stanu dla tego łącza pobierania",
     "portDownlink": "Port",
     "portDownlinkTooltip": "wprowadź port, który chcesz wysłać łączem w dół",
     "priority": "priorytet",
@@ -49,5 +50,6 @@
     "unitTooltip": "wstaw jednostkę swojej wartości",
     "deviceType": "rodzaj urządzenia",
     "deviceTypeTooltip": "wstaw nazwę typu urządzenia, ta konfiguracja jest prawidłowa. (np. Dragino XY pasuje również do Dragino)",
-    "nameTooltip": "wstaw nazwę stanu dla tego łącza pobierania"
+    "origin": "pochodzenie",
+    "originTooltip": "wybierz pochodzenie swoich danych"
 }
