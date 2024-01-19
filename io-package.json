@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "news": {
+      "0.0.9": {
+        "en": "first version for beta",
+        "de": "erste version für beta",
+        "ru": "первая версия для бета",
+        "pt": "primeira versão para beta",
+        "nl": "eerste versie voor beta",
+        "fr": "première version pour bêta",
+        "it": "prima versione per beta",
+        "es": "primera versión para beta",
+        "pl": "pierwsza wersja dla beta",
+        "uk": "перша версія для бета",
+        "zh-cn": "β的第一个版本"
+      },
       "0.0.8": {
         "en": "first implementation of chirpstack",
         "de": "erste implementierung von chirpstack",
@@ -80,19 +93,6 @@
         "pl": "pierwszy config dla downlinks nieznany",
         "uk": "перший конфігурація для вхідних посилань",
         "zh-cn": "输入下行链路的第一个配置"
-      },
-      "0.0.2": {
-        "en": "initial release",
-        "de": "erstausstrahlung",
-        "ru": "первоначальный выпуск",
-        "pt": "lançamento inicial",
-        "nl": "eerste release",
-        "fr": "libération initiale",
-        "it": "rilascio iniziale",
-        "es": "liberación inicial",
-        "pl": "początkowe zwolnienie",
-        "uk": "початковий реліз",
-        "zh-cn": "初步释放"
       }
     },
     "title": "LoRaWAN",
