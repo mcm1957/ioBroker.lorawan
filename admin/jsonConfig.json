@@ -167,18 +167,14 @@
 							"sm":2
 						},
 						{
-							"type": "select",
+							"type": "number",
 							"attr": "length",
 							"label": "length",
 							"tooltip": "lengthTooltip",
-							"options": [
-								{"label":"2","value":2},
-								{"label":"4","value":4},
-								{"label":"6","value":6},
-								{"label":"8","value":8}
-							],
 							"default": 8,
-							"hidden": "data.type === 'boolean' || data.type === 'button'",
+							"min":2,
+							"max": 20,
+							"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
 							"sm":2
 						},
 						{
