@@ -33,37 +33,6 @@ class Lorawan extends utils.Adapter {
 	async onReady() {
 		const activeFunction = "onReady";
 		try{
-		/*
-			Definitionen der Umrechnungen:
-			dec to hex:
-			const decdata = 33;
-			const decdatastring = decdata.toString(16);
-
-			base64 to hex:
-			return(Buffer.from(base_64, 'base64').toString("hex"));
-
-			ascii to hex:
-			return (Buffer.from(ascii).toString('hex'));
-
-			ascii to base64:
-			return (Buffer.from(ascii).toString('base64'));
-
-			base64 to string:
-			return(Buffer.from(base_64, 'base64').toString());
-
-			hex 2 base64:
-			return Buffer.from(hex, 'hex').toString('base64')
-
-			hex 2 number:
-			parseInt(hexdata,16);
-
-			return Math.abs(dec).toString(16);
-			// force 4 Digits
-			//return ('0000' + dec.toString(16).toUpperCase()).slice(-4);
-			// force 2 Digits
-			// return ('00' + dec.toString(16).toUpperCase()).slice(-2);
-
-	*/
 			// create downlinkConfigs
 			this.downlinkConfighandler = new downlinkConfighandlerClass(this);
 
@@ -82,81 +51,7 @@ class Lorawan extends utils.Adapter {
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*.configuration.*");
 			this.subscribeStatesAsync("*downlink.control.*");
-
-			this.fakeMessage = {
-				"deduplicationId":"655e5d71-a625-4332-833c-2700fcacefc2",
-				"time":"2024-01-17T21:08:41.551292+00:00",
-				"deviceInfo":{
-					"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242",
-					"tenantName":"ChirpStack",
-					"applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915",
-					"applicationName":"Mclimate_Vicki",
-					"deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8",
-					"deviceProfileName":"Mclimate_Vicki",
-					"deviceName":"MClimate_Vicki_Heizkoerperventil_001",
-					"devEui":"70b3d52dd300ed31",
-					"deviceClassEnabled":"CLASS_A",
-					"tags":{
-					}
-				},
-				"devAddr":"01343968",
-				"adr":true,
-				"dr":5,
-				"fCnt":8702,
-				"fPort":2,
-				"confirmed":false,
-				"data":"GAGBDItw9vYR0DA=",
-				"object":{
-					"attachedBackplate":true,
-					"batteryVoltage":3.3,
-					"relativeHumidity":43.75,
-					"childLock":false,
-					"brokenSensor":false,
-					"calibrationFailed":false,
-					"sensorTemperature":19.53,
-					"motorPosition":502.0,
-					"highMotorConsumption":false,
-					"reason":81.0,
-					"perceiveAsOnline":true,
-					"targetTemperature":12.0,
-					"lowMotorConsumption":false,
-					"operationalMode":1.0,
-					"openWindow":false,
-					"motorRange":502.0
-				},
-				"rxInfo":[
-					{
-						"gatewayId":"50313953530a4750",
-						"uplinkId":56321,
-						"gwTime":"2024-01-17T21:08:41.551292+00:00",
-						"nsTime":"2024-01-17T21:08:41.570017809+00:00",
-						"rssi":-74,
-						"snr":11.0,
-						"channel":4,
-						"location":{
-							"latitude":53.55485739669679,
-							"longitude":9.921609163284304
-						},
-						"context":"albPhA==",
-						"metadata":{
-							"region_config_id":"eu868",
-							"region_common_name":"EU868"
-						},
-						"crcStatus":"CRC_OK"
-					}
-				],
-				"txInfo":{
-					"frequency":867300000,
-					"modulation":{
-						"lora":{
-							"bandwidth":125000,
-							"spreadingFactor":7,
-							"codeRate":"CR_4_5"
-						}
-					}
-				}
-			};
-			//await this.messagehandler.handleMessage("a/up", this.fakeMessage);
+			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
 		}
 		catch(error){
 			this.log.error(`error at ${activeFunction}: ` + error.stack);
@@ -207,8 +102,8 @@ class Lorawan extends utils.Adapter {
 				if(!state.ack){
 					// Check for downlink in id
 					if(id.indexOf("downlink") !== -1){
+						this.log.debug(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
-						// @ts-ignore
 						const changeInfo = await this.getChangeInfo(id);
 						if(this.config.origin === "ttn"){
 							let appending = "push";
@@ -276,6 +171,7 @@ class Lorawan extends utils.Adapter {
 	async getChangeInfo(id){
 		const activeFunction = "getChangeInfo";
 		try{
+			this.log.debug(`changeinfo of id ${id}, will be generated.`);
 			id = this.removeNamespace(id);
 			const idElements = id.split(".");
 			const changeInfo = {
@@ -292,6 +188,7 @@ class Lorawan extends utils.Adapter {
 				// @ts-ignore
 				changeInfo.deviceType = deviceTypeIdState.val;
 			}
+			this.log.debug(`changeinfo is ${JSON.stringify(changeInfo)}.`);
 			return changeInfo;
 		}
 		catch(error){
@@ -301,6 +198,7 @@ class Lorawan extends utils.Adapter {
 
 	removeNamespace(id){
 		if(id.indexOf(this.namespace) !== -1){
+			this.log.debug(`namespace will be removed from id ${id}.`);
 			id = id.substring(this.namespace.length + 1,id.length);
 		}
 		return id;
