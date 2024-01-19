@@ -40,7 +40,7 @@ class Lorawan extends utils.Adapter {
 			this.messagehandler = new messagehandlerClass(this);
 
 			// Set all mqtt clients
-			//this.mqttClient =  new mqttClientClass(this,this.config);
+			this.mqttClient =  new mqttClientClass(this,this.config);
 
 			// Merge the configed and standard profile of downlinks
 			this.downlinkConfighandler.addAndMergeDownlinkConfigs();
@@ -142,7 +142,6 @@ class Lorawan extends utils.Adapter {
 								if(downlinkConfig !== undefined){
 									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
 									if(downlink !== undefined){
-										this.log.warn(JSON.stringify(downlink));
 										this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
 									}
 									this.setStateAsync(id,state.val,true);
