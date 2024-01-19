@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "news": {
+      "0.0.10": {
+        "en": "changes in length calculation",
+        "de": "änderungen der längenberechnung",
+        "ru": "изменения в расчете длины",
+        "pt": "alterações no cálculo de comprimento",
+        "nl": "wijzigingen in de lengteberekening",
+        "fr": "changements dans le calcul de la longueur",
+        "it": "variazioni del calcolo della lunghezza",
+        "es": "cambios en el cálculo de longitud",
+        "pl": "zmiany w obliczeniach długości",
+        "uk": "зміни розрахунку довжини",
+        "zh-cn": "长度计算的变化"
+      },
       "0.0.9": {
         "en": "first version for beta",
         "de": "erste version für beta",
@@ -80,19 +93,6 @@
         "pl": "implementuje przyciski i standardową kontrolę łącza w dół ind json (push / replacement)",
         "uk": "реалізує кнопки та стандартний контроль за допомогою перемикача json (push / заміна)",
         "zh-cn": "执行按钮和标准下行链路控制 ind json(推/替换)"
-      },
-      "0.0.3": {
-        "en": "first config for downlinks inputed",
-        "de": "erste config für downlinks eingegeben",
-        "ru": "первая настройка для входных ссылок",
-        "pt": "primeiro config para downlinks inseridos",
-        "nl": "eerste configuratie voor downlinks ingevoerd",
-        "fr": "première configuration pour les liaisons descendantes entrée",
-        "it": "prima configurazione per downlink in ingresso",
-        "es": "primer config para downlinks",
-        "pl": "pierwszy config dla downlinks nieznany",
-        "uk": "перший конфігурація для вхідних посилань",
-        "zh-cn": "输入下行链路的第一个配置"
       }
     },
     "title": "LoRaWAN",

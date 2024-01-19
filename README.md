@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.10 (2024-01-19)
 * (BenAhrdt) changes in length calculation
 
 ### 0.0.9 (2024-01-19)
