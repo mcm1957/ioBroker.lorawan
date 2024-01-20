@@ -1,4 +1,5 @@
 "use strict";
+
 /*
  * Created with @iobroker/create-adapter v2.6.0
  */
@@ -54,7 +55,7 @@ class Lorawan extends utils.Adapter {
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
 		}
 		catch(error){
-			this.log.error(`error at ${activeFunction}: ` + error.stack);
+			this.log.error(`error at ${activeFunction}: ` + error);
 		}
 	}
 
@@ -97,34 +98,34 @@ class Lorawan extends utils.Adapter {
 		const activeFunction = "onStateChange";
 		try{
 			if (state) {
-				//this.log.debug(`state ${id} changed: val: ${state.val} - ack: ${state.ack}`);
+				//this.log.silly(`state ${id} changed: val: ${state.val} - ack: ${state.ack}`);
 				// The state was changed => only states with ack = false will be processed, others will be ignored
 				if(!state.ack){
 					// Check for downlink in id
 					if(id.indexOf("downlink") !== -1){
-						this.log.debug(`the state ${id} has changed to ${state.val}.`);
+						this.log.silly(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
 						const changeInfo = await this.getChangeInfo(id);
 						if(this.config.origin === "ttn"){
 							let appending = "push";
 							if(changeInfo?.changedState === "push"){
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-								this.sendDownlink(downlinkTopic,state.val);
+								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								await this.sendDownlink(downlinkTopic,state.val);
 								this.setStateAsync(id,state.val,true);
 							}
 							else if(changeInfo?.changedState === "replace"){
 								appending = "replace";
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-								this.sendDownlink(downlinkTopic,state.val);
+								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
 								this.setStateAsync(id,state.val,true);
 							}
 							else{
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
-									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
+									const downlink = await this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
 									if(downlink !== undefined){
-										this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
+										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
 									}
 									this.setStateAsync(id,state.val,true);
 								}
@@ -132,17 +133,17 @@ class Lorawan extends utils.Adapter {
 						}
 						else if(this.config.origin === "chirpstack"){
 							if(changeInfo?.changedState === "push"){
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
-								this.sendDownlink(downlinkTopic,state.val);
+								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
+								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
 								this.setStateAsync(id,state.val,true);
 							}
 							else{
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
-								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
+								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
+								const downlinkConfig = await this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
-									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
+									const downlink = await this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
 									if(downlink !== undefined){
-										this.sendDownlink(downlinkTopic,JSON.stringify(downlink));
+										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
 									}
 									this.setStateAsync(id,state.val,true);
 								}
@@ -164,22 +165,53 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
-	sendDownlink(topic,message){
+	async sendDownlink(topic,message,changeInfo){
 		this.mqttClient?.publish(topic,message);
+		const idFolderToSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkToSend}`;
+		const idFolderLastSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkLastSend}`;
+		const toSend = await this.getStateAsync(`${idFolderToSend}.hex`);
+		const lastSend = this.getHexpayloadFromDownlink(message);
+		await this.setStateAsync(`${idFolderLastSend}.hex`,lastSend,true);
+		if(toSend && lastSend === toSend?.val){
+			await this.setStateAsync(`${idFolderToSend}.hex`,0,true);
+		}
+	}
+
+	getHexpayloadFromDownlink(downlinkmessage){
+		let downlink = downlinkmessage;
+		if(typeof downlink === "string"){
+			downlink = JSON.parse(downlinkmessage);
+		}
+		else if(typeof downlink !== "object"){
+			return 0;
+		}
+		let payload = "";
+		switch(this.config.origin){
+			case "ttn":
+				payload = downlink.downlinks[0].frm_payload;
+				break;
+
+			case "chirpstack":
+				payload = downlink.data;
+				break;
+		}
+		return Buffer.from(payload, "base64").toString("hex").toUpperCase();
 	}
 
 	async getChangeInfo(id){
 		const activeFunction = "getChangeInfo";
 		try{
-			this.log.debug(`changeinfo of id ${id}, will be generated.`);
+			this.log.silly(`changeinfo of id ${id}, will be generated.`);
 			id = this.removeNamespace(id);
 			const idElements = id.split(".");
 			const changeInfo = {
+				id: id,
 				applicationId : idElements[0],
 				dev_uid : idElements[2],
 				device_id : idElements[3],
 				changedState : idElements[idElements.length - 1],
 				deviceType : "",
+				obectStartDirectory : `${idElements[0]}.devices.${idElements[2]}.${idElements[3]}`,
 				allElements : idElements
 			};
 			const myId = `${changeInfo.applicationId}.devices.${changeInfo.dev_uid}.${changeInfo.device_id}.configuration.devicetype`;
@@ -188,7 +220,7 @@ class Lorawan extends utils.Adapter {
 				// @ts-ignore
 				changeInfo.deviceType = deviceTypeIdState.val;
 			}
-			this.log.debug(`changeinfo is ${JSON.stringify(changeInfo)}.`);
+			this.log.silly(`changeinfo is ${JSON.stringify(changeInfo)}.`);
 			return changeInfo;
 		}
 		catch(error){
@@ -198,7 +230,7 @@ class Lorawan extends utils.Adapter {
 
 	removeNamespace(id){
 		if(id.indexOf(this.namespace) !== -1){
-			this.log.debug(`namespace will be removed from id ${id}.`);
+			this.log.silly(`namespace will be removed from id ${id}.`);
 			id = id.substring(this.namespace.length + 1,id.length);
 		}
 		return id;
