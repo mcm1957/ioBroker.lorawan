@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "news": {
+      "0.0.11": {
+        "en": "toSend und lastSend added to folders",
+        "de": "toSend und lastSend in Ordnern hinzugefügt",
+        "ru": "toSend und lastSend добавлен в папки",
+        "pt": "toSend und lastSend adicionado a pastas",
+        "nl": "toSend und lastSend toegevoegd aan mappen",
+        "fr": "toSend und lastSend ajouté aux dossiers",
+        "it": "toSend und lastSend aggiunto alle cartelle",
+        "es": "toSend und lastSend añadido a carpetas",
+        "pl": "toSend und lastSend dodany do folderów",
+        "uk": "toSend und lastSend додано до папок",
+        "zh-cn": "到文件夹中发送最后的发送"
+      },
       "0.0.10": {
         "en": "changes in length calculation",
         "de": "änderungen der längenberechnung",
@@ -80,19 +93,6 @@
         "pl": "usuń nieskonfigurowane stany przy starcie",
         "uk": "видалити не налаштовані стани при запуску",
         "zh-cn": "删除启动时未配置状态"
-      },
-      "0.0.4": {
-        "en": "implements buttons and standard downlink control ind json (push / replace)",
-        "de": "implementiert tasten und standard-downlink-steuerung ind json (push / ersetzen)",
-        "ru": "реализует кнопки и стандартный нисходящий контрольный джсон (push / заменить)",
-        "pt": "implementa botões e padrão downlink control ind json (push / substituir)",
-        "nl": "implementeert knoppen en standaard downlink control ind json (push / replace)",
-        "fr": "implémente boutons et standard de contrôle de liaison descendante json (pousser / remplacer)",
-        "it": "implementa pulsanti e controllo standard downlink ind json (push / sostituire)",
-        "es": "implementa botones y control de enlace estándar json (push / reemplazar)",
-        "pl": "implementuje przyciski i standardową kontrolę łącza w dół ind json (push / replacement)",
-        "uk": "реалізує кнопки та стандартний контроль за допомогою перемикача json (push / заміна)",
-        "zh-cn": "执行按钮和标准下行链路控制 ind json(推/替换)"
       }
     },
     "title": "LoRaWAN",

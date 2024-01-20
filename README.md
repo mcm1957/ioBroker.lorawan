@@ -19,8 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.11 (2024-01-20)
 * (BenAhrdt) toSend und lastSend added to folders
+
 ### 0.0.10 (2024-01-19)
 * (BenAhrdt) changes in length calculation
 
