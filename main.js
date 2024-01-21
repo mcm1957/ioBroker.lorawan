@@ -41,7 +41,7 @@ class Lorawan extends utils.Adapter {
 			this.messagehandler = new messagehandlerClass(this);
 
 			// Set all mqtt clients
-			this.mqttClient =  new mqttClientClass(this,this.config);
+		//	this.mqttClient =  new mqttClientClass(this,this.config);
 
 			// Merge the configed and standard profile of downlinks
 			this.downlinkConfighandler.addAndMergeDownlinkConfigs();
@@ -53,12 +53,23 @@ class Lorawan extends utils.Adapter {
 			this.subscribeStatesAsync("*.configuration.*");
 			this.subscribeStatesAsync("*downlink.control.*");
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
+
+			setTimeout(async () => {
+				await this.startSimulation();
+			}, 5000);
 		}
 		catch(error){
 			this.log.error(`error at ${activeFunction}: ` + error);
 		}
 	}
 
+	async startSimulation(){
+
+		const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up";
+		const message = {"deduplicationId":"96e4a065-ad5e-402d-a997-7b261072a33c","time":"2024-01-21T17:01:36.641008+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"0b46400f-37ec-4f17-8005-168b06159347","deviceProfileName":"Dragino Feuchtesenor","deviceName":"Skimmer","devEui":"a84041f621857cd2","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01fd9738","adr":true,"dr":5,"fCnt":2,"fPort":2,"confirmed":false,"data":"DPYBAAD//wAA","object":{"soilconductivity":0.0,"soiltemperature":-0.1,"volt":3.318,"soilmoisture":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":39169,"gwTime":"2024-01-21T17:01:36.641008+00:00","nsTime":"2024-01-21T17:01:37.695656999+00:00","rssi":-89,"snr":6.25,"rfChain":1,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"qESemw==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":868100000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
+
+		await this.messagehandler?.handleMessage(topic, message);
+	}
 	/**
 	 * Is called when adapter shuts down - callback has to be called under any circumstances!
 	 * @param {() => void} callback
@@ -176,7 +187,6 @@ class Lorawan extends utils.Adapter {
 
 	async writeNextSend(startDirectory,payloadInHex){
 		const idFolder = `${startDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkNextSend}`;
-		this.log.warn(payloadInHex);
 		await this.setStateAsync(`${idFolder}.hex`,payloadInHex,true);
 	}
 
