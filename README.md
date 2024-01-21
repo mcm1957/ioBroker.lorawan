@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) bugfix chirpstack directory
+
 ### 0.0.13 (2024-01-21)
 * (BenAhrdt) change device id selecting in chirpstack out of directory (for downlink queued)
 
