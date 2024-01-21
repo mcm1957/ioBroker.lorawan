@@ -109,21 +109,23 @@ class Lorawan extends utils.Adapter {
 						if(this.config.origin === "ttn"){
 							let appending = "push";
 							if(changeInfo?.changedState === "push"){
-								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 								await this.sendDownlink(downlinkTopic,state.val);
 								this.setStateAsync(id,state.val,true);
 							}
 							else if(changeInfo?.changedState === "replace"){
 								appending = "replace";
-								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
 								this.setStateAsync(id,state.val,true);
 							}
 							else{
-								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
 								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
-									const downlink = await this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
+									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
+									await this.writeNextSend(changeInfo?.obectStartDirectory,payloadInHex);
+									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 									if(downlink !== undefined){
 										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
 									}
@@ -133,15 +135,17 @@ class Lorawan extends utils.Adapter {
 						}
 						else if(this.config.origin === "chirpstack"){
 							if(changeInfo?.changedState === "push"){
-								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
 								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
 								this.setStateAsync(id,state.val,true);
 							}
 							else{
-								const downlinkTopic = await this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
-								const downlinkConfig = await this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
+								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
+								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
-									const downlink = await this.downlinkConfighandler?.getDownlink(downlinkConfig,state,changeInfo);
+									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
+									await this.writeNextSend(changeInfo?.obectStartDirectory,payloadInHex);
+									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 									if(downlink !== undefined){
 										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
 									}
@@ -165,15 +169,25 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
+	async checkSendDOwnlinkWithUplink(id){
+		const changeInfo = await this.getChangeInfo(id);
+		this.log.warn(JSON.stringify(changeInfo));
+	}
+
+	async writeNextSend(startDirectory,payloadInHex){
+		const idFolder = `${startDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkNextSend}`;
+		await this.setStateAsync(`${idFolder}.hex`,payloadInHex,true);
+	}
+
 	async sendDownlink(topic,message,changeInfo){
-		this.mqttClient?.publish(topic,message);
-		const idFolderToSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkToSend}`;
+		await this.mqttClient?.publish(topic,message);
+		const idFolderNextSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkNextSend}`;
 		const idFolderLastSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkLastSend}`;
-		const toSend = await this.getStateAsync(`${idFolderToSend}.hex`);
+		const nextSend = await this.getStateAsync(`${idFolderNextSend}.hex`);
 		const lastSend = this.getHexpayloadFromDownlink(message);
 		await this.setStateAsync(`${idFolderLastSend}.hex`,lastSend,true);
-		if(toSend && lastSend === toSend?.val){
-			await this.setStateAsync(`${idFolderToSend}.hex`,0,true);
+		if(nextSend && lastSend === nextSend?.val){
+			await this.setStateAsync(`${idFolderNextSend}.hex`,0,true);
 		}
 	}
 
