@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.12 (2024-01-21)
 * (BenAhrdt) change flow of downlink
 
 ### 0.0.11 (2024-01-20)

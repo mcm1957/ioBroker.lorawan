@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "news": {
+      "0.0.12": {
+        "en": "change flow of downlink",
+        "de": "wechselstrom von downlink",
+        "ru": "изменение потока обратных ссылок",
+        "pt": "fluxo de mudança de downlink",
+        "nl": "verandering stroom van downlink",
+        "fr": "changement de flux de liaison descendante",
+        "it": "cambiamento flusso di downlink",
+        "es": "flujo de cambio de enlace descendente",
+        "pl": "zmiana przepływu w dół",
+        "uk": "зміна потоку вниз",
+        "zh-cn": "下行链路的改变"
+      },
       "0.0.11": {
         "en": "toSend und lastSend added to folders",
         "de": "toSend und lastSend in Ordnern hinzugefügt",
@@ -80,19 +93,6 @@
         "pl": "wstaw całe tłumaczenie dla config i przesuń niektóre funkcje",
         "uk": "вставити весь переклад для налаштування та переміщення деяких функцій",
         "zh-cn": "插入配置的全部翻译并移动一些函数"
-      },
-      "0.0.5": {
-        "en": "delete not configed states at startup",
-        "de": "nicht konfiszierte staaten beim start löschen",
-        "ru": "удалить не настроенные состояния при запуске",
-        "pt": "excluir estados não configurados na inicialização",
-        "nl": "verwijderde niet-geconfigeerde toestanden bij opstarten",
-        "fr": "supprimer les états non configurés au démarrage",
-        "it": "delete not configed stati all'avvio",
-        "es": "eliminar estados no confiados al inicio",
-        "pl": "usuń nieskonfigurowane stany przy starcie",
-        "uk": "видалити не налаштовані стани при запуску",
-        "zh-cn": "删除启动时未配置状态"
       }
     },
     "title": "LoRaWAN",
