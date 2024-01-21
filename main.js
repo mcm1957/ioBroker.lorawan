@@ -41,7 +41,7 @@ class Lorawan extends utils.Adapter {
 			this.messagehandler = new messagehandlerClass(this);
 
 			// Set all mqtt clients
-		//	this.mqttClient =  new mqttClientClass(this,this.config);
+			//this.mqttClient =  new mqttClientClass(this,this.config);
 
 			// Merge the configed and standard profile of downlinks
 			this.downlinkConfighandler.addAndMergeDownlinkConfigs();
@@ -54,7 +54,7 @@ class Lorawan extends utils.Adapter {
 			this.subscribeStatesAsync("*downlink.control.*");
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
 
-			setTimeout(async () => {
+					setTimeout(async () => {
 				await this.startSimulation();
 			}, 5000);
 		}
