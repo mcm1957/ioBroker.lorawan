@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.12",
+    "version": "0.0.13",
     "news": {
+      "0.0.13": {
+        "en": "change device id selecting in chirpstack out of directory (for downlink queued)",
+        "de": "id auswahl in chirpstack aus verzeichnis (für downlink queued)",
+        "ru": "переменное устройство id выбора в кирпштак из каталога (для очерченной очертания обратной ссылки)",
+        "pt": "mudar o dispositivo id selecionando no chirpstack fora do diretório (para downlink queued)",
+        "nl": "apparaat-id wijzigen in chirpstack uit de map (voor downlink wachtrij)",
+        "fr": "modifier l'id de l'appareil en sélectionnant dans chirpstack hors du répertoire (pour la file d'attente en bas)",
+        "it": "cambiamento dispositivo id selezionando in chirpstack fuori directory (per downlink coda)",
+        "es": "cambiar dispositivo id seleccionando en chirpstack fuera del directorio (para downlink queued)",
+        "pl": "zmienić id urządzenia wybierając w chirpstock z katalogu (dla downlink kolejka)",
+        "uk": "змінити пристрій id виберіть в chirpstack з каталогу (для кривих посилань)",
+        "zh-cn": "更改设备 id 从目录中选择 chirpstack (用于下链条队列)"
+      },
       "0.0.12": {
         "en": "change flow of downlink",
         "de": "wechselstrom von downlink",
@@ -80,19 +93,6 @@
         "pl": "hex do górnej skrzyni, więcej jednostek dla dekodowanych wartości ładunku",
         "uk": "hex до верхнього корпусу, більше одиниць для декодованих значень навантаження",
         "zh-cn": "十六进制到大写, 更多解码有效载荷值的单位"
-      },
-      "0.0.6": {
-        "en": "insert whole translation for config and move some functions",
-        "de": "vollständige übersetzung einfügen und einige funktionen verschieben",
-        "ru": "включить полный перевод для настройки и переместить некоторые функции",
-        "pt": "inserir tradução inteira para config e mover algumas funções",
-        "nl": "gehele vertaling invoegen voor config en sommige functies verplaatsen",
-        "fr": "insérer la traduction complète pour la configuration et déplacer certaines fonctions",
-        "it": "inserire l'intera traduzione per configurare e spostare alcune funzioni",
-        "es": "insertar traducción completa para configuración y mover algunas funciones",
-        "pl": "wstaw całe tłumaczenie dla config i przesuń niektóre funkcje",
-        "uk": "вставити весь переклад для налаштування та переміщення деяких функцій",
-        "zh-cn": "插入配置的全部翻译并移动一些函数"
       }
     },
     "title": "LoRaWAN",
