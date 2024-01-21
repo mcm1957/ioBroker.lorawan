@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) change device id selecting in chirpstack out of directory (for downlink queued)
+
 ### 0.0.12 (2024-01-21)
 * (BenAhrdt) change flow of downlink
 

@@ -169,13 +169,14 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
-	async checkSendDOwnlinkWithUplink(id){
+	async checkSendDownlinkWithUplink(id){
 		const changeInfo = await this.getChangeInfo(id);
-		this.log.warn(JSON.stringify(changeInfo));
+		this.log.silly(JSON.stringify(changeInfo));
 	}
 
 	async writeNextSend(startDirectory,payloadInHex){
 		const idFolder = `${startDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkNextSend}`;
+		this.log.warn(payloadInHex);
 		await this.setStateAsync(`${idFolder}.hex`,payloadInHex,true);
 	}
 
@@ -212,23 +213,33 @@ class Lorawan extends utils.Adapter {
 		return Buffer.from(payload, "base64").toString("hex").toUpperCase();
 	}
 
-	async getChangeInfo(id){
-		const activeFunction = "getChangeInfo";
+	getBaseDeviceInfo(id){
+		const activeFunction = "getBaseDeviceInfo";
 		try{
-			this.log.silly(`changeinfo of id ${id}, will be generated.`);
 			id = this.removeNamespace(id);
 			const idElements = id.split(".");
-			const changeInfo = {
+			const deviceInfo = {
 				id: id,
 				applicationId : idElements[0],
 				dev_uid : idElements[2],
 				device_id : idElements[3],
 				changedState : idElements[idElements.length - 1],
-				deviceType : "",
 				obectStartDirectory : `${idElements[0]}.devices.${idElements[2]}.${idElements[3]}`,
 				allElements : idElements
 			};
-			const myId = `${changeInfo.applicationId}.devices.${changeInfo.dev_uid}.${changeInfo.device_id}.configuration.devicetype`;
+			return deviceInfo;
+		}
+		catch(error){
+			this.log.error(`error at ${activeFunction}: ` + error);
+		}
+	}
+
+	async getChangeInfo(id){
+		const activeFunction = "getChangeInfo";
+		try{
+			this.log.silly(`changeinfo of id ${id}, will be generated.`);
+			const changeInfo = this.getBaseDeviceInfo(id);
+			const myId = `${changeInfo?.applicationId}.devices.${changeInfo?.dev_uid}.${changeInfo?.device_id}.configuration.devicetype`;
 			const deviceTypeIdState = await this.getStateAsync(myId);
 			if(deviceTypeIdState){
 				// @ts-ignore
