@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "news": {
+      "0.0.15": {
+        "en": "bugfix chirpstack directory at downlink queued",
+        "de": "bugfix chirpstack verzeichnis bei downlink queued",
+        "ru": "bugfix chirpstack directory в очертаниях",
+        "pt": "bugfix chirpstack diretório no downlink queued",
+        "nl": "bugfix chirpstack directory bij downlink wachtrij",
+        "fr": "bugfix répertoire chirpstack au lien descendant en file d'attente",
+        "it": "bugfix chirpstack directory in downlink in coda",
+        "es": "bugfix chirpstack directorio en downlink queued",
+        "pl": "katalog chirpstock bugfix na downlink w kolejce",
+        "uk": "javascript licenses api веб-сайт go1.13.8",
+        "zh-cn": "下行链路队列时的 bugfix kirpstack 目录"
+      },
       "0.0.14": {
         "en": "bugfix chirpstack directory",
         "de": "bugfix chirpstack verzeichnis",
@@ -80,19 +93,6 @@
         "pl": "pierwsza wersja dla beta",
         "uk": "перша версія для бета",
         "zh-cn": "β的第一个版本"
-      },
-      "0.0.8": {
-        "en": "first implementation of chirpstack",
-        "de": "erste implementierung von chirpstack",
-        "ru": "первая реализация chirpstack",
-        "pt": "primeira implementação de chirpstack",
-        "nl": "eerste implementatie van tsjirpstack",
-        "fr": "première mise en œuvre de chirpstack",
-        "it": "prima implementazione di chirpstack",
-        "es": "primera implementación de chirpstack",
-        "pl": "pierwsza realizacja chirpstock",
-        "uk": "перша реалізація тирпастука",
-        "zh-cn": "首次实施黑社会"
       }
     },
     "title": "LoRaWAN",
