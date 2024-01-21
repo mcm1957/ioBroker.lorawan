@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "news": {
+      "0.0.14": {
+        "en": "bugfix chirpstack directory",
+        "de": "bugfix chirpstack verzeichnis",
+        "ru": "bugfix chirpstack directory",
+        "pt": "gerenciamento de contas",
+        "nl": "bugfix chirpstack-map",
+        "fr": "répertoire bugfix chirpstack",
+        "it": "bugfix chirpstack directory",
+        "es": "directorio bugfix chirpstack",
+        "pl": "katalog chirpstock bugfix",
+        "uk": "javascript licenses api веб-сайт",
+        "zh-cn": "bugfix 奇普斯塔克目录"
+      },
       "0.0.13": {
         "en": "change device id selecting in chirpstack out of directory (for downlink queued)",
         "de": "id auswahl in chirpstack aus verzeichnis (für downlink queued)",
@@ -80,19 +93,6 @@
         "pl": "pierwsza realizacja chirpstock",
         "uk": "перша реалізація тирпастука",
         "zh-cn": "首次实施黑社会"
-      },
-      "0.0.7": {
-        "en": "hex to Upper case, more units for decoded payload values",
-        "de": "hex to Upper case, mehr Einheiten für decodierte Nutzwerte",
-        "ru": "hex to Upper case, more units for decode payload values",
-        "pt": "hex para caixa superior, mais unidades para valores de carga descodificados",
-        "nl": "hex naar Upper case, meer eenheden voor gedecodeerde lading waarden",
-        "fr": "hex à Upper case, plus d'unités pour les valeurs de charge utile décodées",
-        "it": "hex to Upper case, più unità per i valori di payload decodificato",
-        "es": "hex to Upper case, más unidades para valores de carga descodificados",
-        "pl": "hex do górnej skrzyni, więcej jednostek dla dekodowanych wartości ładunku",
-        "uk": "hex до верхнього корпусу, більше одиниць для декодованих значень навантаження",
-        "zh-cn": "十六进制到大写, 更多解码有效载荷值的单位"
       }
     },
     "title": "LoRaWAN",

@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.14 (2024-01-21)
 * (BenAhrdt) bugfix chirpstack directory
 
 ### 0.0.13 (2024-01-21)
