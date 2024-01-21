@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) bugfix chirpstack directory at downlink queued
+
 ### 0.0.14 (2024-01-21)
 * (BenAhrdt) bugfix chirpstack directory
 
