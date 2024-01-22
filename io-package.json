@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.15",
+    "version": "0.0.16",
     "news": {
+      "0.0.16": {
+        "en": "romeve reacheble object directory / improoved object === NULL",
+        "de": "romeve toucheble Objektverzeichnis / improoviertes Objekt == NULL",
+        "ru": "romeve reacheble object Directory / improoved object === NULL",
+        "pt": "romeve reacheble object diretório / objeto improoved - Sim",
+        "nl": "roeve bereikbare object directory / improoved object === NULL",
+        "fr": "romeve attele object directory / objet improvisé === NULL",
+        "it": "romeve catcheble object directory / oggetto improvato Traduzione:",
+        "es": "romeve reacheble objeto directorio / objeto improvisado === NULL",
+        "pl": "romeve Reacheble katalog obiektów / obiekt nieprofaworyzowany = = = NULL",
+        "uk": "romeve досягає каталогу об'єктів / об'єкт об'єкта ==== NULL",
+        "zh-cn": "romeve 达到对象目录/ 无法对象 QQ NULL 语言"
+      },
       "0.0.15": {
         "en": "bugfix chirpstack directory at downlink queued",
         "de": "bugfix chirpstack verzeichnis bei downlink queued",
@@ -80,19 +93,6 @@
         "pl": "zmiany w obliczeniach długości",
         "uk": "зміни розрахунку довжини",
         "zh-cn": "长度计算的变化"
-      },
-      "0.0.9": {
-        "en": "first version for beta",
-        "de": "erste version für beta",
-        "ru": "первая версия для бета",
-        "pt": "primeira versão para beta",
-        "nl": "eerste versie voor beta",
-        "fr": "première version pour bêta",
-        "it": "prima versione per beta",
-        "es": "primera versión para beta",
-        "pl": "pierwsza wersja dla beta",
-        "uk": "перша версія для бета",
-        "zh-cn": "β的第一个版本"
       }
     },
     "title": "LoRaWAN",

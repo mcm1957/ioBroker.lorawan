@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.16 (2024-01-22)
 * (BenAhrdt) romeve reacheble object directory / improoved object === NULL
 
 ### 0.0.15 (2024-01-21)
