@@ -54,7 +54,7 @@ class Lorawan extends utils.Adapter {
 			this.subscribeStatesAsync("*downlink.control.*");
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
 
-		/*	setTimeout(async () => {
+			/*setTimeout(async () => {
 				await this.startSimulation();
 			}, 5000);*/
 		}
