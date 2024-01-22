@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) romeve reacheble object directory
+
 ### 0.0.15 (2024-01-21)
 * (BenAhrdt) bugfix chirpstack directory at downlink queued
 
