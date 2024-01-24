@@ -9,7 +9,7 @@
 const utils = require("@iobroker/adapter-core");
 const mqttClientClass = require("./lib/modules/mqttclient");
 const messagehandlerClass = require("./lib/modules/messagehandler");
-const downlinkConfighandlerClass = require("./lib/modules/downlinkConfighandler");;
+const downlinkConfighandlerClass = require("./lib/modules/downlinkConfighandler");
 
 class Lorawan extends utils.Adapter {
 
