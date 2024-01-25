@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "news": {
+      "0.0.18": {
+        "en": "remove wrong warn logging",
+        "de": "falsche warnen protokollierung entfernen",
+        "ru": "удалить неправильные предупреждения",
+        "pt": "remover registro de aviso errado",
+        "nl": "foutmelding verwijderen",
+        "fr": "supprimer les avertissements erronés",
+        "it": "rimuovere l'avvertenza sbagliata",
+        "es": "eliminar el registro incorrecto",
+        "pl": "usunąć nieprawidłowe logowanie ostrzeżeń",
+        "uk": "видалити неправильний попереджати залоги",
+        "zh-cn": "删除错误的警告记录"
+      },
       "0.0.17": {
         "en": "changed Handling of standard configurations",
         "de": "geänderte Handhabung von Standardkonfigurationen",
@@ -80,19 +93,6 @@
         "pl": "zmiana przepływu w dół",
         "uk": "зміна потоку вниз",
         "zh-cn": "下行链路的改变"
-      },
-      "0.0.11": {
-        "en": "toSend und lastSend added to folders",
-        "de": "toSend und lastSend in Ordnern hinzugefügt",
-        "ru": "toSend und lastSend добавлен в папки",
-        "pt": "toSend und lastSend adicionado a pastas",
-        "nl": "toSend und lastSend toegevoegd aan mappen",
-        "fr": "toSend und lastSend ajouté aux dossiers",
-        "it": "toSend und lastSend aggiunto alle cartelle",
-        "es": "toSend und lastSend añadido a carpetas",
-        "pl": "toSend und lastSend dodany do folderów",
-        "uk": "toSend und lastSend додано до папок",
-        "zh-cn": "到文件夹中发送最后的发送"
       }
     },
     "title": "LoRaWAN",
