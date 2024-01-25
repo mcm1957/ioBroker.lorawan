@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) remove wrong warn logging
+
 ### 0.0.17 (2024-01-25)
 * (BenAhrdt) changed Handling of standard configurations
 
