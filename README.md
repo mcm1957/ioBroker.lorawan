@@ -19,6 +19,10 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (BenAhrdt) changed Handling of standard configurations
+
 ### 0.0.16 (2024-01-22)
 * (BenAhrdt) romeve reacheble object directory / improoved object === NULL
 

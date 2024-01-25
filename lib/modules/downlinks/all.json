@@ -1,0 +1,12 @@
+[
+    {
+        "name": "push",
+        "type": "json",
+        "deviceType": "all"
+    },
+    {
+        "name": "replace",
+        "type": "json",
+        "deviceType": "all"
+    }
+]
