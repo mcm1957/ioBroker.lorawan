@@ -12,7 +12,7 @@
         "off": "030011",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     },
     {
@@ -28,7 +28,7 @@
         "off": "11",
         "multiplyfaktor": 60,
         "unit": "Minuten",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111",
         "isConfiguration": true
     },
@@ -45,7 +45,7 @@
         "off": "031100",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     },
     {
@@ -61,7 +61,7 @@
         "off": "2100",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     },
     {
@@ -77,7 +77,7 @@
         "off": "02001111",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     },
     {
@@ -93,7 +93,7 @@
         "off": "02110011",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     },
     {
@@ -109,7 +109,7 @@
         "off": "",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     },
     {
@@ -125,7 +125,7 @@
         "off": "",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "LT22222",
+        "deviceType": "Dragino LT22222",
         "onClick": "030111"
     }
 ]
