@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "news": {
+      "0.0.17": {
+        "en": "changed Handling of standard configurations",
+        "de": "geänderte Handhabung von Standardkonfigurationen",
+        "ru": "изменение обращения со стандартными конфигурациями",
+        "pt": "manipulação alterada de configurações padrão",
+        "nl": "veranderde verwerking van standaardconfiguraties",
+        "fr": "changement Gestion des configurations standard",
+        "it": "gestione delle configurazioni standard",
+        "es": "cambiado Manejo de configuraciones estándar",
+        "pl": "zmiana obsługi konfiguracji standardowych",
+        "uk": "змінено Обробка стандартних конфігурацій",
+        "zh-cn": "更改标准配置的处理"
+      },
       "0.0.16": {
         "en": "romeve reacheble object directory / improoved object === NULL",
         "de": "romeve toucheble Objektverzeichnis / improoviertes Objekt == NULL",
@@ -80,19 +93,6 @@
         "pl": "toSend und lastSend dodany do folderów",
         "uk": "toSend und lastSend додано до папок",
         "zh-cn": "到文件夹中发送最后的发送"
-      },
-      "0.0.10": {
-        "en": "changes in length calculation",
-        "de": "änderungen der längenberechnung",
-        "ru": "изменения в расчете длины",
-        "pt": "alterações no cálculo de comprimento",
-        "nl": "wijzigingen in de lengteberekening",
-        "fr": "changements dans le calcul de la longueur",
-        "it": "variazioni del calcolo della lunghezza",
-        "es": "cambios en el cálculo de longitud",
-        "pl": "zmiany w obliczeniach długości",
-        "uk": "зміни розрахунку довжини",
-        "zh-cn": "长度计算的变化"
       }
     },
     "title": "LoRaWAN",
