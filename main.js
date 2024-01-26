@@ -47,7 +47,7 @@ class Lorawan extends utils.Adapter {
 			this.downlinkConfighandler.addAndMergeDownlinkConfigs();
 
 			// generate new configed downlinkstates on allready existing devices at adapter startup
-			await this.messagehandler.generateDownlinkstatesAtStatup();
+			await this.messagehandler.generateDownlinksAndRemoveStatesAtStatup();
 
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*.configuration.*");
@@ -66,18 +66,19 @@ class Lorawan extends utils.Adapter {
 
 	async startSimulation(){
 
-		//	const topic ="v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/up";
-		//	const message = {"end_device_ids":{"device_id":"eui-lobaro-modbus","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"70B3D5E050013950","join_eui":"D55B58C0DDC074DE","dev_addr":"260B5972"},"correlation_ids":["gs:uplink:01HMQZVSCX4D7JRDNFA7GJ9D4W"],"received_at":"2024-01-22T07:06:25.260676101Z","uplink_message":{"session_key_id":"AY0v/ZirzRkpNW0Cgjdhig==","f_port":20,"f_cnt":2,"frm_payload":"AA5BAf0AxwIAAQ==","decoded_payload":{"airhumidity":50.9,"airtemperature":19.9,"port":20,"relais1":0,"relais2":1,"relais3":null,"relais5":null,"volt":3.649,"zisternenpegel":2},"rx_metadata":[{"gateway_ids":{"gateway_id":"hafenmeister-port2ttn-ng","eui":"50313953530A4750"},"time":"2024-01-22T07:06:25.013878Z","timestamp":995696116,"rssi":-37,"channel_rssi":-37,"snr":8.5,"location":{"latitude":53.5548443059465,"longitude":9.92155426743724,"altitude":10,"source":"SOURCE_REGISTRY"},"uplink_token":"CiYKJAoYaGFmZW5tZWlzdGVyLXBvcnQydHRuLW5nEghQMTlTUwpHUBD0u+TaAxoLCPGnuK0GEM3uvhkgoIL0oP24Sg==","channel_index":5,"received_at":"2024-01-22T07:06:25.032492359Z"}],"settings":{"data_rate":{"lora":{"bandwidth":125000,"spreading_factor":9,"coding_rate":"4/5"}},"frequency":"867500000","timestamp":995696116,"time":"2024-01-22T07:06:25.013878Z"},"received_at":"2024-01-22T07:06:25.054442349Z","consumed_airtime":"0.205824s","network_ids":{"net_id":"000013","ns_id":"EC656E0000000181","tenant_id":"ttn","cluster_id":"eu1","cluster_address":"eu1.cloud.thethings.network"}}};
+		// TTN
+		const topic ="v3/hafi-ttn-lorawan@ttn/devices/eui-lobaro-modbus/up";
+		const message = {"end_device_ids":{"device_id":"eui-lobaro-modbus","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"70B3D5E050013950","join_eui":"D55B58C0DDC074DE","dev_addr":"260B5972"},"correlation_ids":["gs:uplink:01HMQZVSCX4D7JRDNFA7GJ9D4W"],"received_at":"2024-01-22T07:06:25.260676101Z","uplink_message":{"session_key_id":"AY0v/ZirzRkpNW0Cgjdhig==","f_port":20,"f_cnt":2,"frm_payload":"AA5BAf0AxwIAAQ==","decoded_payload":{"airhumidity":50.9,"airtemperature":19.9,"port":20,"relais1":0,"relais2":1,"relais3":null,"relais5":null,"volt":3.649,"zisternenpegel":2},"rx_metadata":[{"gateway_ids":{"gateway_id":"hafenmeister-port2ttn-ng","eui":"50313953530A4750"},"time":"2024-01-22T07:06:25.013878Z","timestamp":995696116,"rssi":-37,"channel_rssi":-37,"snr":8.5,"location":{"latitude":53.5548443059465,"longitude":9.92155426743724,"altitude":10,"source":"SOURCE_REGISTRY"},"uplink_token":"CiYKJAoYaGFmZW5tZWlzdGVyLXBvcnQydHRuLW5nEghQMTlTUwpHUBD0u+TaAxoLCPGnuK0GEM3uvhkgoIL0oP24Sg==","channel_index":5,"received_at":"2024-01-22T07:06:25.032492359Z"}],"settings":{"data_rate":{"lora":{"bandwidth":125000,"spreading_factor":9,"coding_rate":"4/5"}},"frequency":"867500000","timestamp":995696116,"time":"2024-01-22T07:06:25.013878Z"},"received_at":"2024-01-22T07:06:25.054442349Z","consumed_airtime":"0.205824s","network_ids":{"net_id":"000013","ns_id":"EC656E0000000181","tenant_id":"ttn","cluster_id":"eu1","cluster_address":"eu1.cloud.thethings.network"}}};
 
-
+		// Chipstack
 		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up";
 		//const message = {"deduplicationId":"96e4a065-ad5e-402d-a997-7b261072a33c","time":"2024-01-21T17:01:36.641008+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"0b46400f-37ec-4f17-8005-168b06159347","deviceProfileName":"Dragino Feuchtesenor","deviceName":"Skimmer","devEui":"a84041f621857cd2","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01fd9738","adr":true,"dr":5,"fCnt":2,"fPort":2,"confirmed":false,"data":"DPYBAAD//wAA","object":{"soilconductivity":0.0,"soiltemperature":-0.1,"volt":3.318,"soilmoisture":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":39169,"gwTime":"2024-01-21T17:01:36.641008+00:00","nsTime":"2024-01-21T17:01:37.695656999+00:00","rssi":-89,"snr":6.25,"rfChain":1,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"qESemw==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":868100000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
 		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/command/down";
 		//const message = {"devEui":"a84041f621857cd2","confirmed":false,"fPort":1,"data":"AQAqMA=="};
 
 		// Chirpstack LT222222
-		const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/event/up";
-		const message = {"deduplicationId":"bd3fdb3b-af86-4617-b9f2-da07075d2bc5","time":"2024-01-24T16:47:01.573381+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"f1c0ae0e-b4a2-4547-b360-7cfa15e85734","deviceProfileName":"Dragino LT22222","deviceName":"Relaistestgerät","devEui":"a8404127a188d826","deviceClassEnabled":"CLASS_C","tags":{}},"devAddr":"01dfbaf2","adr":true,"dr":5,"fCnt":12,"fPort":2,"confirmed":false,"data":"AAAAAAAAAAA8/0E=","object":{"RO1_status":"OFF","DO2_status":"H","ACI2_mA":0.0,"DO1_status":"H","Hardware_mode":"LT22222","RO2_status":"OFF","AVI2_V":0.0,"ACI1_mA":0.0,"DI1_status":"H","DI2_status":"H","Work_mode":"2ACI+2AVI","AVI1_V":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":57857,"gwTime":"2024-01-24T16:47:01.573381+00:00","nsTime":"2024-01-24T16:47:02.370171527+00:00","rssi":-54,"snr":8.5,"channel":6,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"2tr9BA==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867700000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
+		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/event/up";
+		//const message = {"deduplicationId":"bd3fdb3b-af86-4617-b9f2-da07075d2bc5","time":"2024-01-24T16:47:01.573381+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"f1c0ae0e-b4a2-4547-b360-7cfa15e85734","deviceProfileName":"Dragino LT22222","deviceName":"Relaistestgerät","devEui":"a8404127a188d826","deviceClassEnabled":"CLASS_C","tags":{}},"devAddr":"01dfbaf2","adr":true,"dr":5,"fCnt":12,"fPort":2,"confirmed":false,"data":"AAAAAAAAAAA8/0E=","object":{"RO1_status":"OFF","DO2_status":"H","ACI2_mA":0.0,"DO1_status":"H","Hardware_mode":"LT22222","RO2_status":"OFF","AVI2_V":0.0,"ACI1_mA":0.0,"DI1_status":"H","DI2_status":"H","Work_mode":"2ACI+2AVI","AVI1_V":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":57857,"gwTime":"2024-01-24T16:47:01.573381+00:00","nsTime":"2024-01-24T16:47:02.370171527+00:00","rssi":-54,"snr":8.5,"channel":6,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"2tr9BA==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867700000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
 		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/command/down";
 		//const message = {"devEui":"a8404127a188d826","confirmed":false,"fPort":1,"data":"AQACWA=="};
 		await this.messagehandler?.handleMessage(topic, message);
@@ -179,6 +180,20 @@ class Lorawan extends utils.Adapter {
 					}
 					// State is from configuration path
 					else{
+						const changeInfo = await this.getChangeInfo(id);
+						this.messagehandler?.fillWithDownlinkConfig(changeInfo?.objectStartDirectory);
+
+						// remove not configed states
+						const adapterObjects = await this.getAdapterObjectsAsync();
+						for(const adapterObject of Object.values(adapterObjects)){
+							if(adapterObject.type === "state" && (adapterObject._id.indexOf(`${changeInfo?.objectStartDirectory}.downlink.control`) !== -1)){
+								const changeInfo = await this.getChangeInfo(adapterObject._id);
+								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo,{startupCheck:true});
+								if(!downlinkConfig){
+									await this.delObjectAsync(this.removeNamespace(adapterObject._id));
+								}
+							}
+						}
 						this.setStateAsync(id,state.val,true);
 					}
 				}
