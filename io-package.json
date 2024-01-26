@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.0.18",
+    "version": "0.1.0",
     "news": {
+      "0.1.0": {
+        "en": "removing downlink/configuration path and first tests of send downlink with uplink",
+        "de": "entfernen von downlink/konfigurationspfad und ersten tests von downlink mit uplink",
+        "ru": "удаление пути внизlink/конфигурации и первые тесты отправной ссылки с помощью uplink",
+        "pt": "remoção de downlink / caminho de configuração e primeiros testes de enviar downlink com uplink",
+        "nl": "verwijderen van downlink/configuratie pad en eerste tests van verzenden downlink met uplink",
+        "fr": "supprimer la liaison descendante / chemin de configuration et les premiers tests d'envoi de liaison descendante avec uplink",
+        "it": "rimuovere downlink/configuration path e i primi test di send downlink con uplink",
+        "es": "eliminación de enlace descendente / ruta de configuración y las primeras pruebas de enviar enlace descendente con enlace ascendente",
+        "pl": "usuwanie ścieżki downlink / configuration oraz pierwsze testy wysyłania łącza downlink za pomocą programu uplink",
+        "uk": "видалити шлях посилання / налаштування та перші тести відправки з посиланням",
+        "zh-cn": "删除下行链路/ 配置路径, 并首次测试下行链路的发送"
+      },
       "0.0.18": {
         "en": "remove wrong warn logging",
         "de": "falsche warnen protokollierung entfernen",
@@ -80,19 +93,6 @@
         "pl": "zmienić id urządzenia wybierając w chirpstock z katalogu (dla downlink kolejka)",
         "uk": "змінити пристрій id виберіть в chirpstack з каталогу (для кривих посилань)",
         "zh-cn": "更改设备 id 从目录中选择 chirpstack (用于下链条队列)"
-      },
-      "0.0.12": {
-        "en": "change flow of downlink",
-        "de": "wechselstrom von downlink",
-        "ru": "изменение потока обратных ссылок",
-        "pt": "fluxo de mudança de downlink",
-        "nl": "verandering stroom van downlink",
-        "fr": "changement de flux de liaison descendante",
-        "it": "cambiamento flusso di downlink",
-        "es": "flujo de cambio de enlace descendente",
-        "pl": "zmiana przepływu w dół",
-        "uk": "зміна потоку вниз",
-        "zh-cn": "下行链路的改变"
       }
     },
     "title": "LoRaWAN",
