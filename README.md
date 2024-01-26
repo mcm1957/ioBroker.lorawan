@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) removing downlink/configuration path and first tests of send downlink with uplink
+
 ### 0.0.18 (2024-01-25)
 * (BenAhrdt) remove wrong warn logging
 

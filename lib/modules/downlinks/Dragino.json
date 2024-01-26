@@ -12,8 +12,7 @@
         "off": "",
         "multiplyfaktor": 60,
         "unit": "min",
-        "deviceType": "Dragino",
-        "isConfiguration": true
+        "deviceType": "Dragino"
     },
     {
         "name": "Reboot",
@@ -29,7 +28,6 @@
         "onClick": "04FF",
         "multiplyfaktor": "1",
         "unit": "",
-        "deviceType": "Dragino",
-        "isConfiguration": true
+        "deviceType": "Dragino"
     }
 ]

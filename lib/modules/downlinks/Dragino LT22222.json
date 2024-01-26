@@ -29,8 +29,7 @@
         "multiplyfaktor": 60,
         "unit": "Minuten",
         "deviceType": "Dragino LT22222",
-        "onClick": "030111",
-        "isConfiguration": true
+        "onClick": "030111"
     },
     {
         "name": "RO2_target",

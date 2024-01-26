@@ -76,10 +76,10 @@ class Lorawan extends utils.Adapter {
 		//const message = {"devEui":"a84041f621857cd2","confirmed":false,"fPort":1,"data":"AQAqMA=="};
 
 		// Chirpstack LT222222
-		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/event/up";
-		//const message = {"deduplicationId":"bd3fdb3b-af86-4617-b9f2-da07075d2bc5","time":"2024-01-24T16:47:01.573381+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"f1c0ae0e-b4a2-4547-b360-7cfa15e85734","deviceProfileName":"Dragino LT22222","deviceName":"Relaistestgerät","devEui":"a8404127a188d826","deviceClassEnabled":"CLASS_C","tags":{}},"devAddr":"01dfbaf2","adr":true,"dr":5,"fCnt":12,"fPort":2,"confirmed":false,"data":"AAAAAAAAAAA8/0E=","object":{"RO1_status":"OFF","DO2_status":"H","ACI2_mA":0.0,"DO1_status":"H","Hardware_mode":"LT22222","RO2_status":"OFF","AVI2_V":0.0,"ACI1_mA":0.0,"DI1_status":"H","DI2_status":"H","Work_mode":"2ACI+2AVI","AVI1_V":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":57857,"gwTime":"2024-01-24T16:47:01.573381+00:00","nsTime":"2024-01-24T16:47:02.370171527+00:00","rssi":-54,"snr":8.5,"channel":6,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"2tr9BA==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867700000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
-		const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/command/down";
-		const message = {"devEui":"a8404127a188d826","confirmed":false,"fPort":1,"data":"AQACWA=="};
+		const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/event/up";
+		const message = {"deduplicationId":"bd3fdb3b-af86-4617-b9f2-da07075d2bc5","time":"2024-01-24T16:47:01.573381+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"f1c0ae0e-b4a2-4547-b360-7cfa15e85734","deviceProfileName":"Dragino LT22222","deviceName":"Relaistestgerät","devEui":"a8404127a188d826","deviceClassEnabled":"CLASS_C","tags":{}},"devAddr":"01dfbaf2","adr":true,"dr":5,"fCnt":12,"fPort":2,"confirmed":false,"data":"AAAAAAAAAAA8/0E=","object":{"RO1_status":"OFF","DO2_status":"H","ACI2_mA":0.0,"DO1_status":"H","Hardware_mode":"LT22222","RO2_status":"OFF","AVI2_V":0.0,"ACI1_mA":0.0,"DI1_status":"H","DI2_status":"H","Work_mode":"2ACI+2AVI","AVI1_V":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":57857,"gwTime":"2024-01-24T16:47:01.573381+00:00","nsTime":"2024-01-24T16:47:02.370171527+00:00","rssi":-54,"snr":8.5,"channel":6,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"2tr9BA==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867700000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
+		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/command/down";
+		//const message = {"devEui":"a8404127a188d826","confirmed":false,"fPort":1,"data":"AQACWA=="};
 		await this.messagehandler?.handleMessage(topic, message);
 	}
 	/**
@@ -147,7 +147,7 @@ class Lorawan extends utils.Adapter {
 								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
-									await this.writeNextSend(changeInfo?.obectStartDirectory,payloadInHex);
+									await this.writeNextSend(changeInfo?.objectStartDirectory,payloadInHex);
 									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 									if(downlink !== undefined){
 										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -167,7 +167,7 @@ class Lorawan extends utils.Adapter {
 								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
-									await this.writeNextSend(changeInfo?.obectStartDirectory,payloadInHex);
+									await this.writeNextSend(changeInfo?.objectStartDirectory,payloadInHex);
 									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 									if(downlink !== undefined){
 										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -193,24 +193,48 @@ class Lorawan extends utils.Adapter {
 	}
 
 	async checkSendDownlinkWithUplink(id){
-		const changeInfo = await this.getChangeInfo(id);
-		this.log.silly(JSON.stringify(changeInfo));
+		const activeFunction = "checkSendDownlinkWithUplink";
+		try{
+			this.log.silly(`Check for send downlink with uplink.`);
+			const changeInfo = await this.getChangeInfo(id);
+			const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
+			if(nextSend?.val !== "0"){
+				const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/push`);
+				const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
+				if(!downlinkConfig){
+					this.log.warn(`no downlinkconfig found - nextSend: ${nextSend?.val}`);
+					return;
+				}
+				const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
+				if(downlink !== undefined){
+					await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+				}
+			}
+		}
+		catch(error){
+			this.log.error(`error at ${activeFunction}: ` + error);
+		}
 	}
 
-	async writeNextSend(startDirectory,payloadInHex){
-		const idFolder = `${startDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkNextSend}`;
+	async getNextSend(deviceDirectory){
+		const idFolder = `${deviceDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
+		return await this.getStateAsync(`${idFolder}.hex`);
+	}
+
+	async writeNextSend(deviceDirectory,payloadInHex){
+		const idFolder = `${deviceDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
 		await this.setStateAsync(`${idFolder}.hex`,payloadInHex,true);
 	}
 
 	async sendDownlink(topic,message,changeInfo){
 		await this.mqttClient?.publish(topic,message);
-		const idFolderNextSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkNextSend}`;
-		const idFolderLastSend = `${changeInfo.obectStartDirectory}.${this.messagehandler?.directoryhandler.directoryStructur.downlinkLastSend}`;
+		const idFolderNextSend = `${changeInfo.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
+		const idFolderLastSend = `${changeInfo.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkLastSend}`;
 		const nextSend = await this.getStateAsync(`${idFolderNextSend}.hex`);
 		const lastSend = this.getHexpayloadFromDownlink(message);
 		await this.setStateAsync(`${idFolderLastSend}.hex`,lastSend,true);
 		if(nextSend && lastSend === nextSend?.val){
-			await this.setStateAsync(`${idFolderNextSend}.hex`,0,true);
+			await this.setStateAsync(`${idFolderNextSend}.hex`,"0",true);
 		}
 	}
 
@@ -246,7 +270,7 @@ class Lorawan extends utils.Adapter {
 				dev_uid : idElements[2],
 				device_id : idElements[3],
 				changedState : idElements[idElements.length - 1],
-				obectStartDirectory : `${idElements[0]}.devices.${idElements[2]}.${idElements[3]}`,
+				objectStartDirectory : `${idElements[0]}.devices.${idElements[2]}.${idElements[3]}`,
 				allElements : idElements
 			};
 			return deviceInfo;
