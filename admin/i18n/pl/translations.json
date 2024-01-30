@@ -17,10 +17,8 @@
     "passwordTooltip": "wprowadź hasło",
     "OriginHeader": "Ustawienia oryginalności",
     "OriginInformation": "Ustaw pochodzenie oczekiwanych danych",
-    "ttn": "TTN (Sieć Myśli)",
-    "ttnTooltip": "umożliwić korzystanie z TTN",
-    "chirpstack": "Chirpstack",
-    "chirpstackTooltip": "włącz użycie chirpstackTooltip",
+    "origin": "pochodzenie",
+    "originTooltip": "wybierz pochodzenie swoich danych",
     "downlinkConfig": "Konfiguracja Donwlink",
     "name": "nazwa",
     "nameTooltip": "wstaw nazwę stanu dla tego łącza pobierania",
@@ -49,7 +47,9 @@
     "unit": "jednostka",
     "unitTooltip": "wstaw jednostkę swojej wartości",
     "deviceType": "rodzaj urządzenia",
+    "expertSettings": "Ustawienia eksperckie",
+    "enabled & collect": "włączone i zbierane",
     "deviceTypeTooltip": "wstaw nazwę typu urządzenia, ta konfiguracja jest prawidłowa. (np. Dragino XY pasuje również do Dragino)",
-    "origin": "pochodzenie",
-    "originTooltip": "wybierz pochodzenie swoich danych"
+    "sendWithUplink": "wyślij za pomocą łącza zwrotnego",
+    "sendWithUplinkTooltip": "wybierz tryb wysyłania konfiguracji z żądanym typem urządzenia"
 }

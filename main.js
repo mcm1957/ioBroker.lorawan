@@ -52,12 +52,19 @@ class Lorawan extends utils.Adapter {
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*.configuration.*");
 			this.subscribeStatesAsync("*downlink.control.*");
+			this.subscribeStatesAsync("*.logAvailableConfignames");
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
 			this.log.silly(`the whole reacable downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
 
 			/*setTimeout(async () => {
 				await this.startSimulation();
 			}, 5000);*/
+			/*setTimeout(async () => {
+				const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/f1c0ae0e-b4a2-4547-b360-7cfa15e85734/command/down";
+				const message = {devEui:"f1c0ae0e-b4a2-4547-b360-7cfa15e85734",confirmed:false,fPort:1,data:"AAA"};
+				await this.mqttClient?.publish(topic,JSON.stringify(message));
+			}, 5000);*/
+
 		}
 		catch(error){
 			this.log.error(`error at ${activeFunction}: ` + error);
@@ -129,7 +136,7 @@ class Lorawan extends utils.Adapter {
 					if(id.indexOf("downlink") !== -1){
 						this.log.silly(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
-						const changeInfo = await this.getChangeInfo(id);
+						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
 						if(this.config.origin === "ttn"){
 							let appending = "push";
 							if(changeInfo?.changedState === "push"){
@@ -148,10 +155,12 @@ class Lorawan extends utils.Adapter {
 								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
-									await this.writeNextSend(changeInfo?.objectStartDirectory,payloadInHex);
-									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
-									if(downlink !== undefined){
-										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+									await this.writeNextSend(changeInfo,payloadInHex);
+									if(!changeInfo?.bestExpertDownlinkMatch || this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink === "disabled"){
+										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
+										if(downlink !== undefined){
+											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+										}
 									}
 									this.setStateAsync(id,state.val,true);
 								}
@@ -168,10 +177,12 @@ class Lorawan extends utils.Adapter {
 								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
-									await this.writeNextSend(changeInfo?.objectStartDirectory,payloadInHex);
-									const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
-									if(downlink !== undefined){
-										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+									await this.writeNextSend(changeInfo,payloadInHex);
+									if(!changeInfo?.bestExpertDownlinkMatch || this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink === "disabled"){
+										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
+										if(downlink !== undefined){
+											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+										}
 									}
 									this.setStateAsync(id,state.val,true);
 								}
@@ -179,8 +190,8 @@ class Lorawan extends utils.Adapter {
 						}
 					}
 					// State is from configuration path
-					else{
-						const changeInfo = await this.getChangeInfo(id);
+					else if(id.indexOf("configuration") !== -1){
+						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
 						this.messagehandler?.fillWithDownlinkConfig(changeInfo?.objectStartDirectory);
 
 						// remove not configed states
@@ -193,6 +204,16 @@ class Lorawan extends utils.Adapter {
 									await this.delObjectAsync(this.removeNamespace(adapterObject._id));
 								}
 							}
+						}
+						this.setStateAsync(id,state.val,true);
+					}
+					// logging of the actual available configs
+					else if(id.indexOf("logAvailableConfignames") !== -1){
+						this.log.info(`The following devicenames has an existing downlink-config`);
+						let index = 0;
+						for(const devicename in this.downlinkConfighandler?.activeDownlinkConfigs){
+							index++;
+							this.log.info(`Device ${index}: ${devicename}`);
 						}
 						this.setStateAsync(id,state.val,true);
 					}
@@ -211,18 +232,16 @@ class Lorawan extends utils.Adapter {
 		const activeFunction = "checkSendDownlinkWithUplink";
 		try{
 			this.log.silly(`Check for send downlink with uplink.`);
-			const changeInfo = await this.getChangeInfo(id);
-			const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
-			if(nextSend?.val !== "0"){
-				const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/push`);
-				const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
-				if(!downlinkConfig){
-					this.log.warn(`no downlinkconfig found - nextSend: ${nextSend?.val}`);
-					return;
-				}
-				const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
-				if(downlink !== undefined){
-					await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+			const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
+			if(changeInfo && changeInfo.bestExpertDownlinkMatch && this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink !== "disabled"){
+				const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
+				if(nextSend?.val !== "0"){
+					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/push`);
+					const downlinkConfig = this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch];
+					const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
+					if(downlink !== undefined){
+						await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
+					}
 				}
 			}
 		}
@@ -236,9 +255,15 @@ class Lorawan extends utils.Adapter {
 		return await this.getStateAsync(`${idFolder}.hex`);
 	}
 
-	async writeNextSend(deviceDirectory,payloadInHex){
-		const idFolder = `${deviceDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
-		await this.setStateAsync(`${idFolder}.hex`,payloadInHex,true);
+	async writeNextSend(changeInfo,payloadInHex){
+		const idFolderNextSend = `${changeInfo.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
+		if(changeInfo.bestExpertDownlinkMatch && this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink === "enabled & collect"){
+			const nextSend = await this.getStateAsync(`${idFolderNextSend}.hex`);
+			if(nextSend?.val !== "0"){
+				payloadInHex = nextSend?.val + payloadInHex;
+			}
+		}
+		await this.setStateAsync(`${idFolderNextSend}.hex`,payloadInHex,true);
 	}
 
 	async sendDownlink(topic,message,changeInfo){
@@ -295,16 +320,27 @@ class Lorawan extends utils.Adapter {
 		}
 	}
 
-	async getChangeInfo(id){
+	async getChangeInfo(id,options){
 		const activeFunction = "getChangeInfo";
 		try{
 			this.log.silly(`changeinfo of id ${id}, will be generated.`);
 			const changeInfo = this.getBaseDeviceInfo(id);
 			const myId = `${changeInfo?.applicationId}.devices.${changeInfo?.dev_uid}.${changeInfo?.device_id}.configuration.devicetype`;
+			// Get deviceType
 			const deviceTypeIdState = await this.getStateAsync(myId);
-			if(deviceTypeIdState){
-				// @ts-ignore
+			if(changeInfo && deviceTypeIdState){
 				changeInfo.deviceType = deviceTypeIdState.val;
+				if(options && options.withBestMatch){
+					// Get best match of expert downlink
+					const bestExpertDownlinkMatch =  this.downlinkConfighandler?.getBestMatchForExpertConfig(changeInfo);
+					if(bestExpertDownlinkMatch){
+						changeInfo.bestExpertDownlinkMatch = bestExpertDownlinkMatch;
+						this.log.debug(`best match for expertconfig of device: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"} is: ${bestExpertDownlinkMatch}`);
+					}
+					else{
+						this.log.debug(`no match for expert downlinkconfig found: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"}`);
+					}
+				}
 			}
 			this.log.silly(`changeinfo is ${JSON.stringify(changeInfo)}.`);
 			return changeInfo;

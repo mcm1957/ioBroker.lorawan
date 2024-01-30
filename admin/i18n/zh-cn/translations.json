@@ -17,10 +17,8 @@
     "passwordTooltip": "输入您的密码",
     "OriginHeader": "原始设置",
     "OriginInformation": "设置预期数据的来源",
-    "ttn": "TTN（思考网络）",
-    "ttnTooltip": "启用 TTN",
-    "chirpstack": "调频堆栈",
-    "chirpstackTooltip": "启用使用 chirpstackTooltip",
+    "origin": "起源",
+    "originTooltip": "选择您的数据来源",
     "downlinkConfig": "下行链路配置",
     "name": "姓名",
     "nameTooltip": "为此下行链接插入州名称",
@@ -49,7 +47,9 @@
     "unit": "单元",
     "unitTooltip": "插入您的值的单位",
     "deviceType": "设备类型",
+    "expertSettings": "专家设置",
+    "enabled & collect": "启用并收集",
     "deviceTypeTooltip": "插入设备类型的名称，此配置有效。 （例如，Dragino XY 也匹配 Dragino）",
-    "origin": "起源",
-    "originTooltip": "选择您的数据来源"
+    "sendWithUplink": "通过上行链路发送",
+    "sendWithUplinkTooltip": "选择具有所需设备类型的配置的发送模式"
 }

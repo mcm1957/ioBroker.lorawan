@@ -239,6 +239,69 @@
 					]
 				}
 			}
+		},
+		"ExpertsettingsTab":{
+            "type": "panel",
+            "label": "expertSettings",
+			"items": {
+				"ExpertsettingsAccordion":{
+					"type":"accordion",
+					"titleAttr": "deviceType",
+					"clone": true,
+					"sm":12,
+					"items":[
+						{
+							"type": "autocomplete",
+							"attr": "deviceType",
+							"label": "deviceType",
+							"tooltip": "deviceTypeTooltip",
+							"options": [
+								{"label":"all","value":"all"}
+							],
+							"default": "all",
+							"freeSolo": true,
+							"sm":2
+						},
+						{
+							"type": "number",
+							"attr": "port",
+							"label": "portDownlink",
+							"tooltip": "portDownlinkTooltip",
+							"default": 2,
+							"sm":2
+						},
+						{
+							"type": "text",
+							"attr": "priority",
+							"label": "priority",
+							"tooltip": "priorityTooltip",
+							"default": "NORMAL",
+							"sm":2
+						},
+						{
+							"type": "checkbox",
+							"attr": "confirmed",
+							"label": "confirmed",
+							"tooltip": "confirmedTooltip",
+							"default": false,
+							"sm":2
+						},
+						{
+							"type": "select",
+							"attr": "sendWithUplink",
+							"label": "sendWithUplink",
+							"tooltip": "sendWithUplinkTooltip",
+							"options": [
+								{"label":"disabled","value":"disabled"},
+								{"label":"enabled","value":"enabled"},
+								{"label":"enabled & collect","value":"enabled & collect"}
+							],
+							"default": "disabled",
+							"sm":2
+						}
+					]
+				}
+			}
 		}
 	}
 }

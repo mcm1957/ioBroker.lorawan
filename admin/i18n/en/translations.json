@@ -47,5 +47,9 @@
 	"unit": "unit",
 	"unitTooltip": "insert the unit for your value",
 	"deviceType": "device-type",
-	"deviceTypeTooltip": "insert the name of the device type, this config is valid. (eg. Dragino XY also matches Dragino)"
+	"expertSettings": "Expert-Settings",
+	"enabled & collect": "enabled & collect",
+	"deviceTypeTooltip": "insert the name of the device type, this config is valid. (eg. Dragino XY also matches Dragino)",
+	"sendWithUplink": "send with uplink",
+	"sendWithUplinkTooltip": "choose your send mode for configs with the desired devicetype"
 }

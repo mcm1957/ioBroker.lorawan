@@ -17,10 +17,8 @@
     "passwordTooltip": "voer uw wachtwoord in",
     "OriginHeader": "Oorspronkelijke instellingen",
     "OriginInformation": "Stel de oorsprong van de verwachte gegevens in",
-    "ttn": "TTN (het Thinks-netwerk)",
-    "ttnTooltip": "inschakelen om TTN te gebruiken",
-    "chirpstack": "Tjilpstapel",
-    "chirpstackTooltip": "schakel het gebruik van chirpstackTooltip in",
+    "origin": "oorsprong",
+    "originTooltip": "selecteer de herkomst van uw gegevens",
     "downlinkConfig": "Donwlink-configuratie",
     "name": "naam",
     "nameTooltip": "voer de naam van de staat in voor deze downlink",
@@ -49,7 +47,9 @@
     "unit": "eenheid",
     "unitTooltip": "voer de eenheid voor uw waarde in",
     "deviceType": "soort apparaat",
+    "expertSettings": "Expert-instellingen",
+    "enabled & collect": "ingeschakeld en verzamelen",
     "deviceTypeTooltip": "voer de naam van het apparaattype in, deze configuratie is geldig. (bijv. Dragino XY komt ook overeen met Dragino)",
-    "origin": "oorsprong",
-    "originTooltip": "selecteer de herkomst van uw gegevens"
+    "sendWithUplink": "verzenden met uplink",
+    "sendWithUplinkTooltip": "kies uw verzendmodus voor configuraties met het gewenste apparaattype"
 }

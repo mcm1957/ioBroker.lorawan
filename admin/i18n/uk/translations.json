@@ -17,10 +17,8 @@
     "passwordTooltip": "введіть свій пароль",
     "OriginHeader": "Налаштування походження",
     "OriginInformation": "Встановіть джерело очікуваних даних",
-    "ttn": "TTN (The Thinks Network)",
-    "ttnTooltip": "дозволити використовувати ТТН",
-    "chirpstack": "Chirpstack",
-    "chirpstackTooltip": "увімкнути використання chirpstackTooltip",
+    "origin": "походження",
+    "originTooltip": "виберіть джерело даних",
     "downlinkConfig": "Конфігурація Donwlink",
     "name": "назва",
     "nameTooltip": "вставте назву штату для цього посилання",
@@ -49,7 +47,9 @@
     "unit": "одиниця",
     "unitTooltip": "вставте одиницю для вашого значення",
     "deviceType": "тип пристрою",
+    "expertSettings": "Експерт-Налаштування",
+    "enabled & collect": "увімкнено та збирайте",
     "deviceTypeTooltip": "вставте назву типу пристрою, ця конфігурація дійсна. (наприклад, Dragino XY також відповідає Dragino)",
-    "origin": "походження",
-    "originTooltip": "виберіть джерело даних"
+    "sendWithUplink": "надіслати за допомогою висхідної лінії",
+    "sendWithUplinkTooltip": "виберіть режим надсилання конфігурацій із потрібним типом пристрою"
 }

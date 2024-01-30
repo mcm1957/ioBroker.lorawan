@@ -17,10 +17,8 @@
     "passwordTooltip": "saisissez votre mot de passe",
     "OriginHeader": "Paramètres d'origine",
     "OriginInformation": "Définir l'origine des données attendues",
-    "ttn": "TTN (Le réseau Thinks)",
-    "ttnTooltip": "permettre d'utiliser TTN",
-    "chirpstack": "Pile gazouillante",
-    "chirpstackTooltip": "activer l'utilisation de chirpstackTooltip",
+    "origin": "origine",
+    "originTooltip": "sélectionnez l'origine de vos données",
     "downlinkConfig": "Configuration du lien de téléchargement",
     "name": "nom",
     "nameTooltip": "insérez le nom de l'état, pour ce lien descendant",
@@ -49,7 +47,9 @@
     "unit": "unité",
     "unitTooltip": "insérez l'unité pour votre valeur",
     "deviceType": "type d'appareil",
+    "expertSettings": "Paramètres experts",
+    "enabled & collect": "activé et collecté",
     "deviceTypeTooltip": "insérez le nom du type d'appareil, cette configuration est valide. (par exemple, Dragino XY correspond également à Dragino)",
-    "origin": "origine",
-    "originTooltip": "sélectionnez l'origine de vos données"
+    "sendWithUplink": "envoyer avec liaison montante",
+    "sendWithUplinkTooltip": "choisissez votre mode d'envoi pour les configurations avec le type d'appareil souhaité"
 }

@@ -17,10 +17,8 @@
     "passwordTooltip": "insira sua senha",
     "OriginHeader": "Configurações de origem",
     "OriginInformation": "Defina a origem dos dados esperados",
-    "ttn": "TTN (A Rede Pensa)",
-    "ttnTooltip": "habilitar o uso de TTN",
-    "chirpstack": "Pilha de chirp",
-    "chirpstackTooltip": "habilitar o uso do chirpstackTooltip",
+    "origin": "origem",
+    "originTooltip": "selecione a origem dos seus dados",
     "downlinkConfig": "Configuração Donwlink",
     "name": "nome",
     "nameTooltip": "insira o nome do estado, para este downlink",
@@ -49,7 +47,9 @@
     "unit": "unidade",
     "unitTooltip": "insira a unidade para seu valor",
     "deviceType": "tipo de dispositivo",
+    "expertSettings": "Configurações de especialistas",
+    "enabled & collect": "ativado e coletado",
     "deviceTypeTooltip": "insira o nome do tipo de dispositivo, esta configuração é válida. (por exemplo, Dragino XY também corresponde a Dragino)",
-    "origin": "origem",
-    "originTooltip": "selecione a origem dos seus dados"
+    "sendWithUplink": "enviar com uplink",
+    "sendWithUplinkTooltip": "escolha seu modo de envio para configurações com o tipo de dispositivo desejado"
 }
