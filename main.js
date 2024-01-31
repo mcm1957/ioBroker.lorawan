@@ -236,7 +236,17 @@ class Lorawan extends utils.Adapter {
 			if(changeInfo && changeInfo.bestExpertDownlinkMatch && this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink !== "disabled"){
 				const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
 				if(nextSend?.val !== "0"){
-					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/push`);
+					let appending = "";
+					switch(this.config.origin){
+						case "ttn":
+							appending = `/down/push`;
+							break;
+
+						case "chirpstack":
+							appending = `/down/push`;
+							break;
+					}
+					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,appending);
 					const downlinkConfig = this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch];
 					const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
 					if(downlink !== undefined){
