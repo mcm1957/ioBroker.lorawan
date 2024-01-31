@@ -243,7 +243,7 @@ class Lorawan extends utils.Adapter {
 							break;
 
 						case "chirpstack":
-							appending = `/down/push`;
+							appending = `/down`;
 							break;
 					}
 					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,appending);
