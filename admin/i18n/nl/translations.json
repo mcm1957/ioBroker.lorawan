@@ -51,5 +51,7 @@
     "enabled & collect": "ingeschakeld en verzamelen",
     "deviceTypeTooltip": "voer de naam van het apparaattype in, deze configuratie is geldig. (bijv. Dragino XY komt ook overeen met Dragino)",
     "sendWithUplink": "verzenden met uplink",
-    "sendWithUplinkTooltip": "kies uw verzendmodus voor configuraties met het gewenste apparaattype"
+    "sendWithUplinkTooltip": "kies uw verzendmodus voor configuraties met het gewenste apparaattype",
+    "decimalPlaces": "decimalen",
+    "decimalPlacesTooltip": "selecteer het gewenste aantal decimalen"
 }

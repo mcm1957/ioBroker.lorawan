@@ -216,6 +216,17 @@
 							"sm":2
 						},
 						{
+							"type": "number",
+							"attr": "decimalPlaces",
+							"label": "decimalPlaces",
+							"tooltip": "decimalPlacesTooltip",
+							"default": "1",
+							"min": 0,
+							"max": 5,
+							"hidden": "data.type !== 'number'",
+							"sm":1
+						},
+						{
 							"type": "text",
 							"attr": "unit",
 							"label": "unit",

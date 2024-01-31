@@ -51,5 +51,7 @@
     "enabled & collect": "włączone i zbierane",
     "deviceTypeTooltip": "wstaw nazwę typu urządzenia, ta konfiguracja jest prawidłowa. (np. Dragino XY pasuje również do Dragino)",
     "sendWithUplink": "wyślij za pomocą łącza zwrotnego",
-    "sendWithUplinkTooltip": "wybierz tryb wysyłania konfiguracji z żądanym typem urządzenia"
+    "sendWithUplinkTooltip": "wybierz tryb wysyłania konfiguracji z żądanym typem urządzenia",
+    "decimalPlaces": "miejsca dziesiętne",
+    "decimalPlacesTooltip": "wybierz żądaną liczbę miejsc po przecinku"
 }

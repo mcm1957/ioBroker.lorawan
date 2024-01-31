@@ -51,5 +51,7 @@
     "enabled & collect": "activé et collecté",
     "deviceTypeTooltip": "insérez le nom du type d'appareil, cette configuration est valide. (par exemple, Dragino XY correspond également à Dragino)",
     "sendWithUplink": "envoyer avec liaison montante",
-    "sendWithUplinkTooltip": "choisissez votre mode d'envoi pour les configurations avec le type d'appareil souhaité"
+    "sendWithUplinkTooltip": "choisissez votre mode d'envoi pour les configurations avec le type d'appareil souhaité",
+    "decimalPlaces": "décimales",
+    "decimalPlacesTooltip": "sélectionnez le nombre de décimales souhaité"
 }

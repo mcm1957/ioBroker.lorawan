@@ -51,5 +51,7 @@
     "enabled & collect": "aktiviert & sammeln",
     "deviceTypeTooltip": "Geben Sie den Namen des Gerätetyps ein. Diese Konfiguration ist gültig. (z. B. Dragino XY passt auch zu Dragino)",
     "sendWithUplink": "mit Uplink senden",
-    "sendWithUplinkTooltip": "Wählen Sie Ihren Sendemodus für Konfigurationen mit dem gewünschten Gerätetyp"
+    "sendWithUplinkTooltip": "Wählen Sie Ihren Sendemodus für Konfigurationen mit dem gewünschten Gerätetyp",
+    "decimalPlaces": "Nachkommastellen",
+    "decimalPlacesTooltip": "Wählen Sie die gewünschte Anzahl an Nachkommastellen aus, die als Downlink gesendet werden"
 }
