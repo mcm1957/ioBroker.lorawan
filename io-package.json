@@ -1,211 +1,211 @@
 {
-    "common": {
-        "name": "lorawan",
-        "version": "0.1.1",
-        "news": {
-            "0.1.1": {
-                "en": "reduceing calling changeInfo > create expersettings to send downlinks with uplink",
-                "de": "reduzierung der Anrufänderung Info > erstellen Exkursionen, um Downlinks mit Uplink zu senden",
-                "ru": "уменьшение изменения вызовов Инфо > создать отрывки для отправки обратных ссылок с помощью uplink",
-                "pt": "redução da mudança de chamada Info > criar expersettings para enviar downlinks com uplink",
-                "nl": "verminderen van aanroepverandering Info > maakt expersettings om downlinks met uplink te versturen",
-                "fr": "réduire le changement d'appel Info > créer des expersettings pour envoyer des liens vers le bas avec uplink",
-                "it": "ridurre il cambiamento di chiamata Info > creare expersettings per inviare downlink con uplink",
-                "es": "reducción del cambio de llamada Info > crear explotaciones para enviar enlaces descendentes con uplink",
-                "pl": "redukcja zmiany wywołania Info > tworzenie expersettings do wysyłania linków w dół za pomocą łącza",
-                "uk": "зменшення зміни виклику Інформація > створити налаштування для відправки посилань з посиланням",
-                "zh-cn": "减少调用更改 Info > 创建带上行链路的下行链路"
-            },
-            "0.1.0": {
-                "en": "removing downlink/configuration path and first tests of send downlink with uplink",
-                "de": "entfernen von downlink/konfigurationspfad und ersten tests von downlink mit uplink",
-                "ru": "удаление пути внизlink/конфигурации и первые тесты отправной ссылки с помощью uplink",
-                "pt": "remoção de downlink / caminho de configuração e primeiros testes de enviar downlink com uplink",
-                "nl": "verwijderen van downlink/configuratie pad en eerste tests van verzenden downlink met uplink",
-                "fr": "supprimer la liaison descendante / chemin de configuration et les premiers tests d'envoi de liaison descendante avec uplink",
-                "it": "rimuovere downlink/configuration path e i primi test di send downlink con uplink",
-                "es": "eliminación de enlace descendente / ruta de configuración y las primeras pruebas de enviar enlace descendente con enlace ascendente",
-                "pl": "usuwanie ścieżki downlink / configuration oraz pierwsze testy wysyłania łącza downlink za pomocą programu uplink",
-                "uk": "видалити шлях посилання / налаштування та перші тести відправки з посиланням",
-                "zh-cn": "删除下行链路/ 配置路径, 并首次测试下行链路的发送"
-            },
-            "0.0.18": {
-                "en": "remove wrong warn logging",
-                "de": "falsche warnen protokollierung entfernen",
-                "ru": "удалить неправильные предупреждения",
-                "pt": "remover registro de aviso errado",
-                "nl": "foutmelding verwijderen",
-                "fr": "supprimer les avertissements erronés",
-                "it": "rimuovere l'avvertenza sbagliata",
-                "es": "eliminar el registro incorrecto",
-                "pl": "usunąć nieprawidłowe logowanie ostrzeżeń",
-                "uk": "видалити неправильний попереджати залоги",
-                "zh-cn": "删除错误的警告记录"
-            },
-            "0.0.17": {
-                "en": "changed Handling of standard configurations",
-                "de": "geänderte Handhabung von Standardkonfigurationen",
-                "ru": "изменение обращения со стандартными конфигурациями",
-                "pt": "manipulação alterada de configurações padrão",
-                "nl": "veranderde verwerking van standaardconfiguraties",
-                "fr": "changement Gestion des configurations standard",
-                "it": "gestione delle configurazioni standard",
-                "es": "cambiado Manejo de configuraciones estándar",
-                "pl": "zmiana obsługi konfiguracji standardowych",
-                "uk": "змінено Обробка стандартних конфігурацій",
-                "zh-cn": "更改标准配置的处理"
-            },
-            "0.0.16": {
-                "en": "romeve reacheble object directory / improoved object === NULL",
-                "de": "romeve toucheble Objektverzeichnis / improoviertes Objekt == NULL",
-                "ru": "romeve reacheble object Directory / improoved object === NULL",
-                "pt": "romeve reacheble object diretório / objeto improoved - Sim",
-                "nl": "roeve bereikbare object directory / improoved object === NULL",
-                "fr": "romeve attele object directory / objet improvisé === NULL",
-                "it": "romeve catcheble object directory / oggetto improvato Traduzione:",
-                "es": "romeve reacheble objeto directorio / objeto improvisado === NULL",
-                "pl": "romeve Reacheble katalog obiektów / obiekt nieprofaworyzowany = = = NULL",
-                "uk": "romeve досягає каталогу об'єктів / об'єкт об'єкта ==== NULL",
-                "zh-cn": "romeve 达到对象目录/ 无法对象 QQ NULL 语言"
-            },
-            "0.0.15": {
-                "en": "bugfix chirpstack directory at downlink queued",
-                "de": "bugfix chirpstack verzeichnis bei downlink queued",
-                "ru": "bugfix chirpstack directory в очертаниях",
-                "pt": "bugfix chirpstack diretório no downlink queued",
-                "nl": "bugfix chirpstack directory bij downlink wachtrij",
-                "fr": "bugfix répertoire chirpstack au lien descendant en file d'attente",
-                "it": "bugfix chirpstack directory in downlink in coda",
-                "es": "bugfix chirpstack directorio en downlink queued",
-                "pl": "katalog chirpstock bugfix na downlink w kolejce",
-                "uk": "javascript licenses api веб-сайт go1.13.8",
-                "zh-cn": "下行链路队列时的 bugfix kirpstack 目录"
-            },
-            "0.0.14": {
-                "en": "bugfix chirpstack directory",
-                "de": "bugfix chirpstack verzeichnis",
-                "ru": "bugfix chirpstack directory",
-                "pt": "gerenciamento de contas",
-                "nl": "bugfix chirpstack-map",
-                "fr": "répertoire bugfix chirpstack",
-                "it": "bugfix chirpstack directory",
-                "es": "directorio bugfix chirpstack",
-                "pl": "katalog chirpstock bugfix",
-                "uk": "javascript licenses api веб-сайт",
-                "zh-cn": "bugfix 奇普斯塔克目录"
-            }
-        },
-        "title": "LoRaWAN",
-        "titleLang": {
-            "en": "LoRaWAN",
-            "de": "LoRaWAN",
-            "ru": "ЛоРаВАН",
-            "pt": "LoRaWAN",
-            "nl": "LoRaWAN",
-            "fr": "LoRaWAN",
-            "it": "LoRaWAN",
-            "es": "LoRaWAN",
-            "pl": "LoRaWAN",
-            "uk": "LoRaWAN",
-            "zh-cn": "洛拉万"
-        },
-        "desc": {
-            "en": "converts the desired lora gateway data to a ioBroker structure",
-            "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
-            "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
-            "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
-            "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
-            "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
-            "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
-            "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
-            "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
-            "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
-            "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
-        },
-        "authors": [
-            "BenAhrdt <bsahrdt@gmail.com>"
-        ],
-        "keywords": [
-            "LoRaWAN"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "lorawan.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
-        "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
-        "loglevel": "info",
-        "tier": 3,
-        "mode": "daemon",
-        "type": "protocols",
-        "compact": true,
-        "connectionType": "cloud",
-        "dataSource": "push",
-        "adminUI": {
-            "config": "json"
-        },
-        "dependencies": [
-            {
-                "js-controller": ">=3.3.22"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=5.1.13"
-            }
-        ]
+  "common": {
+    "name": "lorawan",
+    "version": "0.1.2",
+    "news": {
+      "0.1.2": {
+        "en": "concept of config changed",
+        "de": "konzept von config geändert",
+        "ru": "изменено понятие конфигурации",
+        "pt": "conceito de configuração alterado",
+        "nl": "concept van configuratie gewijzigd",
+        "fr": "concept de configuration changé",
+        "it": "concetto di configurazione cambiato",
+        "es": "concepto de configuración cambiado",
+        "pl": "pojęcie config zmienione",
+        "uk": "концепція зміни конфігурації",
+        "zh-cn": "配置概念已更改"
+      },
+      "0.1.1": {
+        "en": "reduceing calling changeInfo > create expersettings to send downlinks with uplink",
+        "de": "reduzierung der Anrufänderung Info > erstellen Exkursionen, um Downlinks mit Uplink zu senden",
+        "ru": "уменьшение изменения вызовов Инфо > создать отрывки для отправки обратных ссылок с помощью uplink",
+        "pt": "redução da mudança de chamada Info > criar expersettings para enviar downlinks com uplink",
+        "nl": "verminderen van aanroepverandering Info > maakt expersettings om downlinks met uplink te versturen",
+        "fr": "réduire le changement d'appel Info > créer des expersettings pour envoyer des liens vers le bas avec uplink",
+        "it": "ridurre il cambiamento di chiamata Info > creare expersettings per inviare downlink con uplink",
+        "es": "reducción del cambio de llamada Info > crear explotaciones para enviar enlaces descendentes con uplink",
+        "pl": "redukcja zmiany wywołania Info > tworzenie expersettings do wysyłania linków w dół za pomocą łącza",
+        "uk": "зменшення зміни виклику Інформація > створити налаштування для відправки посилань з посиланням",
+        "zh-cn": "减少调用更改 Info > 创建带上行链路的下行链路"
+      },
+      "0.1.0": {
+        "en": "removing downlink/configuration path and first tests of send downlink with uplink",
+        "de": "entfernen von downlink/konfigurationspfad und ersten tests von downlink mit uplink",
+        "ru": "удаление пути внизlink/конфигурации и первые тесты отправной ссылки с помощью uplink",
+        "pt": "remoção de downlink / caminho de configuração e primeiros testes de enviar downlink com uplink",
+        "nl": "verwijderen van downlink/configuratie pad en eerste tests van verzenden downlink met uplink",
+        "fr": "supprimer la liaison descendante / chemin de configuration et les premiers tests d'envoi de liaison descendante avec uplink",
+        "it": "rimuovere downlink/configuration path e i primi test di send downlink con uplink",
+        "es": "eliminación de enlace descendente / ruta de configuración y las primeras pruebas de enviar enlace descendente con enlace ascendente",
+        "pl": "usuwanie ścieżki downlink / configuration oraz pierwsze testy wysyłania łącza downlink za pomocą programu uplink",
+        "uk": "видалити шлях посилання / налаштування та перші тести відправки з посиланням",
+        "zh-cn": "删除下行链路/ 配置路径, 并首次测试下行链路的发送"
+      },
+      "0.0.18": {
+        "en": "remove wrong warn logging",
+        "de": "falsche warnen protokollierung entfernen",
+        "ru": "удалить неправильные предупреждения",
+        "pt": "remover registro de aviso errado",
+        "nl": "foutmelding verwijderen",
+        "fr": "supprimer les avertissements erronés",
+        "it": "rimuovere l'avvertenza sbagliata",
+        "es": "eliminar el registro incorrecto",
+        "pl": "usunąć nieprawidłowe logowanie ostrzeżeń",
+        "uk": "видалити неправильний попереджати залоги",
+        "zh-cn": "删除错误的警告记录"
+      },
+      "0.0.17": {
+        "en": "changed Handling of standard configurations",
+        "de": "geänderte Handhabung von Standardkonfigurationen",
+        "ru": "изменение обращения со стандартными конфигурациями",
+        "pt": "manipulação alterada de configurações padrão",
+        "nl": "veranderde verwerking van standaardconfiguraties",
+        "fr": "changement Gestion des configurations standard",
+        "it": "gestione delle configurazioni standard",
+        "es": "cambiado Manejo de configuraciones estándar",
+        "pl": "zmiana obsługi konfiguracji standardowych",
+        "uk": "змінено Обробка стандартних конфігурацій",
+        "zh-cn": "更改标准配置的处理"
+      },
+      "0.0.16": {
+        "en": "romeve reacheble object directory / improoved object === NULL",
+        "de": "romeve toucheble Objektverzeichnis / improoviertes Objekt == NULL",
+        "ru": "romeve reacheble object Directory / improoved object === NULL",
+        "pt": "romeve reacheble object diretório / objeto improoved - Sim",
+        "nl": "roeve bereikbare object directory / improoved object === NULL",
+        "fr": "romeve attele object directory / objet improvisé === NULL",
+        "it": "romeve catcheble object directory / oggetto improvato Traduzione:",
+        "es": "romeve reacheble objeto directorio / objeto improvisado === NULL",
+        "pl": "romeve Reacheble katalog obiektów / obiekt nieprofaworyzowany = = = NULL",
+        "uk": "romeve досягає каталогу об'єктів / об'єкт об'єкта ==== NULL",
+        "zh-cn": "romeve 达到对象目录/ 无法对象 QQ NULL 语言"
+      },
+      "0.0.15": {
+        "en": "bugfix chirpstack directory at downlink queued",
+        "de": "bugfix chirpstack verzeichnis bei downlink queued",
+        "ru": "bugfix chirpstack directory в очертаниях",
+        "pt": "bugfix chirpstack diretório no downlink queued",
+        "nl": "bugfix chirpstack directory bij downlink wachtrij",
+        "fr": "bugfix répertoire chirpstack au lien descendant en file d'attente",
+        "it": "bugfix chirpstack directory in downlink in coda",
+        "es": "bugfix chirpstack directorio en downlink queued",
+        "pl": "katalog chirpstock bugfix na downlink w kolejce",
+        "uk": "javascript licenses api веб-сайт go1.13.8",
+        "zh-cn": "下行链路队列时的 bugfix kirpstack 目录"
+      }
     },
-    "encryptedNative": [
-        "password"
-    ],
-    "protectedNative": [
-        "password"
-    ],
-    "native": {
-        "ipUrl": "",
-        "port": 8883,
-        "username": "",
-        "password": "",
-        "ssl": true,
-        "origin": "ttn",
-        "downlinkConfig": {}
+    "title": "LoRaWAN",
+    "titleLang": {
+      "en": "LoRaWAN",
+      "de": "LoRaWAN",
+      "ru": "ЛоРаВАН",
+      "pt": "LoRaWAN",
+      "nl": "LoRaWAN",
+      "fr": "LoRaWAN",
+      "it": "LoRaWAN",
+      "es": "LoRaWAN",
+      "pl": "LoRaWAN",
+      "uk": "LoRaWAN",
+      "zh-cn": "洛拉万"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.logAvailableConfignames",
-            "type": "state",
-            "common": {
-                "role": "button",
-                "name": "logs the names of available device configurations",
-                "type": "boolean",
-                "read": true,
-                "write": true,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "converts the desired lora gateway data to a ioBroker structure",
+      "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
+      "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
+      "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
+      "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
+      "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
+      "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
+      "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
+      "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
+      "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
+      "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
+    },
+    "authors": [
+      "BenAhrdt <bsahrdt@gmail.com>"
+    ],
+    "keywords": [
+      "LoRaWAN"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "lorawan.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
+    "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "protocols",
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "push",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=3.3.22"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=5.1.13"
+      }
     ]
+  },
+  "encryptedNative": [
+    "password"
+  ],
+  "protectedNative": [
+    "password"
+  ],
+  "native": {
+    "ipUrl": "",
+    "port": 8883,
+    "username": "",
+    "password": "",
+    "ssl": true,
+    "origin": "ttn",
+    "downlinkConfig": {}
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.logAvailableConfignames",
+      "type": "state",
+      "common": {
+        "role": "button",
+        "name": "logs the names of available device configurations",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
