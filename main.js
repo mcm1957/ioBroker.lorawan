@@ -34,7 +34,6 @@ class Lorawan extends utils.Adapter {
 	async onReady() {
 		const activeFunction = "onReady";
 		try{
-			this.log.warn("START");
 			// create downlinkConfigs
 			this.downlinkConfighandler = new downlinkConfighandlerClass(this);
 
