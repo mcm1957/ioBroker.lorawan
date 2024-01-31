@@ -53,5 +53,7 @@
     "sendWithUplink": "envoyer avec liaison montante",
     "sendWithUplinkTooltip": "choisissez votre mode d'envoi pour les configurations avec le type d'appareil souhaité",
     "decimalPlaces": "décimales",
-    "decimalPlacesTooltip": "sélectionnez le nombre de décimales souhaité"
+    "decimalPlacesTooltip": "sélectionnez le nombre de décimales souhaité",
+    "downlinkConfigMainHeader": "configuration principale de la liaison descendante",
+    "downlinkConfigSubHeader": "configuration de liaison descendante individuelle"
 }

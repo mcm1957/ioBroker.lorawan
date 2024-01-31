@@ -34,8 +34,12 @@ class Lorawan extends utils.Adapter {
 	async onReady() {
 		const activeFunction = "onReady";
 		try{
+			this.log.warn("START");
 			// create downlinkConfigs
 			this.downlinkConfighandler = new downlinkConfighandlerClass(this);
+
+			// Merge the configed and standard profile of downlinks
+			await this.downlinkConfighandler.addAndMergeDownlinkConfigs();
 
 			// create new messagehandler
 			this.messagehandler = new messagehandlerClass(this);
@@ -43,8 +47,6 @@ class Lorawan extends utils.Adapter {
 			// Set all mqtt clients
 			this.mqttClient =  new mqttClientClass(this,this.config);
 
-			// Merge the configed and standard profile of downlinks
-			this.downlinkConfighandler.addAndMergeDownlinkConfigs();
 
 			// generate new configed downlinkstates on allready existing devices at adapter startup
 			await this.messagehandler.generateDownlinksAndRemoveStatesAtStatup();
@@ -54,7 +56,7 @@ class Lorawan extends utils.Adapter {
 			this.subscribeStatesAsync("*downlink.control.*");
 			this.subscribeStatesAsync("*.logAvailableConfignames");
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
-			this.log.silly(`the whole reacable downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
+			this.log.silly(`the whole reacable downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkDeviceConfigs)}`);
 
 			/*setTimeout(async () => {
 				await this.startSimulation();
@@ -156,7 +158,7 @@ class Lorawan extends utils.Adapter {
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
 									await this.writeNextSend(changeInfo,payloadInHex);
-									if(!changeInfo?.bestExpertDownlinkMatch || this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink === "disabled"){
+									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
 										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 										if(downlink !== undefined){
 											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -178,7 +180,7 @@ class Lorawan extends utils.Adapter {
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
 									await this.writeNextSend(changeInfo,payloadInHex);
-									if(!changeInfo?.bestExpertDownlinkMatch || this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink === "disabled"){
+									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
 										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 										if(downlink !== undefined){
 											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -211,7 +213,7 @@ class Lorawan extends utils.Adapter {
 					else if(id.indexOf("logAvailableConfignames") !== -1){
 						this.log.info(`The following devicenames has an existing downlink-config`);
 						let index = 0;
-						for(const devicename in this.downlinkConfighandler?.activeDownlinkConfigs){
+						for(const devicename in this.downlinkConfighandler?.activeDownlinkDeviceConfigs){
 							index++;
 							this.log.info(`Device ${index}: ${devicename}`);
 						}
@@ -233,7 +235,7 @@ class Lorawan extends utils.Adapter {
 		try{
 			this.log.silly(`Check for send downlink with uplink.`);
 			const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
-			if(changeInfo && changeInfo.bestExpertDownlinkMatch && this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink !== "disabled"){
+			if(changeInfo && changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink !== "disabled"){
 				const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
 				if(nextSend?.val !== "0"){
 					let appending = "";
@@ -247,7 +249,7 @@ class Lorawan extends utils.Adapter {
 							break;
 					}
 					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,appending);
-					const downlinkConfig = this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch];
+					const downlinkConfig = this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType];
 					const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
 					if(downlink !== undefined){
 						await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -267,7 +269,7 @@ class Lorawan extends utils.Adapter {
 
 	async writeNextSend(changeInfo,payloadInHex){
 		const idFolderNextSend = `${changeInfo.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
-		if(changeInfo.bestExpertDownlinkMatch && this.downlinkConfighandler?.activeExpertConfigs[changeInfo.bestExpertDownlinkMatch].sendWithUplink === "enabled & collect"){
+		if(changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "enabled & collect"){
 			const nextSend = await this.getStateAsync(`${idFolderNextSend}.hex`);
 			if(nextSend?.val !== "0"){
 				payloadInHex = nextSend?.val + payloadInHex;
@@ -342,10 +344,10 @@ class Lorawan extends utils.Adapter {
 				changeInfo.deviceType = deviceTypeIdState.val;
 				if(options && options.withBestMatch){
 					// Get best match of expert downlink
-					const bestExpertDownlinkMatch =  this.downlinkConfighandler?.getBestMatchForExpertConfig(changeInfo);
-					if(bestExpertDownlinkMatch){
-						changeInfo.bestExpertDownlinkMatch = bestExpertDownlinkMatch;
-						this.log.debug(`best match for expertconfig of device: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"} is: ${bestExpertDownlinkMatch}`);
+					const bestMatchForDeviceType =  this.downlinkConfighandler?.getBestMatchForDeviceType(changeInfo);
+					if(bestMatchForDeviceType){
+						changeInfo.bestMatchForDeviceType = bestMatchForDeviceType;
+						this.log.debug(`best match for expertconfig of device: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"} is: ${bestMatchForDeviceType}`);
 					}
 					else{
 						this.log.debug(`no match for expert downlinkconfig found: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"}`);

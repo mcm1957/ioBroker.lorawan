@@ -1,33 +1,40 @@
 [
     {
-        "name": "Intervall",
-        "port": 1,
-        "priority": "NORMAL",
-        "type": "number",
-        "confirmed": false,
-        "front": "01",
-        "end": "",
-        "length": 8,
-        "on": "",
-        "off": "",
-        "multiplyfaktor": 60,
-        "unit": "min",
-        "deviceType": "Dragino"
-    },
-    {
-        "name": "Reboot",
-        "port": 1,
-        "priority": "NORMAL",
-        "type": "button",
-        "confirmed": false,
-        "front": "",
-        "end": "",
-        "length": 4,
-        "on": "",
-        "off": "",
-        "onClick": "04FF",
-        "multiplyfaktor": "1",
-        "unit": "",
-        "deviceType": "Dragino"
-    }
+        "deviceType":"Dragino",
+        "sendWithUplink":"disabled",
+        "port":2,
+        "priority":"NORMAL",
+        "confirmed":false,
+        "downlinkParameter":[
+            {
+                "name": "Intervall",
+                "port": 1,
+                "priority": "NORMAL",
+                "type": "number",
+                "confirmed": false,
+                "front": "01",
+                "end": "",
+                "length": 8,
+                "on": "",
+                "off": "",
+                "multiplyfaktor": 60,
+                "unit": "min"
+            },
+            {
+                "name": "Reboot",
+                "port": 1,
+                "priority": "NORMAL",
+                "type": "button",
+                "confirmed": false,
+                "front": "",
+                "end": "",
+                "length": 4,
+                "on": "",
+                "off": "",
+                "onClick": "04FF",
+                "multiplyfaktor": "1",
+                "unit": ""
+            }
+        ]
+     }    
 ]

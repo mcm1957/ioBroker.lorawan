@@ -53,5 +53,7 @@
     "sendWithUplink": "mit Uplink senden",
     "sendWithUplinkTooltip": "Wählen Sie Ihren Sendemodus für Konfigurationen mit dem gewünschten Gerätetyp",
     "decimalPlaces": "Nachkommastellen",
-    "decimalPlacesTooltip": "Wählen Sie die gewünschte Anzahl an Nachkommastellen aus, die als Downlink gesendet werden"
+    "decimalPlacesTooltip": "Wählen Sie die gewünschte Anzahl an Nachkommastellen aus, die als Downlink gesendet werden",
+    "downlinkConfigMainHeader": "Haupt Downlink Konfiguration",
+    "downlinkConfigSubHeader": "Individuelle Downlink Konfiguration"
 }

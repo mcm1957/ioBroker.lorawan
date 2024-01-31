@@ -94,174 +94,20 @@
             "type": "panel",
             "label": "downlinkConfig",
 			"items": {
-				"downlinkConfigAccordion":{
-					"type":"accordion",
-					"titleAttr": "name",
-					"clone": true,
-					"sm":12,
-					"items":[
-						{
-							"type": "text",
-							"attr": "name",
-							"label": "name",
-							"tooltip": "nameTooltip",
-							"default": "",
-							"sm":2
-						},
-						{
-							"type": "number",
-							"attr": "port",
-							"label": "portDownlink",
-							"tooltip": "portDownlinkTooltip",
-							"default": 2,
-							"sm":2
-						},
-						{
-							"type": "text",
-							"attr": "priority",
-							"label": "priority",
-							"tooltip": "priorityTooltip",
-							"default": "NORMAL",
-							"sm":2
-						},
-						{
-							"type": "select",
-							"attr": "type",
-							"label": "type",
-							"tooltip": "typeTooltip",
-							"options": [
-								{"label":"button","value":"button"},
-								{"label":"boolean","value":"boolean"},
-								{"label":"number","value":"number"},
-								{"label":"ASCII","value":"ascii"},
-								{"label":"String","value":"string"}
-							],
-							"default": "boolean",
-							"sm":2
-						},
-						{
-							"type": "checkbox",
-							"attr": "confirmed",
-							"label": "confirmed",
-							"tooltip": "confirmedTooltip",
-							"default": false,
-							"sm":2
-						},
-						{
-							"newLine": true,
-							"type": "text",
-							"attr": "front",
-							"label": "front",
-							"tooltip": "frontTooltip",
-							"default": "03",
-							"hidden": "data.type === 'boolean' || data.type === 'button'",
-							"sm":2
-						},
-						{
-							"type": "text",
-							"attr": "end",
-							"label": "end",
-							"tooltip": "endTooltip",
-							"default": "11",
-							"hidden": "data.type === 'boolean' || data.type === 'button'",
-							"sm":2
-						},
-						{
-							"type": "number",
-							"attr": "length",
-							"label": "length",
-							"tooltip": "lengthTooltip",
-							"default": 8,
-							"min":2,
-							"max": 20,
-							"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
-							"sm":2
-						},
-						{
-							"newLine": true,
-							"type": "text",
-							"attr": "on",
-							"label": "on",
-							"tooltip": "onTooltip",
-							"default": "01",
-							"hidden": "data.type !== 'boolean'",
-							"sm":2
-						},
-						{
-							"type": "text",
-							"attr": "off",
-							"label": "off",
-							"tooltip": "offTooltip",
-							"default": "11",
-							"hidden": "data.type !== 'boolean'",
-							"sm":2
-						},
-						{
-							"newLine": true,
-							"type": "text",
-							"attr": "onClick",
-							"label": "onClick",
-							"tooltip": "onClickTooltip",
-							"default": "030111",
-							"hidden": "data.type !== 'button'",
-							"sm":2
-						},
-						{
-							"type": "number",
-							"attr": "multiplyfaktor",
-							"label": "multiplyfaktor",
-							"tooltip": "multiplyfaktorTooltip",
-							"default": "1",
-							"hidden": "data.type !== 'number'",
-							"sm":2
-						},
-						{
-							"type": "number",
-							"attr": "decimalPlaces",
-							"label": "decimalPlaces",
-							"tooltip": "decimalPlacesTooltip",
-							"default": "1",
-							"min": 0,
-							"max": 5,
-							"hidden": "data.type !== 'number'",
-							"sm":1
-						},
-						{
-							"type": "text",
-							"attr": "unit",
-							"label": "unit",
-							"tooltip": "unitTooltip",
-							"default": "",
-							"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
-							"sm":2
-						},
-						{
-							"type": "autocomplete",
-							"attr": "deviceType",
-							"label": "deviceType",
-							"tooltip": "deviceTypeTooltip",
-							"options": [
-								{"label":"all","value":"all"}
-							],
-							"default": "all",
-							"freeSolo": true,
-							"sm":2
-						}
-					]
-				}
-			}
-		},
-		"ExpertsettingsTab":{
-            "type": "panel",
-            "label": "expertSettings",
-			"items": {
-				"ExpertsettingsAccordion":{
+				"downlinkConfig":{
 					"type":"accordion",
 					"titleAttr": "deviceType",
 					"clone": true,
 					"sm":12,
 					"items":[
 						{
+							"newLine": true,
+							"attr": "downlinkConfigMain",
+							"type": "header",
+							"text": "downlinkConfigMainHeader",
+							"size": 3
+						},
+						{
 							"type": "autocomplete",
 							"attr": "deviceType",
 							"label": "deviceType",
@@ -274,30 +120,7 @@
 							"sm":2
 						},
 						{
-							"type": "number",
-							"attr": "port",
-							"label": "portDownlink",
-							"tooltip": "portDownlinkTooltip",
-							"default": 2,
-							"sm":2
-						},
-						{
-							"type": "text",
-							"attr": "priority",
-							"label": "priority",
-							"tooltip": "priorityTooltip",
-							"default": "NORMAL",
-							"sm":2
-						},
-						{
-							"type": "checkbox",
-							"attr": "confirmed",
-							"label": "confirmed",
-							"tooltip": "confirmedTooltip",
-							"default": false,
-							"sm":2
-						},
-						{
+							"newLine": true,
 							"type": "select",
 							"attr": "sendWithUplink",
 							"label": "sendWithUplink",
@@ -309,6 +132,185 @@
 							],
 							"default": "disabled",
 							"sm":2
+						},
+						{
+							"type": "number",
+							"attr": "port",
+							"label": "portDownlink",
+							"tooltip": "portDownlinkTooltip",
+							"hidden": "data.sendWithUplink === 'disabled'",
+							"default": 2,
+							"sm":2
+						},
+						{
+							"type": "text",
+							"attr": "priority",
+							"label": "priority",
+							"tooltip": "priorityTooltip",
+							"hidden": "data.sendWithUplink === 'disabled'",
+							"default": "NORMAL",
+							"sm":2
+						},
+						{
+							"type": "checkbox",
+							"attr": "confirmed",
+							"label": "confirmed",
+							"tooltip": "confirmedTooltip",
+							"hidden": "data.sendWithUplink === 'disabled'",
+							"default": false,
+							"sm":2
+						},
+						{
+							"newLine": true,
+							"type": "header",
+							"text": "downlinkConfigSubHeader",
+							"size": 3
+						},
+						{
+							"type":"accordion",
+							"attr":"downlinkParameter",
+							"titleAttr": "name",
+							"clone": true,
+							"sm":12,
+							"items":[
+								{
+									"type": "text",
+									"attr": "name",
+									"label": "name",
+									"tooltip": "nameTooltip",
+									"default": "",
+									"validator": "if(data.name === '' || data.name === null) return false; return true",
+									"validatorNoSaveOnError": true,
+									"sm":2
+								},
+								{
+									"type": "number",
+									"attr": "port",
+									"label": "portDownlink",
+									"tooltip": "portDownlinkTooltip",
+									"default": 2,
+									"sm":2
+								},
+								{
+									"type": "text",
+									"attr": "priority",
+									"label": "priority",
+									"tooltip": "priorityTooltip",
+									"default": "NORMAL",
+									"sm":2
+								},
+								{
+									"type": "select",
+									"attr": "type",
+									"label": "type",
+									"tooltip": "typeTooltip",
+									"options": [
+										{"label":"button","value":"button"},
+										{"label":"boolean","value":"boolean"},
+										{"label":"number","value":"number"},
+										{"label":"ASCII","value":"ascii"},
+										{"label":"String","value":"string"}
+									],
+									"default": "boolean",
+									"sm":2
+								},
+								{
+									"type": "checkbox",
+									"attr": "confirmed",
+									"label": "confirmed",
+									"tooltip": "confirmedTooltip",
+									"default": false,
+									"sm":2
+								},
+								{
+									"newLine": true,
+									"type": "text",
+									"attr": "front",
+									"label": "front",
+									"tooltip": "frontTooltip",
+									"default": "03",
+									"hidden": "data.type === 'boolean' || data.type === 'button'",
+									"sm":2
+								},
+								{
+									"type": "text",
+									"attr": "end",
+									"label": "end",
+									"tooltip": "endTooltip",
+									"default": "11",
+									"hidden": "data.type === 'boolean' || data.type === 'button'",
+									"sm":2
+								},
+								{
+									"type": "number",
+									"attr": "length",
+									"label": "length",
+									"tooltip": "lengthTooltip",
+									"default": 8,
+									"min":2,
+									"max": 20,
+									"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
+									"sm":2
+								},
+								{
+									"newLine": true,
+									"type": "text",
+									"attr": "on",
+									"label": "on",
+									"tooltip": "onTooltip",
+									"default": "01",
+									"hidden": "data.type !== 'boolean'",
+									"sm":2
+								},
+								{
+									"type": "text",
+									"attr": "off",
+									"label": "off",
+									"tooltip": "offTooltip",
+									"default": "11",
+									"hidden": "data.type !== 'boolean'",
+									"sm":2
+								},
+								{
+									"newLine": true,
+									"type": "text",
+									"attr": "onClick",
+									"label": "onClick",
+									"tooltip": "onClickTooltip",
+									"default": "030111",
+									"hidden": "data.type !== 'button'",
+									"sm":2
+								},
+								{
+									"type": "number",
+									"attr": "multiplyfaktor",
+									"label": "multiplyfaktor",
+									"tooltip": "multiplyfaktorTooltip",
+									"default": "1",
+									"hidden": "data.type !== 'number'",
+									"sm":2
+								},
+								{
+									"type": "number",
+									"attr": "decimalPlaces",
+									"label": "decimalPlaces",
+									"tooltip": "decimalPlacesTooltip",
+									"default": "1",
+									"min": 0,
+									"max": 5,
+									"hidden": "data.type !== 'number'",
+									"sm":1
+								},
+								{
+									"type": "text",
+									"attr": "unit",
+									"label": "unit",
+									"tooltip": "unitTooltip",
+									"default": "",
+									"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
+									"sm":2
+								}
+							]
 						}
 					]
 				}

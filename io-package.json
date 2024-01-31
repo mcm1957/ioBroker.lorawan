@@ -169,8 +169,7 @@
         "password": "",
         "ssl": true,
         "origin": "ttn",
-        "downlinkConfigAccordion": {},
-        "ExpertsettingsAccordion": {}
+        "downlinkConfig": {}
     },
     "objects": [],
     "instanceObjects": [

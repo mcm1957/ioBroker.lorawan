@@ -53,5 +53,7 @@
     "sendWithUplink": "enviar com uplink",
     "sendWithUplinkTooltip": "escolha seu modo de envio para configurações com o tipo de dispositivo desejado",
     "decimalPlaces": "casas decimais",
-    "decimalPlacesTooltip": "selecione o número desejado de casas decimais"
+    "decimalPlacesTooltip": "selecione o número desejado de casas decimais",
+    "downlinkConfigMainHeader": "configuração de downlink principal",
+    "downlinkConfigSubHeader": "configuração de downlink individual"
 }

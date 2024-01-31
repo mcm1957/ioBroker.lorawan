@@ -1,12 +1,19 @@
 [
     {
-        "name": "push",
-        "type": "json",
-        "deviceType": "all"
-    },
-    {
-        "name": "replace",
-        "type": "json",
-        "deviceType": "all"
-    }
+        "deviceType":"all",
+        "sendWithUplink":"disabled",
+        "downlinkParameter":[
+            {
+                "name": "push",
+                "type": "json",
+                "deviceType": "all"
+            },
+            {
+                "name": "replace",
+                "type": "json",
+                "deviceType": "all"
+            }
+        ]
+     }
+        
 ]

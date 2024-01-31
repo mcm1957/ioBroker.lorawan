@@ -19,6 +19,9 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) concept of config changed
+
 ### 0.1.1 (2024-01-30)
 * (BenAhrdt) reduceing calling changeInfo > create expersettings to send downlinks with uplink
 

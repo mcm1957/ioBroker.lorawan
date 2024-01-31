@@ -53,5 +53,7 @@
     "sendWithUplink": "verzenden met uplink",
     "sendWithUplinkTooltip": "kies uw verzendmodus voor configuraties met het gewenste apparaattype",
     "decimalPlaces": "decimalen",
-    "decimalPlacesTooltip": "selecteer het gewenste aantal decimalen"
+    "decimalPlacesTooltip": "selecteer het gewenste aantal decimalen",
+    "downlinkConfigMainHeader": "belangrijkste downlink-configuratie",
+    "downlinkConfigSubHeader": "individuele downlinkconfiguratie"
 }

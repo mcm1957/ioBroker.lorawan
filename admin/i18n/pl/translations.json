@@ -53,5 +53,7 @@
     "sendWithUplink": "wyślij za pomocą łącza zwrotnego",
     "sendWithUplinkTooltip": "wybierz tryb wysyłania konfiguracji z żądanym typem urządzenia",
     "decimalPlaces": "miejsca dziesiętne",
-    "decimalPlacesTooltip": "wybierz żądaną liczbę miejsc po przecinku"
+    "decimalPlacesTooltip": "wybierz żądaną liczbę miejsc po przecinku",
+    "downlinkConfigMainHeader": "główna konfiguracja łącza w dół",
+    "downlinkConfigSubHeader": "indywidualna konfiguracja łącza w dół"
 }

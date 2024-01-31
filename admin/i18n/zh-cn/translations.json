@@ -53,5 +53,7 @@
     "sendWithUplink": "通过上行链路发送",
     "sendWithUplinkTooltip": "选择具有所需设备类型的配置的发送模式",
     "decimalPlaces": "小数位",
-    "decimalPlacesTooltip": "选择所需的小数位数"
+    "decimalPlacesTooltip": "选择所需的小数位数",
+    "downlinkConfigMainHeader": "主要下行配置",
+    "downlinkConfigSubHeader": "单独的下行链路配置"
 }
