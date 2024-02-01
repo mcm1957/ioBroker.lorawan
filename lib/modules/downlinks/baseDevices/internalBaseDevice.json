@@ -1,6 +1,6 @@
 [
     {
-        "deviceType":"all",
+        "deviceType":"internalBaseDevice",
         "sendWithUplink":"disabled",
         "downlinkParameter":[
             {
@@ -16,6 +16,5 @@
                 "deviceType": "all"
             }
         ]
-     }
-        
+     }  
 ]

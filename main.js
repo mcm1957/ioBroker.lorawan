@@ -143,55 +143,25 @@ class Lorawan extends utils.Adapter {
 						this.log.silly(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
 						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
-						if(this.config.origin === this.origin.ttn){
-							let appending = "push";
-							if(changeInfo?.changedState === "push"){
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-								await this.sendDownlink(downlinkTopic,state.val);
-								this.setStateAsync(id,state.val,true);
-							}
-							else if(changeInfo?.changedState === "replace"){
-								appending = "replace";
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
-								this.setStateAsync(id,state.val,true);
-							}
-							else{
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
-								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
-								if(downlinkConfig !== undefined){
-									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
-									await this.writeNextSend(changeInfo,payloadInHex);
-									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
-										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
-										if(downlink !== undefined){
-											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
-										}
-									}
-									this.setStateAsync(id,state.val,true);
-								}
-							}
+						const suffix = this.downlinkConfighandler?.getDownlinkTopicSuffix(changeInfo?.changedState);
+						if(changeInfo?.changedState === "push" || changeInfo?.changedState === "replace"){
+							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,suffix);
+							await this.sendDownlink(downlinkTopic,state.val);
+							this.setStateAsync(id,state.val,true);
 						}
-						else if(this.config.origin === this.origin.chirpstack){
-							if(changeInfo?.changedState === "push"){
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
-								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
-								this.setStateAsync(id,state.val,true);
-							}
-							else{
-								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
-								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo);
-								if(downlinkConfig !== undefined){
-									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
-									await this.writeNextSend(changeInfo,payloadInHex);
-									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
-										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
-										if(downlink !== undefined){
-											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
-										}
+						else{
+							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,suffix);
+							const downlinkParameter = this.downlinkConfighandler?.getDownlinkParameter(changeInfo);
+							if(downlinkParameter !== undefined){
+								const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkParameter,state);
+								await this.writeNextSend(changeInfo,payloadInHex);
+								if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
+									const downlink = this.downlinkConfighandler?.getDownlink(downlinkParameter,payloadInHex,changeInfo);
+									if(downlink !== undefined){
+										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
 									}
-									this.setStateAsync(id,state.val,true);
 								}
+								this.setStateAsync(id,state.val,true);
 							}
 						}
 					}
@@ -205,8 +175,8 @@ class Lorawan extends utils.Adapter {
 						for(const adapterObject of Object.values(adapterObjects)){
 							if(adapterObject.type === "state" && (adapterObject._id.indexOf(`${changeInfo?.objectStartDirectory}.downlink.control`) !== -1)){
 								const changeInfo = await this.getChangeInfo(adapterObject._id);
-								const downlinkConfig = this.downlinkConfighandler?.getDownlinkConfig(changeInfo,{startupCheck:true});
-								if(!downlinkConfig){
+								const downlinkParameter = this.downlinkConfighandler?.getDownlinkParameter(changeInfo,{startupCheck:true});
+								if(!downlinkParameter){
 									await this.delObjectAsync(this.removeNamespace(adapterObject._id));
 								}
 							}
@@ -219,7 +189,9 @@ class Lorawan extends utils.Adapter {
 						let index = 0;
 						for(const devicename in this.downlinkConfighandler?.activeDownlinkConfigs){
 							index++;
-							this.log.info(`Device ${index}: ${devicename}`);
+							if(devicename !== this.downlinkConfighandler.internalDevices.baseDevice){
+								this.log.info(`Device ${index}: ${devicename}`);
+							}
 						}
 						this.setStateAsync(id,state.val,true);
 					}
@@ -242,17 +214,8 @@ class Lorawan extends utils.Adapter {
 			if(changeInfo && changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink !== "disabled"){
 				const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
 				if(nextSend?.val !== "0"){
-					let appending = "";
-					switch(this.config.origin){
-						case this.origin.ttn:
-							appending = `/down/push`;
-							break;
-
-						case this.origin.chirpstack:
-							appending = `/down`;
-							break;
-					}
-					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,appending);
+					const suffix = this.downlinkConfighandler?.getDownlinkTopicSuffix("push");
+					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,suffix);
 					const downlinkConfig = this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType];
 					const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
 					if(downlink !== undefined){
