@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.3 (2024-02-01)
 * (BenAhrdt) change internal Base devices
 
 ### 0.1.2 (2024-01-31)

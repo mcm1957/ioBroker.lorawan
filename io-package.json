@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "news": {
+      "0.1.3": {
+        "en": "change internal Base devices",
+        "de": "änderung intern Basisgeräte",
+        "ru": "изменения Базовые устройства",
+        "pt": "mudança interna Dispositivos base",
+        "nl": "intern wijzigen Basisvoorzieningen",
+        "fr": "changement interne Dispositifs de base",
+        "it": "cambiamento interno Dispositivi di base",
+        "es": "cambio interno Dispositivos de base",
+        "pl": "zmiana wewnętrzna Urządzenia bazowe",
+        "uk": "змінити внутрішню Пристрої бази",
+        "zh-cn": "内部变化 基本设备"
+      },
       "0.1.2": {
         "en": "concept of config changed",
         "de": "konzept von config geändert",
@@ -80,19 +93,6 @@
         "pl": "romeve Reacheble katalog obiektów / obiekt nieprofaworyzowany = = = NULL",
         "uk": "romeve досягає каталогу об'єктів / об'єкт об'єкта ==== NULL",
         "zh-cn": "romeve 达到对象目录/ 无法对象 QQ NULL 语言"
-      },
-      "0.0.15": {
-        "en": "bugfix chirpstack directory at downlink queued",
-        "de": "bugfix chirpstack verzeichnis bei downlink queued",
-        "ru": "bugfix chirpstack directory в очертаниях",
-        "pt": "bugfix chirpstack diretório no downlink queued",
-        "nl": "bugfix chirpstack directory bij downlink wachtrij",
-        "fr": "bugfix répertoire chirpstack au lien descendant en file d'attente",
-        "it": "bugfix chirpstack directory in downlink in coda",
-        "es": "bugfix chirpstack directorio en downlink queued",
-        "pl": "katalog chirpstock bugfix na downlink w kolejce",
-        "uk": "javascript licenses api веб-сайт go1.13.8",
-        "zh-cn": "下行链路队列时的 bugfix kirpstack 目录"
       }
     },
     "title": "LoRaWAN",
