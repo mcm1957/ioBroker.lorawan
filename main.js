@@ -26,6 +26,11 @@ class Lorawan extends utils.Adapter {
 		// this.on("objectChange", this.onObjectChange.bind(this));
 		// this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
+
+		this.origin = {
+			ttn: "ttn",
+			chirpstack: "chirpstack"
+		};
 	}
 
 	/**
@@ -55,7 +60,7 @@ class Lorawan extends utils.Adapter {
 			this.subscribeStatesAsync("*downlink.control.*");
 			this.subscribeStatesAsync("*.logAvailableConfignames");
 			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
-			this.log.silly(`the whole reacable downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkDeviceConfigs)}`);
+			this.log.silly(`the whole reacable downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
 
 			/*setTimeout(async () => {
 				await this.startSimulation();
@@ -138,7 +143,7 @@ class Lorawan extends utils.Adapter {
 						this.log.silly(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
 						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
-						if(this.config.origin === "ttn"){
+						if(this.config.origin === this.origin.ttn){
 							let appending = "push";
 							if(changeInfo?.changedState === "push"){
 								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down/${appending}`);
@@ -157,7 +162,7 @@ class Lorawan extends utils.Adapter {
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
 									await this.writeNextSend(changeInfo,payloadInHex);
-									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
+									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
 										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 										if(downlink !== undefined){
 											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -167,7 +172,7 @@ class Lorawan extends utils.Adapter {
 								}
 							}
 						}
-						else if(this.config.origin === "chirpstack"){
+						else if(this.config.origin === this.origin.chirpstack){
 							if(changeInfo?.changedState === "push"){
 								const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,`/down`);
 								await this.sendDownlink(downlinkTopic,state.val,changeInfo);
@@ -179,7 +184,7 @@ class Lorawan extends utils.Adapter {
 								if(downlinkConfig !== undefined){
 									const payloadInHex = this.downlinkConfighandler?.calculatePayloadInHex(downlinkConfig,state);
 									await this.writeNextSend(changeInfo,payloadInHex);
-									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
+									if(!changeInfo?.bestMatchForDeviceType || this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "disabled"){
 										const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,payloadInHex,changeInfo);
 										if(downlink !== undefined){
 											await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -212,7 +217,7 @@ class Lorawan extends utils.Adapter {
 					else if(id.indexOf("logAvailableConfignames") !== -1){
 						this.log.info(`The following devicenames has an existing downlink-config`);
 						let index = 0;
-						for(const devicename in this.downlinkConfighandler?.activeDownlinkDeviceConfigs){
+						for(const devicename in this.downlinkConfighandler?.activeDownlinkConfigs){
 							index++;
 							this.log.info(`Device ${index}: ${devicename}`);
 						}
@@ -234,21 +239,21 @@ class Lorawan extends utils.Adapter {
 		try{
 			this.log.silly(`Check for send downlink with uplink.`);
 			const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
-			if(changeInfo && changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink !== "disabled"){
+			if(changeInfo && changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink !== "disabled"){
 				const nextSend = await this.getNextSend(changeInfo?.objectStartDirectory);
 				if(nextSend?.val !== "0"){
 					let appending = "";
 					switch(this.config.origin){
-						case "ttn":
+						case this.origin.ttn:
 							appending = `/down/push`;
 							break;
 
-						case "chirpstack":
+						case this.origin.chirpstack:
 							appending = `/down`;
 							break;
 					}
 					const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,appending);
-					const downlinkConfig = this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType];
+					const downlinkConfig = this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType];
 					const downlink = this.downlinkConfighandler?.getDownlink(downlinkConfig,nextSend?.val,changeInfo);
 					if(downlink !== undefined){
 						await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
@@ -268,7 +273,7 @@ class Lorawan extends utils.Adapter {
 
 	async writeNextSend(changeInfo,payloadInHex){
 		const idFolderNextSend = `${changeInfo.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkNextSend}`;
-		if(changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkDeviceConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "enabled & collect"){
+		if(changeInfo.bestMatchForDeviceType && this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType].sendWithUplink === "enabled & collect"){
 			const nextSend = await this.getStateAsync(`${idFolderNextSend}.hex`);
 			if(nextSend?.val !== "0"){
 				payloadInHex = nextSend?.val + payloadInHex;
@@ -299,11 +304,11 @@ class Lorawan extends utils.Adapter {
 		}
 		let payload = "";
 		switch(this.config.origin){
-			case "ttn":
+			case this.origin.ttn:
 				payload = downlink.downlinks[0].frm_payload;
 				break;
 
-			case "chirpstack":
+			case this.origin.chirpstack:
 				payload = downlink.data;
 				break;
 		}

@@ -4,11 +4,13 @@
         "sendWithUplink":"disabled",
         "downlinkParameter":[
             {
+                "notInConfig": true,
                 "name": "push",
                 "type": "json",
                 "deviceType": "all"
             },
             {
+                "notInConfig": true,
                 "name": "replace",
                 "type": "json",
                 "deviceType": "all"
