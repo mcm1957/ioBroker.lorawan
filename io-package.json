@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "news": {
+      "0.1.5": {
+        "en": "remove units and insert roles",
+        "de": "einheiten entfernen und rollen einfügen",
+        "ru": "удалить единицы и вставить роли",
+        "pt": "remover unidades e inserir funções",
+        "nl": "eenheden verwijderen en rollen invoegen",
+        "fr": "supprimer les unités et insérer les rôles",
+        "it": "rimuovere unità e inserire ruoli",
+        "es": "eliminar unidades e insertar funciones",
+        "pl": "usunąć jednostki i wstawić role",
+        "uk": "видалення елементів і вставки ролі",
+        "zh-cn": "删除单位并插入角色"
+      },
       "0.1.4": {
         "en": "change input of length and validate hex inputs",
         "de": "längeneingabe ändern und hexeneingänge validieren",
@@ -80,19 +93,6 @@
         "pl": "usunąć nieprawidłowe logowanie ostrzeżeń",
         "uk": "видалити неправильний попереджати залоги",
         "zh-cn": "删除错误的警告记录"
-      },
-      "0.0.17": {
-        "en": "changed Handling of standard configurations",
-        "de": "geänderte Handhabung von Standardkonfigurationen",
-        "ru": "изменение обращения со стандартными конфигурациями",
-        "pt": "manipulação alterada de configurações padrão",
-        "nl": "veranderde verwerking van standaardconfiguraties",
-        "fr": "changement Gestion des configurations standard",
-        "it": "gestione delle configurazioni standard",
-        "es": "cambiado Manejo de configuraciones estándar",
-        "pl": "zmiana obsługi konfiguracji standardowych",
-        "uk": "змінено Обробка стандартних конфігурацій",
-        "zh-cn": "更改标准配置的处理"
       }
     },
     "title": "LoRaWAN",

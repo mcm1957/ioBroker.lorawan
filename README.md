@@ -19,7 +19,7 @@ Adapter was created in collaboration with Joerg Froehner LoraWan@hafenmeister.co
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.5 (2024-02-02)
 * (BenAhrdt) remove units and insert roles
 
 ### 0.1.4 (2024-02-01)
