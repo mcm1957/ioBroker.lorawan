@@ -215,17 +215,24 @@
 								},
 								{
 									"type": "checkbox",
-									"attr": "confirmed",
-									"label": "confirmed",
-									"tooltip": "confirmedTooltip",
+									"attr": "swap",
+									"label": "swap",
+									"tooltip": "swapTooltip",
+									"hidden": "data.type !== 'number'",
 									"default": false,
 									"sm":2
 								},
 								{
+									"type": "staticText",
+									"label": "",
+									"hidden": "data.type === 'number'",
+									"sm":2
+								},
+								{
 									"type": "checkbox",
-									"attr": "swap",
-									"label": "swap",
-									"tooltip": "swapTooltip",
+									"attr": "confirmed",
+									"label": "confirmed",
+									"tooltip": "confirmedTooltip",
 									"default": false,
 									"sm":2
 								},
