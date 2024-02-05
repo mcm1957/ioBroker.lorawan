@@ -55,5 +55,7 @@
     "decimalPlaces": "Nachkommastellen",
     "decimalPlacesTooltip": "Wählen Sie die gewünschte Anzahl an Nachkommastellen aus, die als Downlink gesendet werden",
     "downlinkConfigMainHeader": "Haupt Downlink Konfiguration",
-    "downlinkConfigSubHeader": "Individuelle Downlink Konfiguration"
+    "downlinkConfigSubHeader": "Individuelle Downlink Konfiguration",
+    "swap": "Little Endian (Bytereihenfolge tauschen)",
+    "swapTooltip": "Tauschen Sie den Bytereihenfolged der Eingabe"
 }

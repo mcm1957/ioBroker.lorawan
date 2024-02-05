@@ -55,5 +55,7 @@
     "decimalPlaces": "小数位",
     "decimalPlacesTooltip": "选择所需的小数位数",
     "downlinkConfigMainHeader": "主要下行配置",
-    "downlinkConfigSubHeader": "单独的下行链路配置"
+    "downlinkConfigSubHeader": "单独的下行链路配置",
+    "swap": "小尾数（sawp 字节顺序）",
+    "swapTooltip": "交换输入的字节码"
 }

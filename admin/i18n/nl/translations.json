@@ -55,5 +55,7 @@
     "decimalPlaces": "decimalen",
     "decimalPlacesTooltip": "selecteer het gewenste aantal decimalen",
     "downlinkConfigMainHeader": "belangrijkste downlink-configuratie",
-    "downlinkConfigSubHeader": "individuele downlinkconfiguratie"
+    "downlinkConfigSubHeader": "individuele downlinkconfiguratie",
+    "swap": "kleine endian (sawp-bytevolgorde)",
+    "swapTooltip": "verwissel de byteoder van de invoer"
 }

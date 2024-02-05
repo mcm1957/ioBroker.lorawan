@@ -55,5 +55,7 @@
     "decimalPlaces": "casas decimais",
     "decimalPlacesTooltip": "selecione o número desejado de casas decimais",
     "downlinkConfigMainHeader": "configuração de downlink principal",
-    "downlinkConfigSubHeader": "configuração de downlink individual"
+    "downlinkConfigSubHeader": "configuração de downlink individual",
+    "swap": "little endian (ordem de bytes serrada)",
+    "swapTooltip": "trocar o byteoder da entrada"
 }

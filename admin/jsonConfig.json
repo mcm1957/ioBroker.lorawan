@@ -61,9 +61,8 @@
 					"type": "password",
 					"label": "password",
 					"tooltip": "passwordTooltip",
-					"repeat": true,
 					"default": "",
-					"sm": 6
+					"sm": 3
 				},
 				"OriginHeader": {
 					"newLine": true,
@@ -219,6 +218,14 @@
 									"attr": "confirmed",
 									"label": "confirmed",
 									"tooltip": "confirmedTooltip",
+									"default": false,
+									"sm":2
+								},
+								{
+									"type": "checkbox",
+									"attr": "swap",
+									"label": "swap",
+									"tooltip": "swapTooltip",
 									"default": false,
 									"sm":2
 								},

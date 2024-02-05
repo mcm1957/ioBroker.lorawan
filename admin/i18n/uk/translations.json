@@ -55,5 +55,7 @@
     "decimalPlaces": "знаки після коми",
     "decimalPlacesTooltip": "виберіть потрібну кількість знаків після коми",
     "downlinkConfigMainHeader": "основна конфігурація низхідного каналу",
-    "downlinkConfigSubHeader": "індивідуальна конфігурація низхідного каналу"
+    "downlinkConfigSubHeader": "індивідуальна конфігурація низхідного каналу",
+    "swap": "маленький порядок байтів (sawp byteorder)",
+    "swapTooltip": "поміняти байтовий порядок введення"
 }

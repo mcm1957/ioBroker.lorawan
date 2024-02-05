@@ -56,11 +56,9 @@ class Lorawan extends utils.Adapter {
 			await this.messagehandler.generateDownlinksAndRemoveStatesAtStatup();
 
 			//Subscribe all configuration and control states
-			this.subscribeStatesAsync("*.configuration.*");
-			this.subscribeStatesAsync("*downlink.control.*");
-			this.subscribeStatesAsync("*.logAvailableConfignames");
-			this.log.debug(`the adapter start with the config: ${JSON.stringify(this.config)}.`);
-			this.log.silly(`the whole reacable downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
+			this.subscribeStatesAsync("*");
+			this.log.debug(`the adapter starts with downlinkconfigs: ${JSON.stringify(this.config.downlinkConfig)}.`);
+			this.log.silly(`the active downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
 
 			/*setTimeout(async () => {
 				await this.startSimulation();
@@ -139,7 +137,7 @@ class Lorawan extends utils.Adapter {
 				// The state was changed => only states with ack = false will be processed, others will be ignored
 				if(!state.ack){
 					// Check for downlink in id
-					if(id.indexOf("downlink") !== -1){
+					if(id.indexOf(".downlink.contro.") !== -1){
 						this.log.silly(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
 						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
@@ -166,7 +164,7 @@ class Lorawan extends utils.Adapter {
 						}
 					}
 					// State is from configuration path
-					else if(id.indexOf("configuration") !== -1){
+					else if(id.indexOf(".configuration.") !== -1){
 						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});
 						this.messagehandler?.fillWithDownlinkConfig(changeInfo?.objectStartDirectory);
 
@@ -184,7 +182,7 @@ class Lorawan extends utils.Adapter {
 						this.setStateAsync(id,state.val,true);
 					}
 					// logging of the actual available configs
-					else if(id.indexOf("logAvailableConfignames") !== -1){
+					else if(id.indexOf(".logAvailableConfignames") !== -1){
 						this.log.info(`The following devicenames has an existing downlink-config`);
 						let index = 0;
 						for(const devicename in this.downlinkConfighandler?.activeDownlinkConfigs){

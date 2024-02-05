@@ -55,5 +55,7 @@
 	"decimalPlaces": "decimal places",
 	"decimalPlacesTooltip": "select the desired numberof decimal places",
 	"downlinkConfigMainHeader": "main downlink config",
-	"downlinkConfigSubHeader": "individual downlink config"
+	"downlinkConfigSubHeader": "individual downlink config",
+	"swap": "little endian (sawp byteorder)",
+	"swapTooltip": "swap the byteoder of the input"
 }

@@ -55,5 +55,7 @@
     "decimalPlaces": "décimales",
     "decimalPlacesTooltip": "sélectionnez le nombre de décimales souhaité",
     "downlinkConfigMainHeader": "configuration principale de la liaison descendante",
-    "downlinkConfigSubHeader": "configuration de liaison descendante individuelle"
+    "downlinkConfigSubHeader": "configuration de liaison descendante individuelle",
+    "swap": "Little Endian (ordre des octets Sawp)",
+    "swapTooltip": "échanger le byteoder de l'entrée"
 }
