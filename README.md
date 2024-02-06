@@ -22,7 +22,7 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.7 (2024-02-06)
 * (BenAhrdt) change filter on statechange
 
 ### 0.1.6 (2024-02-05)
