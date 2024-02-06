@@ -57,5 +57,7 @@
 	"downlinkConfigMainHeader": "main downlink config",
 	"downlinkConfigSubHeader": "individual downlink config",
 	"swap": "little endian (sawp byteorder)",
-	"swapTooltip": "swap the byteoder of the input"
+	"swapTooltip": "swap the byteoder of the input",
+	"crc": "checksum (crc 16) (comming soon)",
+	"crcTooltip": "append the crc16 to your data"
 }

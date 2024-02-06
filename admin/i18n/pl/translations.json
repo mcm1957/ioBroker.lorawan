@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "główna konfiguracja łącza w dół",
     "downlinkConfigSubHeader": "indywidualna konfiguracja łącza w dół",
     "swap": "Little Endian (kolejność bajtów sawp)",
-    "swapTooltip": "zamień bajt wejścia"
+    "swapTooltip": "zamień bajt wejścia",
+    "crc": "suma kontrolna (crc 16)",
+    "crcTooltip": "dołącz crc16 do swoich danych"
 }

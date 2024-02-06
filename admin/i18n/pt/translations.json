@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "configuração de downlink principal",
     "downlinkConfigSubHeader": "configuração de downlink individual",
     "swap": "little endian (ordem de bytes serrada)",
-    "swapTooltip": "trocar o byteoder da entrada"
+    "swapTooltip": "trocar o byteoder da entrada",
+    "crc": "soma de verificação (crc 16)",
+    "crcTooltip": "anexe o crc16 aos seus dados"
 }

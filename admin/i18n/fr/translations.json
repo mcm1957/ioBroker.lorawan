@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "configuration principale de la liaison descendante",
     "downlinkConfigSubHeader": "configuration de liaison descendante individuelle",
     "swap": "Little Endian (ordre des octets Sawp)",
-    "swapTooltip": "échanger le byteoder de l'entrée"
+    "swapTooltip": "échanger le byteoder de l'entrée",
+    "crc": "somme de contrôle (crc 16)",
+    "crcTooltip": "ajouter le crc16 à vos données"
 }

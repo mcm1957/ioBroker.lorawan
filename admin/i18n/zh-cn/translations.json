@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "主要下行配置",
     "downlinkConfigSubHeader": "单独的下行链路配置",
     "swap": "小尾数（sawp 字节顺序）",
-    "swapTooltip": "交换输入的字节码"
+    "swapTooltip": "交换输入的字节码",
+    "crc": "校验和（crc 16）",
+    "crcTooltip": "将 crc16 附加到您的数据中"
 }

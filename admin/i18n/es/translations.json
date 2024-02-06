@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "configuración principal del enlace descendente",
     "downlinkConfigSubHeader": "configuración de enlace descendente individual",
     "swap": "little endian (orden de bytes visto)",
-    "swapTooltip": "intercambiar el byteoder de la entrada"
+    "swapTooltip": "intercambiar el byteoder de la entrada",
+    "crc": "suma de comprobación (crc 16)",
+    "crcTooltip": "agregue el crc16 a sus datos"
 }

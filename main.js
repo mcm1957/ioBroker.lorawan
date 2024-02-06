@@ -57,7 +57,7 @@ class Lorawan extends utils.Adapter {
 
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*");
-			this.log.debug(`the adapter starts with downlinkconfigs: ${JSON.stringify(this.config.downlinkConfig)}.`);
+			this.log.silly(`the adapter starts with downlinkconfigs: ${JSON.stringify(this.config.downlinkConfig)}.`);
 			this.log.silly(`the active downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
 
 			/*setTimeout(async () => {
@@ -92,6 +92,35 @@ class Lorawan extends utils.Adapter {
 		//const message = {"deduplicationId":"bd3fdb3b-af86-4617-b9f2-da07075d2bc5","time":"2024-01-24T16:47:01.573381+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"f1c0ae0e-b4a2-4547-b360-7cfa15e85734","deviceProfileName":"Dragino LT22222","deviceName":"Relaistestgerät","devEui":"a8404127a188d826","deviceClassEnabled":"CLASS_C","tags":{}},"devAddr":"01dfbaf2","adr":true,"dr":5,"fCnt":12,"fPort":2,"confirmed":false,"data":"AAAAAAAAAAA8/0E=","object":{"RO1_status":"OFF","DO2_status":"H","ACI2_mA":0.0,"DO1_status":"H","Hardware_mode":"LT22222","RO2_status":"OFF","AVI2_V":0.0,"ACI1_mA":0.0,"DI1_status":"H","DI2_status":"H","Work_mode":"2ACI+2AVI","AVI1_V":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":57857,"gwTime":"2024-01-24T16:47:01.573381+00:00","nsTime":"2024-01-24T16:47:02.370171527+00:00","rssi":-54,"snr":8.5,"channel":6,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"2tr9BA==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867700000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
 		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a8404127a188d826/command/down";
 		//const message = {"devEui":"a8404127a188d826","confirmed":false,"fPort":1,"data":"AQACWA=="};
+
+		// ACK
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/ack";
+		//const message = {"deduplicationId":"b080c0d8-6151-4675-84b8-74ecf9e33bae","time":"2023-08-15T13:22:27.969901+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"queueItemId":"3434298f-2b89-49f8-885e-9fdd9f0892e6","acknowledged":true,"fCntDown":262};
+
+		// TXACK
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/txack";
+		//const message = {"downlinkId":2478630510,"time":"2024-01-27T11:50:04.736655452+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"queueItemId":"efc2bacf-d5da-48d3-a6ef-2a77fda41bd0","fCntDown":4940,"gatewayId":"50313953530a4750","txInfo":{"frequency":868300000,"power":16,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5","polarizationInversion":true}},"timing":{"delay":{"delay":"1s"}},"context":"eqFuiw=="}};
+
+		// STATUS
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/status";
+		//const message = {"deduplicationId":"4a91b00d-b5e1-4955-b085-ba21b9318213","time":"2024-01-26T20:18:45.299871+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"margin":7,"externalPowerSource":false,"batteryLevelUnavailable":false,"batteryLevel":85.826775};
+
+		// UP
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/up";
+		//const message = {"deduplicationId":"c14f77c3-cfe5-42f3-9c43-651d3ca4cf45","time":"2024-01-27T12:00:05.267780+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01343968","adr":true,"dr":5,"fCnt":11129,"fPort":2,"confirmed":false,"data":"gQyOiP39EdAw","object":{"sensorTemperature":20.06,"targetTemperature":12.0,"motorRange":509.0,"childLock":false,"batteryVoltage":3.3,"attachedBackplate":true,"lowMotorConsumption":false,"motorPosition":509.0,"reason":81.0,"highMotorConsumption":false,"calibrationFailed":false,"relativeHumidity":53.13,"perceiveAsOnline":true,"openWindow":false,"brokenSensor":false},"rxInfo":[{"gatewayId":"50313953530a4750","uplinkId":47105,"gwTime":"2024-01-27T12:00:05.267780+00:00","nsTime":"2024-01-27T12:00:05.314616473+00:00","rssi":-68,"snr":9.25,"channel":7,"location":{"latitude":53.55485739669679,"longitude":9.921609163284304},"context":"nnL1/A==","metadata":{"region_common_name":"EU868","region_config_id":"eu868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867900000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
+
+		// LOG
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/up";
+		//const message = {"time":"2024-01-27T10:29:58.221817559+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"level":"ERROR","code":"UPLINK_CODEC","description":"Exception generated by quickjs","context":{"deduplication_id":"c44e7e25-09ce-4c95-b96f-5a298c5c6440"}};
+		
+		// JOIN
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/join";
+		//const message = {"deduplicationId":"44cef56d-1b8d-45fc-a762-03b98b620db2","time":"2023-12-12T03:13:21.551178+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01009400"};
+
+		// DOWN
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/command/down";
+		//const message = {"devEui": "70b3d52dd300ed31", "confirmed": false,"fPort": 1,"data": "DQEYDQEY"};
+
 		await this.messagehandler?.handleMessage(topic, message);
 	}
 	/**
@@ -137,7 +166,7 @@ class Lorawan extends utils.Adapter {
 				// The state was changed => only states with ack = false will be processed, others will be ignored
 				if(!state.ack){
 					// Check for downlink in id
-					if(id.indexOf(".downlink.contro.") !== -1){
+					if(id.indexOf(".downlink.control.") !== -1){
 						this.log.silly(`the state ${id} has changed to ${state.val}.`);
 						// get information of the changing state
 						const changeInfo = await this.getChangeInfo(id,{withBestMatch:true});

@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "Haupt Downlink Konfiguration",
     "downlinkConfigSubHeader": "Individuelle Downlink Konfiguration",
     "swap": "Little Endian (Bytereihenfolge tauschen)",
-    "swapTooltip": "Tauschen Sie den Bytereihenfolged der Eingabe"
+    "swapTooltip": "Tauschen Sie den Bytereihenfolged der Eingabe",
+    "crc": "Prüfsumme (crc 16) (comming soon)",
+    "crcTooltip": "Anhängen der CRC16 Prüsumme an Ihre Daten"
 }

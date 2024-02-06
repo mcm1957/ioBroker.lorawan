@@ -57,5 +57,7 @@
     "downlinkConfigMainHeader": "configurazione downlink principale",
     "downlinkConfigSubHeader": "configurazione downlink individuale",
     "swap": "little endian (ordine byte sawp)",
-    "swapTooltip": "scambia il byteoder dell'input"
+    "swapTooltip": "scambia il byteoder dell'input",
+    "crc": "somma di controllo (crc 16)",
+    "crcTooltip": "aggiungi crc16 ai tuoi dati"
 }
