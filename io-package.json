@@ -1,211 +1,211 @@
 {
-    "common": {
-        "name": "lorawan",
-        "version": "0.1.7",
-        "news": {
-            "0.1.7": {
-                "en": "change filter on statechange",
-                "de": "änderungsfilter auf statechange",
-                "ru": "изменение фильтра для изменения состояния",
-                "pt": "filtro de mudança de estado",
-                "nl": "filter wijzigen bij statusverandering",
-                "fr": "modifier le filtre sur le changement d'état",
-                "it": "cambiare il filtro sul cambio di stato",
-                "es": "filtro de cambio en el cambio de estado",
-                "pl": "zmienić filtr na statechange",
-                "uk": "зміна фільтра на державну зміну",
-                "zh-cn": "状态更改过滤器"
-            },
-            "0.1.6": {
-                "en": "implments byte swap",
-                "de": "implikationen byte swap",
-                "ru": "свопа",
-                "pt": "impelimentos por swap",
-                "nl": "implments byte swap",
-                "fr": "swap par octets",
-                "it": "importazioni di swap",
-                "es": "swap byte",
-                "pl": "implikacje swap bajtów",
-                "uk": "напляскване",
-                "zh-cn": "杂质字节互换"
-            },
-            "0.1.5": {
-                "en": "remove units and insert roles",
-                "de": "einheiten entfernen und rollen einfügen",
-                "ru": "удалить единицы и вставить роли",
-                "pt": "remover unidades e inserir funções",
-                "nl": "eenheden verwijderen en rollen invoegen",
-                "fr": "supprimer les unités et insérer les rôles",
-                "it": "rimuovere unità e inserire ruoli",
-                "es": "eliminar unidades e insertar funciones",
-                "pl": "usunąć jednostki i wstawić role",
-                "uk": "видалення елементів і вставки ролі",
-                "zh-cn": "删除单位并插入角色"
-            },
-            "0.1.4": {
-                "en": "change input of length and validate hex inputs",
-                "de": "längeneingabe ändern und hexeneingänge validieren",
-                "ru": "изменение вводимых значений длины и валидированных",
-                "pt": "alterar a entrada de comprimento e validar entradas de hex",
-                "nl": "de input van lengte wijzigen en hex-inputs valideren",
-                "fr": "modifier l'entrée de longueur et valider les entrées de hexagone",
-                "it": "modificare l'ingresso della lunghezza e convalidare gli input esadecimali",
-                "es": "cambio de entrada de longitud y validar entradas de hex",
-                "pl": "zmiana wejścia długości i walidacja wejść heksu",
-                "uk": "зміна введення довжини і валідації шестигранних входів",
-                "zh-cn": "修改长度输入并验证十六进制输入"
-            },
-            "0.1.3": {
-                "en": "change internal Base devices",
-                "de": "änderung intern Basisgeräte",
-                "ru": "изменения Базовые устройства",
-                "pt": "mudança interna Dispositivos base",
-                "nl": "intern wijzigen Basisvoorzieningen",
-                "fr": "changement interne Dispositifs de base",
-                "it": "cambiamento interno Dispositivi di base",
-                "es": "cambio interno Dispositivos de base",
-                "pl": "zmiana wewnętrzna Urządzenia bazowe",
-                "uk": "змінити внутрішню Пристрої бази",
-                "zh-cn": "内部变化 基本设备"
-            },
-            "0.1.2": {
-                "en": "concept of config changed",
-                "de": "konzept von config geändert",
-                "ru": "изменено понятие конфигурации",
-                "pt": "conceito de configuração alterado",
-                "nl": "concept van configuratie gewijzigd",
-                "fr": "concept de configuration changé",
-                "it": "concetto di configurazione cambiato",
-                "es": "concepto de configuración cambiado",
-                "pl": "pojęcie config zmienione",
-                "uk": "концепція зміни конфігурації",
-                "zh-cn": "配置概念已更改"
-            },
-            "0.1.1": {
-                "en": "reduceing calling changeInfo > create expersettings to send downlinks with uplink",
-                "de": "reduzierung der Anrufänderung Info > erstellen Exkursionen, um Downlinks mit Uplink zu senden",
-                "ru": "уменьшение изменения вызовов Инфо > создать отрывки для отправки обратных ссылок с помощью uplink",
-                "pt": "redução da mudança de chamada Info > criar expersettings para enviar downlinks com uplink",
-                "nl": "verminderen van aanroepverandering Info > maakt expersettings om downlinks met uplink te versturen",
-                "fr": "réduire le changement d'appel Info > créer des expersettings pour envoyer des liens vers le bas avec uplink",
-                "it": "ridurre il cambiamento di chiamata Info > creare expersettings per inviare downlink con uplink",
-                "es": "reducción del cambio de llamada Info > crear explotaciones para enviar enlaces descendentes con uplink",
-                "pl": "redukcja zmiany wywołania Info > tworzenie expersettings do wysyłania linków w dół za pomocą łącza",
-                "uk": "зменшення зміни виклику Інформація > створити налаштування для відправки посилань з посиланням",
-                "zh-cn": "减少调用更改 Info > 创建带上行链路的下行链路"
-            }
-        },
-        "title": "LoRaWAN",
-        "titleLang": {
-            "en": "LoRaWAN",
-            "de": "LoRaWAN",
-            "ru": "ЛоРаВАН",
-            "pt": "LoRaWAN",
-            "nl": "LoRaWAN",
-            "fr": "LoRaWAN",
-            "it": "LoRaWAN",
-            "es": "LoRaWAN",
-            "pl": "LoRaWAN",
-            "uk": "LoRaWAN",
-            "zh-cn": "洛拉万"
-        },
-        "desc": {
-            "en": "converts the desired lora gateway data to a ioBroker structure",
-            "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
-            "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
-            "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
-            "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
-            "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
-            "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
-            "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
-            "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
-            "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
-            "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
-        },
-        "authors": [
-            "BenAhrdt <bsahrdt@gmail.com>"
-        ],
-        "keywords": [
-            "LoRaWAN"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "lorawan.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
-        "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
-        "loglevel": "info",
-        "tier": 3,
-        "mode": "daemon",
-        "type": "protocols",
-        "compact": true,
-        "connectionType": "cloud",
-        "dataSource": "push",
-        "adminUI": {
-            "config": "json"
-        },
-        "dependencies": [
-            {
-                "js-controller": ">=3.3.22"
-            }
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=6.13.15"
-            }
-        ]
+  "common": {
+    "name": "lorawan",
+    "version": "0.1.8",
+    "news": {
+      "0.1.8": {
+        "en": "implement crc calculation",
+        "de": "ck-berechnung implementieren",
+        "ru": "целевые вычисления",
+        "pt": "cálculo de crc de implementação",
+        "nl": "crc berekening uitvoeren",
+        "fr": "mettre en œuvre le calcul crc",
+        "it": "implementare il calcolo crc",
+        "es": "cálculo de crc",
+        "pl": "implementation crc calculation",
+        "uk": "реалізація розрахунку кришки",
+        "zh-cn": "执行计算"
+      },
+      "0.1.7": {
+        "en": "change filter on statechange",
+        "de": "änderungsfilter auf statechange",
+        "ru": "изменение фильтра для изменения состояния",
+        "pt": "filtro de mudança de estado",
+        "nl": "filter wijzigen bij statusverandering",
+        "fr": "modifier le filtre sur le changement d'état",
+        "it": "cambiare il filtro sul cambio di stato",
+        "es": "filtro de cambio en el cambio de estado",
+        "pl": "zmienić filtr na statechange",
+        "uk": "зміна фільтра на державну зміну",
+        "zh-cn": "状态更改过滤器"
+      },
+      "0.1.6": {
+        "en": "implments byte swap",
+        "de": "implikationen byte swap",
+        "ru": "свопа",
+        "pt": "impelimentos por swap",
+        "nl": "implments byte swap",
+        "fr": "swap par octets",
+        "it": "importazioni di swap",
+        "es": "swap byte",
+        "pl": "implikacje swap bajtów",
+        "uk": "напляскване",
+        "zh-cn": "杂质字节互换"
+      },
+      "0.1.5": {
+        "en": "remove units and insert roles",
+        "de": "einheiten entfernen und rollen einfügen",
+        "ru": "удалить единицы и вставить роли",
+        "pt": "remover unidades e inserir funções",
+        "nl": "eenheden verwijderen en rollen invoegen",
+        "fr": "supprimer les unités et insérer les rôles",
+        "it": "rimuovere unità e inserire ruoli",
+        "es": "eliminar unidades e insertar funciones",
+        "pl": "usunąć jednostki i wstawić role",
+        "uk": "видалення елементів і вставки ролі",
+        "zh-cn": "删除单位并插入角色"
+      },
+      "0.1.4": {
+        "en": "change input of length and validate hex inputs",
+        "de": "längeneingabe ändern und hexeneingänge validieren",
+        "ru": "изменение вводимых значений длины и валидированных",
+        "pt": "alterar a entrada de comprimento e validar entradas de hex",
+        "nl": "de input van lengte wijzigen en hex-inputs valideren",
+        "fr": "modifier l'entrée de longueur et valider les entrées de hexagone",
+        "it": "modificare l'ingresso della lunghezza e convalidare gli input esadecimali",
+        "es": "cambio de entrada de longitud y validar entradas de hex",
+        "pl": "zmiana wejścia długości i walidacja wejść heksu",
+        "uk": "зміна введення довжини і валідації шестигранних входів",
+        "zh-cn": "修改长度输入并验证十六进制输入"
+      },
+      "0.1.3": {
+        "en": "change internal Base devices",
+        "de": "änderung intern Basisgeräte",
+        "ru": "изменения Базовые устройства",
+        "pt": "mudança interna Dispositivos base",
+        "nl": "intern wijzigen Basisvoorzieningen",
+        "fr": "changement interne Dispositifs de base",
+        "it": "cambiamento interno Dispositivi di base",
+        "es": "cambio interno Dispositivos de base",
+        "pl": "zmiana wewnętrzna Urządzenia bazowe",
+        "uk": "змінити внутрішню Пристрої бази",
+        "zh-cn": "内部变化 基本设备"
+      },
+      "0.1.2": {
+        "en": "concept of config changed",
+        "de": "konzept von config geändert",
+        "ru": "изменено понятие конфигурации",
+        "pt": "conceito de configuração alterado",
+        "nl": "concept van configuratie gewijzigd",
+        "fr": "concept de configuration changé",
+        "it": "concetto di configurazione cambiato",
+        "es": "concepto de configuración cambiado",
+        "pl": "pojęcie config zmienione",
+        "uk": "концепція зміни конфігурації",
+        "zh-cn": "配置概念已更改"
+      }
     },
-    "encryptedNative": [
-        "password"
-    ],
-    "protectedNative": [
-        "password"
-    ],
-    "native": {
-        "ipUrl": "",
-        "port": 8883,
-        "username": "",
-        "password": "",
-        "ssl": true,
-        "origin": "ttn",
-        "downlinkConfig": {}
+    "title": "LoRaWAN",
+    "titleLang": {
+      "en": "LoRaWAN",
+      "de": "LoRaWAN",
+      "ru": "ЛоРаВАН",
+      "pt": "LoRaWAN",
+      "nl": "LoRaWAN",
+      "fr": "LoRaWAN",
+      "it": "LoRaWAN",
+      "es": "LoRaWAN",
+      "pl": "LoRaWAN",
+      "uk": "LoRaWAN",
+      "zh-cn": "洛拉万"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.logAvailableConfignames",
-            "type": "state",
-            "common": {
-                "role": "button",
-                "name": "logs the names of available device configurations",
-                "type": "boolean",
-                "read": true,
-                "write": true,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "converts the desired lora gateway data to a ioBroker structure",
+      "de": "wandelt die gewünschten Lora-Gateway-Daten in eine ioBroker-Struktur um",
+      "ru": "преобразует нужные данные шлюза Lora в структуру ioBroker",
+      "pt": "converte os dados desejados do gateway lora em uma estrutura ioBroker",
+      "nl": "converteert de gewenste Lora-gatewaygegevens naar een ioBroker-structuur",
+      "fr": "convertit les données de la passerelle Lora souhaitées en une structure ioBroker",
+      "it": "converte i dati del gateway lora desiderati in una struttura ioBroker",
+      "es": "convierte los datos de la puerta de enlace lora deseada a una estructura ioBroker",
+      "pl": "konwertuje żądane dane bramy Lora do struktury ioBroker",
+      "uk": "перетворює потрібні дані lora gateway на структуру ioBroker",
+      "zh-cn": "将所需的lora网关数据转换为ioBroker结构"
+    },
+    "authors": [
+      "BenAhrdt <bsahrdt@gmail.com>"
+    ],
+    "keywords": [
+      "LoRaWAN"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "lorawan.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
+    "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
+    "loglevel": "info",
+    "tier": 3,
+    "mode": "daemon",
+    "type": "protocols",
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "push",
+    "adminUI": {
+      "config": "json"
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=3.3.22"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.13.15"
+      }
     ]
+  },
+  "encryptedNative": [
+    "password"
+  ],
+  "protectedNative": [
+    "password"
+  ],
+  "native": {
+    "ipUrl": "",
+    "port": 8883,
+    "username": "",
+    "password": "",
+    "ssl": true,
+    "origin": "ttn",
+    "downlinkConfig": {}
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.logAvailableConfignames",
+      "type": "state",
+      "common": {
+        "role": "button",
+        "name": "logs the names of available device configurations",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
