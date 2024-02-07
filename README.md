@@ -22,7 +22,7 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.9 (2024-02-07)
 * (BenAhrdt) crc calculation improoved
 
 ### 0.1.8 (2024-02-07)
