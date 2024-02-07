@@ -30,10 +30,10 @@
     "typeTooltip": "seleccione el tipo de entrada que desea elegir",
     "confirmed": "confirmado",
     "confirmedTooltip": "si desea enviar la descarga con mensaje confirmado habilite esta opción",
-    "front": "valor frontal (hexadecimal)",
-    "frontTooltip": "inserte el valor frontal en formato hexadecimal, que se descargará",
-    "end": "valor final (hexadecimal)",
-    "endTooltip": "inserte el valor final en formato hexadecimal, que se descargará",
+    "front": "valor frontal",
+    "frontTooltip": "inserte el valor frontal, que se establecerá en el enlace descendente (el valor debe estar en hexadecimal, excepto el tipo de cadena)",
+    "end": "valor final",
+    "endTooltip": "inserte el valor final, que se establecerá en el enlace descendente (el valor debe estar en hexadecimal, excepto el tipo de cadena)",
     "lengthInByte": "longitud del estado (byte)",
     "lengthInByteTooltip": "insertar la longitud del estado en bytes",
     "on": "en",
@@ -59,5 +59,6 @@
     "swap": "little endian (orden de bytes visto)",
     "swapTooltip": "intercambiar el byteoder de la entrada",
     "crc": "suma de comprobación (crc 16)",
-    "crcTooltip": "agregue el crc16 a sus datos"
+    "crcTooltip": "agregue el crc16 a sus datos",
+    "String": "Cadena"
 }

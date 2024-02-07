@@ -30,10 +30,10 @@
     "typeTooltip": "selecteer het type ingang dat u wilt kiezen",
     "confirmed": "bevestigd",
     "confirmedTooltip": "Als u de download met een bevestigd bericht wilt verzenden, schakelt u deze optie in",
-    "front": "voorste waarde (hexadecimaal)",
-    "frontTooltip": "voeg de voorwaarde in hexadecimaal formaat in, die zal worden gedownload",
-    "end": "eindwaarde (hexadecimaal)",
-    "endTooltip": "voer de eindwaarde in hexadecimaal formaat in, die zal worden gedownload",
+    "front": "frontwaarde",
+    "frontTooltip": "voer de front-waarde in, die wordt ingesteld op de downlink (waarde moet in hex zijn - behalve type string)",
+    "end": "eindwaarde",
+    "endTooltip": "voer de eindwaarde in, die wordt ingesteld op de downlink (waarde moet in hex zijn - behalve type string)",
     "lengthInByte": "lengte van staat (byte)",
     "lengthInByteTooltip": "voer de lengte van de status in bytes in",
     "on": "op",
@@ -59,5 +59,6 @@
     "swap": "kleine endian (sawp-bytevolgorde)",
     "swapTooltip": "verwissel de byteoder van de invoer",
     "crc": "controlesom (crc 16)",
-    "crcTooltip": "voeg de crc16 toe aan uw gegevens"
+    "crcTooltip": "voeg de crc16 toe aan uw gegevens",
+    "String": "Snaar"
 }

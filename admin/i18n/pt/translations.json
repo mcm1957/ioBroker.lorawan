@@ -30,10 +30,10 @@
     "typeTooltip": "selecione o tipo de entrada que você deseja escolher",
     "confirmed": "confirmado",
     "confirmedTooltip": "se quiser enviar o download com mensagem confirmada habilite esta opção",
-    "front": "valor frontal (hex)",
-    "frontTooltip": "insira o valor frontal em formato hexadecimal, que será baixado",
-    "end": "valor final (hex)",
-    "endTooltip": "insira o valor final em formato hexadecimal, que será baixado",
+    "front": "valor frontal",
+    "frontTooltip": "insira o valor frontal, que será definido para o downlink (o valor deve estar em hexadecimal - exceto tipo string)",
+    "end": "valor final",
+    "endTooltip": "insira o valor final, que será definido para o downlink (o valor deve estar em hexadecimal - exceto tipo string)",
     "lengthInByte": "comprimento do estado (byte)",
     "lengthInByteTooltip": "insira o comprimento do estado em bytes",
     "on": "sobre",
@@ -59,5 +59,6 @@
     "swap": "little endian (ordem de bytes serrada)",
     "swapTooltip": "trocar o byteoder da entrada",
     "crc": "soma de verificação (crc 16)",
-    "crcTooltip": "anexe o crc16 aos seus dados"
+    "crcTooltip": "anexe o crc16 aos seus dados",
+    "String": "Corda"
 }

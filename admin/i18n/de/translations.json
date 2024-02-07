@@ -30,10 +30,10 @@
     "typeTooltip": "Wählen Sie den gewünschten Eingabetyp aus",
     "confirmed": "bestätigt",
     "confirmedTooltip": "Wenn Sie den Download mit einer bestätigten Nachricht senden möchten, aktivieren Sie diese Option",
-    "front": "Führend (hex)",
-    "frontTooltip": "Geben Sie den Frontwert im Hex-Format ein, der heruntergeladen werden soll",
-    "end": "Folgend (hex)",
-    "endTooltip": "Geben Sie den Endwert im Hex-Format ein, der heruntergeladen werden soll",
+    "front": "Führend",
+    "frontTooltip": "Geben Sie den führenden Wert ein, der mit dem downlink gesendet werden soll. (Die Eingabe erfolgt in hex - außer beim Typ Zeichenkette)",
+    "end": "Folgend",
+    "endTooltip": "Geben Sie den folgenden Wert ein, der mit dem downlink gesendet werden soll. (Die Eingabe erfolgt in hex - außer beim Typ Zeichenkette)",
     "lengthInByte": "Statelänge (Byte)",
     "lengthInByteTooltip": "Geben Sie die Länge des States in Bytes an",
     "on": "An",
@@ -57,7 +57,8 @@
     "downlinkConfigMainHeader": "Haupt Downlink Konfiguration",
     "downlinkConfigSubHeader": "Individuelle Downlink Konfiguration",
     "swap": "Little Endian (Bytereihenfolge tauschen)",
-    "swapTooltip": "Tauschen Sie den Bytereihenfolged der Eingabe",
-    "crc": "Prüfsumme (crc 16) (comming soon)",
-    "crcTooltip": "Anhängen der CRC16 Prüsumme an Ihre Daten"
+    "swapTooltip": "Tauschen Sie die Bytereihenfolge der Eingabe",
+    "crc": "Prüfsumme (crc 16)",
+    "crcTooltip": "Anhängen der CRC16 Prüsumme an Ihre Daten",
+    "String": "Zeichenkette"
 }

@@ -243,7 +243,7 @@
 									"label": "front",
 									"tooltip": "frontTooltip",
 									"default": "03",
-									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front);",
+									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{const myRegEx = /^([0-9a-z])*$/i; return myRegEx.test(data.front)}",
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
 									"sm":2
 								},
@@ -252,7 +252,8 @@
 									"attr": "end",
 									"label": "end",
 									"tooltip": "endTooltip",
-									"default": "11","validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.end);",
+									"default": "11",
+									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{const myRegEx = /^([0-9a-z])*$/i; return myRegEx.test(data.front)}",
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
 									"sm":2
 								},
@@ -313,7 +314,7 @@
 									"attr": "decimalPlaces",
 									"label": "decimalPlaces",
 									"tooltip": "decimalPlacesTooltip",
-									"default": "1",
+									"default": "0",
 									"min": 0,
 									"max": 5,
 									"hidden": "data.type !== 'number'",
@@ -329,12 +330,17 @@
 									"sm":1
 								},
 								{
-									"type": "checkbox",
+									"type": "select",
 									"attr": "crc",
 									"label": "crc",
 									"tooltip": "crcTooltip",
-									"default": false,
-									"sm":1
+									"options": [
+										{"label":"off","value":"off"},
+										{"label":"KERMIT","value":"KERMIT"},
+										{"label":"KERMIT (Little Endian)","value":"KERMIT.LittleEndian"}
+									],
+									"default": "off",
+									"sm":2
 								}
 							]
 						}

@@ -30,10 +30,10 @@
     "typeTooltip": "选择您想要选择的输入类型",
     "confirmed": "确认的",
     "confirmedTooltip": "如果您想发送带有确认消息的下载，请启用此选项",
-    "front": "前值（十六进制）",
-    "frontTooltip": "以十六进制格式插入前面的值，它将被下载",
-    "end": "最终值（十六进制）",
-    "endTooltip": "插入十六进制格式的最终​​值，它将被下载",
+    "front": "前值",
+    "frontTooltip": "插入前值，该值将设置为下行链路（值必须为十六进制 - 字符串类型除外）",
+    "end": "最终值",
+    "endTooltip": "插入最终值，该值将设置为下行链路（值必须为十六进制 - 字符串类型除外）",
     "lengthInByte": "状态长度（字节）",
     "lengthInByteTooltip": "插入状态的长度（以字节为单位）",
     "on": "在",
@@ -42,7 +42,7 @@
     "offTooltip": "如果将状态设置为 false，则插入要发送的值",
     "onClick": "点击时",
     "onClickTooltip": "如果将状态设置为 true（单击按钮），则插入要发送的值",
-    "multiplyfaktor": "多重因子",
+    "multiplyfaktor": "多重因素",
     "multiplyfaktorTooltip": "插入您想要与数据相乘的因子（例如，输入 1(min) => 60s 为 60）",
     "unit": "单元",
     "unitTooltip": "插入您的值的单位",
@@ -59,5 +59,6 @@
     "swap": "小尾数（sawp 字节顺序）",
     "swapTooltip": "交换输入的字节码",
     "crc": "校验和（crc 16）",
-    "crcTooltip": "将 crc16 附加到您的数据中"
+    "crcTooltip": "将 crc16 附加到您的数据中",
+    "String": "细绳"
 }

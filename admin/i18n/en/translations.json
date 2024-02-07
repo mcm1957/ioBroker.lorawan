@@ -30,10 +30,10 @@
 	"typeTooltip": "select the type of input you like to chose",
 	"confirmed": "confirmed",
 	"confirmedTooltip": "if you like to send the download with confirmed message enable this option",
-	"front": "front value (hex)",
-	"frontTooltip": "insert the front-value in hex format, wich will be downloaded",
-	"end": "end value (hex)",
-	"endTooltip": "insert the end-value in hex format, wich will be downloaded",
+	"front": "front value",
+	"frontTooltip": "insert the front-value, wich will be set to the downlink (value must be in hex - exept type string)",
+	"end": "end value",
+	"endTooltip": "insert the end-value, wich will be set to the downlink (value must be in hex - exept type string)",
 	"lengthInByte": "length of state (byte)",
 	"lengthInByteTooltip": "insert the length of the state in bytes",
 	"on": "on",
@@ -58,6 +58,7 @@
 	"downlinkConfigSubHeader": "individual downlink config",
 	"swap": "little endian (sawp byteorder)",
 	"swapTooltip": "swap the byteoder of the input",
-	"crc": "checksum (crc 16) (comming soon)",
-	"crcTooltip": "append the crc16 to your data"
+	"crc": "checksum (crc 16)",
+	"crcTooltip": "append the crc16 to your data",
+	"String": "String"
 }
