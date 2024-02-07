@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.0.4",
-    "js-crc": "^0.2.0",
     "mqtt": "^5.3.5"
   },
   "devDependencies": {
