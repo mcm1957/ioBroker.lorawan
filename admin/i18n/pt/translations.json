@@ -60,5 +60,6 @@
     "swapTooltip": "trocar o byteoder da entrada",
     "crc": "soma de verificação (crc 16)",
     "crcTooltip": "anexe o crc16 aos seus dados",
-    "String": "Corda"
+    "String": "Corda",
+    "no crc": "sem adição de crc"
 }

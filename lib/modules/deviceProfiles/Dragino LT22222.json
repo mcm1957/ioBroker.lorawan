@@ -19,7 +19,8 @@
                 "off": "030011",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "Intervall",
@@ -34,7 +35,8 @@
                 "off": "11",
                 "multiplyfaktor": 60,
                 "unit": "min",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "RO2_target",
@@ -49,7 +51,8 @@
                 "off": "031100",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "RPC_Level",
@@ -64,7 +67,8 @@
                 "off": "2100",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "DO1_target",
@@ -79,7 +83,8 @@
                 "off": "02001111",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "DO2_target",
@@ -94,7 +99,8 @@
                 "off": "02110011",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "DO1_L_FOR_2_SEC",
@@ -109,7 +115,8 @@
                 "off": "",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             },
             {
                 "name": "RO2_On_FOR_1_Min",
@@ -124,7 +131,8 @@
                 "off": "",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111"
+                "onClick": "030111",
+                "crc":"noCrc"
             }
         ]
      }    

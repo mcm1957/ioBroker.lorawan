@@ -60,5 +60,6 @@
     "swapTooltip": "verwissel de byteoder van de invoer",
     "crc": "controlesom (crc 16)",
     "crcTooltip": "voeg de crc16 toe aan uw gegevens",
-    "String": "Snaar"
+    "String": "Snaar",
+    "no crc": "geen crc-toevoeging"
 }

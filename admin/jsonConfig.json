@@ -243,7 +243,7 @@
 									"label": "front",
 									"tooltip": "frontTooltip",
 									"default": "03",
-									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{const myRegEx = /^([0-9a-z])*$/i; return myRegEx.test(data.front)}",
+									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{return true}",
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
 									"sm":2
 								},
@@ -253,7 +253,7 @@
 									"label": "end",
 									"tooltip": "endTooltip",
 									"default": "11",
-									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{const myRegEx = /^([0-9a-z])*$/i; return myRegEx.test(data.front)}",
+									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{return true}",
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
 									"sm":2
 								},
@@ -335,7 +335,7 @@
 									"label": "crc",
 									"tooltip": "crcTooltip",
 									"options": [
-										{"label":"off","value":"off"},
+										{"label":"no crc","value":"noCrc"},
 										{"label":"KERMIT","value":"KERMIT"},
 										{"label":"KERMIT (Little Endian)","value":"KERMIT.LittleEndian"}
 									],

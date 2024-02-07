@@ -60,5 +60,6 @@
     "swapTooltip": "zamień bajt wejścia",
     "crc": "suma kontrolna (crc 16)",
     "crcTooltip": "dołącz crc16 do swoich danych",
-    "String": "Strunowy"
+    "String": "Strunowy",
+    "no crc": "bez dodawania crc"
 }

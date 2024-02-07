@@ -60,5 +60,6 @@
     "swapTooltip": "échanger le byteoder de l'entrée",
     "crc": "somme de contrôle (crc 16)",
     "crcTooltip": "ajouter le crc16 à vos données",
-    "String": "Chaîne"
+    "String": "Chaîne",
+    "no crc": "pas d'ajout de crc"
 }

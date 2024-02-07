@@ -60,5 +60,6 @@
     "swapTooltip": "Tauschen Sie die Bytereihenfolge der Eingabe",
     "crc": "Prüfsumme (crc 16)",
     "crcTooltip": "Anhängen der CRC16 Prüsumme an Ihre Daten",
-    "String": "Zeichenkette"
+    "String": "Zeichenkette",
+    "no crc": "Keine Prüfumme hinzufügen"
 }

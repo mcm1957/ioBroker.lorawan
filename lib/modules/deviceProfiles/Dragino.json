@@ -18,7 +18,8 @@
                 "on": "",
                 "off": "",
                 "multiplyfaktor": 60,
-                "unit": "min"
+                "unit": "min",
+                "crc":"noCrc"
             },
             {
                 "name": "Reboot",
@@ -33,7 +34,8 @@
                 "off": "",
                 "onClick": "04FF",
                 "multiplyfaktor": "1",
-                "unit": ""
+                "unit": "",
+                "crc":"noCrc"
             }
         ]
      }    
