@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "news": {
+      "0.1.10": {
+        "en": "default of crc changed",
+        "de": "standard von cc geändert",
+        "ru": "по умолчанию",
+        "pt": "padrão de crc alterado",
+        "nl": "default van crc gewijzigd",
+        "fr": "défaut de changement de crc",
+        "it": "default di crc cambiato",
+        "es": "por defecto de crc cambiado",
+        "pl": "domyślna zmiana crc",
+        "uk": "за замовчуванням змінного струму",
+        "zh-cn": "默认 crc 已更改"
+      },
       "0.1.9": {
         "en": "crc calculation improoved",
         "de": "cc berechnung improoviert",
@@ -80,19 +93,6 @@
         "pl": "zmiana wejścia długości i walidacja wejść heksu",
         "uk": "зміна введення довжини і валідації шестигранних входів",
         "zh-cn": "修改长度输入并验证十六进制输入"
-      },
-      "0.1.3": {
-        "en": "change internal Base devices",
-        "de": "änderung intern Basisgeräte",
-        "ru": "изменения Базовые устройства",
-        "pt": "mudança interna Dispositivos base",
-        "nl": "intern wijzigen Basisvoorzieningen",
-        "fr": "changement interne Dispositifs de base",
-        "it": "cambiamento interno Dispositivi di base",
-        "es": "cambio interno Dispositivos de base",
-        "pl": "zmiana wewnętrzna Urządzenia bazowe",
-        "uk": "змінити внутрішню Пристрої бази",
-        "zh-cn": "内部变化 基本设备"
       }
     },
     "title": "LoRaWAN",
