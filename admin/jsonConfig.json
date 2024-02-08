@@ -339,7 +339,7 @@
 										{"label":"KERMIT","value":"KERMIT"},
 										{"label":"KERMIT (Little Endian)","value":"KERMIT.LittleEndian"}
 									],
-									"default": "off",
+									"default": "no crc",
 									"sm":2
 								}
 							]
