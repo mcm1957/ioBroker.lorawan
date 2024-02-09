@@ -61,5 +61,13 @@
     "crc": "somme de contrôle (crc 16)",
     "crcTooltip": "ajouter le crc16 à vos données",
     "String": "Chaîne",
-    "no crc": "pas d'ajout de crc"
+    "no crc": "pas d'ajout de crc",
+    "limitMin": "limite min.",
+    "limitMinTooltip": "limite la possibilité d'entrées dans le sens négatif",
+    "limitMinValue": "min. valeur",
+    "limitMinValueTooltip": "saisir la limite dans le sens négatif",
+    "limitMax": "limite max.",
+    "limitMaxTooltip": "limite la possibilité d'entrées dans le sens positif",
+    "limitMaxValue": "maximum. valeur",
+    "limitMaxValueTooltip": "saisir la limite dans le sens positif"
 }

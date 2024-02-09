@@ -61,5 +61,13 @@
     "crc": "soma de verificação (crc 16)",
     "crcTooltip": "anexe o crc16 aos seus dados",
     "String": "Corda",
-    "no crc": "sem adição de crc"
+    "no crc": "sem adição de crc",
+    "limitMin": "limite mín.",
+    "limitMinTooltip": "limita a possibilidade de entradas na direção negativa",
+    "limitMinValue": "min. valor",
+    "limitMinValueTooltip": "insira o limite na direção negativa",
+    "limitMax": "limite máx.",
+    "limitMaxTooltip": "limita a possibilidade de entradas na direção positiva",
+    "limitMaxValue": "máx. valor",
+    "limitMaxValueTooltip": "insira o limite na direção positiva"
 }

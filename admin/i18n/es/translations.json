@@ -61,5 +61,13 @@
     "crc": "suma de comprobación (crc 16)",
     "crcTooltip": "agregue el crc16 a sus datos",
     "String": "Cadena",
-    "no crc": "sin agregar crc"
+    "no crc": "sin agregar crc",
+    "limitMin": "límite mín.",
+    "limitMinTooltip": "limita la posibilidad de entradas en dirección negativa",
+    "limitMinValue": "mín. valor",
+    "limitMinValueTooltip": "introduzca el límite en dirección negativa",
+    "limitMax": "límite máx.",
+    "limitMaxTooltip": "limita la posibilidad de entradas en dirección positiva",
+    "limitMaxValue": "máx. valor",
+    "limitMaxValueTooltip": "Introduzca el límite en dirección positiva."
 }

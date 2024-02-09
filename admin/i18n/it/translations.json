@@ -61,5 +61,13 @@
     "crc": "somma di controllo (crc 16)",
     "crcTooltip": "aggiungi crc16 ai tuoi dati",
     "String": "Corda",
-    "no crc": "nessuna aggiunta di CRC"
+    "no crc": "nessuna aggiunta di CRC",
+    "limitMin": "limite minimo",
+    "limitMinTooltip": "limita la possibilità di input in direzione negativa",
+    "limitMinValue": "min. valore",
+    "limitMinValueTooltip": "inserire il limite in direzione negativa",
+    "limitMax": "limite massimo",
+    "limitMaxTooltip": "limita la possibilità di input in direzione positiva",
+    "limitMaxValue": "massimo valore",
+    "limitMaxValueTooltip": "inserire il limite in direzione positiva"
 }

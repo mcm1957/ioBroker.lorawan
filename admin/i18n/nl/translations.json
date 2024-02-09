@@ -61,5 +61,13 @@
     "crc": "controlesom (crc 16)",
     "crcTooltip": "voeg de crc16 toe aan uw gegevens",
     "String": "Snaar",
-    "no crc": "geen crc-toevoeging"
+    "no crc": "geen crc-toevoeging",
+    "limitMin": "limiet min.",
+    "limitMinTooltip": "beperkt de mogelijkheid van invoer in negatieve richting",
+    "limitMinValue": "min. waarde",
+    "limitMinValueTooltip": "voer de limiet in negatieve richting in",
+    "limitMax": "limiet max.",
+    "limitMaxTooltip": "beperkt de mogelijkheid van input in positieve richting",
+    "limitMaxValue": "maximaal waarde",
+    "limitMaxValueTooltip": "voer de limiet in positieve richting in"
 }

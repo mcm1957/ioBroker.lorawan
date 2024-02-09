@@ -61,5 +61,13 @@
     "crc": "校验和（crc 16）",
     "crcTooltip": "将 crc16 附加到您的数据中",
     "String": "细绳",
-    "no crc": "没有添加crc"
+    "no crc": "没有添加crc",
+    "limitMin": "限制最小值",
+    "limitMinTooltip": "限制负方向输入的可能性",
+    "limitMinValue": "分钟。价值",
+    "limitMinValueTooltip": "输入负方向的极限值",
+    "limitMax": "限制最大值",
+    "limitMaxTooltip": "限制正向输入的可能性",
+    "limitMaxValue": "最大限度。价值",
+    "limitMaxValueTooltip": "输入正方向的极限值"
 }

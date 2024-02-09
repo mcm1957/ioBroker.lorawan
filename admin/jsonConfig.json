@@ -341,6 +341,44 @@
 									],
 									"default": "no crc",
 									"sm":2
+								},
+								{
+									"newLine": true,
+									"type": "checkbox",
+									"attr": "limitMin",
+									"label": "limitMin",
+									"tooltip": "limitMinTooltip",
+									"hidden": "data.type !== 'number'",
+									"default": false,
+									"sm":1
+								},
+								{
+									"type": "number",
+									"attr": "limitMinValue",
+									"label": "limitMinValue",
+									"tooltip": "limitMinValueTooltip",
+									"default": "0",
+									"hidden": "data.type !== 'number' || data.limitMin !== true",
+									"sm":1
+								},
+								{
+									"newLine": true,
+									"type": "checkbox",
+									"attr": "limitMax",
+									"label": "limitMax",
+									"tooltip": "limitMaxTooltip",
+									"hidden": "data.type !== 'number'",
+									"default": false,
+									"sm":1
+								},
+								{
+									"type": "number",
+									"attr": "limitMaxValue",
+									"label": "limitMaxValue",
+									"tooltip": "limitMaxValueTooltip",
+									"default": "0",
+									"hidden": "data.type !== 'number' || data.limitMax !== true",
+									"sm":1
 								}
 							]
 						}

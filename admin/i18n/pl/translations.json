@@ -61,5 +61,13 @@
     "crc": "suma kontrolna (crc 16)",
     "crcTooltip": "dołącz crc16 do swoich danych",
     "String": "Strunowy",
-    "no crc": "bez dodawania crc"
+    "no crc": "bez dodawania crc",
+    "limitMin": "ograniczenie min.",
+    "limitMinTooltip": "ogranicza możliwość wejść w kierunku ujemnym",
+    "limitMinValue": "min. wartość",
+    "limitMinValueTooltip": "wprowadź limit w kierunku ujemnym",
+    "limitMax": "ograniczenie maks.",
+    "limitMaxTooltip": "ogranicza możliwość wprowadzania danych w kierunku dodatnim",
+    "limitMaxValue": "maks. wartość",
+    "limitMaxValueTooltip": "wprowadź limit w kierunku dodatnim"
 }

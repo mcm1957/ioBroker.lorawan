@@ -61,5 +61,13 @@
 	"no crc": "no crc adding",
 	"crc": "checksum (crc 16)",
 	"crcTooltip": "append the crc16 to your data",
-	"String": "String"
+	"String": "String",
+	"limitMin": "limit min.",
+	"limitMinTooltip": "limits the possibility of inputs in negative direction",
+	"limitMinValue": "min. value",
+	"limitMinValueTooltip": "input the limit in negative direction",
+	"limitMax": "limit max.",
+	"limitMaxTooltip": "limits the possibility of inputs in positive direction",
+	"limitMaxValue": "max. value",
+	"limitMaxValueTooltip": "input the limit in positive direction"
 }
