@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) default value crc config bug fixed
+
 ### 0.1.11 (2024-02-09)
 * (BenAhrdt) min / max values for downlink-configs (number)
 

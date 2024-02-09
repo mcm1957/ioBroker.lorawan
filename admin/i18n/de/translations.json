@@ -64,10 +64,10 @@
     "no crc": "Keine Prüfumme hinzufügen",
     "limitMin": "Minimum begrenzen",
     "limitMinTooltip": "Begrenzt die Möglichkeit von Eingaben in negativer Richtung ein",
-    "limitMinValue": "Mindest. Wert",
+    "limitMinValue": "Mindestwert",
     "limitMinValueTooltip": "Geben Sie den Grenzwert in negativer Richtung ein",
     "limitMax": "Maximum begrenzen",
     "limitMaxTooltip": "Begrenzt die Möglichkeit von Eingaben in positiver Richtung ein",
-    "limitMaxValue": "max. Wert",
+    "limitMaxValue": "Maximalwert",
     "limitMaxValueTooltip": "Geben Sie den Grenzwert in positiver Richtung ein"
 }

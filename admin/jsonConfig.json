@@ -339,7 +339,7 @@
 										{"label":"KERMIT","value":"KERMIT"},
 										{"label":"KERMIT (Little Endian)","value":"KERMIT.LittleEndian"}
 									],
-									"default": "no crc",
+									"default": "noCrc",
 									"sm":2
 								},
 								{
@@ -362,7 +362,6 @@
 									"sm":1
 								},
 								{
-									"newLine": true,
 									"type": "checkbox",
 									"attr": "limitMax",
 									"label": "limitMax",
