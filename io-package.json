@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "news": {
+      "0.1.12": {
+        "en": "default value crc config bug fixed",
+        "de": "standardwert crc config bug behoben",
+        "ru": "по умолчанию",
+        "pt": "valor padrão crc config bug corrigido",
+        "nl": "standaard waarde crc config bug vast",
+        "fr": "valeur par défaut crc config bug corrigé",
+        "it": "valore predefinito crc config bug fisso",
+        "es": "valor predeterminado crc config error fijo",
+        "pl": "wartość domyślna błąd konfiguracyjny crc",
+        "uk": "за замовчуванням значення crc config fix",
+        "zh-cn": "默认值 crc 配置错误已修正"
+      },
       "0.1.11": {
         "en": "min / max values for downlink-configs (number)",
         "de": "min / max werte für downlink-konfigs (anzahl)",
@@ -80,19 +93,6 @@
         "pl": "implikacje swap bajtów",
         "uk": "напляскване",
         "zh-cn": "杂质字节互换"
-      },
-      "0.1.5": {
-        "en": "remove units and insert roles",
-        "de": "einheiten entfernen und rollen einfügen",
-        "ru": "удалить единицы и вставить роли",
-        "pt": "remover unidades e inserir funções",
-        "nl": "eenheden verwijderen en rollen invoegen",
-        "fr": "supprimer les unités et insérer les rôles",
-        "it": "rimuovere unità e inserire ruoli",
-        "es": "eliminar unidades e insertar funciones",
-        "pl": "usunąć jednostki i wstawić role",
-        "uk": "видалення елементів і вставки ролі",
-        "zh-cn": "删除单位并插入角色"
       }
     },
     "title": "LoRaWAN",
