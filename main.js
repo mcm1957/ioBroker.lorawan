@@ -375,6 +375,20 @@ class Lorawan extends utils.Adapter {
 		return id;
 	}
 
+	// Get Chnageinfo in case of device EUI (used more times in onMessage)
+	async getChangeInfoFromDeviceEUI(deviceUI,subId){
+		let changeInfo = undefined;
+		const adapterObjects = await this.getAdapterObjectsAsync();
+		for(const adapterObject of Object.values(adapterObjects)){
+			if(adapterObject.type === "device"){
+				if(adapterObject._id.indexOf(deviceUI) !== -1){
+					changeInfo = await this.getChangeInfo(`${adapterObject._id}.${subId}`);
+					break;
+				}
+			}
+		}
+		return changeInfo;
+	}
 
 	// If you need to accept messages in your adapter, uncomment the following block and the corresponding line in the constructor.
 	// /**
@@ -389,18 +403,9 @@ class Lorawan extends utils.Adapter {
 				let result = {};
 				if(obj.command === "getDeviceInfo"){
 					if(obj.message.deviceEUI){
-						let changeInfo = undefined;
-						const adapterObjects = await this.getAdapterObjectsAsync();
-						for(const adapterObject of Object.values(adapterObjects)){
-							if(adapterObject.type === "device"){
-								if(adapterObject._id.indexOf(obj.message.deviceEUI) !== -1){
-									changeInfo = await this.getChangeInfo(`${adapterObject._id}.${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
-									break;
-								}
-							}
-						}
+						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
 						if(changeInfo){
-							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId};
+							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType};
 						}
 						else{
 							result = {error:true, message:"No device found"};
@@ -414,18 +419,9 @@ class Lorawan extends utils.Adapter {
 				}
 				else if (obj.command === "sendDownlink"){
 					if(obj.message.deviceEUI && obj.message.downlink && (obj.message.value || obj.message.value === false)){
-						let changeInfo = undefined;
-						const adapterObjects = await this.getAdapterObjectsAsync();
-						for(const adapterObject of Object.values(adapterObjects)){
-							if(adapterObject.type === "device"){
-								if(adapterObject._id.indexOf(obj.message.deviceEUI) !== -1){
-									changeInfo = await this.getChangeInfo(`${adapterObject._id}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkControl}.${obj.message.downlink}`);
-									break;
-								}
-							}
-						}
+						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkControl}.${obj.message.downlink}`);
 						if(changeInfo){
-							const downlinkId = `${changeInfo.id}`;
+							const downlinkId = changeInfo.id;
 							if(await this.objectExists(downlinkId)){
 								const downlinkParameter = this.downlinkConfighandler?.getDownlinkParameter(changeInfo);
 								// downlinkvalue is type number
@@ -433,7 +429,7 @@ class Lorawan extends utils.Adapter {
 									// Check limit
 									if((!downlinkParameter.limitMin || obj.message.value >= downlinkParameter.limitMinValue) && (!downlinkParameter.limitMax || obj.message.value <= downlinkParameter.limitMaxValue)){
 										await this.setStateAsync(downlinkId,obj.message.value);
-										result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, downlink: obj.message.downlink, value: obj.message.value};
+										result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType,downlink: obj.message.downlink, value: obj.message.value};
 									}
 									else{
 										result = {error:true, message:"value is not in valid range"};
@@ -442,7 +438,7 @@ class Lorawan extends utils.Adapter {
 								// downlinkvalue not a number
 								else{
 									await this.setStateAsync(downlinkId,obj.message.value);
-									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, downlink: obj.message.downlink, value: obj.message.value};
+									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value};
 								}
 							}
 							else{
@@ -459,7 +455,33 @@ class Lorawan extends utils.Adapter {
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}
-				else{
+				else if (obj.command === "getUplinkDecoded"){
+					if(obj.message.deviceEUI && obj.message.uplink){
+						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.uplinkDecoded}.${obj.message.uplink}`);
+						if(changeInfo){
+							const uplinkId = changeInfo.id;
+							if(await this.objectExists(uplinkId)){
+								const stateResult = await this.getStateAsync(changeInfo.id);
+								if(stateResult){
+									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, value: stateResult.val};
+								}
+							}
+							else{
+								result = {error:true, message:"No uplink matches"};
+							}
+						}
+						else{
+							result = {error:true, message:"No device found"};
+						}
+					}
+					else{
+						result = {error:true, message:"No deviceEUI & uplink found"};
+					}
+					// Send response
+					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
+				}
+				else
+				{
 					const result = {error:true, message: "No message matched"};
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}

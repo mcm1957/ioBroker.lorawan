@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) more functionality in messageing
+
 ### 0.1.13 (2024-02-12)
 * (BenAhrdt) building of directory changed and message implemented
 
