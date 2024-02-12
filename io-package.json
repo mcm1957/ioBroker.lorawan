@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.1.13",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "more functionality in messageing",
+        "de": "mehr funktionalität in der meldung",
+        "ru": "больше функциональности в сообщении",
+        "pt": "mais funcionalidade em mensagens",
+        "nl": "meer functionaliteit in berichtgeving",
+        "fr": "plus de fonctionnalité dans la messagerie",
+        "it": "più funzionalità nel messaggio",
+        "es": "más funcionalidad en el mensaje",
+        "pl": "większa funkcjonalność w zakresie rozwiązywania problemów",
+        "uk": "більше функцій в повідомленнях",
+        "zh-cn": "信件中更多的功能"
+      },
       "0.1.13": {
         "en": "building of directory changed and message implemented",
         "de": "aufbau des geänderten verzeichnisses und der implementierten meldung",
@@ -80,19 +93,6 @@
         "pl": "implementation crc calculation",
         "uk": "реалізація розрахунку кришки",
         "zh-cn": "执行计算"
-      },
-      "0.1.7": {
-        "en": "change filter on statechange",
-        "de": "änderungsfilter auf statechange",
-        "ru": "изменение фильтра для изменения состояния",
-        "pt": "filtro de mudança de estado",
-        "nl": "filter wijzigen bij statusverandering",
-        "fr": "modifier le filtre sur le changement d'état",
-        "it": "cambiare il filtro sul cambio di stato",
-        "es": "filtro de cambio en el cambio de estado",
-        "pl": "zmienić filtr na statechange",
-        "uk": "зміна фільтра на державну зміну",
-        "zh-cn": "状态更改过滤器"
       }
     },
     "title": "LoRaWAN",
