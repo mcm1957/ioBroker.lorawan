@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) building of directory changed and message implemented
+
 ### 0.1.12 (2024-02-09)
 * (BenAhrdt) default value crc config bug fixed
 

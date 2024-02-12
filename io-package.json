@@ -141,6 +141,7 @@
     "type": "protocols",
     "compact": true,
     "connectionType": "cloud",
+    "messagebox": true,
     "dataSource": "push",
     "adminUI": {
       "config": "json"

@@ -24,7 +24,7 @@ class Lorawan extends utils.Adapter {
 		this.on("ready", this.onReady.bind(this));
 		this.on("stateChange", this.onStateChange.bind(this));
 		// this.on("objectChange", this.onObjectChange.bind(this));
-		// this.on("message", this.onMessage.bind(this));
+		this.on("message", this.onMessage.bind(this));
 		this.on("unload", this.onUnload.bind(this));
 
 		this.origin = {
@@ -82,8 +82,8 @@ class Lorawan extends utils.Adapter {
 		//const message = {"end_device_ids":{"device_id":"eui-lobaro-modbus","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"70B3D5E050013950","join_eui":"D55B58C0DDC074DE","dev_addr":"260B5972"},"correlation_ids":["gs:uplink:01HMQZVSCX4D7JRDNFA7GJ9D4W"],"received_at":"2024-01-22T07:06:25.260676101Z","uplink_message":{"session_key_id":"AY0v/ZirzRkpNW0Cgjdhig==","f_port":20,"f_cnt":2,"frm_payload":"AA5BAf0AxwIAAQ==","decoded_payload":{"airhumidity":50.9,"airtemperature":19.9,"port":20,"relais1":0,"relais2":1,"relais3":null,"relais5":null,"volt":3.649,"zisternenpegel":2},"rx_metadata":[{"gateway_ids":{"gateway_id":"hafenmeister-port2ttn-ng","eui":"50313953530A4750"},"time":"2024-01-22T07:06:25.013878Z","timestamp":995696116,"rssi":-37,"channel_rssi":-37,"snr":8.5,"location":{"latitude":53.5548443059465,"longitude":9.92155426743724,"altitude":10,"source":"SOURCE_REGISTRY"},"uplink_token":"CiYKJAoYaGFmZW5tZWlzdGVyLXBvcnQydHRuLW5nEghQMTlTUwpHUBD0u+TaAxoLCPGnuK0GEM3uvhkgoIL0oP24Sg==","channel_index":5,"received_at":"2024-01-22T07:06:25.032492359Z"}],"settings":{"data_rate":{"lora":{"bandwidth":125000,"spreading_factor":9,"coding_rate":"4/5"}},"frequency":"867500000","timestamp":995696116,"time":"2024-01-22T07:06:25.013878Z"},"received_at":"2024-01-22T07:06:25.054442349Z","consumed_airtime":"0.205824s","network_ids":{"net_id":"000013","ns_id":"EC656E0000000181","tenant_id":"ttn","cluster_id":"eu1","cluster_address":"eu1.cloud.thethings.network"}}};
 
 		// ACK
-		//const topic = "v3/hafi-ttn-lorawan@ttn/devices/eui-a84041162183f8fb/down/ack";
-		//const message = {"end_device_ids":{"device_id":"eui-a84041162183f8fb","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"A84041162183F8FB","join_eui":"A840410000000101","dev_addr":"260B141A"},"correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY","gs:uplink:01HP6D1A9X4WAA3SFMXH4ESSMV"],"received_at":"2024-02-09T07:41:41.776887672Z","downlink_ack":{"session_key_id":"AY2MUrmnuovS8DCZAfYmsA==","f_port":1,"f_cnt":21,"frm_payload":"AQAAeA==","confirmed":true,"priority":"NORMAL","correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY"],"confirmed_retry":{"attempt":1}}};
+		const topic = "v3/hafi-ttn-lorawan@ttn/devices/eui-a84041162183f8fb/down/ack";
+		const message = {"end_device_ids":{"device_id":"eui-a84041162183f8fb","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"A84041162183F8FB","join_eui":"A840410000000101","dev_addr":"260B141A"},"correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY","gs:uplink:01HP6D1A9X4WAA3SFMXH4ESSMV"],"received_at":"2024-02-09T07:41:41.776887672Z","downlink_ack":{"session_key_id":"AY2MUrmnuovS8DCZAfYmsA==","f_port":1,"f_cnt":21,"frm_payload":"AQAAeA==","confirmed":true,"priority":"NORMAL","correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY"],"confirmed_retry":{"attempt":1}}};
 
 		// Chipstack
 		//const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up";
@@ -110,8 +110,8 @@ class Lorawan extends utils.Adapter {
 		//const message = {"deduplicationId":"4a91b00d-b5e1-4955-b085-ba21b9318213","time":"2024-01-26T20:18:45.299871+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"margin":7,"externalPowerSource":false,"batteryLevelUnavailable":false,"batteryLevel":85.826775};
 
 		// UP
-		const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/up";
-		const message = {"deduplicationId":"c14f77c3-cfe5-42f3-9c43-651d3ca4cf45","time":"2024-01-27T12:00:05.267780+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01343968","adr":true,"dr":5,"fCnt":11129,"fPort":2,"confirmed":false,"data":"gQyOiP39EdAw","object":{"sensorTemperature":20.06,"targetTemperature":12.0,"motorRange":509.0,"childLock":false,"batteryVoltage":3.3,"attachedBackplate":true,"lowMotorConsumption":false,"motorPosition":509.0,"reason":81.0,"highMotorConsumption":false,"calibrationFailed":false,"relativeHumidity":53.13,"perceiveAsOnline":true,"openWindow":false,"brokenSensor":false},"rxInfo":[{"gatewayId":"50313953530a4750","uplinkId":47105,"gwTime":"2024-01-27T12:00:05.267780+00:00","nsTime":"2024-01-27T12:00:05.314616473+00:00","rssi":-68,"snr":9.25,"channel":7,"location":{"latitude":53.55485739669679,"longitude":9.921609163284304},"context":"nnL1/A==","metadata":{"region_common_name":"EU868","region_config_id":"eu868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867900000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
+		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/up";
+		//const message = {"deduplicationId":"c14f77c3-cfe5-42f3-9c43-651d3ca4cf45","time":"2024-01-27T12:00:05.267780+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"59bcc5a7-59e2-4481-9615-fc4e58791915","applicationName":"Mclimate_Vicki","deviceProfileId":"3a9bc28f-3664-4bdf-b3be-a20d1eb32dc8","deviceProfileName":"Mclimate_Vicki","deviceName":"MClimate_Vicki_Heizkoerperventil_001","devEui":"70b3d52dd300ed31","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01343968","adr":true,"dr":5,"fCnt":11129,"fPort":2,"confirmed":false,"data":"gQyOiP39EdAw","object":{"sensorTemperature":20.06,"targetTemperature":12.0,"motorRange":509.0,"childLock":false,"batteryVoltage":3.3,"attachedBackplate":true,"lowMotorConsumption":false,"motorPosition":509.0,"reason":81.0,"highMotorConsumption":false,"calibrationFailed":false,"relativeHumidity":53.13,"perceiveAsOnline":true,"openWindow":false,"brokenSensor":false},"rxInfo":[{"gatewayId":"50313953530a4750","uplinkId":47105,"gwTime":"2024-01-27T12:00:05.267780+00:00","nsTime":"2024-01-27T12:00:05.314616473+00:00","rssi":-68,"snr":9.25,"channel":7,"location":{"latitude":53.55485739669679,"longitude":9.921609163284304},"context":"nnL1/A==","metadata":{"region_common_name":"EU868","region_config_id":"eu868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":867900000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
 
 		// LOG
 		//const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/event/up";
@@ -317,10 +317,9 @@ class Lorawan extends utils.Adapter {
 			const deviceInfo = {
 				id: id,
 				applicationId : idElements[0],
-				dev_uid : idElements[2],
-				device_id : idElements[3],
+				deviceEUI : idElements[2],
 				changedState : idElements[idElements.length - 1],
-				objectStartDirectory : `${idElements[0]}.devices.${idElements[2]}.${idElements[3]}`,
+				objectStartDirectory : `${idElements[0]}.${idElements[1]}.${idElements[2]}`,
 				allElements : idElements
 			};
 			return deviceInfo;
@@ -335,20 +334,28 @@ class Lorawan extends utils.Adapter {
 		try{
 			this.log.silly(`changeinfo of id ${id}, will be generated.`);
 			const changeInfo = this.getBaseDeviceInfo(id);
-			const myId = `${changeInfo?.applicationId}.devices.${changeInfo?.dev_uid}.${changeInfo?.device_id}.configuration.devicetype`;
-			// Get deviceType
-			const deviceTypeIdState = await this.getStateAsync(myId);
-			if(changeInfo && deviceTypeIdState){
-				changeInfo.deviceType = deviceTypeIdState.val;
-				if(options && options.withBestMatch){
-					// Get best match of expert downlink
-					const bestMatchForDeviceType =  this.downlinkConfighandler?.getBestMatchForDeviceType(changeInfo);
-					if(bestMatchForDeviceType){
-						changeInfo.bestMatchForDeviceType = bestMatchForDeviceType;
-						this.log.debug(`best match for expertconfig of device: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"} is: ${bestMatchForDeviceType}`);
-					}
-					else{
-						this.log.debug(`no match for expert downlinkconfig found: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"}`);
+			const myId = `${changeInfo?.applicationId}.devices.${changeInfo?.deviceEUI}.${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`;
+			// Check for changeInfo
+			if(changeInfo){
+				// Get Obect from startdirectory
+				const startDirectoryObject = await this.getObjectAsync(changeInfo.objectStartDirectory);
+				if(startDirectoryObject){
+					changeInfo.deviceId = startDirectoryObject.common.name;
+				}
+				// Get deviceType
+				const deviceTypeIdState = await this.getStateAsync(myId);
+				if(deviceTypeIdState){
+					changeInfo.deviceType = deviceTypeIdState.val;
+					if(options && options.withBestMatch){
+						// Get best match of expert downlink
+						const bestMatchForDeviceType =  this.downlinkConfighandler?.getBestMatchForDeviceType(changeInfo);
+						if(bestMatchForDeviceType){
+							changeInfo.bestMatchForDeviceType = bestMatchForDeviceType;
+							this.log.debug(`best match for expertconfig of device: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"} is: ${bestMatchForDeviceType}`);
+						}
+						else{
+							this.log.debug(`no match for expert downlinkconfig found: ${changeInfo.deviceType? changeInfo.deviceType: "empty devicetype"}`);
+						}
 					}
 				}
 			}
@@ -375,18 +382,93 @@ class Lorawan extends utils.Adapter {
 	//  * Using this method requires "common.messagebox" property to be set to true in io-package.json
 	//  * @param {ioBroker.Message} obj
 	//  */
-	// onMessage(obj) {
-	// 	if (typeof obj === "object" && obj.message) {
-	// 		if (obj.command === "send") {
-	// 			// e.g. send email or pushover or whatever
-	// 			this.log.info("send command");
-
-	// 			// Send response in callback if required
-	// 			if (obj.callback) this.sendTo(obj.from, obj.command, "Message received", obj.callback);
-	// 		}
-	// 	}
-	// }
-
+	async onMessage(obj){
+		const activeFunction = "onMessage";
+		try{
+			if (typeof obj === "object" && obj.message){
+				let result = {};
+				if(obj.command === "getDeviceInfo"){
+					if(obj.message.deviceEUI){
+						let changeInfo = undefined;
+						const adapterObjects = await this.getAdapterObjectsAsync();
+						for(const adapterObject of Object.values(adapterObjects)){
+							if(adapterObject.type === "device"){
+								if(adapterObject._id.indexOf(obj.message.deviceEUI) !== -1){
+									changeInfo = await this.getChangeInfo(`${adapterObject._id}.${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
+									break;
+								}
+							}
+						}
+						if(changeInfo){
+							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId};
+						}
+						else{
+							result = {error:true, message:"No device found"};
+						}
+					}
+					else{
+						result = {error:true, message:"No deviceEUI found"};
+					}
+					// Send response
+					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
+				}
+				else if (obj.command === "sendDownlink"){
+					if(obj.message.deviceEUI && obj.message.downlink && (obj.message.value || obj.message.value === false)){
+						let changeInfo = undefined;
+						const adapterObjects = await this.getAdapterObjectsAsync();
+						for(const adapterObject of Object.values(adapterObjects)){
+							if(adapterObject.type === "device"){
+								if(adapterObject._id.indexOf(obj.message.deviceEUI) !== -1){
+									changeInfo = await this.getChangeInfo(`${adapterObject._id}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkControl}.${obj.message.downlink}`);
+									break;
+								}
+							}
+						}
+						if(changeInfo){
+							const downlinkId = `${changeInfo.id}`;
+							if(await this.objectExists(downlinkId)){
+								const downlinkParameter = this.downlinkConfighandler?.getDownlinkParameter(changeInfo);
+								// downlinkvalue is type number
+								if(downlinkParameter.type === "number"){
+									// Check limit
+									if((!downlinkParameter.limitMin || obj.message.value >= downlinkParameter.limitMinValue) && (!downlinkParameter.limitMax || obj.message.value <= downlinkParameter.limitMaxValue)){
+										await this.setStateAsync(downlinkId,obj.message.value);
+										result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, downlink: obj.message.downlink, value: obj.message.value};
+									}
+									else{
+										result = {error:true, message:"value is not in valid range"};
+									}
+								}
+								// downlinkvalue not a number
+								else{
+									await this.setStateAsync(downlinkId,obj.message.value);
+									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, downlink: obj.message.downlink, value: obj.message.value};
+								}
+							}
+							else{
+								result = {error:true, message:"No downlink matches"};
+							}
+						}
+						else{
+							result = {error:true, message:"No device found"};
+						}
+					}
+					else{
+						result = {error:true, message:"No deviceEUI, downlink & value found"};
+					}
+					// Send response
+					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
+				}
+				else{
+					const result = {error:true, message: "No message matched"};
+					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
+				}
+			}
+		}
+		catch(error){
+			this.log.error(`error at ${activeFunction}: ` + error);
+		}
+	}
 }
 
 if (require.main !== module) {
