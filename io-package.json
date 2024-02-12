@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.1.12",
+    "version": "0.1.13",
     "news": {
+      "0.1.13": {
+        "en": "building of directory changed and message implemented",
+        "de": "aufbau des geänderten verzeichnisses und der implementierten meldung",
+        "ru": "создание измененного каталога и реализовано сообщение",
+        "pt": "construção de diretório alterado e mensagem implementada",
+        "nl": "opbouw van map gewijzigd en bericht geïmplementeerd",
+        "fr": "la construction du répertoire modifié et le message mis en œuvre",
+        "it": "costruzione della directory modificata e messa in atto",
+        "es": "la construcción del directorio cambiado y el mensaje implementado",
+        "pl": "budowa zmienionych katalogów i wdrożona wiadomość",
+        "uk": "створення каталогу змінено та повідомлення",
+        "zh-cn": "更改目录构建并执行消息"
+      },
       "0.1.12": {
         "en": "default value crc config bug fixed",
         "de": "standardwert crc config bug behoben",
@@ -80,19 +93,6 @@
         "pl": "zmienić filtr na statechange",
         "uk": "зміна фільтра на державну зміну",
         "zh-cn": "状态更改过滤器"
-      },
-      "0.1.6": {
-        "en": "implments byte swap",
-        "de": "implikationen byte swap",
-        "ru": "свопа",
-        "pt": "impelimentos por swap",
-        "nl": "implments byte swap",
-        "fr": "swap par octets",
-        "it": "importazioni di swap",
-        "es": "swap byte",
-        "pl": "implikacje swap bajtów",
-        "uk": "напляскване",
-        "zh-cn": "杂质字节互换"
       }
     },
     "title": "LoRaWAN",
