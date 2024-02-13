@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 /* eslint-disable no-undef */
 // @ts-nocheck
 "use strict";
@@ -43,8 +44,10 @@ Blockly.Blocks["lorawanGetDeviceInfo"] = {
 		const options = [[Blockly.Translate("anyInstance"), ""]];
 		if (typeof main !== "undefined" && main.instances) {
 			for (let i = 0; i < main.instances.length; i++) {
+				// eslint-disable-next-line prefer-const
 				let m = main.instances[i].match(/^system.adapter.lorawan.(\d+)$/);
 				if (m) {
+					// eslint-disable-next-line prefer-const
 					let k = parseInt(m[1], 10);
 					options.push(["lorawan." + k, "." + k]);
 				}
@@ -116,8 +119,10 @@ Blockly.Blocks["lorawanGetUplink"] = {
 		const options = [[Blockly.Translate("anyInstance"), ""]];
 		if (typeof main !== "undefined" && main.instances) {
 			for (let i = 0; i < main.instances.length; i++) {
+				// eslint-disable-next-line prefer-const
 				let m = main.instances[i].match(/^system.adapter.lorawan.(\d+)$/);
 				if (m) {
+					// eslint-disable-next-line prefer-const
 					let k = parseInt(m[1], 10);
 					options.push(["lorawan." + k, "." + k]);
 				}
@@ -198,6 +203,7 @@ Blockly.Blocks["lorawanSetDownlink"] = {
 			for (let i = 0; i < main.instances.length; i++) {
 				let m = main.instances[i].match(/^system.adapter.lorawan.(\d+)$/);
 				if (m) {
+					// eslint-disable-next-line prefer-const
 					let k = parseInt(m[1], 10);
 					options.push(["lorawan." + k, "." + k]);
 				}
@@ -232,6 +238,5 @@ Blockly.JavaScript["lorawanSetDownlink"] = function(block){
 	const dropdown_instance = block.getFieldValue("INSTANCE");
 	const value_devEUI = Blockly.JavaScript.valueToCode(block, "deviceEUI", Blockly.JavaScript.ORDER_ATOMIC);
 	const value_downlink = Blockly.JavaScript.valueToCode(block, "downlink", Blockly.JavaScript.ORDER_ATOMIC);
-	const value_subfolder = Blockly.JavaScript.valueToCode(block, "subfolder", Blockly.JavaScript.ORDER_ATOMIC);
 	return 'sendTo("lorawan' + dropdown_instance + '", "setDownlink", {deviceEUI: ' +   value_devEUI  + ", downlink: " +   value_downlink +"}, async (result) => {console.log(result);});";
 };
