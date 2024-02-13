@@ -36,7 +36,9 @@
                 "multiplyfaktor": 60,
                 "unit": "min",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1
             },
             {
                 "name": "RO2_target",

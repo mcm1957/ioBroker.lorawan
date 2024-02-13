@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) check types of messaging values and implements more blockly blocks
+
 ### 0.2.0 (2024-02-12)
 * (BenAhrdt) more functionality in messageing
 

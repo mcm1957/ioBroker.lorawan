@@ -37,7 +37,9 @@
                 "onClick": "030111",
                 "multiplyfaktor": "1",
                 "unit": "Minuten",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1
             },
             {
                 "name": "Vicki_Target_Temperature",

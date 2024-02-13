@@ -19,7 +19,9 @@
                 "off": "",
                 "multiplyfaktor": 60,
                 "unit": "min",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1
             },
             {
                 "name": "Reboot",

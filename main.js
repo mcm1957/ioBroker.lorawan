@@ -375,7 +375,7 @@ class Lorawan extends utils.Adapter {
 		return id;
 	}
 
-	// Get Chnageinfo in case of device EUI (used more times in onMessage)
+	// Get Changeinfo in case of device EUI (used more times in onMessage)
 	async getChangeInfoFromDeviceEUI(deviceUI,subId){
 		let changeInfo = undefined;
 		const adapterObjects = await this.getAdapterObjectsAsync();
@@ -396,8 +396,10 @@ class Lorawan extends utils.Adapter {
 	//  * Using this method requires "common.messagebox" property to be set to true in io-package.json
 	//  * @param {ioBroker.Message} obj
 	//  */
+
 	async onMessage(obj){
 		const activeFunction = "onMessage";
+		this.log.debug(`message recieved: command = ${obj.command} - message = ${JSON.stringify(obj.message)}`);
 		try{
 			if (typeof obj === "object" && obj.message){
 				let result = {};
@@ -417,28 +419,36 @@ class Lorawan extends utils.Adapter {
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}
-				else if (obj.command === "sendDownlink"){
+				else if (obj.command === "setDownlink"){
 					if(obj.message.deviceEUI && obj.message.downlink && (obj.message.value || obj.message.value === false)){
 						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkControl}.${obj.message.downlink}`);
 						if(changeInfo){
 							const downlinkId = changeInfo.id;
 							if(await this.objectExists(downlinkId)){
-								const downlinkParameter = this.downlinkConfighandler?.getDownlinkParameter(changeInfo);
-								// downlinkvalue is type number
-								if(downlinkParameter.type === "number"){
-									// Check limit
-									if((!downlinkParameter.limitMin || obj.message.value >= downlinkParameter.limitMinValue) && (!downlinkParameter.limitMax || obj.message.value <= downlinkParameter.limitMaxValue)){
-										await this.setStateAsync(downlinkId,obj.message.value);
-										result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType,downlink: obj.message.downlink, value: obj.message.value};
+								// get Object to decide min and max value
+								const downlinkObject = await this.getObjectAsync(downlinkId);
+								if(downlinkObject){
+									// check typ number
+									if(downlinkObject.common.type === "number"){
+										if(typeof obj.message.value === "number"){
+											// Check limit
+											if((!downlinkObject.common.min || obj.message.value >= downlinkObject.common.min) && (!downlinkObject.common.max || obj.message.value <= downlinkObject.common.max)){
+												await this.setStateAsync(downlinkId,obj.message.value);
+												result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType,downlink: obj.message.downlink, value: obj.message.value};
+											}
+											else{
+												result = {error:true, message:"value is not in valid range"};
+											}
+										}
+										else{
+											result = {error:true, message: `downlink is type number, but recieved ${typeof obj.message.value}`};
+										}
 									}
+									// downlinkobject is not a number
 									else{
-										result = {error:true, message:"value is not in valid range"};
+										await this.setStateAsync(downlinkId,obj.message.value);
+										result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value};
 									}
-								}
-								// downlinkvalue not a number
-								else{
-									await this.setStateAsync(downlinkId,obj.message.value);
-									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value};
 								}
 							}
 							else{
@@ -455,9 +465,10 @@ class Lorawan extends utils.Adapter {
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}
-				else if (obj.command === "getUplinkDecoded"){
+				else if (obj.command === "getUplink"){
 					if(obj.message.deviceEUI && obj.message.uplink){
-						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.uplinkDecoded}.${obj.message.uplink}`);
+						const folderAndUplinkId = obj.message.subfolder? `${this.messagehandler?.directoryhandler.reachableSubfolders.uplink}.${obj.message.subfolder}.${obj.message.uplink}`: obj.message.uplink;
+						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,folderAndUplinkId);
 						if(changeInfo){
 							const uplinkId = changeInfo.id;
 							if(await this.objectExists(uplinkId)){
@@ -467,7 +478,7 @@ class Lorawan extends utils.Adapter {
 								}
 							}
 							else{
-								result = {error:true, message:"No uplink matches"};
+								result = {error:true, message:"No uplink matches", changeInfo: changeInfo};
 							}
 						}
 						else{
