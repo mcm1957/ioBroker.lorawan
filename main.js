@@ -419,6 +419,32 @@ class Lorawan extends utils.Adapter {
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}
+				else if (obj.command === "getUplink"){
+					if(obj.message.deviceEUI && obj.message.uplink){
+						const folderAndUplinkId = obj.message.subfolder? `${this.messagehandler?.directoryhandler.reachableSubfolders.uplink}.${obj.message.subfolder}.${obj.message.uplink}`: obj.message.uplink;
+						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,folderAndUplinkId);
+						if(changeInfo){
+							const uplinkId = changeInfo.id;
+							if(await this.objectExists(uplinkId)){
+								const stateResult = await this.getStateAsync(changeInfo.id);
+								if(stateResult){
+									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, value: stateResult.val};
+								}
+							}
+							else{
+								result = {error:true, message:"No uplink matches", changeInfo: changeInfo};
+							}
+						}
+						else{
+							result = {error:true, message:"No device found"};
+						}
+					}
+					else{
+						result = {error:true, message:"No deviceEUI & uplink found"};
+					}
+					// Send response
+					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
+				}
 				else if (obj.command === "setDownlink"){
 					if(obj.message.deviceEUI && obj.message.downlink && (obj.message.value || obj.message.value === false)){
 						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkControl}.${obj.message.downlink}`);
@@ -446,8 +472,13 @@ class Lorawan extends utils.Adapter {
 									}
 									// downlinkobject is not a number
 									else{
-										await this.setStateAsync(downlinkId,obj.message.value);
-										result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value};
+										if(downlinkObject.common.type !== typeof obj.message.value){
+											result = {error:true, message: `downlink is type ${downlinkObject.common.type}, but recieved ${typeof obj.message.value}`};
+										}
+										else{
+											await this.setStateAsync(downlinkId,obj.message.value);
+											result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value};
+										}
 									}
 								}
 							}
@@ -461,32 +492,6 @@ class Lorawan extends utils.Adapter {
 					}
 					else{
 						result = {error:true, message:"No deviceEUI, downlink & value found"};
-					}
-					// Send response
-					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
-				}
-				else if (obj.command === "getUplink"){
-					if(obj.message.deviceEUI && obj.message.uplink){
-						const folderAndUplinkId = obj.message.subfolder? `${this.messagehandler?.directoryhandler.reachableSubfolders.uplink}.${obj.message.subfolder}.${obj.message.uplink}`: obj.message.uplink;
-						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,folderAndUplinkId);
-						if(changeInfo){
-							const uplinkId = changeInfo.id;
-							if(await this.objectExists(uplinkId)){
-								const stateResult = await this.getStateAsync(changeInfo.id);
-								if(stateResult){
-									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, value: stateResult.val};
-								}
-							}
-							else{
-								result = {error:true, message:"No uplink matches", changeInfo: changeInfo};
-							}
-						}
-						else{
-							result = {error:true, message:"No device found"};
-						}
-					}
-					else{
-						result = {error:true, message:"No deviceEUI & uplink found"};
 					}
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
