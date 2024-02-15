@@ -24,7 +24,7 @@ Blockly.Words["anyInstance"]   = {
 };
 Blockly.Words["lorawanDeviceEUI"] = {
 	"en": "device EUI",
-	"de": "Geräte EUI",
+	"de": "Device EUI",
 	"ru": "устройство EUI",
 	"pt": "dispositivo EUI",
 	"nl": "apparaat EUI",
@@ -34,19 +34,6 @@ Blockly.Words["lorawanDeviceEUI"] = {
 	"pl": "urządzenie EUI",
 	"uk": "пристрій EUI",
 	"zh-cn": "设备 EUI"
-};
-Blockly.Words["lorawanResult"] = {
-	"en": "result",
-	"de": "Ergebnis",
-	"ru": "результат",
-	"pt": "resultado",
-	"nl": "resultaat",
-	"fr": "résultat",
-	"it": "risultato",
-	"es": "resultado",
-	"pl": "wynik",
-	"uk": "результат",
-	"zh-cn": "结果"
 };
 
 /**************************************************************************
@@ -69,7 +56,7 @@ Blockly.Words["lorawanGetDeviceInfo"] = {
 };
 Blockly.Words["lorawanGetDeviceInfotooltip"] = {
 	"en": "get Informations about the device with the given device EUI",
-	"de": "informationen über das Gerät mit der angegebenen Geräte EUI",
+	"de": "Informationen über das Gerät mit der angegebenen Geräte EUI",
 	"ru": "получить информацию об устройстве с данным устройством EUI",
 	"pt": "obter informações sobre o dispositivo com o dispositivo dado EUI",
 	"nl": "informatie over het apparaat met het gegeven apparaat opvragen EUI",
@@ -125,8 +112,7 @@ Blockly.Blocks["lorawanGetDeviceInfo"] = {
 		this.appendValueInput("deviceEUI")
 			.appendField(Blockly.Translate("lorawanDeviceEUI"));
 
-		this.appendStatementInput("result")
-			.appendField(Blockly.Translate("lorawanResult"));
+		this.appendStatementInput("result");
 
 		this.setInputsInline(false);
 		this.setPreviousStatement(true, null);
@@ -146,7 +132,7 @@ Blockly.JavaScript["lorawanGetDeviceInfo"] = function(block){
 	objParameter.push("deviceEUI:" + value_devEUI);
 	const objEnd = [];
 	if(code_result){
-		objEnd.push(`,(result) => {${code_result}});`);
+		objEnd.push(`, async (result) => {${code_result}});`);
 	}
 	else{
 		objEnd.push(`);`);
@@ -174,7 +160,7 @@ Blockly.Words["lorawanGetUplink"] = {
 };
 Blockly.Words["lorawanGetUplinktooltip"] = {
 	"en": "get information about the given uplink",
-	"de": "informationen zum angegebenen uplink",
+	"de": "Informationen zum angegebenen uplink",
 	"ru": "получить информацию об отказе от ссылки",
 	"pt": "obter informações sobre o link fornecido",
 	"nl": "informatie krijgen over de opgegeven uplink",
@@ -187,7 +173,7 @@ Blockly.Words["lorawanGetUplinktooltip"] = {
 };
 Blockly.Words["lorawanUplink"] = {
 	"en": "uplink",
-	"de": "uplink",
+	"de": "Uplink",
 	"ru": "uplink",
 	"pt": "o que é",
 	"nl": "uplink",
@@ -200,7 +186,7 @@ Blockly.Words["lorawanUplink"] = {
 };
 Blockly.Words["lorawanSubfolder"] = {
 	"en": "subfolder",
-	"de": "unterordner",
+	"de": "Unterordner",
 	"ru": "subfolder",
 	"pt": "subpastas",
 	"nl": "submap",
@@ -272,8 +258,7 @@ Blockly.Blocks["lorawanGetUplink"] = {
 		this.appendValueInput("subfolder")
 			.appendField(Blockly.Translate("lorawanSubfolder"));
 
-		this.appendStatementInput("result")
-			.appendField(Blockly.Translate("lorawanResult"));
+		this.appendStatementInput("result");
 
 		this.setInputsInline(false);
 		this.setPreviousStatement(true, null);
@@ -297,7 +282,7 @@ Blockly.JavaScript["lorawanGetUplink"] = function(block){
 	objParameter.push("subfolder:" + value_subfolder);
 	const objEnd = [];
 	if(code_result){
-		objEnd.push(`,(result) => {${code_result}});`);
+		objEnd.push(`, async (result) => {${code_result}});`);
 	}
 	else{
 		objEnd.push(`);`);
@@ -325,7 +310,7 @@ Blockly.Words["lorawanSetDownlink"] = {
 };
 Blockly.Words["lorawanSetDownlinktooltip"] = {
 	"en": "set downlink",
-	"de": "downlink zur lorawan instanz absetzen",
+	"de": "Downlink zur lorawan instanz absetzen",
 	"ru": "set downlink",
 	"pt": "definir link",
 	"nl": "downlink instellen",
@@ -338,7 +323,7 @@ Blockly.Words["lorawanSetDownlinktooltip"] = {
 };
 Blockly.Words["lorawanDownlink"] = {
 	"en": "downlink",
-	"de": "downlink",
+	"de": "Downlink",
 	"ru": "downlink",
 	"pt": "o que é",
 	"nl": "downlink",
@@ -351,7 +336,7 @@ Blockly.Words["lorawanDownlink"] = {
 };
 Blockly.Words["lorawanValue"] = {
 	"en": "value",
-	"de": "wert",
+	"de": "Wert",
 	"ru": "стоимость",
 	"pt": "valor",
 	"nl": "waarde",
@@ -422,8 +407,7 @@ Blockly.Blocks["lorawanSetDownlink"] = {
 		this.appendValueInput("value")
 			.appendField(Blockly.Translate("lorawanValue"));
 
-		this.appendStatementInput("result")
-			.appendField(Blockly.Translate("lorawanResult"));
+		this.appendStatementInput("result");
 
 		this.setInputsInline(false);
 		this.setPreviousStatement(true, null);
@@ -447,7 +431,7 @@ Blockly.JavaScript["lorawanSetDownlink"] = function(block){
 	objParameter.push("value:" + value_value);
 	const objEnd = [];
 	if(code_result){
-		objEnd.push(`,(result) => {${code_result}});`);
+		objEnd.push(`, async (result) => {${code_result}});`);
 	}
 	else{
 		objEnd.push(`);`);

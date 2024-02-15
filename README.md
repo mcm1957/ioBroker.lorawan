@@ -153,3 +153,8 @@ The rights of the trademarks and company names,
 remain with their owners and have no relation to this adapter.
 The fairuse policy must continue to be adhered to by the operator of the adapter.
 If this repository is forked, it must be cited as the source.
+
+LoRa® is a registered trademark or service
+mark of Semtech Corporation or its affilantes.
+
+LoRaWAN® is a licensed mark.
