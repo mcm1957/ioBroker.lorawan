@@ -426,7 +426,6 @@ Blockly.Blocks["lorawanSetDownlink"] = {
 			.appendField(Blockly.Translate("lorawanResult"));
 
 		this.setInputsInline(false);
-		this.setOutput(true);
 		this.setPreviousStatement(true, null);
 		this.setNextStatement(true, null);
 
