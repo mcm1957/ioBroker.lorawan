@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "news": {
+      "0.3.0": {
+        "en": "define user friendly Blockly Blocks with result",
+        "de": "benutzerfreundlich definieren Blockly Blocks mit Ergebnis",
+        "ru": "определение пользователя Блоки с результатом",
+        "pt": "definir amigável Blocos com resultado",
+        "nl": "gebruikersvriendelijk definiëren Blokkeren met resultaat",
+        "fr": "définir une utilisation conviviale Blocs avec résultat",
+        "it": "definire l'utente amichevole Blocchi Blockly con risultato",
+        "es": "definir fácil de usar Bloqueo bloques con resultado",
+        "pl": "zdefiniować przyjazny dla użytkownika Blokady z wynikiem",
+        "uk": "визначення дружності користувача Блокнотні блоки з результатом",
+        "zh-cn": "定义用户友好 块状块及结果"
+      },
       "0.2.1": {
         "en": "check types of messaging values and implements more blockly blocks",
         "de": "überprüfen sie die arten der messaging-werte und implementiert mehr blockweise blöcke",
@@ -80,19 +93,6 @@
         "pl": "domyślna zmiana crc",
         "uk": "за замовчуванням змінного струму",
         "zh-cn": "默认 crc 已更改"
-      },
-      "0.1.9": {
-        "en": "crc calculation improoved",
-        "de": "cc berechnung improoviert",
-        "ru": "crccalc improov",
-        "pt": "cálculo de crc improoved",
-        "nl": "crc berekening geïmproviseerd",
-        "fr": "calcul crc réalisé",
-        "it": "crc calcolo improvato",
-        "es": "crc cálculo improvido",
-        "pl": "crc obliczenia improuved",
-        "uk": "розрахунок обертів",
-        "zh-cn": "crc 计算未启动"
       }
     },
     "title": "LoRaWAN",
