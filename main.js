@@ -407,14 +407,14 @@ class Lorawan extends utils.Adapter {
 					if(obj.message.deviceEUI){
 						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
 						if(changeInfo){
-							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType};
+							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, recieved:obj.message};
 						}
 						else{
-							result = {error:true, message:"No device found"};
+							result = {error:true, message:"No device found", recieved:obj.message};
 						}
 					}
 					else{
-						result = {error:true, message:"No deviceEUI found"};
+						result = {error:true, message:"No deviceEUI found", recieved:obj.message};
 					}
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
@@ -460,7 +460,7 @@ class Lorawan extends utils.Adapter {
 											// Check limit
 											if((!downlinkObject.common.min || obj.message.value >= downlinkObject.common.min) && (!downlinkObject.common.max || obj.message.value <= downlinkObject.common.max)){
 												await this.setStateAsync(downlinkId,obj.message.value);
-												result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType,downlink: obj.message.downlink, value: obj.message.value, recieved:obj.message};
+												result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, recieved:obj.message};
 											}
 											else{
 												result = {error:true, message:"value is not in valid range", recieved:obj.message};
