@@ -22,7 +22,7 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.3.1 (2024-02-15)
 * (BenAhrdt) rebuild with better messageing
 
 ### 0.3.0 (2024-02-15)

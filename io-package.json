@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "news": {
+      "0.3.1": {
+        "en": "rebuild with better messageing",
+        "de": "neuaufbau mit besserer botschaft",
+        "ru": "перестроить с лучшим сообщением",
+        "pt": "reconstruir com melhor mensagem",
+        "nl": "herbouwen met betere berichtgeving",
+        "fr": "reconstruire avec un meilleur message",
+        "it": "ricostruire con messaggi migliori",
+        "es": "reconstruir con mejor mensaje",
+        "pl": "odbudowa dzięki lepszemu rozwiązywaniu problemów",
+        "uk": "перебудувати краще повідомлення",
+        "zh-cn": "以更好的信息重建"
+      },
       "0.3.0": {
         "en": "define user friendly Blockly Blocks with result",
         "de": "benutzerfreundlich definieren Blockly Blocks mit Ergebnis",
@@ -80,19 +93,6 @@
         "pl": "min / max wartości dla downlink- configs (liczba)",
         "uk": "min / максимальні значення для налаштувань посилань (номер)",
         "zh-cn": "下行链路配置最小值( 数)"
-      },
-      "0.1.10": {
-        "en": "default of crc changed",
-        "de": "standard von cc geändert",
-        "ru": "по умолчанию",
-        "pt": "padrão de crc alterado",
-        "nl": "default van crc gewijzigd",
-        "fr": "défaut de changement de crc",
-        "it": "default di crc cambiato",
-        "es": "por defecto de crc cambiado",
-        "pl": "domyślna zmiana crc",
-        "uk": "за замовчуванням змінного струму",
-        "zh-cn": "默认 crc 已更改"
       }
     },
     "title": "LoRaWAN",
