@@ -399,7 +399,7 @@ class Lorawan extends utils.Adapter {
 
 	async onMessage(obj){
 		const activeFunction = "onMessage";
-		this.log.debug(`message recieved: command = ${obj.command} - message = ${JSON.stringify(obj.message)}`);
+		this.log.debug(`message received: command = ${obj.command} - message = ${JSON.stringify(obj.message)}`);
 		try{
 			if (typeof obj === "object" && obj.message){
 				let result = {};
@@ -407,14 +407,14 @@ class Lorawan extends utils.Adapter {
 					if(obj.message.deviceEUI){
 						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
 						if(changeInfo){
-							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, recieved:obj.message};
+							result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, received:obj.message};
 						}
 						else{
-							result = {error:true, message:"No device found", recieved:obj.message};
+							result = {error:true, message:"No device found", received:obj.message};
 						}
 					}
 					else{
-						result = {error:true, message:"No deviceEUI found", recieved:obj.message};
+						result = {error:true, message:"No deviceEUI found", received:obj.message};
 					}
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
@@ -428,19 +428,19 @@ class Lorawan extends utils.Adapter {
 							if(await this.objectExists(uplinkId)){
 								const stateResult = await this.getStateAsync(changeInfo.id);
 								if(stateResult){
-									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, value: stateResult.val, recieved:obj.message};
+									result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, value: stateResult.val, received:obj.message};
 								}
 							}
 							else{
-								result = {error:true, message:"No uplink matches", recieved:obj.message};
+								result = {error:true, message:"No uplink matches", received:obj.message};
 							}
 						}
 						else{
-							result = {error:true, message:"No device found", recieved:obj.message};
+							result = {error:true, message:"No device found", received:obj.message};
 						}
 					}
 					else{
-						result = {error:true, message:"No deviceEUI & uplink found", recieved:obj.message};
+						result = {error:true, message:"No deviceEUI & uplink found", received:obj.message};
 					}
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
@@ -460,45 +460,45 @@ class Lorawan extends utils.Adapter {
 											// Check limit
 											if((!downlinkObject.common.min || obj.message.value >= downlinkObject.common.min) && (!downlinkObject.common.max || obj.message.value <= downlinkObject.common.max)){
 												await this.setStateAsync(downlinkId,obj.message.value);
-												result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, recieved:obj.message};
+												result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, received:obj.message};
 											}
 											else{
-												result = {error:true, message:"value is not in valid range", recieved:obj.message};
+												result = {error:true, message:"value is not in valid range", received:obj.message};
 											}
 										}
 										else{
-											result = {error:true, message: `downlink is type number, but recieved ${typeof obj.message.value}`, recieved:obj.message};
+											result = {error:true, message: `downlink is type number, but received ${typeof obj.message.value}`, received:obj.message};
 										}
 									}
 									// downlinkobject is not a number
 									else{
 										if(downlinkObject.common.type !== typeof obj.message.value){
-											result = {error:true, message: `downlink is type ${downlinkObject.common.type}, but recieved ${typeof obj.message.value}`, recieved:obj.message};
+											result = {error:true, message: `downlink is type ${downlinkObject.common.type}, but received ${typeof obj.message.value}`, received:obj.message};
 										}
 										else{
 											await this.setStateAsync(downlinkId,obj.message.value);
-											result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, recieved:obj.message};
+											result = {applicationId: changeInfo.applicationId, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, received:obj.message};
 										}
 									}
 								}
 							}
 							else{
-								result = {error:true, message:"No downlink matches", recieved:obj.message};
+								result = {error:true, message:"No downlink matches", received:obj.message};
 							}
 						}
 						else{
-							result = {error:true, message:"No device found", recieved:obj.message};
+							result = {error:true, message:"No device found", received:obj.message};
 						}
 					}
 					else{
-						result = {error:true, message:"No deviceEUI, downlink & value found", recieved:obj.message};
+						result = {error:true, message:"No deviceEUI, downlink & value found", received:obj.message};
 					}
 					// Send response
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}
 				else
 				{
-					const result = {error:true, message: "No message matched", recieved:obj.message};
+					const result = {error:true, message: "No message matched", received:obj.message};
 					if (obj.callback) this.sendTo(obj.from, obj.command, result, obj.callback);
 				}
 			}
