@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "news": {
+      "0.3.2": {
+        "en": "wording recieved => received in messageing",
+        "de": "zurückgegeben => in der mitteilung empfangen",
+        "ru": "=> в сообщении",
+        "pt": "redação recieved => recebido em mensagens",
+        "nl": "tekst ontvangen => ontvangen in berichtgeving",
+        "fr": "texte reçu => reçu en message",
+        "it": "> ricevuto nel messaggio",
+        "es": "wording recieved = recibidos en mensajes",
+        "pl": "sformułowanie otrzymane = > otrzymywane w procesie messaging",
+        "uk": "javascript licenses api веб-сайт go1.13.8 отримувати повідомлення",
+        "zh-cn": "重述的语句 发送信件时收到"
+      },
       "0.3.1": {
         "en": "rebuild with better messageing",
         "de": "neuaufbau mit besserer botschaft",
@@ -80,19 +93,6 @@
         "pl": "wartość domyślna błąd konfiguracyjny crc",
         "uk": "за замовчуванням значення crc config fix",
         "zh-cn": "默认值 crc 配置错误已修正"
-      },
-      "0.1.11": {
-        "en": "min / max values for downlink-configs (number)",
-        "de": "min / max werte für downlink-konfigs (anzahl)",
-        "ru": "min / max значения для конфигураций нисходящей ссылки (число)",
-        "pt": "min / valores máximos para downlink-configs (número)",
-        "nl": "min / max waarden voor downlink-configs (aantal)",
-        "fr": "valeurs min / max pour les configurations de liaison descendante (nombre)",
-        "it": "min / max valori per downlink-configs (numero)",
-        "es": "valores min / máx para los inconvenientes (número)",
-        "pl": "min / max wartości dla downlink- configs (liczba)",
-        "uk": "min / максимальні значення для налаштувань посилань (номер)",
-        "zh-cn": "下行链路配置最小值( 数)"
       }
     },
     "title": "LoRaWAN",
