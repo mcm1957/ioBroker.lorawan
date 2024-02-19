@@ -195,19 +195,6 @@
         "def": false
       },
       "native": {}
-    },
-    {
-      "_id": "info.logAvailableConfignames",
-      "type": "state",
-      "common": {
-        "role": "button",
-        "name": "logs the names of available device configurations",
-        "type": "boolean",
-        "read": true,
-        "write": true,
-        "def": false
-      },
-      "native": {}
     }
   ]
 }
