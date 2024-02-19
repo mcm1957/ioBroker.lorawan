@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "news": {
+      "0.3.3": {
+        "en": "set infos into native",
+        "de": "informationen in die heimat",
+        "ru": "установить информацию на родной",
+        "pt": "definir informações em nativo",
+        "nl": "info's instellen in native",
+        "fr": "définir les infos dans native",
+        "it": "impostare le informazioni in nativo",
+        "es": "set infos into native",
+        "pl": "zestaw infos do rodzimej",
+        "uk": "встановити інформацію на рідні",
+        "zh-cn": "设置为本地信息"
+      },
       "0.3.2": {
         "en": "wording recieved => received in messageing",
         "de": "zurückgegeben => in der mitteilung empfangen",
@@ -80,19 +93,6 @@
         "pl": "budowa zmienionych katalogów i wdrożona wiadomość",
         "uk": "створення каталогу змінено та повідомлення",
         "zh-cn": "更改目录构建并执行消息"
-      },
-      "0.1.12": {
-        "en": "default value crc config bug fixed",
-        "de": "standardwert crc config bug behoben",
-        "ru": "по умолчанию",
-        "pt": "valor padrão crc config bug corrigido",
-        "nl": "standaard waarde crc config bug vast",
-        "fr": "valeur par défaut crc config bug corrigé",
-        "it": "valore predefinito crc config bug fisso",
-        "es": "valor predeterminado crc config error fijo",
-        "pl": "wartość domyślna błąd konfiguracyjny crc",
-        "uk": "за замовчуванням значення crc config fix",
-        "zh-cn": "默认值 crc 配置错误已修正"
       }
     },
     "title": "LoRaWAN",
