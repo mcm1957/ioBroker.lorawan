@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "news": {
+      "0.3.4": {
+        "en": "put some debug and silly logging to code",
+        "de": "debug und silly logging auf code setzen",
+        "ru": "положить некоторые отладки и глупые журналы для кодирования",
+        "pt": "colocar algum debug e log tonto para o código",
+        "nl": "zet wat debug en dom loggen op code",
+        "fr": "mettre un peu de débogage et stupide log pour coder",
+        "it": "mettere alcuni debug e stupido registrazione al codice",
+        "es": "poner un poco de depuración y registro tonto para el código",
+        "pl": "dodaj debug i głupie logowanie do kodu",
+        "uk": "покласти деякі debug і silly журналювання до коду",
+        "zh-cn": "把一些调试和愚蠢的日志输入代码"
+      },
       "0.3.3": {
         "en": "set infos into native",
         "de": "informationen in die heimat",
@@ -80,19 +93,6 @@
         "pl": "większa funkcjonalność w zakresie rozwiązywania problemów",
         "uk": "більше функцій в повідомленнях",
         "zh-cn": "信件中更多的功能"
-      },
-      "0.1.13": {
-        "en": "building of directory changed and message implemented",
-        "de": "aufbau des geänderten verzeichnisses und der implementierten meldung",
-        "ru": "создание измененного каталога и реализовано сообщение",
-        "pt": "construção de diretório alterado e mensagem implementada",
-        "nl": "opbouw van map gewijzigd en bericht geïmplementeerd",
-        "fr": "la construction du répertoire modifié et le message mis en œuvre",
-        "it": "costruzione della directory modificata e messa in atto",
-        "es": "la construcción del directorio cambiado y el mensaje implementado",
-        "pl": "budowa zmienionych katalogów i wdrożona wiadomość",
-        "uk": "створення каталогу змінено та повідомлення",
-        "zh-cn": "更改目录构建并执行消息"
       }
     },
     "title": "LoRaWAN",
