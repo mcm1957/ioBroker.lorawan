@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "news": {
+      "0.3.5": {
+        "en": "set tier to 2 and improove standard devices",
+        "de": "tier auf 2 und improovierte standardgeräte",
+        "ru": "установить уровень до 2 и импровизировать стандартные устройства",
+        "pt": "definir nível para 2 e improvisar dispositivos padrão",
+        "nl": "set tier to 2 and improove standaard devices",
+        "fr": "définir le niveau à 2 et improviser les appareils standard",
+        "it": "set tier a 2 e improove dispositivi standard",
+        "es": "set tier a 2 y improove dispositivos estándar",
+        "pl": "ustawić poziom dokładności na 2 i improove standardowe urządzenia",
+        "uk": "встановити ярус до 2 і непровисних стандартних пристроїв",
+        "zh-cn": "设置等级至 2 级, 并且不包含标准设备"
+      },
       "0.3.4": {
         "en": "put some debug and silly logging to code",
         "de": "debug und silly logging auf code setzen",
@@ -80,19 +93,6 @@
         "pl": "sprawdzają typy wartości wiadomości i wdrażają blokowane bloki",
         "uk": "перевіряти типи значень обміну повідомленнями та реалізовувати більше блоків",
         "zh-cn": "检查消息值的类型, 执行更多块"
-      },
-      "0.2.0": {
-        "en": "more functionality in messageing",
-        "de": "mehr funktionalität in der meldung",
-        "ru": "больше функциональности в сообщении",
-        "pt": "mais funcionalidade em mensagens",
-        "nl": "meer functionaliteit in berichtgeving",
-        "fr": "plus de fonctionnalité dans la messagerie",
-        "it": "più funzionalità nel messaggio",
-        "es": "más funcionalidad en el mensaje",
-        "pl": "większa funkcjonalność w zakresie rozwiązywania problemów",
-        "uk": "більше функцій в повідомленнях",
-        "zh-cn": "信件中更多的功能"
       }
     },
     "title": "LoRaWAN",
