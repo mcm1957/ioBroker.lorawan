@@ -21,7 +21,12 @@
                 "multiplyfaktor": 10,
                 "unit": "Grad",
                 "decimalPlaces": 1,
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false
             },
             {
                 "name": "Vicki_Interval",
@@ -39,7 +44,11 @@
                 "unit": "Minuten",
                 "crc":"noCrc",
                 "limitMin": true,
-                "limitMinValue": 1
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Vicki_Target_Temperature",
@@ -56,7 +65,12 @@
                 "multiplyfaktor": "1",
                 "unit": "Grad",
                 "decimalPlaces": 0,
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false
             },
             {
                 "name": "Vicki_Max_Temperature",
@@ -72,7 +86,13 @@
                 "onClick": "030111",
                 "multiplyfaktor": "1",
                 "unit": "Grad",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Vicki_Get_Infos",
@@ -88,7 +108,13 @@
                 "onClick": "041215184634",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Vicki_Motor_Callibration",
@@ -104,7 +130,13 @@
                 "onClick": "03",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Vicki_Child_Lock",
@@ -120,7 +152,13 @@
                 "onClick": "030111",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Vicki_Mode_2",
@@ -137,7 +175,12 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "decimalPlaces": "1",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false
             }
         ]
     }

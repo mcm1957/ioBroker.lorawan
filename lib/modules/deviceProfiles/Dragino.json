@@ -17,11 +17,16 @@
                 "lengthInByte": 3,
                 "on": "",
                 "off": "",
+                "onClick": "",
                 "multiplyfaktor": 60,
                 "unit": "min",
                 "crc":"noCrc",
                 "limitMin": true,
-                "limitMinValue": 1
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Reboot",
@@ -35,9 +40,15 @@
                 "on": "",
                 "off": "",
                 "onClick": "04FF",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
                 "multiplyfaktor": "1",
                 "unit": "",
-                "crc":"noCrc"
+                "crc": "noCrc",
+                "decimalPlaces": "0"
             }
         ]
      }    

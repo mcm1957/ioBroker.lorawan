@@ -20,7 +20,14 @@
               "onClick": "030111",
               "multiplyfaktor": "1",
               "unit": "",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null,
+              "decimalPlaces": "0"
             },
             {
               "name": "Get config parameter",
@@ -36,7 +43,14 @@
               "onClick": "g",
               "multiplyfaktor": "1",
               "unit": "",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null,
+              "decimalPlaces": "0"
             },
             {
               "name": "Request firmware and version",
@@ -52,7 +66,14 @@
               "onClick": "3F",
               "multiplyfaktor": "1",
               "unit": "",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null,
+              "decimalPlaces": "0"
             },
             {
               "name": "BSM_Relais1",
@@ -68,7 +89,14 @@
               "onClick": "030111",
               "multiplyfaktor": "1",
               "unit": "",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null,
+              "decimalPlaces": "0"
             },
             {
               "name": "BSM_Relais2",
@@ -84,7 +112,14 @@
               "onClick": "030111",
               "multiplyfaktor": "1",
               "unit": "",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null,
+              "decimalPlaces": "0"
             },
             {
               "name": "BSM_Relais3",
@@ -100,7 +135,14 @@
               "onClick": "030111",
               "multiplyfaktor": "1",
               "unit": "",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null,
+              "decimalPlaces": "0"
             },
             {
               "name": "BSM_Relais4",
@@ -117,7 +159,13 @@
               "multiplyfaktor": "1",
               "unit": "",
               "decimalPlaces": "1",
-              "crc":"noCrc"
+              "crc":"noCrc",
+              "limitMin": true,
+              "limitMinValue": 1,
+              "limitMax": false,
+              "limitMaxValue": 0,
+              "swap": false,
+              "statciText4": null
             }
         ]
     }

@@ -23,7 +23,7 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* (BenAhrdt) some more functions
+* (BenAhrdt) set tier to 2 and improove standard devices
 
 ### 0.3.4 (2024-02-20)
 * (BenAhrdt) put some debug and silly logging to code

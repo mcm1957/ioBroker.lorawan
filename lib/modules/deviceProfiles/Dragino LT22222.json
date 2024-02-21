@@ -11,16 +11,23 @@
                 "port": 1,
                 "priority": "NORMAL",
                 "type": "boolean",
+                "awap": false,
                 "confirmed": true,
                 "front": "030111",
                 "end": "11",
                 "lengthInByte": 1,
                 "on": "030111",
                 "off": "030011",
+                "onClick": "030111",
                 "multiplyfaktor": "1",
                 "unit": "",
-                "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMaxValue": 0,
+                "limitMax": false,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "Intervall",
@@ -38,7 +45,11 @@
                 "onClick": "030111",
                 "crc":"noCrc",
                 "limitMin": true,
-                "limitMinValue": 1
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "RO2_target",
@@ -54,7 +65,13 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "RPC_Level",
@@ -70,7 +87,13 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "DO1_target",
@@ -86,7 +109,13 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "DO2_target",
@@ -102,7 +131,13 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "DO1_L_FOR_2_SEC",
@@ -118,7 +153,13 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             },
             {
                 "name": "RO2_On_FOR_1_Min",
@@ -134,7 +175,13 @@
                 "multiplyfaktor": "1",
                 "unit": "",
                 "onClick": "030111",
-                "crc":"noCrc"
+                "crc":"noCrc",
+                "limitMin": true,
+                "limitMinValue": 1,
+                "limitMax": false,
+                "limitMaxValue": 0,
+                "swap": false,
+                "decimalPlaces": "0"
             }
         ]
      }    

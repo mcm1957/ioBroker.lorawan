@@ -102,6 +102,7 @@
 						{
 							"newLine": true,
 							"type": "header",
+							"attr": "_header",
 							"text": "downlinkConfigMainHeader",
 							"size": 3
 						},
@@ -224,6 +225,7 @@
 								},
 								{
 									"type": "staticText",
+									"attr": "_statciText",
 									"label": "",
 									"hidden": "data.type === 'number'",
 									"sm":2

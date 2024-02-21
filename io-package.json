@@ -136,7 +136,7 @@
     "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
     "readme": "https://github.com/BenAhrdt/ioBroker.lorawan/blob/main/README.md",
     "loglevel": "info",
-    "tier": 3,
+    "tier": 2,
     "mode": "daemon",
     "type": "protocols",
     "compact": true,
