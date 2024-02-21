@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "news": {
+      "0.3.6": {
+        "en": "set attributs if undefined",
+        "de": "wenn nicht definiert",
+        "ru": "набор атрибутов, если не определено",
+        "pt": "definir atributos se indefinido",
+        "nl": "attributes instellen indien niet gedefinieerd",
+        "fr": "définir les attributs si non définis",
+        "it": "attributi impostati se non definiti",
+        "es": "conjunto atributos si no definido",
+        "pl": "set attributs if undefined",
+        "uk": "встановити attributs if undefined",
+        "zh-cn": "如果未定义, 设置附件"
+      },
       "0.3.5": {
         "en": "set tier to 2 and improove standard devices",
         "de": "tier auf 2 und improovierte standardgeräte",
@@ -80,19 +93,6 @@
         "pl": "zdefiniować przyjazny dla użytkownika Blokady z wynikiem",
         "uk": "визначення дружності користувача Блокнотні блоки з результатом",
         "zh-cn": "定义用户友好 块状块及结果"
-      },
-      "0.2.1": {
-        "en": "check types of messaging values and implements more blockly blocks",
-        "de": "überprüfen sie die arten der messaging-werte und implementiert mehr blockweise blöcke",
-        "ru": "проверить типы значений обмена сообщениями и реализовать более блоков",
-        "pt": "verificar os tipos de valores de mensagens e implementa blocos mais bloqueados",
-        "nl": "controleer soorten messaging waarden en implementeert meer blokken",
-        "fr": "vérifier les types de valeurs de messagerie et implémente des blocs plus bloc",
-        "it": "controllare i tipi di valori di messaggistica e implementa più blocchi bloccati",
-        "es": "comprobar tipos de valores de mensajería e implementar bloques más bloque",
-        "pl": "sprawdzają typy wartości wiadomości i wdrażają blokowane bloki",
-        "uk": "перевіряти типи значень обміну повідомленнями та реалізовувати більше блоків",
-        "zh-cn": "检查消息值的类型, 执行更多块"
       }
     },
     "title": "LoRaWAN",
