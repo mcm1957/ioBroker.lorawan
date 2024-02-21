@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) some more functions
+
 ### 0.3.4 (2024-02-20)
 * (BenAhrdt) put some debug and silly logging to code
 
