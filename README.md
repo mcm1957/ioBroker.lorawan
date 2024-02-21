@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) set attributs if undefined
+
 ### 0.3.5 (2024-02-21)
 * (BenAhrdt) set tier to 2 and improove standard devices
 
