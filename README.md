@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) improove forbidden chars and implements join raw
+
 ### 0.3.6 (2024-02-21)
 * (BenAhrdt) set attributs if undefined
 

@@ -180,7 +180,8 @@
 									"label": "name",
 									"tooltip": "nameTooltip",
 									"default": "",
-									"validator": "if(data.name === '' || data.name === null){return false;}else{return true;}",
+									"validator": "if(data.name === '' || data.name === null){return false;}else{const myRegEx = /^([0-9a-z])*$/i; return myRegEx.test(data.name);}",
+									"validatorNoSaveOnError": true,
 									"sm":2
 								},
 								{
@@ -246,6 +247,7 @@
 									"tooltip": "frontTooltip",
 									"default": "03",
 									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{return true}",
+									"validatorNoSaveOnError": true,
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
 									"sm":2
 								},
@@ -256,6 +258,7 @@
 									"tooltip": "endTooltip",
 									"default": "11",
 									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{return true}",
+									"validatorNoSaveOnError": true,
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
 									"sm":2
 								},
@@ -278,6 +281,7 @@
 									"tooltip": "onTooltip",
 									"default": "01",
 									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.on);",
+									"validatorNoSaveOnError": true,
 									"hidden": "data.type !== 'boolean'",
 									"sm":2
 								},
@@ -288,6 +292,7 @@
 									"tooltip": "offTooltip",
 									"default": "11",
 									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.off);",
+									"validatorNoSaveOnError": true,
 									"hidden": "data.type !== 'boolean'",
 									"sm":2
 								},
@@ -299,6 +304,7 @@
 									"tooltip": "onClickTooltip",
 									"default": "030111",
 									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.onClick);",
+									"validatorNoSaveOnError": true,
 									"hidden": "data.type !== 'button'",
 									"sm":2
 								},
