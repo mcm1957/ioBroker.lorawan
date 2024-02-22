@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.6",
+    "version": "0.3.7",
     "news": {
+      "0.3.7": {
+        "en": "improove forbidden chars and implements join raw",
+        "de": "unproove verbotene wagen und geräte roh beitreten",
+        "ru": "импровизировать запрещенные шары и реализаций присоединяются к сырому",
+        "pt": "improove proibido chars e implementos se juntar cru",
+        "nl": "improove verboden tekens en werktuigen samen rauw",
+        "fr": "improove prohibed chars and implements joignent brut",
+        "it": "improove vietati carboni e strumenti si uniscono crudo",
+        "es": "improove chars prohibidos e implementos se unen a crudo",
+        "pl": "improove zakazane znaki i narzędzia dołączyć surowe",
+        "uk": "неприпустимий заборонений діаграма і реалізує приєднатися до сировини",
+        "zh-cn": "将禁用字符和工具合并为原始字符"
+      },
       "0.3.6": {
         "en": "set attributs if undefined",
         "de": "wenn nicht definiert",
@@ -80,19 +93,6 @@
         "pl": "odbudowa dzięki lepszemu rozwiązywaniu problemów",
         "uk": "перебудувати краще повідомлення",
         "zh-cn": "以更好的信息重建"
-      },
-      "0.3.0": {
-        "en": "define user friendly Blockly Blocks with result",
-        "de": "benutzerfreundlich definieren Blockly Blocks mit Ergebnis",
-        "ru": "определение пользователя Блоки с результатом",
-        "pt": "definir amigável Blocos com resultado",
-        "nl": "gebruikersvriendelijk definiëren Blokkeren met resultaat",
-        "fr": "définir une utilisation conviviale Blocs avec résultat",
-        "it": "definire l'utente amichevole Blocchi Blockly con risultato",
-        "es": "definir fácil de usar Bloqueo bloques con resultado",
-        "pl": "zdefiniować przyjazny dla użytkownika Blokady z wynikiem",
-        "uk": "визначення дружності користувача Блокнотні блоки з результатом",
-        "zh-cn": "定义用户友好 块状块及结果"
       }
     },
     "title": "LoRaWAN",
