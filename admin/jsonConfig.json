@@ -180,7 +180,7 @@
 									"label": "name",
 									"tooltip": "nameTooltip",
 									"default": "",
-									"validator": "if(data.name === '' || data.name === null){return false;}else{const myRegEx = /^([0-9a-z])*$/i; return myRegEx.test(data.name);}",
+									"validator": "if(data.name === '' || data.name === null){return false;}else{const myRegEx = /^([0-9a-z_ ])*$/i; return myRegEx.test(data.name);}",
 									"validatorNoSaveOnError": true,
 									"sm":2
 								},
