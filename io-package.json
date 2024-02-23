@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "news": {
+      "0.3.8": {
+        "en": "write def into state in case of type changes",
+        "de": "schreiben def in zustand bei typänderungen",
+        "ru": "написать деф в состояние в случае изменения типа",
+        "pt": "escrever def em estado em caso de alterações de tipo",
+        "nl": "def in status schrijven in geval van typewijzigingen",
+        "fr": "écrire def dans l'état en cas de changement de type",
+        "it": "scrivere def in stato in caso di variazioni di tipo",
+        "es": "escribir def en estado en caso de cambios de tipo",
+        "pl": "zapis def do stanu w przypadku zmian typu",
+        "uk": "писати деф в стан у разі зміни типу",
+        "zh-cn": "在类型变化时将 def 写入状态"
+      },
       "0.3.7": {
         "en": "improove forbidden chars and implements join raw",
         "de": "unproove verbotene wagen und geräte roh beitreten",
@@ -80,19 +93,6 @@
         "pl": "sformułowanie otrzymane = > otrzymywane w procesie messaging",
         "uk": "javascript licenses api веб-сайт go1.13.8 отримувати повідомлення",
         "zh-cn": "重述的语句 发送信件时收到"
-      },
-      "0.3.1": {
-        "en": "rebuild with better messageing",
-        "de": "neuaufbau mit besserer botschaft",
-        "ru": "перестроить с лучшим сообщением",
-        "pt": "reconstruir com melhor mensagem",
-        "nl": "herbouwen met betere berichtgeving",
-        "fr": "reconstruire avec un meilleur message",
-        "it": "ricostruire con messaggi migliori",
-        "es": "reconstruir con mejor mensaje",
-        "pl": "odbudowa dzięki lepszemu rozwiązywaniu problemów",
-        "uk": "перебудувати краще повідомлення",
-        "zh-cn": "以更好的信息重建"
       }
     },
     "title": "LoRaWAN",
