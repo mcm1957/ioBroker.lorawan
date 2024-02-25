@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) change logging if a device joined the network
+
 ### 0.3.8 (2024-02-23)
 * (BenAhrdt) write def into state in case of type changes
 
