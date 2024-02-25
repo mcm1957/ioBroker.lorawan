@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.3.9",
+    "version": "0.3.10",
     "news": {
+      "0.3.10": {
+        "en": "change logging again if a device joined the network",
+        "de": "erneute protokollierung ändern, wenn ein gerät dem netzwerk angeschlossen ist",
+        "ru": "изменить журнализацию снова, если устройство вступило в сеть",
+        "pt": "mudar o registro novamente se um dispositivo entrou na rede",
+        "nl": "loggen opnieuw wijzigen als een apparaat zich aan het netwerk heeft aangesloten",
+        "fr": "changer de journalisation si un périphérique a rejoint le réseau",
+        "it": "modificare la registrazione di nuovo se un dispositivo è entrato nella rete",
+        "es": "cambiar de registro de nuevo si un dispositivo se unió a la red",
+        "pl": "zmiana logowania w przypadku połączenia urządzenia z siecią",
+        "uk": "перезавантаження знову, якщо пристрій долучився до мережі",
+        "zh-cn": "如果设备加入了网络, 将再次更改记录"
+      },
       "0.3.9": {
         "en": "change logging if a device joined the network",
         "de": "änderung der protokollierung, wenn ein gerät im netzwerk angeschlossen ist",
@@ -80,19 +93,6 @@
         "pl": "dodaj debug i głupie logowanie do kodu",
         "uk": "покласти деякі debug і silly журналювання до коду",
         "zh-cn": "把一些调试和愚蠢的日志输入代码"
-      },
-      "0.3.3": {
-        "en": "set infos into native",
-        "de": "informationen in die heimat",
-        "ru": "установить информацию на родной",
-        "pt": "definir informações em nativo",
-        "nl": "info's instellen in native",
-        "fr": "définir les infos dans native",
-        "it": "impostare le informazioni in nativo",
-        "es": "set infos into native",
-        "pl": "zestaw infos do rodzimej",
-        "uk": "встановити інформацію на рідні",
-        "zh-cn": "设置为本地信息"
       }
     },
     "title": "LoRaWAN",
