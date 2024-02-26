@@ -164,6 +164,7 @@
 						{
 							"newLine": true,
 							"type": "header",
+							"attr": "_header2",
 							"text": "downlinkConfigSubHeader",
 							"size": 3
 						},
@@ -313,7 +314,7 @@
 									"attr": "multiplyfaktor",
 									"label": "multiplyfaktor",
 									"tooltip": "multiplyfaktorTooltip",
-									"default": "1",
+									"default": 1,
 									"hidden": "data.type !== 'number'",
 									"sm":2
 								},
@@ -322,7 +323,7 @@
 									"attr": "decimalPlaces",
 									"label": "decimalPlaces",
 									"tooltip": "decimalPlacesTooltip",
-									"default": "0",
+									"default": 0,
 									"min": 0,
 									"max": 5,
 									"hidden": "data.type !== 'number'",
