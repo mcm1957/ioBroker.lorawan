@@ -107,17 +107,13 @@
 							"size": 3
 						},
 						{
-							"type": "autocomplete",
+							"type": "text",
 							"attr": "deviceType",
 							"label": "deviceType",
 							"tooltip": "deviceTypeTooltip",
-							"options": [
-								{"label":"all","value":"all"}
-							],
 							"validator": "if(data.deviceType === '' || data.deviceType === null){return false;}else{return true;}",
 							"validatorNoSaveOnError": true,
-							"default": "all",
-							"freeSolo": true,
+							"default": "",
 							"sm":2
 						},
 						{
