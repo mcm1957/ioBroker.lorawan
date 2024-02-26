@@ -5,13 +5,11 @@
         "downlinkParameter":[
             {
                 "name": "push",
-                "type": "json",
-                "deviceType": "all"
+                "type": "json"
             },
             {
                 "name": "replace",
-                "type": "json",
-                "deviceType": "all"
+                "type": "json"
             }
         ]
      }  

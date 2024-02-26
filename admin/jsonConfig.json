@@ -140,8 +140,8 @@
 							"label": "portDownlink",
 							"tooltip": "portDownlinkTooltip",
 							"hidden": "data.sendWithUplink === 'disabled'",
-							"default": 2,
-							"sm":2
+							"default": 1,
+							"sm":1
 						},
 						{
 							"type": "text",
