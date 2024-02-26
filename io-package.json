@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "news": {
+      "0.4.1": {
+        "en": "implement new deviceprofiles",
+        "de": "neue geräteprofile implementieren",
+        "ru": "внедрение новых профилей устройств",
+        "pt": "implementar novos dispositivosprofiles",
+        "nl": "nieuwe apparaatprofielen implementeren",
+        "fr": "implémenter de nouveaux profils d'appareils",
+        "it": "implementare nuovi profili dei dispositivi",
+        "es": "implementar nuevos ficheros de dispositivo",
+        "pl": "wdrożenienowych profili projektowych",
+        "uk": "впроваджувати нові пристрої",
+        "zh-cn": "执行新设备配置"
+      },
       "0.4.0": {
         "en": "searchallgorythm improoved, defaultvalues changed, remove query for \"all\"",
         "de": "searchallgorythm improoved, standardwerte geändert, entfernen abfrage für \"all\"",
@@ -80,19 +93,6 @@
         "pl": "set attributs if undefined",
         "uk": "встановити attributs if undefined",
         "zh-cn": "如果未定义, 设置附件"
-      },
-      "0.3.5": {
-        "en": "set tier to 2 and improove standard devices",
-        "de": "tier auf 2 und improovierte standardgeräte",
-        "ru": "установить уровень до 2 и импровизировать стандартные устройства",
-        "pt": "definir nível para 2 e improvisar dispositivos padrão",
-        "nl": "set tier to 2 and improove standaard devices",
-        "fr": "définir le niveau à 2 et improviser les appareils standard",
-        "it": "set tier a 2 e improove dispositivi standard",
-        "es": "set tier a 2 y improove dispositivos estándar",
-        "pl": "ustawić poziom dokładności na 2 i improove standardowe urządzenia",
-        "uk": "встановити ярус до 2 і непровисних стандартних пристроїв",
-        "zh-cn": "设置等级至 2 级, 并且不包含标准设备"
       }
     },
     "title": "LoRaWAN",
