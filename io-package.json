@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "news": {
+      "0.5.0": {
+        "en": "trigger for devicetype implemented",
+        "de": "trigger für implementierte gerätetypen",
+        "ru": "триггер для реализованного устройства",
+        "pt": "gatilho para o tipo de dispositivo implementado",
+        "nl": "trigger voor apparaattype geïmplementeerd",
+        "fr": "déclencheur pour le type d'appareil implémenté",
+        "it": "trigger per il tipo di dispositivo implementato",
+        "es": "disparador para el tipo de dispositivo implementado",
+        "pl": "wyzwalacz dla wdrożonego typu devicetype",
+        "uk": "тригер для установки",
+        "zh-cn": "已执行设备类型的触发器"
+      },
       "0.4.1": {
         "en": "implement new deviceprofiles",
         "de": "neue geräteprofile implementieren",
@@ -80,19 +93,6 @@
         "pl": "improove zakazane znaki i narzędzia dołączyć surowe",
         "uk": "неприпустимий заборонений діаграма і реалізує приєднатися до сировини",
         "zh-cn": "将禁用字符和工具合并为原始字符"
-      },
-      "0.3.6": {
-        "en": "set attributs if undefined",
-        "de": "wenn nicht definiert",
-        "ru": "набор атрибутов, если не определено",
-        "pt": "definir atributos se indefinido",
-        "nl": "attributes instellen indien niet gedefinieerd",
-        "fr": "définir les attributs si non définis",
-        "it": "attributi impostati se non definiti",
-        "es": "conjunto atributos si no definido",
-        "pl": "set attributs if undefined",
-        "uk": "встановити attributs if undefined",
-        "zh-cn": "如果未定义, 设置附件"
       }
     },
     "title": "LoRaWAN",
