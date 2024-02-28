@@ -322,7 +322,7 @@ class Lorawan extends utils.Adapter {
 		try{
 			this.log.silly(`changeinfo of id ${id}, will be generated.`);
 			const changeInfo = this.getBaseDeviceInfo(id);
-			const myId = `${changeInfo?.applicationId}.devices.${changeInfo?.deviceEUI}.${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`;
+			const myId = `${changeInfo?.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`;
 			// Check for changeInfo
 			if(changeInfo){
 				// Get Obect from startdirectory

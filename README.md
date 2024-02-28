@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) trigger for devicetype implemented
+
 ### 0.4.1 (2024-02-26)
 * (BenAhrdt) implement new deviceprofiles
 
