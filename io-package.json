@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "news": {
+      "0.5.1": {
+        "en": "detecting of triggerwords changed",
+        "de": "erkennung von triggerworten geändert",
+        "ru": "изменено обнаружение триггеров",
+        "pt": "detecção de palavras de gatilho alteradas",
+        "nl": "detectie van gewijzigde triggerwoorden",
+        "fr": "la détection des mots-clés a changé",
+        "it": "rilevazione delle parole d'innesco modificate",
+        "es": "detección de palabras de disparador cambiadas",
+        "pl": "wykrywanie zmienionych tryggerwords",
+        "uk": "виявлення змінених фраз",
+        "zh-cn": "检测触发词已更改"
+      },
       "0.5.0": {
         "en": "trigger for devicetype implemented",
         "de": "trigger für implementierte gerätetypen",
@@ -80,19 +93,6 @@
         "pl": "zapis def do stanu w przypadku zmian typu",
         "uk": "писати деф в стан у разі зміни типу",
         "zh-cn": "在类型变化时将 def 写入状态"
-      },
-      "0.3.7": {
-        "en": "improove forbidden chars and implements join raw",
-        "de": "unproove verbotene wagen und geräte roh beitreten",
-        "ru": "импровизировать запрещенные шары и реализаций присоединяются к сырому",
-        "pt": "improove proibido chars e implementos se juntar cru",
-        "nl": "improove verboden tekens en werktuigen samen rauw",
-        "fr": "improove prohibed chars and implements joignent brut",
-        "it": "improove vietati carboni e strumenti si uniscono crudo",
-        "es": "improove chars prohibidos e implementos se unen a crudo",
-        "pl": "improove zakazane znaki i narzędzia dołączyć surowe",
-        "uk": "неприпустимий заборонений діаграма і реалізує приєднатися до сировини",
-        "zh-cn": "将禁用字符和工具合并为原始字符"
       }
     },
     "title": "LoRaWAN",
