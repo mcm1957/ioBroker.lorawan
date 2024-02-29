@@ -1,0 +1,8 @@
+{
+    "Devicetype": "configuration.devicetype",
+    "devicetype": "configuration.devicetype",
+    "Device": "configuration.devicetype",
+    "device": "configuration.devicetype",
+    "Hardware_mode": "configuration.devicetype",
+    "Hardware_Mode": "configuration.devicetype"
+}
