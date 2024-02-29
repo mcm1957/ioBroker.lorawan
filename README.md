@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) change folder for writetriggers
+
 ### 0.5.2 (2024-02-29)
 * (BenAhrdt) make writetrigger more flexible
 
