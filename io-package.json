@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "news": {
+      "0.5.2": {
+        "en": "make writetrigger more flexible",
+        "de": "schreibtrigger flexibler gestalten",
+        "ru": "сделать пишущее устройство более гибким",
+        "pt": "fazer writetrigger mais flexível",
+        "nl": "schrijftrigger flexibeler maken",
+        "fr": "rendre le trigger plus flexible",
+        "it": "rendere writetrigger più flessibile",
+        "es": "hacer la escritura más flexible",
+        "pl": "uczynić pisarkę bardziej elastyczną",
+        "uk": "зробити напилення більш гнучким",
+        "zh-cn": "使写入器更加灵活"
+      },
       "0.5.1": {
         "en": "detecting of triggerwords changed",
         "de": "erkennung von triggerworten geändert",
@@ -80,19 +93,6 @@
         "pl": "zmiana logowania, jeśli urządzenie dołączyło do sieci",
         "uk": "змінити логування, якщо пристрій долучився до мережі",
         "zh-cn": "如果设备加入网络, 更改日志"
-      },
-      "0.3.8": {
-        "en": "write def into state in case of type changes",
-        "de": "schreiben def in zustand bei typänderungen",
-        "ru": "написать деф в состояние в случае изменения типа",
-        "pt": "escrever def em estado em caso de alterações de tipo",
-        "nl": "def in status schrijven in geval van typewijzigingen",
-        "fr": "écrire def dans l'état en cas de changement de type",
-        "it": "scrivere def in stato in caso di variazioni di tipo",
-        "es": "escribir def en estado en caso de cambios de tipo",
-        "pl": "zapis def do stanu w przypadku zmian typu",
-        "uk": "писати деф в стан у разі зміни типу",
-        "zh-cn": "在类型变化时将 def 写入状态"
       }
     },
     "title": "LoRaWAN",
