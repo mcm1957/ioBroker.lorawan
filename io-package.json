@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "news": {
+      "0.5.3": {
+        "en": "change folder for writetriggers",
+        "de": "ordner für schreiber ändern",
+        "ru": "изменить папку для дикторов",
+        "pt": "mudar a pasta para writetriggers",
+        "nl": "map voor schrijftriggers wijzigen",
+        "fr": "modifier le dossier pour writetriggers",
+        "it": "modificare la cartella per writetriggers",
+        "es": "cambiar la carpeta para los escritores",
+        "pl": "zmień folder dla pisarzy",
+        "uk": "змінити папку для запису",
+        "zh-cn": "更改写入文件夹"
+      },
       "0.5.2": {
         "en": "make writetrigger more flexible",
         "de": "schreibtrigger flexibler gestalten",
@@ -80,19 +93,6 @@
         "pl": "zmiana logowania w przypadku połączenia urządzenia z siecią",
         "uk": "перезавантаження знову, якщо пристрій долучився до мережі",
         "zh-cn": "如果设备加入了网络, 将再次更改记录"
-      },
-      "0.3.9": {
-        "en": "change logging if a device joined the network",
-        "de": "änderung der protokollierung, wenn ein gerät im netzwerk angeschlossen ist",
-        "ru": "изменение регистрации, если устройство вступило в сеть",
-        "pt": "alterar o registro se um dispositivo entrou na rede",
-        "nl": "loggen wijzigen als een apparaat zich aan het netwerk heeft aangesloten",
-        "fr": "modifier l'enregistrement si un périphérique a rejoint le réseau",
-        "it": "modificare la registrazione se un dispositivo è entrato nella rete",
-        "es": "cambiar de registro si un dispositivo se unió a la red",
-        "pl": "zmiana logowania, jeśli urządzenie dołączyło do sieci",
-        "uk": "змінити логування, якщо пристрій долучився до мережі",
-        "zh-cn": "如果设备加入网络, 更改日志"
       }
     },
     "title": "LoRaWAN",
