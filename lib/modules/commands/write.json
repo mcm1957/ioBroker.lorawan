@@ -1,0 +1,8 @@
+{
+    "Devicetype": {"destination":"configuration.devicetype","releaseValue":"","approvedFolders":{"uplink.decoded":true}},
+    "devicetype": {"destination":"configuration.devicetype","releaseValue":"","approvedFolders":{"uplink.decoded":true}},
+    "Device": {"destination":"configuration.devicetype","releaseValue":"","approvedFolders":{"uplink.decoded":true}},
+    "device": {"destination":"configuration.devicetype","releaseValue":"","approvedFolders":{"uplink.decoded":true}},
+    "Hardware_mode": {"destination":"configuration.devicetype","releaseValue":"","approvedFolders":{"uplink.decoded":true}},
+    "Hardware_Mode": {"destination":"configuration.devicetype","releaseValue":"","approvedFolders":{"uplink.decoded":true}}
+}

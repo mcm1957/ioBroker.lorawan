@@ -1,8 +1,0 @@
-{
-    "Devicetype": {"destination":{"destination":"configuration.devicetype","releaseValue":""},"releaseValue":""},
-    "devicetype": {"destination":"configuration.devicetype","releaseValue":""},
-    "Device": {"destination":"configuration.devicetype","releaseValue":""},
-    "device": {"destination":"configuration.devicetype","releaseValue":""},
-    "Hardware_mode": {"destination":"configuration.devicetype","releaseValue":""},
-    "Hardware_Mode": {"destination":"configuration.devicetype","releaseValue":""}
-}

@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) implement ther approvedFolder conzept for writecommands from message
+
 ### 0.5.3 (2024-02-29)
 * (BenAhrdt) change folder for writetriggers
 
