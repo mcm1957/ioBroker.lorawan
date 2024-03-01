@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.5.3",
+    "version": "0.5.4",
     "news": {
+      "0.5.4": {
+        "en": "implement ther approvedFolder conzept for writecommands from message",
+        "de": "den genehmigten Ordner-Konzept für Schreibbefehle aus der Nachricht",
+        "ru": "реализовать Folder conzept for writecommands from message",
+        "pt": "implementar o aprovado Conzept de pasta para writecommands da mensagem",
+        "nl": "tenuitvoerlegging goedgekeurd Map conzept voor schrijfopdrachten uit bericht",
+        "fr": "mise en œuvre approuvée Dossier conzept pour les commandes d'écriture du message",
+        "it": "implementare il Cartella conzept per i comandi di scrittura dal messaggio",
+        "es": "de aplicación aprobado Folder conzept for writecommands from message",
+        "pl": "wdrożyć zatwierdzoną Folder conzept dla pisarek z wiadomości",
+        "uk": "реалізація затвердженого р. Складаний конверт для написаннякоманд з повідомлення",
+        "zh-cn": "执行批准的程序 从信件中写入命令的文件夹召集"
+      },
       "0.5.3": {
         "en": "change folder for writetriggers",
         "de": "ordner für schreiber ändern",
@@ -80,19 +93,6 @@
         "pl": "searchogorythm improused, defaultvalues changed, remove query for \"all\"",
         "uk": "searchallgorythm improoved, типові значення змінені, видалення запиту для \"all\"",
         "zh-cn": "搜索所有未启动的理论, 默认值已更改, 删除“ 所有” 的查询"
-      },
-      "0.3.10": {
-        "en": "change logging again if a device joined the network",
-        "de": "erneute protokollierung ändern, wenn ein gerät dem netzwerk angeschlossen ist",
-        "ru": "изменить журнализацию снова, если устройство вступило в сеть",
-        "pt": "mudar o registro novamente se um dispositivo entrou na rede",
-        "nl": "loggen opnieuw wijzigen als een apparaat zich aan het netwerk heeft aangesloten",
-        "fr": "changer de journalisation si un périphérique a rejoint le réseau",
-        "it": "modificare la registrazione di nuovo se un dispositivo è entrato nella rete",
-        "es": "cambiar de registro de nuevo si un dispositivo se unió a la red",
-        "pl": "zmiana logowania w przypadku połączenia urządzenia z siecią",
-        "uk": "перезавантаження знову, якщо пристрій долучився до мережі",
-        "zh-cn": "如果设备加入了网络, 将再次更改记录"
       }
     },
     "title": "LoRaWAN",
