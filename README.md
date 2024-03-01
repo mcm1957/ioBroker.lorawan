@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) first step of handling with date
+
 ### 0.5.4 (2024-03-01)
 * (BenAhrdt) implement ther approvedFolder conzept for writecommands from message
 
