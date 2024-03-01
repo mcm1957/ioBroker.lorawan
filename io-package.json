@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.5.4",
+    "version": "0.5.5",
     "news": {
+      "0.5.5": {
+        "en": "first step of handling with date",
+        "de": "erster schritt der handhabung mit datum",
+        "ru": "первый шаг обработки с датой",
+        "pt": "primeiro passo de manuseio com data",
+        "nl": "eerste stap van verwerking met datum",
+        "fr": "première étape de la manipulation avec date",
+        "it": "primo passo di gestione con data",
+        "es": "primer paso de manejo con fecha",
+        "pl": "pierwszy etap postępowania z datą",
+        "uk": "перший крок обробки з датою",
+        "zh-cn": "处理日期的第一步"
+      },
       "0.5.4": {
         "en": "implement ther approvedFolder conzept for writecommands from message",
         "de": "den genehmigten Ordner-Konzept für Schreibbefehle aus der Nachricht",
@@ -80,19 +93,6 @@
         "pl": "wdrożenienowych profili projektowych",
         "uk": "впроваджувати нові пристрої",
         "zh-cn": "执行新设备配置"
-      },
-      "0.4.0": {
-        "en": "searchallgorythm improoved, defaultvalues changed, remove query for \"all\"",
-        "de": "searchallgorythm improoved, standardwerte geändert, entfernen abfrage für \"all\"",
-        "ru": "searchallgorythm сброшен, изменены значения по умолчанию, удален запрос \"все\"",
-        "pt": "searchallgorythm improoved, defaultvalues alterado, remover consulta para \"all\"",
-        "nl": "searchallgorythm improoved, defaultvalues veranderd, query verwijderen voor \"all\"",
-        "fr": "searchallgorythm improoved, valeurs par défaut changé, supprimer la requête pour \"all\"",
-        "it": "ricercaallgorythm improoved, valori di default modificati, rimuovere la query per \"tutti\"",
-        "es": "searchallgorythm improvisado, valores predeterminados cambiaron, eliminar la consulta para \"todo\"",
-        "pl": "searchogorythm improused, defaultvalues changed, remove query for \"all\"",
-        "uk": "searchallgorythm improoved, типові значення змінені, видалення запиту для \"all\"",
-        "zh-cn": "搜索所有未启动的理论, 默认值已更改, 删除“ 所有” 的查询"
       }
     },
     "title": "LoRaWAN",
