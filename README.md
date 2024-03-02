@@ -22,6 +22,9 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) change concept of assigning roles, values and writecommands
+
 ### 0.5.5 (2024-03-01)
 * (BenAhrdt) first step of handling with date
 
