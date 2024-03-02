@@ -22,7 +22,7 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.6.1 (2024-03-02)
 * (BenAhrdt) better concept to write values and change setObjectNotExists to extendObject
 
 ### 0.6.0 (2024-03-02)

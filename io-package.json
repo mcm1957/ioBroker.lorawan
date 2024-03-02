@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "news": {
+      "0.6.1": {
+        "en": "better concept to write values and change setObjectNotExists to extendObject",
+        "de": "besseres Konzept zum Schreiben von Werten und Änderungsset ObjectNotExists to erweitern Gegenstand",
+        "ru": "лучшее понятие для написания ценностей и изменения набора ObjectNotExists Объект",
+        "pt": "melhor conceito para escrever valores e alterar o conjunto ObjectNotExists para estender Objeto",
+        "nl": "beter concept om waarden en verandering set te schrijven ObjectNotBestaat om uit te breiden Doel",
+        "fr": "meilleur concept pour écrire des valeurs et changer ensemble ObjectNotExiste à étendre Objet",
+        "it": "migliore concetto per scrivere valori e cambiare set ObjectNotEsiste per estendere Oggetto",
+        "es": "mejor concepto para escribir valores y cambiar conjunto ObjectNotExists to extend Objeto",
+        "pl": "lepsza koncepcja zapisu wartości i zestaw zmian ObjectNotExists rozszerzyć Obiekt",
+        "uk": "краща концепція для написання значень та змін Об'єктNotExists для розширення Об'єкт",
+        "zh-cn": "更好的写值和更改集的概念 要扩展的对象不包含 对象"
+      },
       "0.6.0": {
         "en": "change concept of assigning roles, values and writecommands",
         "de": "änderungskonzept der zuordnung von rollen, werten und schreibbefehlen",
@@ -80,19 +93,6 @@
         "pl": "wykrywanie zmienionych tryggerwords",
         "uk": "виявлення змінених фраз",
         "zh-cn": "检测触发词已更改"
-      },
-      "0.5.0": {
-        "en": "trigger for devicetype implemented",
-        "de": "trigger für implementierte gerätetypen",
-        "ru": "триггер для реализованного устройства",
-        "pt": "gatilho para o tipo de dispositivo implementado",
-        "nl": "trigger voor apparaattype geïmplementeerd",
-        "fr": "déclencheur pour le type d'appareil implémenté",
-        "it": "trigger per il tipo di dispositivo implementato",
-        "es": "disparador para el tipo de dispositivo implementado",
-        "pl": "wyzwalacz dla wdrożonego typu devicetype",
-        "uk": "тригер для установки",
-        "zh-cn": "已执行设备类型的触发器"
       }
     },
     "title": "LoRaWAN",
