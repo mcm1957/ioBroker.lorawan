@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.5.5",
+    "version": "0.6.0",
     "news": {
+      "0.6.0": {
+        "en": "change concept of assigning roles, values and writecommands",
+        "de": "änderungskonzept der zuordnung von rollen, werten und schreibbefehlen",
+        "ru": "изменение концепции присвоения ролей, ценностей и комманд",
+        "pt": "mudar o conceito de atribuir papéis, valores e redigircomando",
+        "nl": "verandering concept van het toewijzen van rollen, waarden en schrijfcommando's",
+        "fr": "changer le concept d'attribution des rôles, des valeurs et des commandes écrites",
+        "it": "cambiare il concetto di assegnare ruoli, valori e comandi di scrittura",
+        "es": "cambio de concepto de asignación de roles, valores y",
+        "pl": "zmiana koncepcji przypisywania ról, wartości i pisarek",
+        "uk": "зміни концепції присвоєння ролей, значень та написаннякоманд",
+        "zh-cn": "更改指定角色、值和写入命令的概念"
+      },
       "0.5.5": {
         "en": "first step of handling with date",
         "de": "erster schritt der handhabung mit datum",
@@ -80,19 +93,6 @@
         "pl": "wyzwalacz dla wdrożonego typu devicetype",
         "uk": "тригер для установки",
         "zh-cn": "已执行设备类型的触发器"
-      },
-      "0.4.1": {
-        "en": "implement new deviceprofiles",
-        "de": "neue geräteprofile implementieren",
-        "ru": "внедрение новых профилей устройств",
-        "pt": "implementar novos dispositivosprofiles",
-        "nl": "nieuwe apparaatprofielen implementeren",
-        "fr": "implémenter de nouveaux profils d'appareils",
-        "it": "implementare nuovi profili dei dispositivi",
-        "es": "implementar nuevos ficheros de dispositivo",
-        "pl": "wdrożenienowych profili projektowych",
-        "uk": "впроваджувати нові пристрої",
-        "zh-cn": "执行新设备配置"
       }
     },
     "title": "LoRaWAN",

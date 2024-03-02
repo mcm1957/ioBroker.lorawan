@@ -22,7 +22,7 @@ For now there is documentation in English here: http://www.hafenmeister.com/Lora
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.6.0 (2024-03-02)
 * (BenAhrdt) change concept of assigning roles, values and writecommands
 
 ### 0.5.5 (2024-03-01)
