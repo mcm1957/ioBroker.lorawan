@@ -55,6 +55,9 @@ class Lorawan extends utils.Adapter {
 			// generate new configed downlinkstates on allready existing devices at adapter startup
 			await this.messagehandler.generateDownlinksAndRemoveStatesAtStatup();
 
+			// generate deviceinfo of all devices in info folder
+			await this.messagehandler.generateDeviceinfosAtStartup();
+
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*");
 			this.log.silly(`the adapter starts with downlinkconfigs: ${JSON.stringify(this.config.downlinkConfig)}.`);
@@ -326,10 +329,13 @@ class Lorawan extends utils.Adapter {
 			// Check for changeInfo
 			if(changeInfo){
 				// Get Obect from startdirectory
+				const applicationDirectoryObject = await this.getObjectAsync(changeInfo.applicationId);
 				const startDirectoryObject = await this.getObjectAsync(changeInfo.objectStartDirectory);
-				if(startDirectoryObject){
-					changeInfo.applicationName = startDirectoryObject.native.applicationName;
+				if(applicationDirectoryObject && startDirectoryObject){
+					changeInfo.applicationName = applicationDirectoryObject.native.applicationName;
+					changeInfo.usendApplicationName = applicationDirectoryObject.common.name;
 					changeInfo.deviceId = startDirectoryObject.native.deviceId;
+					changeInfo.usedDeviceId = startDirectoryObject.common.name;
 				}
 				// Get deviceType
 				const deviceTypeIdState = await this.getStateAsync(myId);
@@ -396,7 +402,7 @@ class Lorawan extends utils.Adapter {
 					if(obj.message.deviceEUI){
 						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
 						if(changeInfo){
-							result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, received:obj.message};
+							result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, usedApplicationName: changeInfo.usedApplicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, usedDeviceId: changeInfo.usedDeviceId, deviceType: changeInfo.deviceType, received:obj.message};
 						}
 						else{
 							result = {error:true, message:"No device found", received:obj.message};
@@ -417,7 +423,7 @@ class Lorawan extends utils.Adapter {
 							if(await this.objectExists(uplinkId)){
 								const stateResult = await this.getStateAsync(changeInfo.id);
 								if(stateResult){
-									result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, value: stateResult.val, received:obj.message};
+									result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, usedApplicationName: changeInfo.usedApplicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, usedDeviceId: changeInfo.usedDeviceId, deviceType: changeInfo.deviceType, value: stateResult.val, received:obj.message};
 								}
 							}
 							else{
@@ -449,7 +455,7 @@ class Lorawan extends utils.Adapter {
 											// Check limit
 											if((!downlinkObject.common.min || obj.message.value >= downlinkObject.common.min) && (!downlinkObject.common.max || obj.message.value <= downlinkObject.common.max)){
 												await this.setStateAsync(downlinkId,obj.message.value);
-												result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, received:obj.message};
+												result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, usedApplicationName: changeInfo.usedApplicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, received:obj.message};
 											}
 											else{
 												result = {error:true, message:"value is not in valid range", received:obj.message};

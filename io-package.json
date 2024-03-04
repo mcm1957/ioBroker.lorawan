@@ -195,6 +195,18 @@
         "def": false
       },
       "native": {}
+    },
+    {
+      "_id": "info.deviceinformations",
+      "type": "state",
+      "common": {
+        "role": "json",
+        "name": "Information of all devices",
+        "type": "json",
+        "read": true,
+        "write": false
+      },
+      "native": {}
     }
   ]
 }
