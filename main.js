@@ -333,7 +333,7 @@ class Lorawan extends utils.Adapter {
 				const startDirectoryObject = await this.getObjectAsync(changeInfo.objectStartDirectory);
 				if(applicationDirectoryObject && startDirectoryObject){
 					changeInfo.applicationName = applicationDirectoryObject.native.applicationName;
-					changeInfo.usendApplicationName = applicationDirectoryObject.common.name;
+					changeInfo.usedApplicationName = applicationDirectoryObject.common.name;
 					changeInfo.deviceId = startDirectoryObject.native.deviceId;
 					changeInfo.usedDeviceId = startDirectoryObject.common.name;
 				}
