@@ -204,7 +204,8 @@
         "name": "Information of all devices",
         "type": "json",
         "read": true,
-        "write": false
+        "write": false,
+        "def": ""
       },
       "native": {}
     }
