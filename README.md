@@ -22,7 +22,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.6.2 (2024-03-05)
 * (BenAhrdt) seperate dp for deviceinformations
 
 ### 0.6.1 (2024-03-02)

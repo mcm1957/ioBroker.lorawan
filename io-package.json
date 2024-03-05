@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "news": {
+      "0.6.2": {
+        "en": "seperate dp for deviceinformations",
+        "de": "seperate dp für geräteinformationen",
+        "ru": "seperate dp for deviceinformations",
+        "pt": "seperar dp para informações do dispositivo",
+        "nl": "aparte dp voor apparaatinformatie",
+        "fr": "seperate dp pour les informations de l'appareil",
+        "it": "seperate dp per informazioni sui dispositivi",
+        "es": "dp de seperato para desinformaciones de dispositivo",
+        "pl": "seperate dp for deviceinformations",
+        "uk": "seperate dp для пристроюінформаційних систем",
+        "zh-cn": "设备信息的 seperate dp"
+      },
       "0.6.1": {
         "en": "better concept to write values and change setObjectNotExists to extendObject",
         "de": "besseres Konzept zum Schreiben von Werten und Änderungsset ObjectNotExists to erweitern Gegenstand",
@@ -80,19 +93,6 @@
         "pl": "uczynić pisarkę bardziej elastyczną",
         "uk": "зробити напилення більш гнучким",
         "zh-cn": "使写入器更加灵活"
-      },
-      "0.5.1": {
-        "en": "detecting of triggerwords changed",
-        "de": "erkennung von triggerworten geändert",
-        "ru": "изменено обнаружение триггеров",
-        "pt": "detecção de palavras de gatilho alteradas",
-        "nl": "detectie van gewijzigde triggerwoorden",
-        "fr": "la détection des mots-clés a changé",
-        "it": "rilevazione delle parole d'innesco modificate",
-        "es": "detección de palabras de disparador cambiadas",
-        "pl": "wykrywanie zmienionych tryggerwords",
-        "uk": "виявлення змінених фраз",
-        "zh-cn": "检测触发词已更改"
       }
     },
     "title": "LoRaWAN",
