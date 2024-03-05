@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "news": {
+      "0.6.3": {
+        "en": "def of deviceinformations changed",
+        "de": "def von geräteinformationen geändert",
+        "ru": "изменена дефабрикация устройств",
+        "pt": "def das informações do dispositivo alteradas",
+        "nl": "de def van apparaatinformatie gewijzigd",
+        "fr": "def des informations de l'appareil changé",
+        "it": "def delle informazioni sui dispositivi modificate",
+        "es": "def de las desinformaciones de dispositivo cambiadas",
+        "pl": "def deviceinformations changed",
+        "uk": "змінено деф приладів",
+        "zh-cn": "设备信息已更改"
+      },
       "0.6.2": {
         "en": "seperate dp for deviceinformations",
         "de": "seperate dp für geräteinformationen",
@@ -80,19 +93,6 @@
         "pl": "zmień folder dla pisarzy",
         "uk": "змінити папку для запису",
         "zh-cn": "更改写入文件夹"
-      },
-      "0.5.2": {
-        "en": "make writetrigger more flexible",
-        "de": "schreibtrigger flexibler gestalten",
-        "ru": "сделать пишущее устройство более гибким",
-        "pt": "fazer writetrigger mais flexível",
-        "nl": "schrijftrigger flexibeler maken",
-        "fr": "rendre le trigger plus flexible",
-        "it": "rendere writetrigger più flessibile",
-        "es": "hacer la escritura más flexible",
-        "pl": "uczynić pisarkę bardziej elastyczną",
-        "uk": "зробити напилення більш гнучким",
-        "zh-cn": "使写入器更加灵活"
       }
     },
     "title": "LoRaWAN",
