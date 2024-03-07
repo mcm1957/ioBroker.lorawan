@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.3",
+    "version": "0.6.4",
     "news": {
+      "0.6.4": {
+        "en": "Change writing of deviceinformations at Ttn",
+        "de": "Schreiben von Geräteinformationen bei Ttn ändern",
+        "ru": "Изменение записи устройств в Ttn",
+        "pt": "Alterar a escrita de informações de dispositivos no Ttn",
+        "nl": "Het schrijven van apparaatinformatie bij Ttn wijzigen",
+        "fr": "Modifier l'écriture des informations de l'appareil à Ttn",
+        "it": "Cambia la scrittura di informazioni sui dispositivi a Ttn",
+        "es": "Cambiar la escritura de las informaciones de dispositivo en Ttn",
+        "pl": "Zmień pisanie informacji na temat treści w Ttn",
+        "uk": "Зміна письмової інформації про пристрій",
+        "zh-cn": "在 Ttn 更改设备信息的写入"
+      },
       "0.6.3": {
         "en": "def of deviceinformations changed",
         "de": "def von geräteinformationen geändert",
@@ -80,19 +93,6 @@
         "pl": "wdrożyć zatwierdzoną Folder conzept dla pisarek z wiadomości",
         "uk": "реалізація затвердженого р. Складаний конверт для написаннякоманд з повідомлення",
         "zh-cn": "执行批准的程序 从信件中写入命令的文件夹召集"
-      },
-      "0.5.3": {
-        "en": "change folder for writetriggers",
-        "de": "ordner für schreiber ändern",
-        "ru": "изменить папку для дикторов",
-        "pt": "mudar a pasta para writetriggers",
-        "nl": "map voor schrijftriggers wijzigen",
-        "fr": "modifier le dossier pour writetriggers",
-        "it": "modificare la cartella per writetriggers",
-        "es": "cambiar la carpeta para los escritores",
-        "pl": "zmień folder dla pisarzy",
-        "uk": "змінити папку для запису",
-        "zh-cn": "更改写入文件夹"
       }
     },
     "title": "LoRaWAN",
