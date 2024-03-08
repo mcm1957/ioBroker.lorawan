@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "news": {
+      "0.6.5": {
+        "en": "setObject changed into setObjectAsync",
+        "de": "menge Objekt geändert in Set ObjektAsync",
+        "ru": "set Объект изменен на набор ОбъектАсинк",
+        "pt": "conjunto Objeto alterado em conjunto ObjectAsync",
+        "nl": "ingesteld Object veranderd in set ObjectAsync",
+        "fr": "ensemble Objet modifié en jeu ObjetAsync",
+        "it": "set Oggetto cambiato in set Luogo di origine",
+        "es": "set Objeto cambiado en conjunto ObjectAsync",
+        "pl": "zestaw Obiekt zmieniony w zestaw ObjectAsync",
+        "uk": "комплекти Об'єкт змінився в комплекті Об'єктАсинхрон",
+        "zh-cn": "设定 对象更改为集合 对象同步"
+      },
       "0.6.4": {
         "en": "Change writing of deviceinformations at Ttn",
         "de": "Schreiben von Geräteinformationen bei Ttn ändern",
@@ -80,19 +93,6 @@
         "pl": "pierwszy etap postępowania z datą",
         "uk": "перший крок обробки з датою",
         "zh-cn": "处理日期的第一步"
-      },
-      "0.5.4": {
-        "en": "implement ther approvedFolder conzept for writecommands from message",
-        "de": "den genehmigten Ordner-Konzept für Schreibbefehle aus der Nachricht",
-        "ru": "реализовать Folder conzept for writecommands from message",
-        "pt": "implementar o aprovado Conzept de pasta para writecommands da mensagem",
-        "nl": "tenuitvoerlegging goedgekeurd Map conzept voor schrijfopdrachten uit bericht",
-        "fr": "mise en œuvre approuvée Dossier conzept pour les commandes d'écriture du message",
-        "it": "implementare il Cartella conzept per i comandi di scrittura dal messaggio",
-        "es": "de aplicación aprobado Folder conzept for writecommands from message",
-        "pl": "wdrożyć zatwierdzoną Folder conzept dla pisarek z wiadomości",
-        "uk": "реалізація затвердженого р. Складаний конверт для написаннякоманд з повідомлення",
-        "zh-cn": "执行批准的程序 从信件中写入命令的文件夹召集"
       }
     },
     "title": "LoRaWAN",
