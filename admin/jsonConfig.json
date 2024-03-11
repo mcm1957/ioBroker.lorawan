@@ -186,7 +186,7 @@
 									"attr": "port",
 									"label": "portDownlink",
 									"tooltip": "portDownlinkTooltip",
-									"default": 2,
+									"default": 1,
 									"sm":2
 								},
 								{

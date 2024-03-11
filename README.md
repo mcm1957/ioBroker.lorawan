@@ -22,6 +22,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) update Vicki device-config
+
 ### 0.6.5 (2024-03-08)
 * (BenAhrdt) setObject changed into setObjectAsync
 
