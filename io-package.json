@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "news": {
+      "0.6.6": {
+        "en": "update Vicki device-config",
+        "de": "vicki Gerät-config aktualisieren",
+        "ru": "обновление конфигурации устройства Vicki",
+        "pt": "atualizar o dispositivo Vicki-config",
+        "nl": "vicki apparaat-config bijwerken",
+        "fr": "mettre à jour Vicki device-config",
+        "it": "aggiornamento Vicki device-config",
+        "es": "actualización Vicki dispositivo-config",
+        "pl": "aktualizacja Vicki device- config",
+        "uk": "оновлення Vicki налаштування пристрою",
+        "zh-cn": "更新 Vicki 设备配置"
+      },
       "0.6.5": {
         "en": "setObject changed into setObjectAsync",
         "de": "menge Objekt geändert in Set ObjektAsync",
@@ -80,19 +93,6 @@
         "pl": "zmiana koncepcji przypisywania ról, wartości i pisarek",
         "uk": "зміни концепції присвоєння ролей, значень та написаннякоманд",
         "zh-cn": "更改指定角色、值和写入命令的概念"
-      },
-      "0.5.5": {
-        "en": "first step of handling with date",
-        "de": "erster schritt der handhabung mit datum",
-        "ru": "первый шаг обработки с датой",
-        "pt": "primeiro passo de manuseio com data",
-        "nl": "eerste stap van verwerking met datum",
-        "fr": "première étape de la manipulation avec date",
-        "it": "primo passo di gestione con data",
-        "es": "primer paso de manejo con fecha",
-        "pl": "pierwszy etap postępowania z datą",
-        "uk": "перший крок обробки з датою",
-        "zh-cn": "处理日期的第一步"
       }
     },
     "title": "LoRaWAN",
