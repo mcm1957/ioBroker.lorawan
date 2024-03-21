@@ -31,6 +31,9 @@ class Lorawan extends utils.Adapter {
 			ttn: "ttn",
 			chirpstack: "chirpstack"
 		};
+
+		// Simulation variables
+		this.simulation = {};
 	}
 
 	/**
@@ -66,7 +69,7 @@ class Lorawan extends utils.Adapter {
 			/*setTimeout(async () => {
 				await this.startSimulation();
 			}, 5000);*/
-			/*setTimeout(async () => {
+			/*this.simulation.timeout = setTimeout(async () => {
 				const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/f1c0ae0e-b4a2-4547-b360-7cfa15e85734/command/down";
 				const message = {devEui:"f1c0ae0e-b4a2-4547-b360-7cfa15e85734",confirmed:false,fPort:1,data:"AAA"};
 				await this.mqttClient?.publish(topic,JSON.stringify(message));
@@ -136,6 +139,11 @@ class Lorawan extends utils.Adapter {
 	 */
 	onUnload(callback) {
 		try {
+			// clear timeout (for simulation)
+			if(this.simulation.timeout){
+				this.clearTimeout(this.simulation.timeout);
+				delete this.simulation.timeout;
+			}
 			this.mqttClient?.destroy();
 			callback();
 		} catch (e) {
