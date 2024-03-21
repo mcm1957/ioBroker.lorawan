@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "0.6.6",
+    "version": "1.0.0",
     "news": {
+      "1.0.0": {
+        "en": "implement wifi icons",
+        "de": "wifi-symbole implementieren",
+        "ru": "реализовать wifi иконки",
+        "pt": "implementar ícones de wifi",
+        "nl": "wifi-pictogrammen implementeren",
+        "fr": "implémenter des icônes wifi",
+        "it": "implementare le icone wifi",
+        "es": "implementar iconos wifi",
+        "pl": "implementuj ikony wifi",
+        "uk": "впроваджувати іконки wifi",
+        "zh-cn": "执行wifi图标"
+      },
       "0.6.6": {
         "en": "update Vicki device-config",
         "de": "vicki Gerät-config aktualisieren",
@@ -80,19 +93,6 @@
         "pl": "lepsza koncepcja zapisu wartości i zestaw zmian ObjectNotExists rozszerzyć Obiekt",
         "uk": "краща концепція для написання значень та змін Об'єктNotExists для розширення Об'єкт",
         "zh-cn": "更好的写值和更改集的概念 要扩展的对象不包含 对象"
-      },
-      "0.6.0": {
-        "en": "change concept of assigning roles, values and writecommands",
-        "de": "änderungskonzept der zuordnung von rollen, werten und schreibbefehlen",
-        "ru": "изменение концепции присвоения ролей, ценностей и комманд",
-        "pt": "mudar o conceito de atribuir papéis, valores e redigircomando",
-        "nl": "verandering concept van het toewijzen van rollen, waarden en schrijfcommando's",
-        "fr": "changer le concept d'attribution des rôles, des valeurs et des commandes écrites",
-        "it": "cambiare il concetto di assegnare ruoli, valori e comandi di scrittura",
-        "es": "cambio de concepto de asignación de roles, valores y",
-        "pl": "zmiana koncepcji przypisywania ról, wartości i pisarek",
-        "uk": "зміни концепції присвоєння ролей, значень та написаннякоманд",
-        "zh-cn": "更改指定角色、值和写入命令的概念"
       }
     },
     "titleLang": {

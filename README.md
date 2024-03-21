@@ -22,7 +22,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.0 (2024-03-21)
 * (BenAhrdt) implement wifi icons
 
 ### 0.6.6 (2024-03-11)
