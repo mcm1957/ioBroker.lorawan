@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "support 2's complement",
+        "de": "support 2's ergänzung",
+        "ru": "поддержка 2",
+        "pt": "complemento do suporte 2",
+        "nl": "ondersteuning 2's complement",
+        "fr": "soutenir le complément 2",
+        "it": "supporto 2's complemento",
+        "es": "complemento de soporte 2",
+        "pl": "wsparcie dopełnienia 2",
+        "uk": "підтримка 2 доповнення",
+        "zh-cn": "支助2的补充"
+      },
       "1.0.0": {
         "en": "implement wifi icons",
         "de": "wifi-symbole implementieren",
@@ -80,19 +93,6 @@
         "pl": "seperate dp for deviceinformations",
         "uk": "seperate dp для пристроюінформаційних систем",
         "zh-cn": "设备信息的 seperate dp"
-      },
-      "0.6.1": {
-        "en": "better concept to write values and change setObjectNotExists to extendObject",
-        "de": "besseres Konzept zum Schreiben von Werten und Änderungsset ObjectNotExists to erweitern Gegenstand",
-        "ru": "лучшее понятие для написания ценностей и изменения набора ObjectNotExists Объект",
-        "pt": "melhor conceito para escrever valores e alterar o conjunto ObjectNotExists para estender Objeto",
-        "nl": "beter concept om waarden en verandering set te schrijven ObjectNotBestaat om uit te breiden Doel",
-        "fr": "meilleur concept pour écrire des valeurs et changer ensemble ObjectNotExiste à étendre Objet",
-        "it": "migliore concetto per scrivere valori e cambiare set ObjectNotEsiste per estendere Oggetto",
-        "es": "mejor concepto para escribir valores y cambiar conjunto ObjectNotExists to extend Objeto",
-        "pl": "lepsza koncepcja zapisu wartości i zestaw zmian ObjectNotExists rozszerzyć Obiekt",
-        "uk": "краща концепція для написання значень та змін Об'єктNotExists для розширення Об'єкт",
-        "zh-cn": "更好的写值和更改集的概念 要扩展的对象不包含 对象"
       }
     },
     "titleLang": {
