@@ -361,21 +361,6 @@ class Lorawan extends utils.Adapter {
 						}
 					}
 				}
-				// Get lon and lat for location of device
-				if(options && options.withLocation){
-					changeInfo.lat = 0;
-					changeInfo.lon = 0;
-					const myLat = `${changeInfo?.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.uplinkDecoded}.lat`;
-					const deviceLat = await this.getStateAsync(myLat);
-					if(deviceLat){
-						changeInfo.lat = deviceLat.val;
-					}
-					const myLon = `${changeInfo?.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.uplinkDecoded}.lon`;
-					const deviceLon = await this.getStateAsync(myLon);
-					if(deviceLon){
-						changeInfo.lon = deviceLon.val;
-					}
-				}
 			}
 			this.log.silly(`changeinfo is ${JSON.stringify(changeInfo)}.`);
 			return changeInfo;
@@ -400,7 +385,7 @@ class Lorawan extends utils.Adapter {
 		for(const adapterObject of Object.values(adapterObjects)){
 			if(adapterObject.type === "device"){
 				if(adapterObject._id.indexOf(deviceUI) !== -1){
-					changeInfo = await this.getChangeInfo(`${adapterObject._id}.${subId}`,{withLocation:true});
+					changeInfo = await this.getChangeInfo(`${adapterObject._id}.${subId}`);
 					break;
 				}
 			}
@@ -425,7 +410,7 @@ class Lorawan extends utils.Adapter {
 					if(obj.message.deviceEUI){
 						const changeInfo = await this.getChangeInfoFromDeviceEUI(obj.message.deviceEUI,`${this.messagehandler?.directoryhandler.reachableSubfolders.configuration}.devicetype`);
 						if(changeInfo){
-							result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, usedApplicationName: changeInfo.usedApplicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, usedDeviceId: changeInfo.usedDeviceId, deviceType: changeInfo.deviceType, lat:changeInfo.lat, lon:changeInfo.lon, received:obj.message};
+							result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, usedApplicationName: changeInfo.usedApplicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, usedDeviceId: changeInfo.usedDeviceId, deviceType: changeInfo.deviceType, received:obj.message};
 						}
 						else{
 							result = {error:true, message:"No device found", received:obj.message};
