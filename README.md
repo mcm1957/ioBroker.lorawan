@@ -22,6 +22,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) lat & lon for location of sensors
+
 ### 1.0.1 (2024-03-25)
 * (BenAhrdt) support 2's complement
 
