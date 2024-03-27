@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "news": {
+      "1.0.2": {
+        "en": "change some comments and logging",
+        "de": "einige kommentare und protokollierung ändern",
+        "ru": "изменить некоторые комментарии и блог",
+        "pt": "alterar alguns comentários e logar",
+        "nl": "sommige opmerkingen en loggen wijzigen",
+        "fr": "modifier certains commentaires et l'enregistrement",
+        "it": "cambiare alcuni commenti e logging",
+        "es": "cambiar algunos comentarios y registro",
+        "pl": "zmienić niektóre komentarze i logowanie",
+        "uk": "змінити деякі коментарі та журналювання",
+        "zh-cn": "更改一些注释和记录"
+      },
       "1.0.1": {
         "en": "support 2's complement",
         "de": "support 2's ergänzung",
@@ -80,19 +93,6 @@
         "pl": "def deviceinformations changed",
         "uk": "змінено деф приладів",
         "zh-cn": "设备信息已更改"
-      },
-      "0.6.2": {
-        "en": "seperate dp for deviceinformations",
-        "de": "seperate dp für geräteinformationen",
-        "ru": "seperate dp for deviceinformations",
-        "pt": "seperar dp para informações do dispositivo",
-        "nl": "aparte dp voor apparaatinformatie",
-        "fr": "seperate dp pour les informations de l'appareil",
-        "it": "seperate dp per informazioni sui dispositivi",
-        "es": "dp de seperato para desinformaciones de dispositivo",
-        "pl": "seperate dp for deviceinformations",
-        "uk": "seperate dp для пристроюінформаційних систем",
-        "zh-cn": "设备信息的 seperate dp"
       }
     },
     "titleLang": {
