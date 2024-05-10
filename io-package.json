@@ -157,6 +157,135 @@
       }
     ]
   },
+  "notifications": [
+    {
+      "scope": "lorawan",
+      "name": {
+        "en": "LoRaWAN",
+        "de": "LoRaWAN",
+        "ru": "LoRaWAN",
+        "pt": "LoRaWAN",
+        "nl": "LoRaWAN",
+        "fr": "LORAWAN",
+        "it": "LoRaWAN",
+        "es": "LoRaWAN",
+        "pl": "LoRaWAN",
+        "uk": "Лоравіан",
+        "zh-cn": "洛拉万语"
+      },
+      "description": {
+        "en": "These notifications represent news of devices, gateways or LoraWAN Network Services",
+        "de": "Diese Benachrichtigungen stellen Nachrichten von Geräten, Gateways oder LoraWAN Network Services dar",
+        "ru": "Эти уведомления представляют новости об устройствах, шлюзах или LoraWAN Network Services",
+        "pt": "Estas notificações representam notícias de dispositivos, gateways ou serviços de rede LoraWAN",
+        "nl": "Deze meldingen vertegenwoordigen nieuws van apparaten, gateways of LoraWAN Network Services",
+        "fr": "Ces notifications représentent des nouvelles d'appareils, passerelles ou services réseau LoraWAN",
+        "it": "Queste notifiche rappresentano notizie di dispositivi, gateway o LoraWAN Network Services",
+        "es": "Estas notificaciones representan noticias de dispositivos, portales o LoraWAN Network Services",
+        "pl": "Powiadomienia te stanowią wiadomości o urządzeniach, bramach lub usługach sieciowych LoraWAN",
+        "uk": "Ці повідомлення представляють новини пристроїв, шлюзу або LoraWAN",
+        "zh-cn": "这些通知代表设备、网关或LoraWAN网络服务的新闻"
+      },
+      "categories": [
+        {
+          "category": "LoRaWAN Network Service connected",
+          "name": {
+            "en": "The desired LoRaWAN Network service was connected",
+            "de": "Der gewünschte LoRaWAN Network Service wurde verbunden",
+            "ru": "Желаемый сервис LoRaWAN Network был подключен",
+            "pt": "O serviço de rede LoRaWAN desejado foi conectado",
+            "nl": "De gewenste LoRaWAN Network service was aangesloten",
+            "fr": "Le service de réseau LoRaWAN souhaité était connecté",
+            "it": "Il servizio LoRaWAN Network desiderato è stato collegato",
+            "es": "El servicio LoRaWAN Network deseado estaba conectado",
+            "pl": "Połączono żądaną usługę sieci LoRaWAN",
+            "uk": "З'єднано бажаний сервіс LoRaWAN",
+            "zh-cn": "所期望的LORAWAN网络服务已连接"
+          },
+          "severity": "info",
+          "description": {
+            "en": "The connection to the LoRaWAN Network service changed from disconnected to connected",
+            "de": "Die Verbindung zum LoRaWAN Network-Service hat sich von getrennt zu verbunden geändert",
+            "ru": "Соединение с сервисом LoRaWAN Network изменилось от отключенного к подключенному",
+            "pt": "A conexão com o serviço de rede LoRaWAN mudou de desconectado para conectado",
+            "nl": "De verbinding met de LoRaWAN Network service veranderde van losgekoppeld naar verbonden",
+            "fr": "La connexion au service réseau LoRaWAN est passée de déconnectée à connectée",
+            "it": "Il collegamento al servizio di rete LoRaWAN è cambiato da disconnesso a collegato",
+            "es": "La conexión con el servicio LoRaWAN Network cambió de desconectado a conectado",
+            "pl": "Połączenie z siecią LoRaWAN zmieniło się z odłączonego na podłączony",
+            "uk": "З'єднання до мережі LoRaWAN змінено з відключення",
+            "zh-cn": "连接 LoRAWAN 网络服务从断开到连接"
+          },
+          "regex": [],
+          "limit": 1
+        },
+        {
+          "category": "LoRaWAN Network Service disconnected",
+          "name": {
+            "en": "The desired LoRaWAN Network service was disconnected",
+            "de": "Der gewünschte LoRaWAN Network Service ist nicht mehr erreichbar",
+            "ru": "Желаемый сервис LoRaWAN Network был отключен",
+            "pt": "O serviço de rede LoRaWAN desejado foi desligado",
+            "nl": "De gewenste LoRaWAN Network service werd afgesloten",
+            "fr": "Le service de réseau LoRaWAN souhaité a été déconnecté",
+            "it": "Il servizio LoRaWAN Network desiderato è stato disconnesso",
+            "es": "El servicio LoRaWAN Network deseado fue desconectado",
+            "pl": "Wybrana usługa LoRaWAN Network została odłączona",
+            "uk": "Відключено бажаний сервіс мережі LoRaWAN",
+            "zh-cn": "想要的LORAWAN网络服务已断开"
+          },
+          "severity": "alert",
+          "description": {
+            "en": "The connection to the LoRaWAN Network service changed from connected to disconnected",
+            "de": "Die Verbindung zum LoRaWAN-Netzwerk-Service hat sich von verbunden zu getrennt geändert",
+            "ru": "Соединение с сервисом LoRaWAN Network изменилось от подключения к отключенному",
+            "pt": "A conexão com o serviço de rede LoRaWAN mudou de conectado para desconectado",
+            "nl": "De verbinding met de LoRaWAN Network service veranderde van verbonden naar losgekoppeld",
+            "fr": "La connexion au service réseau LoRaWAN a changé de connecté à déconnecté",
+            "it": "La connessione al servizio di rete LoRaWAN è cambiata da collegato a disconnesso",
+            "es": "La conexión con el servicio LoRaWAN Network cambió de conexión a desconexión",
+            "pl": "Połączenie z siecią LoRaWAN zmieniło się z podłączonego na odłączony",
+            "uk": "З'єднання до мережі LoRaWAN змінено з підключеного до відключення",
+            "zh-cn": "连接到 LoRAWAN 网络服务从连接到断开"
+          },
+          "regex": [],
+          "limit": 1
+        },
+        {
+          "category": "LoRaWAN device offline",
+          "name": {
+            "en": "A LoRaWAN device is offline",
+            "de": "Ein LoRaWAN Gerät ist offline",
+            "ru": "Устройство LoRaWAN отключено",
+            "pt": "Um dispositivo LoRaWAN está offline",
+            "nl": "Een LoRaWAN apparaat is offline",
+            "fr": "Un périphérique LoRaWAN est hors ligne",
+            "it": "Un dispositivo LoRaWAN è offline",
+            "es": "Un dispositivo LoRaWAN está fuera de línea",
+            "pl": "Urządzenie LoRaWAN jest wyłączone",
+            "uk": "Пристрій LoRaWAN автономний",
+            "zh-cn": "LORAWAN 设备已下线"
+          },
+          "severity": "notify",
+          "description": {
+            "en": "A LoraWAN device has not sended a message for a long time",
+            "de": "Ein LoraWAN-Gerät hat lange keine Nachricht gesendet",
+            "ru": "Устройство LoraWAN не посылало сообщения в течение длительного времени",
+            "pt": "Um dispositivo LoraWAN não enviou uma mensagem por muito tempo",
+            "nl": "Een LoraWAN-apparaat heeft al lange tijd geen bericht meer verstuurd",
+            "fr": "Un périphérique LoraWAN n'a pas envoyé de message depuis longtemps",
+            "it": "Un dispositivo LoraWAN non ha inviato un messaggio per molto tempo",
+            "es": "Un dispositivo LoraWAN no ha enviado un mensaje durante mucho tiempo",
+            "pl": "Urządzenie LoraWAN nie wysłało wiadomości przez długi czas",
+            "uk": "Пристрій LoraWAN не відправляє повідомлення тривалий час",
+            "zh-cn": "LoraWAN 设备已经很久没有固定消息了"
+          },
+          "regex": [],
+          "limit": 10
+        }
+      ]
+    }
+  ],
   "encryptedNative": [
     "password"
   ],

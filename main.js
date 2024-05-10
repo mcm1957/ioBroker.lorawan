@@ -7,6 +7,7 @@
 // The adapter-core module gives you access to the core ioBroker functions
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
+const schedule = require("node-schedule");
 const mqttClientClass = require("./lib/modules/mqttclient");
 const messagehandlerClass = require("./lib/modules/messagehandler");
 const downlinkConfighandlerClass = require("./lib/modules/downlinkConfighandler");
@@ -30,6 +31,14 @@ class Lorawan extends utils.Adapter {
 		this.origin = {
 			ttn: "ttn",
 			chirpstack: "chirpstack"
+		};
+
+		this.cronJobs = {};
+		this.cronJobIds = {
+			checkTimestamp: "checkTimestamp"
+		};
+		this.cronJosValues = {
+			checkTimestamp: "* * * * *"//"0 * * * *"
 		};
 
 		// Simulation variables
@@ -66,6 +75,9 @@ class Lorawan extends utils.Adapter {
 			this.log.silly(`the adapter starts with downlinkconfigs: ${JSON.stringify(this.config.downlinkConfig)}.`);
 			this.log.silly(`the active downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`);
 
+			// Create cronjob to check timestamps (for device offline notification)
+			this.cronJobs[this.cronJobIds.checkTimestamp] = schedule.scheduleJob(this.cronJosValues.checkTimestamp,this.checkTimestamps.bind(this));
+
 			/*setTimeout(async () => {
 				await this.startSimulation();
 			}, 5000);*/
@@ -75,6 +87,36 @@ class Lorawan extends utils.Adapter {
 				await this.mqttClient?.publish(topic,JSON.stringify(message));
 			}, 5000);*/
 
+		}
+		catch(error){
+			this.log.error(`error at ${activeFunction}: ` + error);
+		}
+	}
+
+	async checkTimestamps(){
+		const activeFunction = "checkTimestamps";
+		try{
+			const adapterObjects = await this.getAdapterObjectsAsync();
+			// Generate Infos of all defices and decoded folders
+			for(const adapterObject of Object.values(adapterObjects)){
+				if(adapterObject._id.endsWith(`${this.messagehandler?.directoryhandler.reachableSubfolders.uplinkRaw}.json`)){
+					const uplinkState = await this.getStateAsync(adapterObject._id);
+					if(uplinkState){
+						const msInOneHour = 1000 * 60 * 60;
+						const maxDifferenceMin = 25 * msInOneHour;
+						const maxDifferenceMax = 26 * msInOneHour;
+						const timestampNow = Date.now();
+						const timestampData = uplinkState.ts;
+						const difference = timestampNow - timestampData;
+						if(difference >= maxDifferenceMin && difference <= maxDifferenceMax){
+							const changeInfo = await this.getChangeInfo(adapterObject._id);
+							if(changeInfo){
+								this.registerNotification("lorawan", "LoRaWAN device offline", `The LoRaWAN device ${changeInfo.usedDeviceId} in the application ${changeInfo.usedApplicationName} is offline`);
+							}
+						}
+					}
+				}
+			}
 		}
 		catch(error){
 			this.log.error(`error at ${activeFunction}: ` + error);
@@ -508,6 +550,15 @@ class Lorawan extends utils.Adapter {
 		}
 		catch(error){
 			this.log.error(`error at ${activeFunction}: ` + error);
+		}
+	}
+
+	// Clear all schedules, if there are some
+	clearAllSchedules(){
+		for(const cronJob in this.cronJobs)
+		{
+			schedule.cancelJob(this.cronJobs[cronJob]);
+			delete this.cronJobs[cronJob];
 		}
 	}
 }
