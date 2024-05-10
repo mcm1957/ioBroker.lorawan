@@ -146,7 +146,7 @@ class Lorawan extends utils.Adapter {
 			}
 
 			// Clear Schedules im directoriehandler
-			this.messagehandler?.directoryhandler.clearAllSchedules();
+			this.messagehandler?.clearAllSchedules();
 
 			// Destroy mqtt client
 			this.mqttClient?.destroy();
