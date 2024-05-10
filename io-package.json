@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "news": {
+      "1.0.7": {
+        "en": "setObjectAsynch bug after offline solved",
+        "de": "menge ObjectAsynch Bug nach Offline gelöst",
+        "ru": "set ObjectAsynch bug after offline resolved",
+        "pt": "conjunto Bug ObjectAsynch após offline resolvido",
+        "nl": "ingesteld ObjectAsynch bug na offline opgelost",
+        "fr": "ensemble ObjectAsynch bug après hors ligne résolu",
+        "it": "set bug ObjectAsynch dopo risolto offline",
+        "es": "set ObjectAsynch bug después de la resolución offline",
+        "pl": "zestaw Błąd obiektu Asynch po rozwiązaniu offline",
+        "uk": "комплекти Об'єктАсинхронний помилка після офлайну",
+        "zh-cn": "设定 离线后解析 ObjectAsynch 错误"
+      },
       "1.0.6": {
         "en": "icons changed\ndevice offline notofication placed in messagehandler.js",
         "de": "icons geändert\ngerät offline-noofication platziert in messagehandler.js",
@@ -80,19 +93,6 @@
         "pl": "wsparcie dopełnienia 2",
         "uk": "підтримка 2 доповнення",
         "zh-cn": "支助2的补充"
-      },
-      "1.0.0": {
-        "en": "implement wifi icons",
-        "de": "wifi-symbole implementieren",
-        "ru": "реализовать wifi иконки",
-        "pt": "implementar ícones de wifi",
-        "nl": "wifi-pictogrammen implementeren",
-        "fr": "implémenter des icônes wifi",
-        "it": "implementare le icone wifi",
-        "es": "implementar iconos wifi",
-        "pl": "implementuj ikony wifi",
-        "uk": "впроваджувати іконки wifi",
-        "zh-cn": "执行wifi图标"
       }
     },
     "titleLang": {

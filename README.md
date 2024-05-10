@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.0.7 (2024-05-10)
 * (BenAhrdt) setObjectAsynch bug after offline solved
 
 ### 1.0.6 (2024-05-10)
