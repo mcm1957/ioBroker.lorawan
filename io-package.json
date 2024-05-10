@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "news": {
+      "1.0.6": {
+        "en": "icons changed\ndevice offline notofication placed in messagehandler.js",
+        "de": "icons geändert\ngerät offline-noofication platziert in messagehandler.js",
+        "ru": "значки изменились\nустройство в автономном режиме, помещенное в messagehandler.js",
+        "pt": "ícones alterados\ndispositivo off-line notofication colocado em messagehandler.js",
+        "nl": "pictogrammen gewijzigd\napparaat offline notificatie geplaatst in messagehandler.js",
+        "fr": "icônes changées\npériphérique hors ligne notofication placé dans messagehandler.js",
+        "it": "icone cambiate\ndispositivo notorietà offline posto in messagehandler.js",
+        "es": "iconos cambiados\ndispositivo offline notofication placed in messagehandler.js",
+        "pl": "ikony zmienione\nnotyfikacja urządzenia umieszczona w messagehandler.js",
+        "uk": "іконки змінені\nпристрій offline notofication, розміщений в повідомленняhandler.js",
+        "zh-cn": "图标已更改\n设备离线通知放置在 messagehandler.js"
+      },
       "1.0.5": {
         "en": "device offline location changed",
         "de": "gerät offline-standort geändert",
@@ -80,19 +93,6 @@
         "pl": "implementuj ikony wifi",
         "uk": "впроваджувати іконки wifi",
         "zh-cn": "执行wifi图标"
-      },
-      "0.6.6": {
-        "en": "update Vicki device-config",
-        "de": "vicki Gerät-config aktualisieren",
-        "ru": "обновление конфигурации устройства Vicki",
-        "pt": "atualizar o dispositivo Vicki-config",
-        "nl": "vicki apparaat-config bijwerken",
-        "fr": "mettre à jour Vicki device-config",
-        "it": "aggiornamento Vicki device-config",
-        "es": "actualización Vicki dispositivo-config",
-        "pl": "aktualizacja Vicki device- config",
-        "uk": "оновлення Vicki налаштування пристрою",
-        "zh-cn": "更新 Vicki 设备配置"
       }
     },
     "titleLang": {
