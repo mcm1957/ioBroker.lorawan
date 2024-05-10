@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) setObjectAsynch bug after offline solved
+
 ### 1.0.6 (2024-05-10)
 * (BenAhrdt) icons changed
 * (BenAhrdt) device offline notofication placed in messagehandler.js
