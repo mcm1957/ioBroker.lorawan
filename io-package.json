@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "news": {
+      "1.0.5": {
+        "en": "device offline location changed",
+        "de": "gerät offline-standort geändert",
+        "ru": "устройство офлайн расположение изменено",
+        "pt": "dispositivo localização offline alterado",
+        "nl": "apparaat offline locatie gewijzigd",
+        "fr": "changement d'emplacement hors ligne du périphérique",
+        "it": "dispositivo posizione offline cambiato",
+        "es": "ubicación del dispositivo sin conexión cambiado",
+        "pl": "zmiana lokalizacji urządzenia offline",
+        "uk": "змінено розташування пристрою",
+        "zh-cn": "设备离线位置已更改"
+      },
       "1.0.4": {
         "en": "changed icon and offline time",
         "de": "geändertes icon und offline-zeit",
@@ -80,19 +93,6 @@
         "pl": "aktualizacja Vicki device- config",
         "uk": "оновлення Vicki налаштування пристрою",
         "zh-cn": "更新 Vicki 设备配置"
-      },
-      "0.6.5": {
-        "en": "setObject changed into setObjectAsync",
-        "de": "menge Objekt geändert in Set ObjektAsync",
-        "ru": "set Объект изменен на набор ОбъектАсинк",
-        "pt": "conjunto Objeto alterado em conjunto ObjectAsync",
-        "nl": "ingesteld Object veranderd in set ObjectAsync",
-        "fr": "ensemble Objet modifié en jeu ObjetAsync",
-        "it": "set Oggetto cambiato in set Luogo di origine",
-        "es": "set Objeto cambiado en conjunto ObjectAsync",
-        "pl": "zestaw Obiekt zmieniony w zestaw ObjectAsync",
-        "uk": "комплекти Об'єкт змінився в комплекті Об'єктАсинхрон",
-        "zh-cn": "设定 对象更改为集合 对象同步"
       }
     },
     "titleLang": {
