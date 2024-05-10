@@ -25,6 +25,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 -->
 ### **WORK IN PROGRESS**
 * (BenAhrdt) icons changed
+* (BenAhrdt) device offline notofication placed in messagehandler.js
 
 ### 1.0.5 (2024-05-10)
 * (BenAhrdt) device offline location changed
