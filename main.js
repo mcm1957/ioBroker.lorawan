@@ -38,7 +38,7 @@ class Lorawan extends utils.Adapter {
 			checkTimestamp: "checkTimestamp"
 		};
 		this.cronJosValues = {
-			checkTimestamp: "* * * * *"//"0 * * * *"
+			checkTimestamp: "0 * * * *"
 		};
 
 		// Simulation variables
@@ -112,6 +112,17 @@ class Lorawan extends utils.Adapter {
 							const changeInfo = await this.getChangeInfo(adapterObject._id);
 							if(changeInfo){
 								this.registerNotification("lorawan", "LoRaWAN device offline", `The LoRaWAN device ${changeInfo.usedDeviceId} in the application ${changeInfo.usedApplicationName} is offline`);
+								const deviceFolderId = adapterObject._id.substring(0,adapterObject._id.indexOf(".uplink"));
+								const deviceFolderObject = await this.getObjectAsync(deviceFolderId);
+								// Set foldericon to low / no connection
+								if(deviceFolderObject){
+									deviceFolderObject.common.icon = "icons/wifiSfX_0.png";
+									await this.extendObjectAsync(deviceFolderId,{
+										common: deviceFolderObject.common,
+									});
+								}
+
+								//const devicefolder = await this.getObjectAsync()
 							}
 						}
 					}

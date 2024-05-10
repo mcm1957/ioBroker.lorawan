@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) changed icon and offline time
+
 ### 1.0.3 (2024-05-10)
 * (BenAhrdt) notifications for connection and disconnection LNS added
 * (BenAhrdt) notifiction for device offline added
