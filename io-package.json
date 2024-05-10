@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "news": {
+      "1.0.3": {
+        "en": "notifications for connection and disconnection LNS added\nnotifiction for device offline added",
+        "de": "benachrichtigungen für Anschluss und Abschaltung LNS hinzugefügt\nnotification für gerät offline hinzugefügt",
+        "ru": "уведомления для подключения и отключения\nnotification for device offline added",
+        "pt": "notificações para conexão e desconexão LNS adicionado\nnotificação para dispositivo offline adicionado",
+        "nl": "meldingen voor verbinding en loskoppeling LNS toegevoegd\nnotatie voor apparaat offline toegevoegd",
+        "fr": "notifications pour connexion et déconnexion LNS ajoutées\nnotifition pour périphérique hors ligne ajouté",
+        "it": "notifiche per connessione e disconnessione LNS aggiunto\nnotifica per dispositivo offline aggiunto",
+        "es": "notificaciones para conexión y desconexión LNS añadido\nnotifiction para dispositivo offline añadido",
+        "pl": "powiadomienia o dodanych LNS podłączenia i odłączenia\nname",
+        "uk": "повідомлення про підключення та відключення LNS додано\nдодано невідповідність пристрою",
+        "zh-cn": "添加连接和断开LNS的通知\n设备下线通知已添加"
+      },
       "1.0.2": {
         "en": "change some comments and logging",
         "de": "einige kommentare und protokollierung ändern",
@@ -80,19 +93,6 @@
         "pl": "Zmień pisanie informacji na temat treści w Ttn",
         "uk": "Зміна письмової інформації про пристрій",
         "zh-cn": "在 Ttn 更改设备信息的写入"
-      },
-      "0.6.3": {
-        "en": "def of deviceinformations changed",
-        "de": "def von geräteinformationen geändert",
-        "ru": "изменена дефабрикация устройств",
-        "pt": "def das informações do dispositivo alteradas",
-        "nl": "de def van apparaatinformatie gewijzigd",
-        "fr": "def des informations de l'appareil changé",
-        "it": "def delle informazioni sui dispositivi modificate",
-        "es": "def de las desinformaciones de dispositivo cambiadas",
-        "pl": "def deviceinformations changed",
-        "uk": "змінено деф приладів",
-        "zh-cn": "设备信息已更改"
       }
     },
     "titleLang": {
