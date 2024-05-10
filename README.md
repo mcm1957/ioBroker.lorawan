@@ -25,7 +25,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 -->
 ### **WORK IN PROGRESS**
 * (BenAhrdt) notifications for connection and disconnection LNS added
-notifiction for device offline added
+* (BenAhrdt) notifiction for device offline added
 
 ### 1.0.2 (2024-03-27)
 * (BenAhrdt) change some comments and logging
