@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "news": {
+      "1.0.9": {
+        "en": "remove debug warn logging",
+        "de": "debug warnen protokoll entfernen",
+        "ru": "удалить отладку предупредить",
+        "pt": "remover debug avisar o registro",
+        "nl": "debug-waarschuwing verwijderen",
+        "fr": "supprimer l'avertissement de débogage",
+        "it": "rimuovere debug avvertire logging",
+        "es": "eliminar debug registro de advertencia",
+        "pl": "usuń alarm debugowania logowanie",
+        "uk": "видалити debug попередження",
+        "zh-cn": "删除调试警告日志"
+      },
       "1.0.8": {
         "en": "set keepalive value to 0 => deactivate automatic reconnection",
         "de": "festhaltenswert auf 0 gesetzt => deaktivieren der automatischen wiederverbindung",
@@ -80,19 +93,6 @@
         "pl": "powiadomienia o dodanych LNS podłączenia i odłączenia\nname",
         "uk": "повідомлення про підключення та відключення LNS додано\nдодано невідповідність пристрою",
         "zh-cn": "添加连接和断开LNS的通知\n设备下线通知已添加"
-      },
-      "1.0.2": {
-        "en": "change some comments and logging",
-        "de": "einige kommentare und protokollierung ändern",
-        "ru": "изменить некоторые комментарии и блог",
-        "pt": "alterar alguns comentários e logar",
-        "nl": "sommige opmerkingen en loggen wijzigen",
-        "fr": "modifier certains commentaires et l'enregistrement",
-        "it": "cambiare alcuni commenti e logging",
-        "es": "cambiar algunos comentarios y registro",
-        "pl": "zmienić niektóre komentarze i logowanie",
-        "uk": "змінити деякі коментарі та журналювання",
-        "zh-cn": "更改一些注释和记录"
       }
     },
     "titleLang": {
