@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "news": {
+      "1.0.8": {
+        "en": "set keepalive value to 0 => deactivate automatic reconnection",
+        "de": "festhaltenswert auf 0 gesetzt => deaktivieren der automatischen wiederverbindung",
+        "ru": "установка постоянного значения 0 => деактивировать автоматическое соединение",
+        "pt": "set keepalive value to 0 => desativar a reconexão automática",
+        "nl": "stel de bewaarwaarde in op 0 => de automatische herverbinding deactiveren",
+        "fr": "définir la valeur de conservation à 0 => désactiver la reconnexion automatique",
+        "it": "imposta il valore manalive a 0 => disattivare la riconnessione automatica",
+        "es": "ajuste del valor de mantenimiento a 0 = prenda desactivar la reconexión automática",
+        "pl": "ustawić wartość keeplive na 0 = > dezaktywować automatyczne ponowne połączenie",
+        "uk": "встановити безпечне значення 0 => деактивувати автоматичне відключення",
+        "zh-cn": "将保存值设置为 0 qq 自动重联"
+      },
       "1.0.7": {
         "en": "setObjectAsynch bug after offline solved",
         "de": "menge ObjectAsynch Bug nach Offline gelöst",
@@ -80,19 +93,6 @@
         "pl": "zmienić niektóre komentarze i logowanie",
         "uk": "змінити деякі коментарі та журналювання",
         "zh-cn": "更改一些注释和记录"
-      },
-      "1.0.1": {
-        "en": "support 2's complement",
-        "de": "support 2's ergänzung",
-        "ru": "поддержка 2",
-        "pt": "complemento do suporte 2",
-        "nl": "ondersteuning 2's complement",
-        "fr": "soutenir le complément 2",
-        "it": "supporto 2's complemento",
-        "es": "complemento de soporte 2",
-        "pl": "wsparcie dopełnienia 2",
-        "uk": "підтримка 2 доповнення",
-        "zh-cn": "支助2的补充"
       }
     },
     "titleLang": {
