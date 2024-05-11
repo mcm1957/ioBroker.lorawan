@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) set keepalive value to 0 => deactivate automatic reconnection
+
 ### 1.0.7 (2024-05-10)
 * (BenAhrdt) setObjectAsynch bug after offline solved
 
