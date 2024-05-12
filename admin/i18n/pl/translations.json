@@ -69,5 +69,8 @@
     "limitMax": "ograniczenie maks.",
     "limitMaxTooltip": "ogranicza możliwość wprowadzania danych w kierunku dodatnim",
     "limitMaxValue": "maks. wartość",
-    "limitMaxValueTooltip": "wprowadź limit w kierunku dodatnim"
+    "limitMaxValueTooltip": "wprowadź limit w kierunku dodatnim",
+    "keepalive": "utrzymać przy życiu",
+    "keepaliveTooltip": "wprowadź czas w sekundach dla funkcji utrzymywania aktywności",
+    "unused": "nie używany"
 }

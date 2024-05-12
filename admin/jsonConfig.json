@@ -85,7 +85,22 @@
 						{"label":"Chirpstack","value":"chirpstack"}
 					],
 					"default": "ttn",
-					"sm":1
+					"sm":2
+				},
+				"keepalive":{
+					"type": "select",
+					"label": "keepalive",
+					"tooltip": "keepaliveTooltip",
+					"options": [
+						{"label":"unused","value":0},
+						{"label":"60s","value":60},
+						{"label":"120s","value":120},
+						{"label":"180s","value":180},
+						{"label":"240s","value":240},
+						{"label":"300s","value":300}
+					],
+					"default": 0,
+					"sm":2
 				}
 			}
 		},
@@ -355,7 +370,7 @@
 									"tooltip": "limitMinTooltip",
 									"hidden": "data.type !== 'number'",
 									"default": false,
-									"sm":1
+									"sm":2
 								},
 								{
 									"type": "number",
@@ -373,7 +388,7 @@
 									"tooltip": "limitMaxTooltip",
 									"hidden": "data.type !== 'number'",
 									"default": false,
-									"sm":1
+									"sm":2
 								},
 								{
 									"type": "number",

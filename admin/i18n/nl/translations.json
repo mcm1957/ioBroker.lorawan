@@ -69,5 +69,8 @@
     "limitMax": "limiet max.",
     "limitMaxTooltip": "beperkt de mogelijkheid van input in positieve richting",
     "limitMaxValue": "maximaal waarde",
-    "limitMaxValueTooltip": "voer de limiet in positieve richting in"
+    "limitMaxValueTooltip": "voer de limiet in positieve richting in",
+    "keepalive": "keepalive",
+    "keepaliveTooltip": "voer de tijd in seconden in voor de keepalive-functie",
+    "unused": "ongebruikt"
 }

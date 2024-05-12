@@ -69,5 +69,8 @@
     "limitMax": "limite máx.",
     "limitMaxTooltip": "limita a possibilidade de entradas na direção positiva",
     "limitMaxValue": "máx. valor",
-    "limitMaxValueTooltip": "insira o limite na direção positiva"
+    "limitMaxValueTooltip": "insira o limite na direção positiva",
+    "keepalive": "keepalive",
+    "keepaliveTooltip": "insira o tempo em segundos para a função keepalive",
+    "unused": "não utilizado"
 }

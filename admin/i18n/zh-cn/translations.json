@@ -69,5 +69,8 @@
     "limitMax": "限制最大值",
     "limitMaxTooltip": "限制正向输入的可能性",
     "limitMaxValue": "最大限度。价值",
-    "limitMaxValueTooltip": "输入正方向的极限值"
+    "limitMaxValueTooltip": "输入正方向的极限值",
+    "keepalive": "活着",
+    "keepaliveTooltip": "输入保活功能的时间（以秒为单位）",
+    "unused": "没用过"
 }
