@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "news": {
+      "1.1.0": {
+        "en": "implement keepalive in config",
+        "de": "betreuen in config",
+        "ru": "реализуй сохранение в настройке",
+        "pt": "implementar manter em config",
+        "nl": "keepalive in config implementeren",
+        "fr": "mettre en œuvre keepalive in config",
+        "it": "implementare manalive in config",
+        "es": "mantenimiento de implementos en config",
+        "pl": "implementation keeplive in config",
+        "uk": "реалізація конфіденційності в конфігурації",
+        "zh-cn": "在配置中执行保存"
+      },
       "1.0.9": {
         "en": "remove debug warn logging",
         "de": "debug warnen protokoll entfernen",
@@ -80,19 +93,6 @@
         "pl": "zmieniony czas ikon i offline",
         "uk": "змінена ікона і в автономному режимі",
         "zh-cn": "更改图标和离线时间"
-      },
-      "1.0.3": {
-        "en": "notifications for connection and disconnection LNS added\nnotifiction for device offline added",
-        "de": "benachrichtigungen für Anschluss und Abschaltung LNS hinzugefügt\nnotification für gerät offline hinzugefügt",
-        "ru": "уведомления для подключения и отключения\nnotification for device offline added",
-        "pt": "notificações para conexão e desconexão LNS adicionado\nnotificação para dispositivo offline adicionado",
-        "nl": "meldingen voor verbinding en loskoppeling LNS toegevoegd\nnotatie voor apparaat offline toegevoegd",
-        "fr": "notifications pour connexion et déconnexion LNS ajoutées\nnotifition pour périphérique hors ligne ajouté",
-        "it": "notifiche per connessione e disconnessione LNS aggiunto\nnotifica per dispositivo offline aggiunto",
-        "es": "notificaciones para conexión y desconexión LNS añadido\nnotifiction para dispositivo offline añadido",
-        "pl": "powiadomienia o dodanych LNS podłączenia i odłączenia\nname",
-        "uk": "повідомлення про підключення та відключення LNS додано\nдодано невідповідність пристрою",
-        "zh-cn": "添加连接和断开LNS的通知\n设备下线通知已添加"
       }
     },
     "titleLang": {
