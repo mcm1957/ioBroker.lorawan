@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "news": {
+      "1.1.1": {
+        "en": "mqtt dependencies updated for better keepalive",
+        "de": "mqtt abhängigkeiten aktualisiert für besser halten",
+        "ru": "зависимости mqtt обновляется для лучшего сохранения",
+        "pt": "dependências mqtt atualizadas para melhor manter",
+        "nl": "mqtt afhankelijkheden bijgewerkt voor een betere houdbaarheid",
+        "fr": "mqtt dépendances mises à jour pour mieux garder",
+        "it": "dipendenze di mqtt aggiornate per mantenersi al meglio",
+        "es": "mqtt dependencias actualizadas para mejor mantenimiento",
+        "pl": "mqtt zależne zaktualizowane dla lepszego utrzymania",
+        "uk": "mqtt залежності оновлені для кращого безпечного",
+        "zh-cn": "mqtt 依赖性更新以更好地保存"
+      },
       "1.1.0": {
         "en": "implement keepalive in config",
         "de": "betreuen in config",
@@ -80,19 +93,6 @@
         "pl": "zmiana lokalizacji urządzenia offline",
         "uk": "змінено розташування пристрою",
         "zh-cn": "设备离线位置已更改"
-      },
-      "1.0.4": {
-        "en": "changed icon and offline time",
-        "de": "geändertes icon und offline-zeit",
-        "ru": "измененная иконка и автономное время",
-        "pt": "ícone alterado e tempo offline",
-        "nl": "veranderd pictogram en offline tijd",
-        "fr": "changement d'icône et de l'heure hors ligne",
-        "it": "cambiato icona e tempo offline",
-        "es": "cambiado icono y tiempo sin conexión",
-        "pl": "zmieniony czas ikon i offline",
-        "uk": "змінена ікона і в автономному режимі",
-        "zh-cn": "更改图标和离线时间"
       }
     },
     "titleLang": {
