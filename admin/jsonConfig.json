@@ -86,21 +86,6 @@
 					],
 					"default": "ttn",
 					"sm":2
-				},
-				"keepalive":{
-					"type": "select",
-					"label": "keepalive",
-					"tooltip": "keepaliveTooltip",
-					"options": [
-						{"label":"unused","value":0},
-						{"label":"60s","value":60},
-						{"label":"120s","value":120},
-						{"label":"180s","value":180},
-						{"label":"240s","value":240},
-						{"label":"300s","value":300}
-					],
-					"default": 0,
-					"sm":2
 				}
 			}
 		},
