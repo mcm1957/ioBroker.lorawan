@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "news": {
+      "1.2.0": {
+        "en": "change deviceInformations (keep old values in structure)",
+        "de": "ändern deviceInformationen (erhalten alte Werte in der Struktur)",
+        "ru": "изменение устройстваИнформации (сдерживайте старые значения в структуре)",
+        "pt": "alterar dispositivoInformações (manter valores antigos na estrutura)",
+        "nl": "apparaat wijzigenInformaties (oude waarden in structuur behouden)",
+        "fr": "modifier l'appareilInformations (conserver les anciennes valeurs dans la structure)",
+        "it": "cambiamento dispositivoInformazioni (mantenere vecchi valori in struttura)",
+        "es": "cambiar dispositivoInformación (Mantener valores antiguos en la estructura)",
+        "pl": "change deviceInformations (zachować stare wartości w strukturze)",
+        "uk": "змінити пристрійРеформації (зніміть старі значення в структурі)",
+        "zh-cn": "更改设备信息( 保留结构中的旧值)"
+      },
       "1.1.1": {
         "en": "mqtt dependencies updated for better keepalive",
         "de": "mqtt abhängigkeiten aktualisiert für besser halten",
@@ -80,19 +93,6 @@
         "pl": "ikony zmienione\nnotyfikacja urządzenia umieszczona w messagehandler.js",
         "uk": "іконки змінені\nпристрій offline notofication, розміщений в повідомленняhandler.js",
         "zh-cn": "图标已更改\n设备离线通知放置在 messagehandler.js"
-      },
-      "1.0.5": {
-        "en": "device offline location changed",
-        "de": "gerät offline-standort geändert",
-        "ru": "устройство офлайн расположение изменено",
-        "pt": "dispositivo localização offline alterado",
-        "nl": "apparaat offline locatie gewijzigd",
-        "fr": "changement d'emplacement hors ligne du périphérique",
-        "it": "dispositivo posizione offline cambiato",
-        "es": "ubicación del dispositivo sin conexión cambiado",
-        "pl": "zmiana lokalizacji urządzenia offline",
-        "uk": "змінено розташування пристрою",
-        "zh-cn": "设备离线位置已更改"
       }
     },
     "titleLang": {
