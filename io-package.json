@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "news": {
+      "1.2.1": {
+        "en": "improof building of offlinenotification >= 25 hours",
+        "de": "unsicherer aufbau der offlinenotifizierung >= 25 stunden",
+        "ru": " im 25 часов",
+        "pt": "construção à prova de notificações off-line >= 25 horas",
+        "nl": "voor de toepassing van deze onderverdeling wordt verstaan onder:",
+        "fr": "improof construction de la notification hors ligne >= 25 heures",
+        "it": ">= 25 ore",
+        "es": "construcción infalible de la notificación sin conexión >= 25 horas",
+        "pl": "nieodporna budowa offlinenotyfikacji > = 25 godzin",
+        "uk": "небезпечна будівля офлайнеризації >= 25 годин",
+        "zh-cn": "防线外通知楼 25小时"
+      },
       "1.2.0": {
         "en": "change deviceInformations (keep old values in structure)",
         "de": "ändern deviceInformationen (erhalten alte Werte in der Struktur)",
@@ -80,19 +93,6 @@
         "pl": "zestaw Błąd obiektu Asynch po rozwiązaniu offline",
         "uk": "комплекти Об'єктАсинхронний помилка після офлайну",
         "zh-cn": "设定 离线后解析 ObjectAsynch 错误"
-      },
-      "1.0.6": {
-        "en": "icons changed\ndevice offline notofication placed in messagehandler.js",
-        "de": "icons geändert\ngerät offline-noofication platziert in messagehandler.js",
-        "ru": "значки изменились\nустройство в автономном режиме, помещенное в messagehandler.js",
-        "pt": "ícones alterados\ndispositivo off-line notofication colocado em messagehandler.js",
-        "nl": "pictogrammen gewijzigd\napparaat offline notificatie geplaatst in messagehandler.js",
-        "fr": "icônes changées\npériphérique hors ligne notofication placé dans messagehandler.js",
-        "it": "icone cambiate\ndispositivo notorietà offline posto in messagehandler.js",
-        "es": "iconos cambiados\ndispositivo offline notofication placed in messagehandler.js",
-        "pl": "ikony zmienione\nnotyfikacja urządzenia umieszczona w messagehandler.js",
-        "uk": "іконки змінені\nпристрій offline notofication, розміщений в повідомленняhandler.js",
-        "zh-cn": "图标已更改\n设备离线通知放置在 messagehandler.js"
       }
     },
     "titleLang": {

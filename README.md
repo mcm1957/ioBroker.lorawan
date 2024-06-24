@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.2.1 (2024-06-24)
 * (BenAhrdt) improof building of offlinenotification >= 25 hours
 
 ### 1.2.0 (2024-05-28)
