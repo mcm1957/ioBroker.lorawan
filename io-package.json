@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "news": {
+      "1.2.3": {
+        "en": "Bugfix offlinenotification (calculation of diffenerce)",
+        "de": "Bugfix Offlinenotification (Berechnung von Diffenerce)",
+        "ru": "Обратное обозначение (расчет диффенерции)",
+        "pt": "Bugfix notificação off-line (cálculo de diffenerce)",
+        "nl": "Bugfix offline aanmelding (berekening van diffenerce)",
+        "fr": "Bugfix non-offlinenotification (calcul de la différence)",
+        "it": "Bugfix notificazione offline (calcolo di diffenerce)",
+        "es": "Bugfix sin conexión (calculación de diffenerce)",
+        "pl": "Bugfix offlinenotification (obliczenie dyfferenerce)",
+        "uk": "Виправлення помилок (облік дифеенції)",
+        "zh-cn": "Bugfix 离线通知( diffenerce 的计算)"
+      },
       "1.2.2": {
         "en": "Bugfix inf generate Deviceinfo at startup for chirpstack",
         "de": "Bugfix inf erzeugen Deviceinfo beim Start für chirpstack",
@@ -80,19 +93,6 @@
         "pl": "usuń alarm debugowania logowanie",
         "uk": "видалити debug попередження",
         "zh-cn": "删除调试警告日志"
-      },
-      "1.0.8": {
-        "en": "set keepalive value to 0 => deactivate automatic reconnection",
-        "de": "festhaltenswert auf 0 gesetzt => deaktivieren der automatischen wiederverbindung",
-        "ru": "установка постоянного значения 0 => деактивировать автоматическое соединение",
-        "pt": "set keepalive value to 0 => desativar a reconexão automática",
-        "nl": "stel de bewaarwaarde in op 0 => de automatische herverbinding deactiveren",
-        "fr": "définir la valeur de conservation à 0 => désactiver la reconnexion automatique",
-        "it": "imposta il valore manalive a 0 => disattivare la riconnessione automatica",
-        "es": "ajuste del valor de mantenimiento a 0 = prenda desactivar la reconexión automática",
-        "pl": "ustawić wartość keeplive na 0 = > dezaktywować automatyczne ponowne połączenie",
-        "uk": "встановити безпечне значення 0 => деактивувати автоматичне відключення",
-        "zh-cn": "将保存值设置为 0 qq 自动重联"
       }
     },
     "titleLang": {
