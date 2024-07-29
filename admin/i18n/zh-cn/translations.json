@@ -42,7 +42,7 @@
     "offTooltip": "如果将状态设置为 false，则插入要发送的值",
     "onClick": "点击时",
     "onClickTooltip": "如果将状态设置为 true（单击按钮），则插入要发送的值",
-    "multiplyfaktor": "多重因素",
+    "multiplyfaktor": "多重因子",
     "multiplyfaktorTooltip": "插入您想要与数据相乘的因子（例如，输入 1(min) => 60s 为 60）",
     "unit": "单元",
     "unitTooltip": "插入您的值的单位",
@@ -58,10 +58,10 @@
     "downlinkConfigSubHeader": "单独的下行链路配置",
     "swap": "小尾数（sawp 字节顺序）",
     "swapTooltip": "交换输入的字节码",
+    "no crc": "没有添加crc",
     "crc": "校验和（crc 16）",
     "crcTooltip": "将 crc16 附加到您的数据中",
     "String": "细绳",
-    "no crc": "没有添加crc",
     "limitMin": "限制最小值",
     "limitMinTooltip": "限制负方向输入的可能性",
     "limitMinValue": "分钟。价值",
@@ -72,5 +72,10 @@
     "limitMaxValueTooltip": "输入正方向的极限值",
     "keepalive": "活着",
     "keepaliveTooltip": "输入保活功能的时间（以秒为单位）",
-    "unused": "没用过"
+    "unused": "没用过",
+    "downlinkConfigHeader": "添加您的设备特定的下行链路",
+    "customConfig": "“定制”-组合",
+    "customConfigHeader": "将特定的自定义对象添加到每个解码状态",
+    "customJson": "“自定义”对象-“通用”对象中的对象",
+    "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wrd."
 }

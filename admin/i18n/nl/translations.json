@@ -58,10 +58,10 @@
     "downlinkConfigSubHeader": "individuele downlinkconfiguratie",
     "swap": "kleine endian (sawp-bytevolgorde)",
     "swapTooltip": "verwissel de byteoder van de invoer",
+    "no crc": "geen crc-toevoeging",
     "crc": "controlesom (crc 16)",
     "crcTooltip": "voeg de crc16 toe aan uw gegevens",
     "String": "Snaar",
-    "no crc": "geen crc-toevoeging",
     "limitMin": "limiet min.",
     "limitMinTooltip": "beperkt de mogelijkheid van invoer in negatieve richting",
     "limitMinValue": "min. waarde",
@@ -70,7 +70,12 @@
     "limitMaxTooltip": "beperkt de mogelijkheid van input in positieve richting",
     "limitMaxValue": "maximaal waarde",
     "limitMaxValueTooltip": "voer de limiet in positieve richting in",
-    "keepalive": "keepalive",
+    "keepalive": "in leven houden",
     "keepaliveTooltip": "voer de tijd in seconden in voor de keepalive-functie",
-    "unused": "ongebruikt"
+    "unused": "ongebruikt",
+    "downlinkConfigHeader": "Voeg uw apparaatspecifieke downlinks toe",
+    "customConfig": "\"Aangepaste\" configuratie",
+    "customConfigHeader": "Voeg een specifiek aangepast object toe aan elke gedecodeerde staat",
+    "customJson": "Object voor het \"Custom\"-Bereich im \"Common\" Object",
+    "customJsonTooltip": "Als u een voorwerp zoekt, hebben we gemeenschappelijke kenmerken."
 }

@@ -72,5 +72,10 @@
     "limitMaxValueTooltip": "Geben Sie den Grenzwert in positiver Richtung ein",
     "keepalive": "keepalive",
     "keepaliveTooltip": "Geben Sie die Zeit in Sekunden für die Keepalive-Funktion ein",
-    "unused": "ungenutzt"
+    "unused": "ungenutzt",    
+    "downlinkConfigHeader": "Fügen Sie Ihre gerätespezifischen Downlinks hinzu",
+    "customConfig": "\"Custom\"-Konfiguration",
+    "customConfigHeader": "Fügen Sie jedem dekodierten State ein bestimmtes \"custom\" Objekt hinzu",
+    "customJson": "Objekt für den „Custom“-Bereich im „Common“ Objekt",
+    "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird."
 }

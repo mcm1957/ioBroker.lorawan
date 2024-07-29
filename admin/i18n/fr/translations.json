@@ -58,10 +58,10 @@
     "downlinkConfigSubHeader": "configuration de liaison descendante individuelle",
     "swap": "Little Endian (ordre des octets Sawp)",
     "swapTooltip": "échanger le byteoder de l'entrée",
+    "no crc": "pas d'ajout de crc",
     "crc": "somme de contrôle (crc 16)",
     "crcTooltip": "ajouter le crc16 à vos données",
     "String": "Chaîne",
-    "no crc": "pas d'ajout de crc",
     "limitMin": "limite min.",
     "limitMinTooltip": "limite la possibilité d'entrées dans le sens négatif",
     "limitMinValue": "min. valeur",
@@ -70,7 +70,12 @@
     "limitMaxTooltip": "limite la possibilité d'entrées dans le sens positif",
     "limitMaxValue": "maximum. valeur",
     "limitMaxValueTooltip": "saisir la limite dans le sens positif",
-    "keepalive": "keepalive",
+    "keepalive": "rester en vie",
     "keepaliveTooltip": "entrez le temps en secondes pour la fonction keepalive",
-    "unused": "inutilisé"
+    "unused": "inutilisé",
+    "downlinkConfigHeader": "Ajoutez des liens descendants spécifiques à votre appareil",
+    "customConfig": "Configuration \"Personnalisée\"",
+    "customConfigHeader": "Ajouter un objet personnalisé spécifique à chaque état décodé",
+    "customJson": "Objet pour l'objet \"Personnalisé\" dans l'objet \"Commun\"",
+    "customJsonTooltip": "Fügen Sie un Objekt hinzu, welches in common.custom geschrieben wird."
 }

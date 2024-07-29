@@ -93,7 +93,14 @@
             "type": "panel",
             "label": "downlinkConfig",
 			"items": {
+				"downlinkConfigHeader": {
+					"newLine": true,
+					"type": "header",
+					"text": "downlinkConfigHeader",
+					"size": 3
+				},
 				"downlinkConfig":{
+					"newLine": true,
 					"type":"accordion",
 					"titleAttr": "deviceType",
 					"clone": true,
@@ -387,6 +394,25 @@
 							]
 						}
 					]
+				}
+			}
+		},
+		"customTab":{
+            "type": "panel",
+            "label": "customConfig",
+			"items": {
+			"customConfigHeader":{
+				"newLine": true,
+				"type": "header",
+				"text": "customConfigHeader",
+				"size": 3
+				},
+				"customJson":{
+					"newLine": true,
+					"type": "jsonEditor",
+					"label": "customJson",
+					"tooltip": "customJsonTooltip",
+					"default": {}
 				}
 			}
 		}

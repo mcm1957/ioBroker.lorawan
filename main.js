@@ -61,6 +61,9 @@ class Lorawan extends utils.Adapter {
 			// generate deviceinfo of all devices in info folder
 			await this.messagehandler.generateDeviceinfosAtStartup();
 
+			// get history instances at Startup
+			await this.messagehandler.setCustomObjectAtStartup();
+
 			//Subscribe all configuration and control states
 			this.subscribeStatesAsync("*");
 			this.log.silly(`the adapter starts with downlinkconfigs: ${JSON.stringify(this.config.downlinkConfig)}.`);
