@@ -127,7 +127,7 @@
     "keywords": [
       "LoRaWAN"
     ],
-    "licenseInformation": "MIT",
+    "license": "MIT",
     "platform": "Javascript/Node.js",
     "main": "main.js",
     "icon": "lorawan.png",
