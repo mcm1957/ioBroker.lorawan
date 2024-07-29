@@ -77,5 +77,8 @@
     "customConfig": "Configurazione \"personalizzata\".",
     "customConfigHeader": "Aggiungi un oggetto personalizzato specifico a ciascuno stato decodificato",
     "customJson": "Oggetto per l'oggetto \"Custom\" nell'oggetto \"Common\".",
-    "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird."
+    "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird.",
+    "customJsonInformation": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati. Basta inserire il contenuto JSON desiderato nella funzione attiva.",
+    "customJsonActive": "\"personalizzato\"-JSON",
+    "customJsonActiveTooltip": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati"
 }

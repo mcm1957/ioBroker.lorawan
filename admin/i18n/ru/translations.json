@@ -77,5 +77,8 @@
     "customConfig": "«Пользовательская» конфигурация",
     "customConfigHeader": "Добавьте определенный пользовательский объект в каждое декодированное состояние.",
     "customJson": "Объект для «Пользовательского»-Bereich im «Common» Objekt",
-    "customJsonTooltip": "Fügen Sie ein Objekthinzu, welches in common.custom Geschrieben Wird."
+    "customJsonTooltip": "Fügen Sie ein Objekthinzu, welches in common.custom Geschrieben Wird.",
+    "customJsonInformation": "С помощью этой функции можно добавлять свои собственные записи к декодированным состояниям. Просто введите желаемое содержимое JSON в активную функцию.",
+    "customJsonActive": "«пользовательский» — JSON",
+    "customJsonActiveTooltip": "С помощью этой функции можно добавлять свои собственные записи в декодированные состояния."
 }

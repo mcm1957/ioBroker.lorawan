@@ -77,5 +77,8 @@
     "customConfig": "Configuration \"Personnalisée\"",
     "customConfigHeader": "Ajouter un objet personnalisé spécifique à chaque état décodé",
     "customJson": "Objet pour l'objet \"Personnalisé\" dans l'objet \"Commun\"",
-    "customJsonTooltip": "Fügen Sie un Objekt hinzu, welches in common.custom geschrieben wird."
+    "customJsonTooltip": "Fügen Sie un Objekt hinzu, welches in common.custom geschrieben wird.",
+    "customJsonInformation": "Avec cette fonction, il est possible d'ajouter vos propres entrées personnalisées aux états décodés. Saisissez simplement le contenu json souhaité dans la fonction active.",
+    "customJsonActive": "\"personnalisé\"-JSON",
+    "customJsonActiveTooltip": "Avec cette fonction, il est possible d'ajouter vos propres entrées personnalisées aux états décodés"
 }

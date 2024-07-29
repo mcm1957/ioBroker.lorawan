@@ -407,12 +407,24 @@
 				"text": "customConfigHeader",
 				"size": 3
 				},
-				"customJson":{
+				"customJsonInformation":{
+					"newLine":true,
+					"type": "staticText",
+					"label": "customJsonInformation"
+				},
+				"customJsonActive":{
 					"newLine": true,
+					"type": "checkbox",
+					"label": "customJsonActive",
+					"tooltip": "customJsonActiveTooltip",
+					"default": false
+				},
+				"customJson":{
 					"type": "jsonEditor",
 					"label": "customJson",
 					"tooltip": "customJsonTooltip",
-					"default": {}
+					"default": {},
+					"hidden": "data.customJsonActive === false"		
 				}
 			}
 		}

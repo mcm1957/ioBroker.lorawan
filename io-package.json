@@ -302,7 +302,9 @@
     "password": "",
     "ssl": true,
     "origin": "ttn",
-    "downlinkConfig": []
+    "downlinkConfig": [],
+    "customJsonActive": false,
+    "customJson": {}
   },
   "objects": [],
   "instanceObjects": [

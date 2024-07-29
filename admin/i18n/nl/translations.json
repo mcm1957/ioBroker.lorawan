@@ -77,5 +77,8 @@
     "customConfig": "\"Aangepaste\" configuratie",
     "customConfigHeader": "Voeg een specifiek aangepast object toe aan elke gedecodeerde staat",
     "customJson": "Object voor het \"Custom\"-Bereich im \"Common\" Object",
-    "customJsonTooltip": "Als u een voorwerp zoekt, hebben we gemeenschappelijke kenmerken."
+    "customJsonTooltip": "Als u een voorwerp zoekt, hebben we gemeenschappelijke kenmerken.",
+    "customJsonInformation": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen. Voer gewoon de gewenste json-inhoud in de actieve functie in.",
+    "customJsonActive": "\"aangepast\"-JSON",
+    "customJsonActiveTooltip": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen"
 }

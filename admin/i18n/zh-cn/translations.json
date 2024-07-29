@@ -77,5 +77,8 @@
     "customConfig": "“定制”-组合",
     "customConfigHeader": "将特定的自定义对象添加到每个解码状态",
     "customJson": "“自定义”对象-“通用”对象中的对象",
-    "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wrd."
+    "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wrd.",
+    "customJsonInformation": "使用此功能，可以将您自己的自定义条目添加到解码状态。只需在 active 函数中输入所需的 json 内容即可。",
+    "customJsonActive": "“自定义”-JSON",
+    "customJsonActiveTooltip": "使用此功能，可以将您自己的自定义条目添加到解码状态"
 }
