@@ -132,7 +132,6 @@
       "type": "free"
     },
     "platform": "Javascript/Node.js",
-    "main": "main.js",
     "icon": "lorawan.png",
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.lorawan/main/admin/lorawan.png",
@@ -151,7 +150,7 @@
     },
     "dependencies": [
       {
-        "js-controller": ">=3.3.22"
+        "js-controller": ">=5.0.19"
       }
     ],
     "globalDependencies": [
