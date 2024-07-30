@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "news": {
+      "1.3.1": {
+        "en": "implements example image",
+        "de": "implementiert beispielbild",
+        "ru": "реализует пример изображения",
+        "pt": "implementos exemplo de imagem",
+        "nl": "implementeert voorbeeldafbeelding",
+        "fr": "implémente l'image exemple",
+        "it": "implementa l'immagine di esempio",
+        "es": "implementa ejemplo imagen",
+        "pl": "implementuje przykładowy obraz",
+        "uk": "реалізовує приклад зображення",
+        "zh-cn": "执行示例图像"
+      },
       "1.3.0": {
         "en": "Add \"Custom\"-Configuration",
         "de": "\"Custom\"-Konfiguration hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "mqtt zależne zaktualizowane dla lepszego utrzymania",
         "uk": "mqtt залежності оновлені для кращого безпечного",
         "zh-cn": "mqtt 依赖性更新以更好地保存"
-      },
-      "1.1.0": {
-        "en": "implement keepalive in config",
-        "de": "betreuen in config",
-        "ru": "реализуй сохранение в настройке",
-        "pt": "implementar manter em config",
-        "nl": "keepalive in config implementeren",
-        "fr": "mettre en œuvre keepalive in config",
-        "it": "implementare manalive in config",
-        "es": "mantenimiento de implementos en config",
-        "pl": "implementation keeplive in config",
-        "uk": "реалізація конфіденційності в конфігурації",
-        "zh-cn": "在配置中执行保存"
       }
     },
     "titleLang": {
