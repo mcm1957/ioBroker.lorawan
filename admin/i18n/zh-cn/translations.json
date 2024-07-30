@@ -80,5 +80,7 @@
     "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wrd.",
     "customJsonInformation": "使用此功能，可以将您自己的自定义条目添加到解码状态。只需在 active 函数中输入所需的 json 内容即可。",
     "customJsonActive": "“自定义”-JSON",
-    "customJsonActiveTooltip": "使用此功能，可以将您自己的自定义条目添加到解码状态"
+    "customJsonActiveTooltip": "使用此功能，可以将您自己的自定义条目添加到解码状态",
+    "customDesciption": "下图显示了 JSON-EDITOR 中数据的示例。有关更多信息，请使用文档。",
+    "customDescriptionImageTooltip": "请在编辑器中填写您希望在解码状态的 common.custom 对象中拥有的所需 json。"
 }

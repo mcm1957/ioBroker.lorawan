@@ -80,5 +80,7 @@
     "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird.",
     "customJsonInformation": "За допомогою цієї функції можна додавати власні записи до розшифрованих станів. Просто введіть потрібний вміст json в активну функцію.",
     "customJsonActive": "\"спеціальний\"-JSON",
-    "customJsonActiveTooltip": "За допомогою цієї функції можна додавати власні записи до розшифрованих станів"
+    "customJsonActiveTooltip": "За допомогою цієї функції можна додавати власні записи до розшифрованих станів",
+    "customDesciption": "На наступному малюнку показано приклад даних у JSON-EDITOR. Для отримання додаткової інформації скористайтеся документацією.",
+    "customDescriptionImageTooltip": "Будь ласка, заповніть Редактор бажаним json, який ви хочете мати в common.custom об’єкті декодованих станів."
 }

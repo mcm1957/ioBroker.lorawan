@@ -80,5 +80,7 @@
     "customJsonTooltip": "Als u een voorwerp zoekt, hebben we gemeenschappelijke kenmerken.",
     "customJsonInformation": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen. Voer gewoon de gewenste json-inhoud in de actieve functie in.",
     "customJsonActive": "\"aangepast\"-JSON",
-    "customJsonActiveTooltip": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen"
+    "customJsonActiveTooltip": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen",
+    "customDesciption": "De volgende afbeelding toont u een voorbeeld voor gegevens in de JSON-EDITOR. Gebruik de documentatie voor meer informatie.",
+    "customDescriptionImageTooltip": "Vul de Editor met de gewenste json die u gemeenschappelijk wilt hebben.aangepast object van de gedecodeerde staten."
 }

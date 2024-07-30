@@ -80,5 +80,7 @@
 	"customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird.",
 	"customJsonInformation" : "With this function it is possible to add your own custom entries to the decoded states. Just input the desired json content in active function.",
 	"customJsonActive" : "\"custom\"-JSON",
-	"customJsonActiveTooltip" : "With this function it is possible to add your own custom entries to the decoded states"
+	"customJsonActiveTooltip" : "With this function it is possible to add your own custom entries to the decoded states",
+	"customDesciption": "The folwing picture shows you an example for data in the JSON-EDITOR. For more informations use the documentation.",
+	"customDescriptionImageTooltip": "Please fill the Editor with desired json you like to have in common.custom object of the decoded states."
 }

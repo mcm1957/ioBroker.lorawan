@@ -425,6 +425,18 @@
 					"tooltip": "customJsonTooltip",
 					"default": {},
 					"hidden": "data.customJsonActive === false"		
+				},
+				"customDesciption":{
+					"newLine":true,
+					"type": "staticText",
+					"label": "customDesciption"
+				},
+				"customDescriptionImage":{
+					"newLine": true,
+					"type": "staticImage",
+					"label": "",
+					"tooltip": "customDescriptionImageTooltip",
+					"src": "icons/config/customDescriptionImage.png"	
 				}
 			}
 		}

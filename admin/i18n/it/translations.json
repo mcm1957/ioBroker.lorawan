@@ -80,5 +80,7 @@
     "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird.",
     "customJsonInformation": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati. Basta inserire il contenuto JSON desiderato nella funzione attiva.",
     "customJsonActive": "\"personalizzato\"-JSON",
-    "customJsonActiveTooltip": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati"
+    "customJsonActiveTooltip": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati",
+    "customDesciption": "L'immagine seguente mostra un esempio di dati nel JSON-EDITOR. Per maggiori informazioni utilizzare la documentazione.",
+    "customDescriptionImageTooltip": "Compila l'editor con il json desiderato che desideri avere in comune.oggetto personalizzato degli stati decodificati."
 }

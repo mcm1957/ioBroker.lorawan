@@ -80,5 +80,7 @@
     "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird.",
     "customJsonInformation": "Dzięki tej funkcji możliwe jest dodawanie własnych, niestandardowych wpisów do zdekodowanych stanów. Po prostu wprowadź żądaną treść json w aktywnej funkcji.",
     "customJsonActive": "„niestandardowy” — JSON",
-    "customJsonActiveTooltip": "Dzięki tej funkcji możliwe jest dodawanie własnych, niestandardowych wpisów do zdekodowanych stanów"
+    "customJsonActiveTooltip": "Dzięki tej funkcji możliwe jest dodawanie własnych, niestandardowych wpisów do zdekodowanych stanów",
+    "customDesciption": "Poniższy obrazek pokazuje przykład danych w EDYTORZE JSON. Aby uzyskać więcej informacji, skorzystaj z dokumentacji.",
+    "customDescriptionImageTooltip": "Wypełnij edytor żądanym kodem JSON, który chcesz mieć we wspólnym obiekcie niestandardowym zdekodowanych stanów."
 }
