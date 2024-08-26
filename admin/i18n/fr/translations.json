@@ -1,6 +1,6 @@
 {
     "lorawan adapter settings": "Paramètres de l'adaptateur pour Lorawan",
-    "mainSettings": "Réglages principaux",
+    "mainSettings": "Paramètres principaux",
     "ServersettingsHeader": "Paramètres du serveur",
     "Serverinformation": "Définissez les principaux paramètres de communication sur votre serveur",
     "ipUrl": "URL ou IP du serveur",
@@ -40,7 +40,7 @@
     "onTooltip": "insérez la valeur que vous souhaitez envoyer si vous définissez l'état sur true",
     "off": "désactivé",
     "offTooltip": "insérez la valeur que vous souhaitez envoyer si vous définissez l'état sur false",
-    "onClick": "sur clic",
+    "onClick": "au clic",
     "onClickTooltip": "insérez la valeur que vous souhaitez envoyer si vous définissez l'état sur true (clic sur le bouton)",
     "multiplyfaktor": "facteur multiplicateur",
     "multiplyfaktorTooltip": "insérez le facteur avec lequel vous souhaitez multiplier vos données (par exemple 60 pour l'entrée 1 (min) => 60 s)",
@@ -79,8 +79,12 @@
     "customJson": "Objet pour l'objet \"Personnalisé\" dans l'objet \"Commun\"",
     "customJsonTooltip": "Fügen Sie un Objekt hinzu, welches in common.custom geschrieben wird.",
     "customJsonInformation": "Avec cette fonction, il est possible d'ajouter vos propres entrées personnalisées aux états décodés. Saisissez simplement le contenu json souhaité dans la fonction active.",
-    "customJsonActive": "\"personnalisé\"-JSON",
+    "customDecodedJsonActive": "\"decoded.custom\"-JSON",
     "customJsonActiveTooltip": "Avec cette fonction, il est possible d'ajouter vos propres entrées personnalisées aux états décodés",
     "customDesciption": "L'image suivante vous montre un exemple de données dans JSON-EDITOR. Pour plus d'informations utilisez la documentation.",
-    "customDescriptionImageTooltip": "Veuillez remplir l'éditeur avec le json souhaité que vous souhaitez avoir dans l'objet common.custom des états décodés."
+    "customDescriptionImageTooltip": "Veuillez remplir l'éditeur avec le json souhaité que vous souhaitez avoir dans l'objet common.custom des états décodés.",
+    "customConfigurationJsonActive": "\"configuration personnalisée\"-JSON",
+    "customConfigurationJsonActiveTooltip": "Avec cette fonction vous ajoutez le JSON souhaité sur l'entrée personnalisée du canal de configuration",
+    "customControlJsonActive": "\"contrôle-personnalisé\"-JSON",
+    "customControlJsonActiveTooltip": "Avec cette fonction, vous ajoutez le JSON souhaité sur l'entrée personnalisée du canal de contrôle"
 }

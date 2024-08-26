@@ -302,7 +302,9 @@
     "ssl": true,
     "origin": "ttn",
     "downlinkConfig": [],
-    "customJsonActive": false,
+    "customDecodedJsonActive": false,
+    "customConfigurationJsonActive": false,
+    "customControlJsonActive": false,
     "customJson": {}
   },
   "objects": [],

@@ -412,11 +412,11 @@
 					"type": "staticText",
 					"label": "customJsonInformation"
 				},
-				"customJsonActive":{
+				"customDecodedJsonActive":{
 					"newLine": true,
 					"type": "checkbox",
-					"label": "customJsonActive",
-					"tooltip": "customJsonActiveTooltip",
+					"label": "customDecodedJsonActive",
+					"tooltip": "customDecodedJsonActiveTooltip",
 					"default": false
 				},
 				"customJson":{
@@ -424,7 +424,23 @@
 					"label": "customJson",
 					"tooltip": "customJsonTooltip",
 					"default": {},
-					"hidden": "data.customJsonActive === false"		
+					"hidden": "data.customDecodedJsonActive === false"		
+				},
+				"customConfigurationJsonActive":{
+					"newLine": true,
+					"type": "checkbox",
+					"label": "customConfigurationJsonActive",
+					"tooltip": "customConfigurationJsonActiveConfigurationTooltip",
+					"hidden": "data.customDecodedJsonActive === false",
+					"default": false
+				},
+				"customControlJsonActive":{
+					"newLine": true,
+					"type": "checkbox",
+					"label": "customControlJsonActive",
+					"tooltip": "customControlJsonActiveTooltip",
+					"hidden": "data.customDecodedJsonActive === false",
+					"default": false
 				},
 				"customDesciption":{
 					"newLine":true,

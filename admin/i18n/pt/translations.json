@@ -70,7 +70,7 @@
     "limitMaxTooltip": "limita a possibilidade de entradas na direção positiva",
     "limitMaxValue": "máx. valor",
     "limitMaxValueTooltip": "insira o limite na direção positiva",
-    "keepalive": "mantenha vivo",
+    "keepalive": "manutenção de atividade",
     "keepaliveTooltip": "insira o tempo em segundos para a função keepalive",
     "unused": "não utilizado",
     "downlinkConfigHeader": "Adicione downlinks específicos do seu dispositivo",
@@ -79,8 +79,12 @@
     "customJson": "Objeto para o objeto \"Personalizado\" no objeto \"Comum\"",
     "customJsonTooltip": "Certifique-se de ter um objeto próprio, que será escrito em comum.custom.",
     "customJsonInformation": "Com esta função é possível adicionar suas próprias entradas personalizadas aos estados decodificados. Basta inserir o conteúdo json desejado na função ativa.",
-    "customJsonActive": "\"personalizado\"-JSON",
+    "customDecodedJsonActive": "\"decodificado.custom\"-JSON",
     "customJsonActiveTooltip": "Com esta função é possível adicionar suas próprias entradas personalizadas aos estados decodificados",
     "customDesciption": "A imagem a seguir mostra um exemplo de dados no JSON-EDITOR. Para mais informações utilize a documentação.",
-    "customDescriptionImageTooltip": "Por favor, preencha o Editor com o json desejado que você gostaria de ter no objeto common.custom dos estados decodificados."
+    "customDescriptionImageTooltip": "Por favor, preencha o Editor com o json desejado que você gostaria de ter no objeto common.custom dos estados decodificados.",
+    "customConfigurationJsonActive": "\"configuração personalizada\"-JSON",
+    "customConfigurationJsonActiveTooltip": "Com esta função você adiciona o JSON desejado na entrada customizada do canal de configuração",
+    "customControlJsonActive": "\"controle personalizado\"-JSON",
+    "customControlJsonActiveTooltip": "Com esta função você adiciona o JSON desejado na entrada personalizada do canal de controle"
 }

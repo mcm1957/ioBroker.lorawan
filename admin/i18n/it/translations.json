@@ -13,7 +13,7 @@
     "AuthenticationInformation": "Imposta l'autenticazione per il tuo server (se necessario)",
     "username": "nome utente",
     "usernameTooltip": "inserisci il tuo nome utente",
-    "password": "parola d'ordine",
+    "password": "password",
     "passwordTooltip": "inserisci la tua password",
     "OriginHeader": "Impostazioni dell'origine",
     "OriginInformation": "Imposta l'origine dei dati attesi",
@@ -52,7 +52,7 @@
     "deviceTypeTooltip": "inserire il nome del tipo di dispositivo, questa configurazione è valida. (es. Dragino XY corrisponde anche a Dragino)",
     "sendWithUplink": "inviare con uplink",
     "sendWithUplinkTooltip": "scegli la modalità di invio per le configurazioni con il tipo di dispositivo desiderato",
-    "decimalPlaces": "decimali",
+    "decimalPlaces": "cifre decimali",
     "decimalPlacesTooltip": "selezionare il numero desiderato di cifre decimali",
     "downlinkConfigMainHeader": "configurazione downlink principale",
     "downlinkConfigSubHeader": "configurazione downlink individuale",
@@ -79,8 +79,12 @@
     "customJson": "Oggetto per l'oggetto \"Custom\" nell'oggetto \"Common\".",
     "customJsonTooltip": "Fügen Sie ein Objekt hinzu, welches in common.custom geschrieben wird.",
     "customJsonInformation": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati. Basta inserire il contenuto JSON desiderato nella funzione attiva.",
-    "customJsonActive": "\"personalizzato\"-JSON",
+    "customDecodedJsonActive": "\"decoded.custom\"-JSON",
     "customJsonActiveTooltip": "Con questa funzione è possibile aggiungere voci personalizzate agli stati decodificati",
     "customDesciption": "L'immagine seguente mostra un esempio di dati nel JSON-EDITOR. Per maggiori informazioni utilizzare la documentazione.",
-    "customDescriptionImageTooltip": "Compila l'editor con il json desiderato che desideri avere in comune.oggetto personalizzato degli stati decodificati."
+    "customDescriptionImageTooltip": "Compila l'editor con il json desiderato che desideri avere in comune.oggetto personalizzato degli stati decodificati.",
+    "customConfigurationJsonActive": "\"configurazione personalizzata\"-JSON",
+    "customConfigurationJsonActiveTooltip": "Con questa funzione aggiungi il JSON desiderato sulla voce personalizzata dal canale di configurazione",
+    "customControlJsonActive": "\"controllo-personalizzato\"-JSON",
+    "customControlJsonActiveTooltip": "Con questa funzione aggiungi il JSON desiderato alla voce personalizzata dal canale di controllo"
 }

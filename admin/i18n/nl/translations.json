@@ -1,6 +1,6 @@
 {
     "lorawan adapter settings": "Adapterinstellingen voor Lorawan",
-    "mainSettings": "Belangrijkste instellingen",
+    "mainSettings": "Hoofdinstellingen",
     "ServersettingsHeader": "Serverinstellingen",
     "Serverinformation": "Stel de belangrijkste communicatie-instellingen in op uw server",
     "ipUrl": "url of ip van de server",
@@ -40,13 +40,13 @@
     "onTooltip": "voer de waarde in die u wilt verzenden als u de status op true instelt",
     "off": "uit",
     "offTooltip": "voer de waarde in die u wilt verzenden als u de status instelt op false",
-    "onClick": "bij klikken",
+    "onClick": "op klik",
     "onClickTooltip": "voer de waarde in die u wilt verzenden als u de status instelt op true (klik op de knop)",
     "multiplyfaktor": "vermenigvuldigfactor",
     "multiplyfaktorTooltip": "voer de factor in waarmee u uw gegevens wilt vermenigvuldigen (bijv. 60 voor invoer 1(min) => 60s)",
     "unit": "eenheid",
     "unitTooltip": "voer de eenheid voor uw waarde in",
-    "deviceType": "soort apparaat",
+    "deviceType": "apparaattype",
     "expertSettings": "Expert-instellingen",
     "enabled & collect": "ingeschakeld en verzamelen",
     "deviceTypeTooltip": "voer de naam van het apparaattype in, deze configuratie is geldig. (bijv. Dragino XY komt ook overeen met Dragino)",
@@ -79,8 +79,12 @@
     "customJson": "Object voor het \"Custom\"-Bereich im \"Common\" Object",
     "customJsonTooltip": "Als u een voorwerp zoekt, hebben we gemeenschappelijke kenmerken.",
     "customJsonInformation": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen. Voer gewoon de gewenste json-inhoud in de actieve functie in.",
-    "customJsonActive": "\"aangepast\"-JSON",
+    "customDecodedJsonActive": "\"gedecodeerd.custom\"-JSON",
     "customJsonActiveTooltip": "Met deze functie is het mogelijk om uw eigen aangepaste gegevens aan de gedecodeerde staten toe te voegen",
     "customDesciption": "De volgende afbeelding toont u een voorbeeld voor gegevens in de JSON-EDITOR. Gebruik de documentatie voor meer informatie.",
-    "customDescriptionImageTooltip": "Vul de Editor met de gewenste json die u gemeenschappelijk wilt hebben.aangepast object van de gedecodeerde staten."
+    "customDescriptionImageTooltip": "Vul de Editor met de gewenste json die u gemeenschappelijk wilt hebben.aangepast object van de gedecodeerde staten.",
+    "customConfigurationJsonActive": "\"configuratie-aangepast\"-JSON",
+    "customConfigurationJsonActiveTooltip": "Met deze functie voeg je de gewenste JSON toe aan de custom entry vanuit het configuratiekanaal",
+    "customControlJsonActive": "\"control-custom\"-JSON",
+    "customControlJsonActiveTooltip": "Met deze functie voeg je de gewenste JSON toe aan de custom entry vanuit het control channel"
 }
