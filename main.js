@@ -196,8 +196,16 @@ class Lorawan extends utils.Adapter {
 						const suffix = this.downlinkConfighandler?.getDownlinkTopicSuffix(changeInfo?.changedState);
 						if(changeInfo?.changedState === "push" || changeInfo?.changedState === "replace"){
 							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,suffix);
-							await this.sendDownlink(downlinkTopic,state.val);
-							this.setStateAsync(id,state.val,true);
+							try{
+								// @ts-ignore
+								if(JSON.parse(state.val)){
+									await this.sendDownlink(downlinkTopic,state.val,changeInfo);
+									this.setState(id,state.val,true);
+								}
+							}
+							catch(error){
+								this.log.warn("Cant send invalid downlinks. Error: " + error);
+							}
 						}
 						else{
 							const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo,suffix);
@@ -211,7 +219,7 @@ class Lorawan extends utils.Adapter {
 										await this.sendDownlink(downlinkTopic,JSON.stringify(downlink),changeInfo);
 									}
 								}
-								this.setStateAsync(id,state.val,true);
+								this.setState(id,state.val,true);
 							}
 						}
 					}
@@ -231,7 +239,7 @@ class Lorawan extends utils.Adapter {
 								}
 							}
 						}
-						this.setStateAsync(id,state.val,true);
+						this.setState(id,state.val,true);
 					}
 				}
 			} else {
@@ -280,7 +288,7 @@ class Lorawan extends utils.Adapter {
 				payloadInHex = nextSend?.val + payloadInHex;
 			}
 		}
-		await this.setStateAsync(`${idFolderNextSend}.hex`,payloadInHex,true);
+		await this.setState(`${idFolderNextSend}.hex`,payloadInHex,true);
 	}
 
 	async sendDownlink(topic,message,changeInfo){
@@ -289,9 +297,9 @@ class Lorawan extends utils.Adapter {
 		const idFolderLastSend = `${changeInfo.objectStartDirectory}.${this.messagehandler?.directoryhandler.reachableSubfolders.downlinkLastSend}`;
 		const nextSend = await this.getStateAsync(`${idFolderNextSend}.hex`);
 		const lastSend = this.getHexpayloadFromDownlink(message);
-		await this.setStateAsync(`${idFolderLastSend}.hex`,lastSend,true);
+		await this.setState(`${idFolderLastSend}.hex`,lastSend,true);
 		if(nextSend && lastSend === nextSend?.val){
-			await this.setStateAsync(`${idFolderNextSend}.hex`,"0",true);
+			await this.setState(`${idFolderNextSend}.hex`,"0",true);
 		}
 	}
 
@@ -470,7 +478,7 @@ class Lorawan extends utils.Adapter {
 										if(typeof obj.message.value === "number"){
 											// Check limit
 											if((!downlinkObject.common.min || obj.message.value >= downlinkObject.common.min) && (!downlinkObject.common.max || obj.message.value <= downlinkObject.common.max)){
-												await this.setStateAsync(downlinkId,obj.message.value);
+												await this.setState(downlinkId,obj.message.value);
 												result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, usedApplicationName: changeInfo.usedApplicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, received:obj.message};
 											}
 											else{
@@ -487,7 +495,7 @@ class Lorawan extends utils.Adapter {
 											result = {error:true, message: `downlink is type ${downlinkObject.common.type}, but received ${typeof obj.message.value}`, received:obj.message};
 										}
 										else{
-											await this.setStateAsync(downlinkId,obj.message.value);
+											await this.setState(downlinkId,obj.message.value);
 											result = {applicationId: changeInfo.applicationId, applicationName: changeInfo.applicationName, deviceEUI: changeInfo.deviceEUI, deviceId: changeInfo.deviceId, deviceType: changeInfo.deviceType, downlink: obj.message.downlink, value: obj.message.value, received:obj.message};
 										}
 									}
