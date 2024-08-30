@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.3.1",
+    "version": "1.4.0",
     "news": {
+      "1.4.0": {
+        "en": "function to assign properties",
+        "de": "funktion eigenschaften zuzuordnen",
+        "ru": "функция для присвоения свойств",
+        "pt": "função para atribuir propriedades",
+        "nl": "functie om eigenschappen toe te wijzen",
+        "fr": "fonction pour attribuer des propriétés",
+        "it": "funzione per assegnare proprietà",
+        "es": "función para asignar propiedades",
+        "pl": "funkcja przypisywania właściwości",
+        "uk": "функція присвоєння властивостей",
+        "zh-cn": "函数以指定属性"
+      },
       "1.3.1": {
         "en": "implements example image",
         "de": "implementiert beispielbild",
@@ -80,19 +93,6 @@
         "pl": "change deviceInformations (zachować stare wartości w strukturze)",
         "uk": "змінити пристрійРеформації (зніміть старі значення в структурі)",
         "zh-cn": "更改设备信息( 保留结构中的旧值)"
-      },
-      "1.1.1": {
-        "en": "mqtt dependencies updated for better keepalive",
-        "de": "mqtt abhängigkeiten aktualisiert für besser halten",
-        "ru": "зависимости mqtt обновляется для лучшего сохранения",
-        "pt": "dependências mqtt atualizadas para melhor manter",
-        "nl": "mqtt afhankelijkheden bijgewerkt voor een betere houdbaarheid",
-        "fr": "mqtt dépendances mises à jour pour mieux garder",
-        "it": "dipendenze di mqtt aggiornate per mantenersi al meglio",
-        "es": "mqtt dependencias actualizadas para mejor mantenimiento",
-        "pl": "mqtt zależne zaktualizowane dla lepszego utrzymania",
-        "uk": "mqtt залежності оновлені для кращого безпечного",
-        "zh-cn": "mqtt 依赖性更新以更好地保存"
       }
     },
     "titleLang": {
