@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.4.1 (2024-09-25)
 * (BenAhrdt) remove timestamp from role date (ttn timestamp im µs)
 
 ### 1.4.0 (2024-08-30)

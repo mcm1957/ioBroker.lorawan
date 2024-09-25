@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "news": {
+      "1.4.1": {
+        "en": "remove timestamp from role date (ttn timestamp im µs)",
+        "de": "zeitstempel aus rollendatum entfernen (ttn timestamp im μs)",
+        "ru": "удалить таймстам от даты роли (ttn timestamp im μs)",
+        "pt": "remove timestamp da data de função (ttn timestamp im μs)",
+        "nl": "tijdstempel verwijderen van roldatum (ttn tijdstempel im μs)",
+        "fr": "enlever l'horodatage à partir de la date du rôle (ttn horodatage im μs)",
+        "it": "rimuovere timestamp dalla data di ruolo (tn timestamp im μs)",
+        "es": "eliminar el timetamp de la fecha de función (ttn timestamp im μs)",
+        "pl": "usunąć znacznik czasu z daty odtworzenia (ttn timestamp im µs)",
+        "uk": "видалення мітки часу від дати ролі (tn timestamp im μs)",
+        "zh-cn": "从角色日期中删除时间戳 (ttn timestamp im μs)"
+      },
       "1.4.0": {
         "en": "function to assign properties",
         "de": "funktion eigenschaften zuzuordnen",
@@ -80,19 +93,6 @@
         "pl": "nieodporna budowa offlinenotyfikacji > = 25 godzin",
         "uk": "небезпечна будівля офлайнеризації >= 25 годин",
         "zh-cn": "防线外通知楼 25小时"
-      },
-      "1.2.0": {
-        "en": "change deviceInformations (keep old values in structure)",
-        "de": "ändern deviceInformationen (erhalten alte Werte in der Struktur)",
-        "ru": "изменение устройстваИнформации (сдерживайте старые значения в структуре)",
-        "pt": "alterar dispositivoInformações (manter valores antigos na estrutura)",
-        "nl": "apparaat wijzigenInformaties (oude waarden in structuur behouden)",
-        "fr": "modifier l'appareilInformations (conserver les anciennes valeurs dans la structure)",
-        "it": "cambiamento dispositivoInformazioni (mantenere vecchi valori in struttura)",
-        "es": "cambiar dispositivoInformación (Mantener valores antiguos en la estructura)",
-        "pl": "change deviceInformations (zachować stare wartości w strukturze)",
-        "uk": "змінити пристрійРеформації (зніміть старі значення в структурі)",
-        "zh-cn": "更改设备信息( 保留结构中的旧值)"
       }
     },
     "titleLang": {
