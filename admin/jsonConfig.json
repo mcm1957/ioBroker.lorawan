@@ -452,7 +452,8 @@
 					"type": "staticImage",
 					"label": "",
 					"tooltip": "customDescriptionImageTooltip",
-					"src": "icons/config/customDescriptionImage.png"	
+					"src": "icons/config/customDescriptionImage.png",
+					"sm":5
 				},
 				"customDeleteDesciption":{
 					"newLine":true,
@@ -464,7 +465,8 @@
 					"type": "staticImage",
 					"label": "",
 					"tooltip": "customDeleteDescriptionImageTooltip",
-					"src": "icons/config/customDeleteDescriptionImage.png"	
+					"src": "icons/config/customDeleteDescriptionImage.png",
+					"sm": 2	
 				}
 			}
 		}
