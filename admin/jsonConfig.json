@@ -453,6 +453,18 @@
 					"label": "",
 					"tooltip": "customDescriptionImageTooltip",
 					"src": "icons/config/customDescriptionImage.png"	
+				},
+				"customDeleteDesciption":{
+					"newLine":true,
+					"type": "staticText",
+					"label": "customDeleteDesciption"
+				},
+				"customDeleteDescriptionImage":{
+					"newLine": true,
+					"type": "staticImage",
+					"label": "",
+					"tooltip": "customDeleteDescriptionImageTooltip",
+					"src": "icons/config/customDeleteDescriptionImage.png"	
 				}
 			}
 		}

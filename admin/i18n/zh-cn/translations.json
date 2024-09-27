@@ -86,5 +86,7 @@
     "customConfigurationJsonActive": "“配置-自定义”-JSON",
     "customConfigurationJsonActiveTooltip": "使用此函数，您可以从配置通道在自定义条目上添加所需的 JSON",
     "customControlJsonActive": "“控制-自定义”-JSON",
-    "customControlJsonActiveTooltip": "使用此函数，您可以从控制通道在自定义条目上添加所需的 JSON"
+    "customControlJsonActiveTooltip": "使用此函数，您可以从控制通道在自定义条目上添加所需的 JSON",
+    "customDeleteDesciption": "要删除条目，请输入内容为“null”的条目。",
+    "customDeleteDescriptionImageTooltip": "有关删除现有条目的信息。"
 }

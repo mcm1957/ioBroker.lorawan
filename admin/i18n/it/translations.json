@@ -86,5 +86,7 @@
     "customConfigurationJsonActive": "\"configurazione personalizzata\"-JSON",
     "customConfigurationJsonActiveTooltip": "Con questa funzione aggiungi il JSON desiderato sulla voce personalizzata dal canale di configurazione",
     "customControlJsonActive": "\"controllo-personalizzato\"-JSON",
-    "customControlJsonActiveTooltip": "Con questa funzione aggiungi il JSON desiderato alla voce personalizzata dal canale di controllo"
+    "customControlJsonActiveTooltip": "Con questa funzione aggiungi il JSON desiderato alla voce personalizzata dal canale di controllo",
+    "customDeleteDesciption": "Per eliminare una voce, inserire la voce con il contenuto \"null\".",
+    "customDeleteDescriptionImageTooltip": "Informazioni sulla rimozione di una voce esistente."
 }

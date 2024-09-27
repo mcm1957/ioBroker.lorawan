@@ -86,5 +86,7 @@
 	"customConfigurationJsonActive" : "\"configuration-custom\"-JSON",
 	"customConfigurationJsonActiveTooltip" : "With this function you add the desired JSON on the custom entrie from the configuration channel",
 	"customControlJsonActive" : "\"control-custom\"-JSON",
-	"customControlJsonActiveTooltip" : "With this function you add the desired JSON on the custom entrie from the control channel"
+	"customControlJsonActiveTooltip" : "With this function you add the desired JSON on the custom entrie from the control channel",
+	"customDeleteDesciption": "To delete an entry, please enter the entry with content \"null\".",
+	"customDeleteDescriptionImageTooltip": "Information about removing an existing entry."
 }

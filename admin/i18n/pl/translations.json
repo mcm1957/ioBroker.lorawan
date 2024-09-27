@@ -86,5 +86,7 @@
     "customConfigurationJsonActive": "„konfiguracja niestandardowa” — JSON",
     "customConfigurationJsonActiveTooltip": "Dzięki tej funkcji dodajesz żądany JSON do niestandardowego wpisu z kanału konfiguracyjnego",
     "customControlJsonActive": "„kontrola niestandardowa” - JSON",
-    "customControlJsonActiveTooltip": "Dzięki tej funkcji dodajesz żądany JSON do niestandardowego wpisu z kanału kontrolnego"
+    "customControlJsonActiveTooltip": "Dzięki tej funkcji dodajesz żądany JSON do niestandardowego wpisu z kanału kontrolnego",
+    "customDeleteDesciption": "Aby usunąć wpis, wprowadź wpis o treści „null”.",
+    "customDeleteDescriptionImageTooltip": "Informacja o usunięciu istniejącego wpisu."
 }

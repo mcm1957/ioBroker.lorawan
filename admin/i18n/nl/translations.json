@@ -86,5 +86,7 @@
     "customConfigurationJsonActive": "\"configuratie-aangepast\"-JSON",
     "customConfigurationJsonActiveTooltip": "Met deze functie voeg je de gewenste JSON toe aan de custom entry vanuit het configuratiekanaal",
     "customControlJsonActive": "\"control-custom\"-JSON",
-    "customControlJsonActiveTooltip": "Met deze functie voeg je de gewenste JSON toe aan de custom entry vanuit het control channel"
+    "customControlJsonActiveTooltip": "Met deze functie voeg je de gewenste JSON toe aan de custom entry vanuit het control channel",
+    "customDeleteDesciption": "Om een ​​vermelding te verwijderen, voert u de vermelding in met de inhoud \"null\".",
+    "customDeleteDescriptionImageTooltip": "Informatie over het verwijderen van een bestaand item."
 }

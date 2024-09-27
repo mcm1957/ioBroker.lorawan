@@ -86,5 +86,7 @@
     "customConfigurationJsonActive": "\"configuration-custom\"-JSON",
     "customConfigurationJsonActiveTooltip": "За допомогою цієї функції ви додаєте потрібний JSON до спеціального запису з каналу конфігурації",
     "customControlJsonActive": "\"control-custom\"-JSON",
-    "customControlJsonActiveTooltip": "За допомогою цієї функції ви додаєте потрібний JSON до спеціального запису з каналу керування"
+    "customControlJsonActiveTooltip": "За допомогою цієї функції ви додаєте потрібний JSON до спеціального запису з каналу керування",
+    "customDeleteDesciption": "Щоб видалити запис, будь ласка, введіть запис із вмістом \"null\".",
+    "customDeleteDescriptionImageTooltip": "Інформація про видалення існуючого запису."
 }
