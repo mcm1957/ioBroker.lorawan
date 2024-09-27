@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "news": {
+      "1.4.2": {
+        "en": "add informations about delete an custom entry in config",
+        "de": "fügen sie informationen zum löschen eines benutzerdefinierten eintrags in config hinzu",
+        "ru": "добавить информацию об удалении пользовательской записи в настройке",
+        "pt": "adicionar informações sobre excluir uma entrada personalizada em config",
+        "nl": "toe te voegen informatie over verwijderen van een aangepaste ingang in configuratie",
+        "fr": "ajouter des informations sur supprimer une entrée personnalisée dans config",
+        "it": "aggiungere informazioni su cancellare una voce personalizzata in configurazione",
+        "es": "añadir información sobre eliminar una entrada personalizada en config",
+        "pl": "dodaj informacje o usunięciu niestandardowego wpisu w konfiguratorze",
+        "uk": "додати інформацію про видалення користувацького входу в налаштування",
+        "zh-cn": "在配置中添加关于删除自定义项的信息"
+      },
       "1.4.1": {
         "en": "remove timestamp from role date (ttn timestamp im µs)",
         "de": "zeitstempel aus rollendatum entfernen (ttn timestamp im μs)",
@@ -80,19 +93,6 @@
         "pl": "Bugfix inf generuje Deviceinfo przy starcie dla chirpstock",
         "uk": "Bugfix inf генерувати Deviceinfo на запуску для chirpstack",
         "zh-cn": "启动时 bugfix inf 生成设备信息"
-      },
-      "1.2.1": {
-        "en": "improof building of offlinenotification >= 25 hours",
-        "de": "unsicherer aufbau der offlinenotifizierung >= 25 stunden",
-        "ru": " im 25 часов",
-        "pt": "construção à prova de notificações off-line >= 25 horas",
-        "nl": "voor de toepassing van deze onderverdeling wordt verstaan onder:",
-        "fr": "improof construction de la notification hors ligne >= 25 heures",
-        "it": ">= 25 ore",
-        "es": "construcción infalible de la notificación sin conexión >= 25 horas",
-        "pl": "nieodporna budowa offlinenotyfikacji > = 25 godzin",
-        "uk": "небезпечна будівля офлайнеризації >= 25 годин",
-        "zh-cn": "防线外通知楼 25小时"
       }
     },
     "titleLang": {
