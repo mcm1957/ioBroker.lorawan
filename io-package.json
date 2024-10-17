@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "news": {
+      "1.5.0": {
+        "en": "add some notifications for devices back online",
+        "de": "benachrichtigungen für geräte online hinzufügen",
+        "ru": "добавить несколько уведомлений для устройств обратно онлайн",
+        "pt": "adicionar algumas notificações para dispositivos online",
+        "nl": "toe te voegen sommige meldingen voor apparaten terug online",
+        "fr": "ajouter quelques notifications pour les appareils retour en ligne",
+        "it": "aggiungere alcune notifiche per i dispositivi indietro online",
+        "es": "añadir algunas notificaciones para dispositivos en línea",
+        "pl": "dodaj kilka powiadomień dla urządzeń online",
+        "uk": "додати деякі повідомлення для пристроїв назад онлайн",
+        "zh-cn": "在线添加设备的一些通知"
+      },
       "1.4.2": {
         "en": "add informations about delete an custom entry in config",
         "de": "fügen sie informationen zum löschen eines benutzerdefinierten eintrags in config hinzu",
@@ -80,19 +93,6 @@
         "pl": "Bugfix offlinenotification (obliczenie dyfferenerce)",
         "uk": "Виправлення помилок (облік дифеенції)",
         "zh-cn": "Bugfix 离线通知( diffenerce 的计算)"
-      },
-      "1.2.2": {
-        "en": "Bugfix inf generate Deviceinfo at startup for chirpstack",
-        "de": "Bugfix inf erzeugen Deviceinfo beim Start für chirpstack",
-        "ru": "Bugfix вf генерирует Deviceinfo при запуске chirpstack",
-        "pt": "Bugfix inf gerar Deviceinfo na inicialização para chirpstack",
-        "nl": "Bugfix inf genereren Apparaatinfo bij opstarten voor tjirpstack",
-        "fr": "Bugfix inf génère Deviceinfo au démarrage pour chirpstack",
-        "it": "Bugfix inf genera Deviceinfo all'avvio per chirpstack",
-        "es": "Bugfix inf genera Deviceinfo al inicio para chirpstack",
-        "pl": "Bugfix inf generuje Deviceinfo przy starcie dla chirpstock",
-        "uk": "Bugfix inf генерувати Deviceinfo на запуску для chirpstack",
-        "zh-cn": "启动时 bugfix inf 生成设备信息"
       }
     },
     "titleLang": {
