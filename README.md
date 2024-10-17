@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add some notifications for devices back online
+
 ### 1.4.2 (2024-09-27)
 * (BenAhrdt) add informations about delete an custom entry in config
 

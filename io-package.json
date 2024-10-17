@@ -284,6 +284,38 @@
           },
           "regex": [],
           "limit": 10
+        },
+        {
+          "category": "Lorawan device back online",
+          "name": {
+            "en": "A LoRaWAN device is back online",
+            "de": "Ein LoRaWAN Gerät ist wieder online",
+            "ru": "Устройство LoRaWAN возвращается в онлайн",
+            "pt": "Um dispositivo LoRaWAN está de volta online",
+            "nl": "Een LoRaWAN apparaat is terug online",
+            "fr": "Un appareil LoRaWAN est de retour en ligne",
+            "it": "Un dispositivo LoRaWAN è tornato online",
+            "es": "Un dispositivo LoRaWAN está de vuelta en línea",
+            "pl": "Urządzenie LoRaWAN jest z powrotem online",
+            "uk": "Пристрої LoRaWAN звернулися в Інтернеті",
+            "zh-cn": "LORAWAN 设备恢复在线"
+          },
+          "severity": "notify",
+          "description": {
+            "en": "A LoraWAN device has sended a message after going offline",
+            "de": "Ein LoraWAN-Gerät hat eine Nachricht gesendet, nachdem es offline ging",
+            "ru": "Устройство LoraWAN отправило сообщение после выхода в автономном режиме",
+            "pt": "Um dispositivo LoraWAN enviou uma mensagem depois de ficar offline",
+            "nl": "Een LoraWAN apparaat heeft een bericht verzonden na het offline gaan",
+            "fr": "Un périphérique LoraWAN a envoyé un message après avoir déconnecté",
+            "it": "Un dispositivo LoraWAN ha inviato un messaggio dopo essere andato offline",
+            "es": "Un dispositivo LoraWAN ha enviado un mensaje después de salir sin conexión",
+            "pl": "Urządzenie LoraWAN wysłało wiadomość po wyłączeniu",
+            "uk": "Пристрій LoraWAN надсилав повідомлення після вимкнення",
+            "zh-cn": "一个 LoraWAN 设备在下线后将消息截断"
+          },
+          "regex": [],
+          "limit": 10
         }
       ]
     }
