@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "news": {
+      "1.5.1": {
+        "en": "remove some wrong loggings",
+        "de": "einige falsche protokolle entfernen",
+        "ru": "удалить некоторые неправильные журналы",
+        "pt": "remover alguns registros errados",
+        "nl": "sommige verkeerde logs verwijderen",
+        "fr": "supprimer quelques erreurs d'enregistrement",
+        "it": "rimuovere alcune registrazioni sbagliate",
+        "es": "eliminar algunos registros incorrectos",
+        "pl": "usunąć złe blokowania",
+        "uk": "видалити деякі неправильні журнали",
+        "zh-cn": "删除一些错误的日志"
+      },
       "1.5.0": {
         "en": "add some notifications for devices back online",
         "de": "benachrichtigungen für geräte online hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "Dodaj konfigurację \"Własny\"",
         "uk": "Додати \"Custom\"-Configuration",
         "zh-cn": "添加“ 自定义”-配置"
-      },
-      "1.2.3": {
-        "en": "Bugfix offlinenotification (calculation of diffenerce)",
-        "de": "Bugfix Offlinenotification (Berechnung von Diffenerce)",
-        "ru": "Обратное обозначение (расчет диффенерции)",
-        "pt": "Bugfix notificação off-line (cálculo de diffenerce)",
-        "nl": "Bugfix offline aanmelding (berekening van diffenerce)",
-        "fr": "Bugfix non-offlinenotification (calcul de la différence)",
-        "it": "Bugfix notificazione offline (calcolo di diffenerce)",
-        "es": "Bugfix sin conexión (calculación de diffenerce)",
-        "pl": "Bugfix offlinenotification (obliczenie dyfferenerce)",
-        "uk": "Виправлення помилок (облік дифеенції)",
-        "zh-cn": "Bugfix 离线通知( diffenerce 的计算)"
       }
     },
     "titleLang": {
