@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) remove some wrong loggings
+
 ### 1.5.0 (2024-10-17)
 * (BenAhrdt) add some notifications for devices back online
 
