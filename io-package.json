@@ -302,17 +302,17 @@
           },
           "severity": "notify",
           "description": {
-            "en": "A LoraWAN device has sended a message after going offline",
-            "de": "Ein LoraWAN-Gerät hat eine Nachricht gesendet, nachdem es offline ging",
-            "ru": "Устройство LoraWAN отправило сообщение после выхода в автономном режиме",
-            "pt": "Um dispositivo LoraWAN enviou uma mensagem depois de ficar offline",
-            "nl": "Een LoraWAN apparaat heeft een bericht verzonden na het offline gaan",
-            "fr": "Un périphérique LoraWAN a envoyé un message après avoir déconnecté",
-            "it": "Un dispositivo LoraWAN ha inviato un messaggio dopo essere andato offline",
-            "es": "Un dispositivo LoraWAN ha enviado un mensaje después de salir sin conexión",
-            "pl": "Urządzenie LoraWAN wysłało wiadomość po wyłączeniu",
-            "uk": "Пристрій LoraWAN надсилав повідомлення після вимкнення",
-            "zh-cn": "一个 LoraWAN 设备在下线后将消息截断"
+            "en": "A LoraWAN device has sended a message and is back online",
+            "de": "Ein LoraWAN Gerät hat eine Nachricht gesendet und ist wieder online",
+            "ru": "Устройство LoraWAN отправило сообщение и возвращается в онлайн",
+            "pt": "Um dispositivo LoraWAN enviou uma mensagem e está de volta online",
+            "nl": "Een LoraWAN apparaat heeft een bericht verzonden en is weer online",
+            "fr": "Un appareil LoraWAN a envoyé un message et est de retour en ligne",
+            "it": "Un dispositivo LoraWAN ha inviato un messaggio ed è tornato online",
+            "es": "Un dispositivo LoraWAN ha enviado un mensaje y está de vuelta en línea",
+            "pl": "Urządzenie LoraWAN wysłało wiadomość i jest z powrotem online",
+            "uk": "Пристрої LoraWAN надсилають повідомлення і повертається онлайн",
+            "zh-cn": "一个LoraWAN 设备将消息剪辑并恢复在线"
           },
           "regex": [],
           "limit": 10
