@@ -30,34 +30,12 @@
       "swap": false
     },
     {
-      "name": "Target_Temperature_integer",
-      "port": 1,
-      "priority": "NORMAL",
-      "type": "number",
-      "confirmed": false,
-      "front": "0E",
-      "end": "",
-      "length": 4,
-      "on": "01",
-      "off": "11",
-      "onClick": "030111",
-      "multiplyfaktor": "1",
-      "unit": "Grad",
-      "decimalPlaces": 0,
-      "lengthInByte": 1,
-      "crc": "noCrc",
-      "limitMin": true,
-      "limitMinValue": 6,
-      "limitMax": true,
-      "limitMaxValue": 30,
-      "swap": false
-    },
-    {
-      "name": "Target_Temperature",
+      "name": "TargetTemperature",
       "port": 1,
       "priority": "NORMAL",
       "type": "number",
       "swap": false,
+      "_statciText": null,
       "confirmed": false,
       "front": "51",
       "end": "",
@@ -75,7 +53,7 @@
       "limitMaxValue": 30
     },
     {
-      "name": "Extenal_Temperatur",
+      "name": "ExtenalTemperatur",
       "port": 1,
       "priority": "NORMAL",
       "type": "number",
@@ -98,7 +76,7 @@
       "swap": false
     },
     {
-      "name": "Vicki_Mode_2",
+      "name": "Mode2",
       "port": 1,
       "priority": "NORMAL",
       "type": "boolean",
@@ -121,7 +99,7 @@
       "limitMin": false
     },
     {
-      "name": "Max_Temperature",
+      "name": "MaxTemperature",
       "port": 1,
       "priority": "NORMAL",
       "type": "number",
@@ -145,7 +123,7 @@
       "limitMaxValue": 0
     },
     {
-      "name": "Get_Infos",
+      "name": "GetInfos",
       "port": 1,
       "priority": "NORMAL",
       "type": "button",
@@ -169,7 +147,7 @@
       "swap": false
     },
     {
-      "name": "Motor_Callibration",
+      "name": "MotorCallibration",
       "port": 1,
       "priority": "NORMAL",
       "type": "button",
@@ -193,7 +171,7 @@
       "swap": false
     },
     {
-      "name": "Child_Lock",
+      "name": "ChildLock",
       "port": 1,
       "priority": "NORMAL",
       "type": "boolean",
@@ -217,11 +195,12 @@
       "limitMin": false
     },
     {
-      "name": "Child_Lock_when_Offline",
+      "name": "ChildLockWhenOffline",
       "port": 1,
       "priority": "NORMAL",
       "type": "boolean",
       "swap": false,
+      "_statciText": null,
       "confirmed": false,
       "front": "03",
       "end": "11",
@@ -239,11 +218,12 @@
       "limitMaxValue": 0
     },
     {
-      "name": "Open_window_detection",
+      "name": "OpenWindowDetection",
       "port": 1,
       "priority": "NORMAL",
       "type": "boolean",
       "swap": false,
+      "_statciText": null,
       "confirmed": false,
       "front": "03",
       "end": "11",
@@ -266,6 +246,7 @@
       "priority": "NORMAL",
       "type": "button",
       "swap": false,
+      "_statciText": null,
       "confirmed": false,
       "front": "03",
       "end": "11",
