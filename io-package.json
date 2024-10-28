@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "news": {
+      "1.5.2": {
+        "en": "add new standard types / add new Roles / update core to 3.2.2",
+        "de": "neue Standardtypen hinzufügen / neue Roles / Update-Kern zu 3.2.2 hinzufügen",
+        "ru": "добавить новые стандартные типы / добавить новые роли / обновление ядра к 3.2.2",
+        "pt": "adicionar novos tipos padrão / adicionar novas funções / atualizar o núcleo para 3.2.2",
+        "nl": "nieuwe standaardtypes toevoegen / nieuwe rollen toevoegen / updatekern toevoegen aan 3.2.2",
+        "fr": "ajouter de nouveaux types standard / ajouter de nouveaux rôles / mettre à jour le noyau au 3.2.2",
+        "it": "aggiungere nuovi tipi standard / aggiungere nuovi ruoli / aggiornamento core a 3.2.2",
+        "es": "añadir nuevos tipos estándar / añadir nuevos Roles / núcleo de actualización a 3.2.2",
+        "pl": "dodaj nowe standardowe typy / dodaj nowe Roles / update core do 3.2.2",
+        "uk": "додати нові стандартні типи / додати нові ролі / оновити ядро до 3.2.2",
+        "zh-cn": "添加新的标准类型 / 添加新的角色 / 更新核心到 3. 2.2"
+      },
       "1.5.1": {
         "en": "remove some wrong loggings",
         "de": "einige falsche protokolle entfernen",
@@ -80,19 +93,6 @@
         "pl": "implementuje przykładowy obraz",
         "uk": "реалізовує приклад зображення",
         "zh-cn": "执行示例图像"
-      },
-      "1.3.0": {
-        "en": "Add \"Custom\"-Configuration",
-        "de": "\"Custom\"-Konfiguration hinzufügen",
-        "ru": "Добавить \"Кустом\" -",
-        "pt": "Adicionar \"Custom\"-Configuration",
-        "nl": "Aangepaste configuratie toevoegen",
-        "fr": "Ajouter la configuration \"Custom\"",
-        "it": "Aggiungi \"Custom\"-Configurazione",
-        "es": "Añadir \"Custom\"-Configuración",
-        "pl": "Dodaj konfigurację \"Własny\"",
-        "uk": "Додати \"Custom\"-Configuration",
-        "zh-cn": "添加“ 自定义”-配置"
       }
     },
     "titleLang": {
