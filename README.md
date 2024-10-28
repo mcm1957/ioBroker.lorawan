@@ -24,7 +24,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* (BenAhrdt) add new standard types
+* (BenAhrdt) add new standard types / add new Roles / update core to 3.2.2
 
 ### 1.5.1 (2024-10-17)
 * (BenAhrdt) remove some wrong loggings
