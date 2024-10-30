@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "news": {
+      "1.5.3": {
+        "en": "add roles",
+        "de": "rollen hinzufügen",
+        "ru": "добавить роли",
+        "pt": "adicionar papéis",
+        "nl": "rollen toevoegen",
+        "fr": "ajouter des rôles",
+        "it": "aggiungere ruoli",
+        "es": "añadir funciones",
+        "pl": "dodaj role",
+        "uk": "додати ролі",
+        "zh-cn": "添加角色"
+      },
       "1.5.2": {
         "en": "add new standard types / add new Roles / update core to 3.2.2",
         "de": "neue Standardtypen hinzufügen / neue Roles / Update-Kern zu 3.2.2 hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "funkcja przypisywania właściwości",
         "uk": "функція присвоєння властивостей",
         "zh-cn": "函数以指定属性"
-      },
-      "1.3.1": {
-        "en": "implements example image",
-        "de": "implementiert beispielbild",
-        "ru": "реализует пример изображения",
-        "pt": "implementos exemplo de imagem",
-        "nl": "implementeert voorbeeldafbeelding",
-        "fr": "implémente l'image exemple",
-        "it": "implementa l'immagine di esempio",
-        "es": "implementa ejemplo imagen",
-        "pl": "implementuje przykładowy obraz",
-        "uk": "реалізовує приклад зображення",
-        "zh-cn": "执行示例图像"
       }
     },
     "titleLang": {
