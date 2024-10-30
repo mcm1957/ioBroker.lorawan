@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add roles
+
 ### 1.5.2 (2024-10-28)
 * (BenAhrdt) add new standard types / add new Roles / update core to 3.2.2
 
