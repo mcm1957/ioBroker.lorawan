@@ -13,7 +13,12 @@
 					"newLine": true,
 					"type": "header",
 					"text": "ServersettingsHeader",
-					"size": 3
+					"size": 3,
+					"xs": 3,
+                    "sm": 3,
+                    "md": 3,
+                    "lg": 3,
+                    "xl": 3
 				},
 				"Serverinformation":{
 					"newLine":true,
@@ -26,26 +31,44 @@
 					"label": "ipUrl",
 					"tooltip": "ipUrlTooltip",
 					"default": "",
-					"sm": 4
+					"xs": 4,
+                    "sm": 4,
+                    "md": 4,
+                    "lg": 4,
+                    "xl": 4
 				},
 				"port":{
 					"type": "number",
 					"label": "port",
 					"tooltip": "portTooltip",
 					"default": 8883,
-					"sm": 1
+					"xs": 1,
+                    "sm": 1,
+                    "md": 1,
+                    "lg": 1,
+                    "xl": 1
 				},
 				"ssl":{
 					"type": "checkbox",
 					"label": "SSL",
 					"tooltip": "sslTooltip",
-					"default": true
+					"default": true,
+					"xs": 1,
+                    "sm": 1,
+                    "md": 1,
+                    "lg": 1,
+                    "xl": 1
 				},
 				"AuthenticationHeader": {
 					"newLine": true,
 					"type": "header",
 					"text": "AuthenticationHeader",
-					"size": 3
+					"size": 3,
+					"xs": 3,
+                    "sm": 3,
+                    "md": 3,
+                    "lg": 3,
+                    "xl": 3
 				},
 				"AuthenticationInformation":{
 					"newLine":true,
@@ -58,25 +81,43 @@
 					"label": "username",
 					"tooltip": "usernameTooltip",
 					"default": "",
-					"sm": 4
+					"xs": 4,
+                    "sm": 4,
+                    "md": 4,
+                    "lg": 4,
+                    "xl": 4
 				},
 				"password":{
 					"type": "password",
 					"label": "password",
 					"tooltip": "passwordTooltip",
 					"default": "",
-					"sm": 3
+					"xs": 3,
+                    "sm": 3,
+                    "md": 3,
+                    "lg": 3,
+                    "xl": 3
 				},
 				"OriginHeader": {
 					"newLine": true,
 					"type": "header",
 					"text": "OriginHeader",
-					"size": 3
+					"size": 3,
+					"xs": 3,
+                    "sm": 3,
+                    "md": 3,
+                    "lg": 3,
+                    "xl": 3
 				},
 				"OriginInformation":{
 					"newLine":true,
 					"type": "staticText",
-					"label": "OriginInformation"
+					"label": "OriginInformation",
+					"xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
 				},
 				"origin":{
 					"newLine": true,
@@ -88,7 +129,11 @@
 						{"label":"Chirpstack","value":"chirpstack"}
 					],
 					"default": "ttn",
-					"sm":2
+					"xs": 2,
+                    "sm": 2,
+                    "md": 2,
+                    "lg": 2,
+                    "xl": 2
 				}
 			}
 		},
@@ -100,21 +145,35 @@
 					"newLine": true,
 					"type": "header",
 					"text": "downlinkConfigHeader",
-					"size": 3
+					"size": 3,
+					"xs": 3,
+                    "sm": 3,
+                    "md": 3,
+                    "lg": 3,
+                    "xl": 3
 				},
 				"downlinkConfig":{
 					"newLine": true,
 					"type":"accordion",
 					"titleAttr": "deviceType",
 					"clone": true,
-					"sm":12,
+					"xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12,
 					"items":[
 						{
 							"newLine": true,
 							"type": "header",
 							"attr": "_header",
 							"text": "downlinkConfigMainHeader",
-							"size": 3
+							"size": 3,
+							"xs": 3,
+							"sm": 3,
+							"md": 3,
+							"lg": 3,
+							"xl": 3
 						},
 						{
 							"type": "text",
@@ -124,7 +183,11 @@
 							"validator": "if(data.deviceType === '' || data.deviceType === null){return false;}else{return true;}",
 							"validatorNoSaveOnError": true,
 							"default": "",
-							"sm":2
+							"xs": 2,
+							"sm": 2,
+							"md": 2,
+							"lg": 2,
+							"xl": 2
 						},
 						{
 							"newLine": true,
@@ -138,7 +201,11 @@
 								{"label":"enabled & collect","value":"enabled & collect"}
 							],
 							"default": "disabled",
-							"sm":2
+							"xs": 2,
+							"sm": 2,
+							"md": 2,
+							"lg": 2,
+							"xl": 2
 						},
 						{
 							"type": "number",
@@ -147,7 +214,11 @@
 							"tooltip": "portDownlinkTooltip",
 							"hidden": "data.sendWithUplink === 'disabled'",
 							"default": 1,
-							"sm":1
+							"xs": 1,
+							"sm": 1,
+							"md": 1,
+							"lg": 1,
+							"xl": 1
 						},
 						{
 							"type": "text",
@@ -156,7 +227,11 @@
 							"tooltip": "priorityTooltip",
 							"hidden": "data.sendWithUplink === 'disabled'",
 							"default": "NORMAL",
-							"sm":2
+							"xs": 2,
+							"sm": 2,
+							"md": 2,
+							"lg": 2,
+							"xl": 2
 						},
 						{
 							"type": "checkbox",
@@ -165,21 +240,34 @@
 							"tooltip": "confirmedTooltip",
 							"hidden": "data.sendWithUplink === 'disabled'",
 							"default": false,
-							"sm":2
+							"xs": 2,
+							"sm": 2,
+							"md": 2,
+							"lg": 2,
+							"xl": 2
 						},
 						{
 							"newLine": true,
 							"type": "header",
 							"attr": "_header2",
 							"text": "downlinkConfigSubHeader",
-							"size": 3
+							"size": 3,
+							"xs": 3,
+							"sm": 3,
+							"md": 3,
+							"lg": 3,
+							"xl": 3
 						},
 						{
 							"type":"accordion",
 							"attr":"downlinkParameter",
 							"titleAttr": "name",
 							"clone": true,
-							"sm":12,
+							"xs": 12,
+							"sm": 12,
+							"md": 12,
+							"lg": 12,
+							"xl": 12,
 							"items":[
 								{
 									"type": "text",
@@ -189,7 +277,11 @@
 									"default": "",
 									"validator": "if(data.name === '' || data.name === null){return false;}else{const myRegEx = /^([0-9a-z_ ])*$/i; return myRegEx.test(data.name);}",
 									"validatorNoSaveOnError": true,
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "number",
@@ -197,7 +289,11 @@
 									"label": "portDownlink",
 									"tooltip": "portDownlinkTooltip",
 									"default": 1,
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "text",
@@ -205,7 +301,11 @@
 									"label": "priority",
 									"tooltip": "priorityTooltip",
 									"default": "NORMAL",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "select",
@@ -220,7 +320,11 @@
 										{"label":"String","value":"string"}
 									],
 									"default": "boolean",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "checkbox",
@@ -229,14 +333,22 @@
 									"tooltip": "swapTooltip",
 									"hidden": "data.type !== 'number'",
 									"default": false,
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "staticText",
 									"attr": "_statciText",
 									"label": "",
 									"hidden": "data.type === 'number'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "checkbox",
@@ -244,7 +356,11 @@
 									"label": "confirmed",
 									"tooltip": "confirmedTooltip",
 									"default": false,
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"newLine": true,
@@ -256,7 +372,11 @@
 									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{return true}",
 									"validatorNoSaveOnError": true,
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "text",
@@ -267,7 +387,11 @@
 									"validator": "if(data.type !== 'string'){const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.front)}else{return true}",
 									"validatorNoSaveOnError": true,
 									"hidden": "data.type === 'boolean' || data.type === 'button'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "number",
@@ -278,7 +402,11 @@
 									"min":1,
 									"max": 20,
 									"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"newLine": true,
@@ -290,7 +418,11 @@
 									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.on);",
 									"validatorNoSaveOnError": true,
 									"hidden": "data.type !== 'boolean'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "text",
@@ -301,7 +433,11 @@
 									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.off);",
 									"validatorNoSaveOnError": true,
 									"hidden": "data.type !== 'boolean'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"newLine": true,
@@ -313,7 +449,11 @@
 									"validator": "const myRegEx = /^([0-9a-f]{2})*$/i; return myRegEx.test(data.onClick);",
 									"validatorNoSaveOnError": true,
 									"hidden": "data.type !== 'button'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "number",
@@ -322,7 +462,11 @@
 									"tooltip": "multiplyfaktorTooltip",
 									"default": 1,
 									"hidden": "data.type !== 'number'",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "number",
@@ -333,7 +477,11 @@
 									"min": 0,
 									"max": 5,
 									"hidden": "data.type !== 'number'",
-									"sm":1
+									"xs": 1,
+									"sm": 1,
+									"md": 1,
+									"lg": 1,
+									"xl": 1
 								},
 								{
 									"type": "text",
@@ -342,7 +490,11 @@
 									"tooltip": "unitTooltip",
 									"default": "",
 									"hidden": "data.type === 'boolean' || data.type === 'button' || data.type === 'string'",
-									"sm":1
+									"xs": 1,
+									"sm": 1,
+									"md": 1,
+									"lg": 1,
+									"xl": 1
 								},
 								{
 									"type": "select",
@@ -355,7 +507,11 @@
 										{"label":"KERMIT (Little Endian)","value":"KERMIT.LittleEndian"}
 									],
 									"default": "noCrc",
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"newLine": true,
@@ -365,7 +521,11 @@
 									"tooltip": "limitMinTooltip",
 									"hidden": "data.type !== 'number'",
 									"default": false,
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "number",
@@ -374,7 +534,11 @@
 									"tooltip": "limitMinValueTooltip",
 									"default": 0,
 									"hidden": "data.type !== 'number' || data.limitMin !== true",
-									"sm":1
+									"xs": 1,
+									"sm": 1,
+									"md": 1,
+									"lg": 1,
+									"xl": 1
 								},
 								{
 									"type": "checkbox",
@@ -383,7 +547,11 @@
 									"tooltip": "limitMaxTooltip",
 									"hidden": "data.type !== 'number'",
 									"default": false,
-									"sm":2
+									"xs": 2,
+									"sm": 2,
+									"md": 2,
+									"lg": 2,
+									"xl": 2
 								},
 								{
 									"type": "number",
@@ -392,7 +560,11 @@
 									"tooltip": "limitMaxValueTooltip",
 									"default": 0,
 									"hidden": "data.type !== 'number' || data.limitMax !== true",
-									"sm":1
+									"xs": 1,
+									"sm": 1,
+									"md": 1,
+									"lg": 1,
+									"xl": 1
 								}
 							]
 						}
@@ -408,26 +580,46 @@
 				"newLine": true,
 				"type": "header",
 				"text": "customConfigHeader",
-				"size": 3
+				"size": 3,
+				"xs": 3,
+				"sm": 3,
+				"md": 3,
+				"lg": 3,
+				"xl": 3
 				},
 				"customJsonInformation":{
 					"newLine":true,
 					"type": "staticText",
-					"label": "customJsonInformation"
+					"label": "customJsonInformation",
+					"xs": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"customDecodedJsonActive":{
 					"newLine": true,
 					"type": "checkbox",
 					"label": "customDecodedJsonActive",
 					"tooltip": "customDecodedJsonActiveTooltip",
-					"default": false
+					"default": false,
+					"xs": 2,
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xl": 2
 				},
 				"customJson":{
 					"type": "jsonEditor",
 					"label": "customJson",
 					"tooltip": "customJsonTooltip",
 					"default": {},
-					"hidden": "data.customDecodedJsonActive === false"		
+					"hidden": "data.customDecodedJsonActive === false",
+					"xs": 2,
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xl": 2	
 				},
 				"customConfigurationJsonActive":{
 					"newLine": true,
@@ -435,7 +627,12 @@
 					"label": "customConfigurationJsonActive",
 					"tooltip": "customConfigurationJsonActiveConfigurationTooltip",
 					"hidden": "data.customDecodedJsonActive === false",
-					"default": false
+					"default": false,
+					"xs": 2,
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xl": 2
 				},
 				"customControlJsonActive":{
 					"newLine": true,
@@ -443,12 +640,22 @@
 					"label": "customControlJsonActive",
 					"tooltip": "customControlJsonActiveTooltip",
 					"hidden": "data.customDecodedJsonActive === false",
-					"default": false
+					"default": false,
+					"xs": 2,
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xl": 2
 				},
 				"customDesciption":{
 					"newLine":true,
 					"type": "staticText",
-					"label": "customDesciption"
+					"label": "customDesciption",
+					"xs": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"customDescriptionImage":{
 					"newLine": true,
@@ -456,12 +663,21 @@
 					"label": "",
 					"tooltip": "customDescriptionImageTooltip",
 					"src": "icons/config/customDescriptionImage.png",
-					"sm":5
+					"xs": 5,
+					"sm": 5,
+					"md": 5,
+					"lg": 5,
+					"xl": 5
 				},
 				"customDeleteDesciption":{
 					"newLine":true,
 					"type": "staticText",
-					"label": "customDeleteDesciption"
+					"label": "customDeleteDesciption",
+					"xs": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"customDeleteDescriptionImage":{
 					"newLine": true,
@@ -469,7 +685,11 @@
 					"label": "",
 					"tooltip": "customDeleteDescriptionImageTooltip",
 					"src": "icons/config/customDeleteDescriptionImage.png",
-					"sm": 2	
+					"xs": 2,
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xl": 2
 				}
 			}
 		}
