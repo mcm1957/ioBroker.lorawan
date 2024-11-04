@@ -15,10 +15,10 @@
 					"text": "ServersettingsHeader",
 					"size": 3,
 					"xs": 12,
-                    "sm": 12,
-                    "md": 12,
-                    "lg": 12,
-                    "xl": 12
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"Serverinformation":{
 					"newLine":true,
@@ -32,10 +32,10 @@
 					"tooltip": "ipUrlTooltip",
 					"default": "",
 					"xs": 12,
-                    "sm": 4,
-                    "md": 4,
-                    "lg": 4,
-                    "xl": 4
+					"sm": 4,
+					"md": 4,
+					"lg": 4,
+					"xl": 4
 				},
 				"port":{
 					"type": "number",
@@ -43,10 +43,10 @@
 					"tooltip": "portTooltip",
 					"default": 8883,
 					"xs": 12,
-                    "sm": 1,
-                    "md": 1,
-                    "lg": 1,
-                    "xl": 1
+					"sm": 1,
+					"md": 1,
+					"lg": 1,
+					"xl": 1
 				},
 				"ssl":{
 					"type": "checkbox",
@@ -54,10 +54,10 @@
 					"tooltip": "sslTooltip",
 					"default": true,
 					"xs": 12,
-                    "sm": 1,
-                    "md": 1,
-                    "lg": 1,
-                    "xl": 1
+					"sm": 1,
+					"md": 1,
+					"lg": 1,
+					"xl": 1
 				},
 				"AuthenticationHeader": {
 					"newLine": true,
@@ -65,10 +65,10 @@
 					"text": "AuthenticationHeader",
 					"size": 3,
 					"xs": 12,
-                    "sm": 3,
-                    "md": 3,
-                    "lg": 3,
-                    "xl": 3
+					"sm": 3,
+					"md": 3,
+					"lg": 3,
+					"xl": 3
 				},
 				"AuthenticationInformation":{
 					"newLine":true,
@@ -82,10 +82,10 @@
 					"tooltip": "usernameTooltip",
 					"default": "",
 					"xs": 12,
-                    "sm": 4,
-                    "md": 4,
-                    "lg": 4,
-                    "xl": 4
+					"sm": 4,
+					"md": 4,
+					"lg": 4,
+					"xl": 4
 				},
 				"password":{
 					"type": "password",
@@ -93,10 +93,10 @@
 					"tooltip": "passwordTooltip",
 					"default": "",
 					"xs": 12,
-                    "sm": 3,
-                    "md": 3,
-                    "lg": 3,
-                    "xl": 3
+					"sm": 3,
+					"md": 3,
+					"lg": 3,
+					"xl": 3
 				},
 				"OriginHeader": {
 					"newLine": true,
@@ -104,20 +104,20 @@
 					"text": "OriginHeader",
 					"size": 3,
 					"xs": 12,
-                    "sm": 3,
-                    "md": 3,
-                    "lg": 3,
-                    "xl": 3
+					"sm": 3,
+					"md": 3,
+					"lg": 3,
+					"xl": 3
 				},
 				"OriginInformation":{
 					"newLine":true,
 					"type": "staticText",
 					"label": "OriginInformation",
 					"xs": 12,
-                    "sm": 12,
-                    "md": 12,
-                    "lg": 12,
-                    "xl": 12
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"origin":{
 					"newLine": true,
@@ -130,10 +130,10 @@
 					],
 					"default": "ttn",
 					"xs": 12,
-                    "sm": 2,
-                    "md": 2,
-                    "lg": 2,
-                    "xl": 2
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xl": 2
 				}
 			}
 		},
@@ -147,10 +147,10 @@
 					"text": "downlinkConfigHeader",
 					"size": 3,
 					"xs": 12,
-                    "sm": 3,
-                    "md": 3,
-                    "lg": 3,
-                    "xl": 3
+					"sm": 3,
+					"md": 3,
+					"lg": 3,
+					"xl": 3
 				},
 				"downlinkConfig":{
 					"newLine": true,
@@ -158,10 +158,10 @@
 					"titleAttr": "deviceType",
 					"clone": true,
 					"xs": 12,
-                    "sm": 12,
-                    "md": 12,
-                    "lg": 12,
-                    "xl": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12,
 					"items":[
 						{
 							"newLine": true,
