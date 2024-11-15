@@ -23,7 +23,12 @@
 				"Serverinformation":{
 					"newLine":true,
 					"type": "staticText",
-					"label": "Serverinformation"
+					"label": "Serverinformation",
+					"xs": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"ipUrl":{
 					"newLine": true,
@@ -73,7 +78,12 @@
 				"AuthenticationInformation":{
 					"newLine":true,
 					"type": "staticText",
-					"label": "AuthenticationInformation"
+					"label": "AuthenticationInformation",
+					"xs": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12,
+					"xl": 12
 				},
 				"username":{
 					"newLine":true,
