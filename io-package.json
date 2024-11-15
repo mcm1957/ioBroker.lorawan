@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "news": {
+      "1.5.4": {
+        "en": "add roles and fix responsive issues",
+        "de": "rollen hinzufügen und reaktionsprobleme beheben",
+        "ru": "добавить роли и решить вопросы реагирования",
+        "pt": "adicionar funções e corrigir problemas responsivos",
+        "nl": "rolletjes toevoegen en responsieve problemen oplossen",
+        "fr": "ajouter des rôles et résoudre les problèmes sensibles",
+        "it": "aggiungere ruoli e risolvere problemi reattivi",
+        "es": "añadir funciones y fijar cuestiones sensibles",
+        "pl": "dodać role i naprawić problemy reagujące",
+        "uk": "додавання ролей і виправлення чуйних питань",
+        "zh-cn": "增加作用和解决应答问题"
+      },
       "1.5.3": {
         "en": "add roles",
         "de": "rollen hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "usunąć znacznik czasu z daty odtworzenia (ttn timestamp im µs)",
         "uk": "видалення мітки часу від дати ролі (tn timestamp im μs)",
         "zh-cn": "从角色日期中删除时间戳 (ttn timestamp im μs)"
-      },
-      "1.4.0": {
-        "en": "function to assign properties",
-        "de": "funktion eigenschaften zuzuordnen",
-        "ru": "функция для присвоения свойств",
-        "pt": "função para atribuir propriedades",
-        "nl": "functie om eigenschappen toe te wijzen",
-        "fr": "fonction pour attribuer des propriétés",
-        "it": "funzione per assegnare proprietà",
-        "es": "función para asignar propiedades",
-        "pl": "funkcja przypisywania właściwości",
-        "uk": "функція присвоєння властивостей",
-        "zh-cn": "函数以指定属性"
       }
     },
     "titleLang": {
