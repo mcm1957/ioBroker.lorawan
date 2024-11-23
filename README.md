@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.5.5 (2024-11-23)
 * (BenAhrdt) add CRC-8
 
 ### 1.5.4 (2024-11-15)

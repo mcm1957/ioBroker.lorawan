@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.4",
+    "version": "1.5.5",
     "news": {
+      "1.5.5": {
+        "en": "add CRC-8",
+        "de": "cRC-8 hinzufügen",
+        "ru": "добавить CRC-8",
+        "pt": "adicionar CRC-8",
+        "nl": "cRC-8 toevoegen",
+        "fr": "ajouter CRC-8",
+        "it": "aggiungere CRC-8",
+        "es": "añadir CRC-8",
+        "pl": "dodaj CRC- 8",
+        "uk": "додати CRC-8",
+        "zh-cn": "添加CRC-8"
+      },
       "1.5.4": {
         "en": "add roles and fix responsive issues",
         "de": "rollen hinzufügen und reaktionsprobleme beheben",
@@ -80,19 +93,6 @@
         "pl": "dodaj informacje o usunięciu niestandardowego wpisu w konfiguratorze",
         "uk": "додати інформацію про видалення користувацького входу в налаштування",
         "zh-cn": "在配置中添加关于删除自定义项的信息"
-      },
-      "1.4.1": {
-        "en": "remove timestamp from role date (ttn timestamp im µs)",
-        "de": "zeitstempel aus rollendatum entfernen (ttn timestamp im μs)",
-        "ru": "удалить таймстам от даты роли (ttn timestamp im μs)",
-        "pt": "remove timestamp da data de função (ttn timestamp im μs)",
-        "nl": "tijdstempel verwijderen van roldatum (ttn tijdstempel im μs)",
-        "fr": "enlever l'horodatage à partir de la date du rôle (ttn horodatage im μs)",
-        "it": "rimuovere timestamp dalla data di ruolo (tn timestamp im μs)",
-        "es": "eliminar el timetamp de la fecha de función (ttn timestamp im μs)",
-        "pl": "usunąć znacznik czasu z daty odtworzenia (ttn timestamp im µs)",
-        "uk": "видалення мітки часу від дати ролі (tn timestamp im μs)",
-        "zh-cn": "从角色日期中删除时间戳 (ttn timestamp im μs)"
       }
     },
     "titleLang": {
