@@ -513,6 +513,7 @@
 									"tooltip": "crcTooltip",
 									"options": [
 										{"label":"no crc","value":"noCrc"},
+										{"label":"CRC-8","value":"CRC-8"},
 										{"label":"KERMIT","value":"KERMIT"},
 										{"label":"KERMIT (Little Endian)","value":"KERMIT.LittleEndian"}
 									],
