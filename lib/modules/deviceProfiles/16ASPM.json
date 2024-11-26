@@ -18,7 +18,7 @@
         "end": "11",
         "lengthInByte": 2,
         "on": "C101B1",
-        "off": "C101B1",
+        "off": "C100B1",
         "onClick": "030111",
         "multiplyfaktor": 1,
         "decimalPlaces": 0,
