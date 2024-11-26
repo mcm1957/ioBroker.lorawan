@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add folder "uplink.remaining.version_ids" to writecommands
+
 ### 1.5.5 (2024-11-23)
 * (BenAhrdt) add CRC-8
 
