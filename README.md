@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.5.7 (2024-11-26)
 * (BenAhrdt) change header responsive
 
 ### 1.5.6 (2024-11-26)

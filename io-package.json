@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.6",
+    "version": "1.5.7",
     "news": {
+      "1.5.7": {
+        "en": "change header responsive",
+        "de": "wechselkopf-reaktion",
+        "ru": "изменения заголовка",
+        "pt": "mudança de cabeçalho responsivo",
+        "nl": "verandering header responsive",
+        "fr": "réponse au changement d'en-tête",
+        "it": "cambiamento intestazione reattiva",
+        "es": "cambio de encabezado sensible",
+        "pl": "zmiana odpowiedzi nagłówka",
+        "uk": "зміна спонтана",
+        "zh-cn": "更改信头响应"
+      },
       "1.5.6": {
         "en": "add folder \"uplink.remaining.version_ids\" to writecommands",
         "de": "ordner \"uplink.remaining.version_ids\" zu schreibenbefehlen hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "usunąć złe blokowania",
         "uk": "видалити деякі неправильні журнали",
         "zh-cn": "删除一些错误的日志"
-      },
-      "1.5.0": {
-        "en": "add some notifications for devices back online",
-        "de": "benachrichtigungen für geräte online hinzufügen",
-        "ru": "добавить несколько уведомлений для устройств обратно онлайн",
-        "pt": "adicionar algumas notificações para dispositivos online",
-        "nl": "toe te voegen sommige meldingen voor apparaten terug online",
-        "fr": "ajouter quelques notifications pour les appareils retour en ligne",
-        "it": "aggiungere alcune notifiche per i dispositivi indietro online",
-        "es": "añadir algunas notificaciones para dispositivos en línea",
-        "pl": "dodaj kilka powiadomień dla urządzeń online",
-        "uk": "додати деякі повідомлення для пристроїв назад онлайн",
-        "zh-cn": "在线添加设备的一些通知"
       }
     },
     "titleLang": {
