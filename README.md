@@ -24,7 +24,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* (BenAhrdt) change heade responsive
+* (BenAhrdt) change header responsive
 
 ### 1.5.6 (2024-11-26)
 * (BenAhrdt) add folder "uplink.remaining.version_ids" to writecommands
