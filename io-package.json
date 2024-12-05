@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.5.7",
+    "version": "1.6.0",
     "news": {
+      "1.6.0": {
+        "en": "update eslint",
+        "de": "update eslint",
+        "ru": "обновление eslint",
+        "pt": "atualização eslint",
+        "nl": "eslint bijwerken",
+        "fr": "mettre à jour eslint",
+        "it": "aggiornamento eslint",
+        "es": "update eslint",
+        "pl": "update eslint",
+        "uk": "оновлення eslint",
+        "zh-cn": "更新埃斯林特"
+      },
       "1.5.7": {
         "en": "change header responsive",
         "de": "wechselkopf-reaktion",
@@ -80,19 +93,6 @@
         "pl": "dodaj nowe standardowe typy / dodaj nowe Roles / update core do 3.2.2",
         "uk": "додати нові стандартні типи / додати нові ролі / оновити ядро до 3.2.2",
         "zh-cn": "添加新的标准类型 / 添加新的角色 / 更新核心到 3. 2.2"
-      },
-      "1.5.1": {
-        "en": "remove some wrong loggings",
-        "de": "einige falsche protokolle entfernen",
-        "ru": "удалить некоторые неправильные журналы",
-        "pt": "remover alguns registros errados",
-        "nl": "sommige verkeerde logs verwijderen",
-        "fr": "supprimer quelques erreurs d'enregistrement",
-        "it": "rimuovere alcune registrazioni sbagliate",
-        "es": "eliminar algunos registros incorrectos",
-        "pl": "usunąć złe blokowania",
-        "uk": "видалити деякі неправильні журнали",
-        "zh-cn": "删除一些错误的日志"
       }
     },
     "titleLang": {
