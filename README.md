@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) correction of role for state ExtenalTemperatur
+
 ### 1.6.0 (2024-12-05)
 * (BenAhrdt) update eslint
 
