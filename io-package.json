@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "news": {
+      "1.6.1": {
+        "en": "correction of role for state ExtenalTemperatur",
+        "de": "korrektur der Rolle für Zustand ExtenalTemperatur",
+        "ru": "коррекция роли для государства ExtenalTemperatur",
+        "pt": "correção de papel para o estado ExtenalTemperatur",
+        "nl": "correctie van de rol van staat ExtenalTemperatur",
+        "fr": "correction du rôle de l'État ExtenalTemperatur",
+        "it": "correzione del ruolo per stato ExtenalTemperatur",
+        "es": "correcciones del papel para el estado ExtenalTemperatur",
+        "pl": "korekta roli w odniesieniu do stanu ExtenalTemperatur",
+        "uk": "корекція ролі для держави ExtenalTemperatur",
+        "zh-cn": "校正状态ExtenalTemperatur的作用"
+      },
       "1.6.0": {
         "en": "update eslint",
         "de": "update eslint",
@@ -80,19 +93,6 @@
         "pl": "dodaj role",
         "uk": "додати ролі",
         "zh-cn": "添加角色"
-      },
-      "1.5.2": {
-        "en": "add new standard types / add new Roles / update core to 3.2.2",
-        "de": "neue Standardtypen hinzufügen / neue Roles / Update-Kern zu 3.2.2 hinzufügen",
-        "ru": "добавить новые стандартные типы / добавить новые роли / обновление ядра к 3.2.2",
-        "pt": "adicionar novos tipos padrão / adicionar novas funções / atualizar o núcleo para 3.2.2",
-        "nl": "nieuwe standaardtypes toevoegen / nieuwe rollen toevoegen / updatekern toevoegen aan 3.2.2",
-        "fr": "ajouter de nouveaux types standard / ajouter de nouveaux rôles / mettre à jour le noyau au 3.2.2",
-        "it": "aggiungere nuovi tipi standard / aggiungere nuovi ruoli / aggiornamento core a 3.2.2",
-        "es": "añadir nuevos tipos estándar / añadir nuevos Roles / núcleo de actualización a 3.2.2",
-        "pl": "dodaj nowe standardowe typy / dodaj nowe Roles / update core do 3.2.2",
-        "uk": "додати нові стандартні типи / додати нові ролі / оновити ядро до 3.2.2",
-        "zh-cn": "添加新的标准类型 / 添加新的角色 / 更新核心到 3. 2.2"
       }
     },
     "titleLang": {
