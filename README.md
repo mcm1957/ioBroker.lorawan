@@ -298,8 +298,8 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 ## License
 MIT License
 
-Copyright (c) 2024 BenAhrdt <bsahrdt@gmail.com>
-Copyright (c) 2024 Joerg Froehner <LoraWan@hafenmeister.com>
+Copyright (c) 2025 BenAhrdt <bsahrdt@gmail.com>
+Copyright (c) 2025 Joerg Froehner <LoraWan@hafenmeister.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
