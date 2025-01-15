@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Bugfix creation of deviceinfo
+
 ### 1.6.1 (2025-01-10)
 * (BenAhrdt) correction of role for state ExtenalTemperatur
 
