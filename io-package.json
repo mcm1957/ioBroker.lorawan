@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "news": {
+      "1.6.2": {
+        "en": "Bugfix creation of deviceinfo",
+        "de": "Bugfix Erstellung von deviceinfo",
+        "ru": "Bugfix создание deviceinfo",
+        "pt": "Criação de Bugfix de deviceinfo",
+        "nl": "Bugfix aanmaken van apparaatinfo",
+        "fr": "Bugfix création de périphériqueinfo",
+        "it": "Bugfix creazione di deviceinfo",
+        "es": "Creación de bugfix del dispositivoinfo",
+        "pl": "Bugfix tworzenie deviceinfo",
+        "uk": "Створення пристроюinfo",
+        "zh-cn": "设备信息的错误修正创建"
+      },
       "1.6.1": {
         "en": "correction of role for state ExtenalTemperatur",
         "de": "korrektur der Rolle für Zustand ExtenalTemperatur",
@@ -80,19 +93,6 @@
         "pl": "dodać role i naprawić problemy reagujące",
         "uk": "додавання ролей і виправлення чуйних питань",
         "zh-cn": "增加作用和解决应答问题"
-      },
-      "1.5.3": {
-        "en": "add roles",
-        "de": "rollen hinzufügen",
-        "ru": "добавить роли",
-        "pt": "adicionar papéis",
-        "nl": "rollen toevoegen",
-        "fr": "ajouter des rôles",
-        "it": "aggiungere ruoli",
-        "es": "añadir funciones",
-        "pl": "dodaj role",
-        "uk": "додати ролі",
-        "zh-cn": "添加角色"
       }
     },
     "titleLang": {
