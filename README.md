@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Names of states changed (Downlink Raw)
+
 ### 1.6.2 (2025-01-15)
 * (BenAhrdt) Bugfix creation of deviceinfo
 
