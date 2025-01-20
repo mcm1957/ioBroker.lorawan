@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.6.3 (2025-01-20)
 * (BenAhrdt) Names of states changed (Downlink Raw)
 * (BenAhrdt) Change setObjectNotExistsAsync to extendObjectAsync for Raw Data
 

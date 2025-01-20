@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "news": {
+      "1.6.3": {
+        "en": "Names of states changed (Downlink Raw)\nChange setObjectNotExistsAsync to extendObjectAsync for Raw Data",
+        "de": "Namen der geänderten Zustände (Downlink Raw)\nÄnderungssatz ObjectNotExistsAsync erweitert ObjectAsync für Rohdaten",
+        "ru": "Изменились названия государств (Downlink Raw)\nИзменение ObjectNotExistsAsync ObjectAsync для первичных данных",
+        "pt": "Nomes de estados alterados (Downlink Raw)\nConjunto de alterações ObjectNotExistsAsync para estender ObjectAsync para dados brutos",
+        "nl": "Namen van statuss veranderd (Downlink Raw)\nVerander set ObjectNotExistsAsync uit te breiden ObjectAsync voor ruwe gegevens",
+        "fr": "Noms des états modifiés (Downlink Raw)\nModifier l'ensemble ObjetNotExistsAsync pour étendre ObjetAsync pour les données brutes",
+        "it": "I nomi degli stati cambiati (Downlink Raw)\nModifica set ObjectNotExistsAsync per estendere ObjectAsync per dati raw",
+        "es": "Los nombres de los estados cambiaron (Downlink Raw)\nCambio ObjectNotExistsAsync para extender ObjectAsync for Raw Data",
+        "pl": "Zmienione nazwy państw (Downlink Raw)\nZmień zestaw ObjectNotExistsAsync do rozszerzenia ObjectAsync for raw Data",
+        "uk": "Назви змінених держав (Downlink Raw)\nЗмінення Об'єктNotExistsAsync для розширення Об'єктАсинк для сирих даних",
+        "zh-cn": "更改州名( 下link Raw)\n更改设置 要扩展的对象“非外来”Async 原始数据对象同步"
+      },
       "1.6.2": {
         "en": "Bugfix creation of deviceinfo",
         "de": "Bugfix Erstellung von deviceinfo",
@@ -80,19 +93,6 @@
         "pl": "dodaj CRC- 8",
         "uk": "додати CRC-8",
         "zh-cn": "添加CRC-8"
-      },
-      "1.5.4": {
-        "en": "add roles and fix responsive issues",
-        "de": "rollen hinzufügen und reaktionsprobleme beheben",
-        "ru": "добавить роли и решить вопросы реагирования",
-        "pt": "adicionar funções e corrigir problemas responsivos",
-        "nl": "rolletjes toevoegen en responsieve problemen oplossen",
-        "fr": "ajouter des rôles et résoudre les problèmes sensibles",
-        "it": "aggiungere ruoli e risolvere problemi reattivi",
-        "es": "añadir funciones y fijar cuestiones sensibles",
-        "pl": "dodać role i naprawić problemy reagujące",
-        "uk": "додавання ролей і виправлення чуйних питань",
-        "zh-cn": "增加作用和解决应答问题"
       }
     },
     "titleLang": {
