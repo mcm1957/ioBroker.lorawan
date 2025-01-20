@@ -25,6 +25,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 -->
 ### **WORK IN PROGRESS**
 * (BenAhrdt) Names of states changed (Downlink Raw)
+* (BenAhrdt) Change setObjectNotExistsAsync to extendObjectAsync for Raw Data
 
 ### 1.6.2 (2025-01-15)
 * (BenAhrdt) Bugfix creation of deviceinfo
