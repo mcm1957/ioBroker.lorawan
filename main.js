@@ -70,8 +70,8 @@ class Lorawan extends utils.Adapter {
             );
 
             /*setTimeout(async () => {
-				await this.startSimulation();
-			}, 5000);*/
+                await this.startSimulation();
+            }, 5000);*/
             /*this.simulation.timeout = setTimeout(async () => {
 				const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/f1c0ae0e-b4a2-4547-b360-7cfa15e85734/command/down";
 				const message = {devEui:"f1c0ae0e-b4a2-4547-b360-7cfa15e85734",confirmed:false,fPort:1,data:"AAA"};
@@ -86,7 +86,7 @@ class Lorawan extends utils.Adapter {
         // TTN
         //const topic ="v3/hafi-ttn-lorawan@ttn/devices/Meins/up";
         //const message = {"end_device_ids":{"device_id":"eui-lobaro-modbus","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"70B3D5E050013950","join_eui":"D55B58C0DDC074DE","dev_addr":"260B5972"},"correlation_ids":["gs:uplink:01HMQZVSCX4D7JRDNFA7GJ9D4W"],"received_at":"2024-01-22T07:06:25.260676101Z","uplink_message":{"session_key_id":"AY0v/ZirzRkpNW0Cgjdhig==","f_port":20,"f_cnt":2,"frm_payload":"AA5BAf0AxwIAAQ==","decoded_payload":{"airhumidity":50.9,"airtemperature":19.9,"port":20,"relais1":0,"relais2":1,"relais3":null,"relais5":null,"volt":3.649,"zisternenpegel":2},"rx_metadata":[{"gateway_ids":{"gateway_id":"hafenmeister-port2ttn-ng","eui":"50313953530A4750"},"time":"2024-01-22T07:06:25.013878Z","timestamp":995696116,"rssi":-37,"channel_rssi":-37,"snr":8.5,"location":{"latitude":53.5548443059465,"longitude":9.92155426743724,"altitude":10,"source":"SOURCE_REGISTRY"},"uplink_token":"CiYKJAoYaGFmZW5tZWlzdGVyLXBvcnQydHRuLW5nEghQMTlTUwpHUBD0u+TaAxoLCPGnuK0GEM3uvhkgoIL0oP24Sg==","channel_index":5,"received_at":"2024-01-22T07:06:25.032492359Z"}],"settings":{"data_rate":{"lora":{"bandwidth":125000,"spreading_factor":9,"coding_rate":"4/5"}},"frequency":"867500000","timestamp":995696116,"time":"2024-01-22T07:06:25.013878Z"},"received_at":"2024-01-22T07:06:25.054442349Z","consumed_airtime":"0.205824s","network_ids":{"net_id":"000013","ns_id":"EC656E0000000181","tenant_id":"ttn","cluster_id":"eu1","cluster_address":"eu1.cloud.thethings.network"}}};
-
+/*
         const topic = 'v3/hafi-ttn-lorawan@ttn/devices/eui-00137A1000044DF5/up';
         const message = {
             end_device_ids: {
@@ -177,14 +177,14 @@ class Lorawan extends utils.Adapter {
                 },
             },
         };
-
+*/
         // ACK
         //const topic = "v3/hafi-ttn-lorawan@ttn/devices/eui-a84041162183f8fb/down/ack";
         //const message = {"end_device_ids":{"device_id":"eui-a84041162183f8fb","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"A84041162183F8FB","join_eui":"A840410000000101","dev_addr":"260B141A"},"correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY","gs:uplink:01HP6D1A9X4WAA3SFMXH4ESSMV"],"received_at":"2024-02-09T07:41:41.776887672Z","downlink_ack":{"session_key_id":"AY2MUrmnuovS8DCZAfYmsA==","f_port":1,"f_cnt":21,"frm_payload":"AQAAeA==","confirmed":true,"priority":"NORMAL","correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY"],"confirmed_retry":{"attempt":1}}};
 
         // Chipstack
-        //const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up";
-        //const message = {"deduplicationId":"96e4a065-ad5e-402d-a997-7b261072a33c","time":"2024-01-21T17:01:36.641008+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"0b46400f-37ec-4f17-8005-168b06159347","deviceProfileName":"Dragino Feuchtesenor","deviceName":"Skimmer","devEui":"a84041f621857cd2","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01fd9738","adr":true,"dr":5,"fCnt":2,"fPort":2,"confirmed":false,"data":"DPYBAAD//wAA","object":{"soilconductivity":0.0,"soiltemperature":-0.1,"volt":3.318,"soilmoisture":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":39169,"gwTime":"2024-01-21T17:01:36.641008+00:00","nsTime":"2024-01-21T17:01:37.695656999+00:00","rssi":-89,"snr":6.25,"rfChain":1,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"qESemw==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":868100000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
+        const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up";
+        const message = {"deduplicationId":"96e4a065-ad5e-402d-a997-7b261072a33c","time":"2024-01-21T17:01:36.641008+00:00","deviceInfo":{"tenantId":"52f14cd4-c6f1-4fbd-8f87-4025e1d49242","tenantName":"ChirpStack","applicationId":"d63c10b6-9263-4ab3-9299-4308fa19a2ad","applicationName":"Benjamin Schmidt","deviceProfileId":"0b46400f-37ec-4f17-8005-168b06159347","deviceProfileName":"Dragino Feuchtesenor","deviceName":"Skimmer","devEui":"a84041f621857cd2","deviceClassEnabled":"CLASS_A","tags":{}},"devAddr":"01fd9738","adr":true,"dr":5,"fCnt":2,"fPort":2,"confirmed":false,"data":"DPYBAAD//wAA","object":{"Test":{"zweite":{"dritte":{"a":4}}},"soilconductivity":0.0,"soiltemperature":-0.1,"volt":3.318,"soilmoisture":0.0},"rxInfo":[{"gatewayId":"50303541b0344750","uplinkId":39169,"gwTime":"2024-01-21T17:01:36.641008+00:00","nsTime":"2024-01-21T17:01:37.695656999+00:00","rssi":-89,"snr":6.25,"rfChain":1,"location":{"latitude":50.69344693065449,"longitude":8.476783633232118},"context":"qESemw==","metadata":{"region_config_id":"eu868","region_common_name":"EU868"},"crcStatus":"CRC_OK"}],"txInfo":{"frequency":868100000,"modulation":{"lora":{"bandwidth":125000,"spreadingFactor":7,"codeRate":"CR_4_5"}}}};
         //const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/command/down";
         //const message = {"devEui":"a84041f621857cd2","confirmed":false,"fPort":1,"data":"AQAqMA=="};
 
