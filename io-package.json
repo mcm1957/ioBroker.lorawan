@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.3",
+    "version": "1.6.4",
     "news": {
+      "1.6.4": {
+        "en": "Set decoded Structure in deviceInfos (with Merge)",
+        "de": "Set decodierte Struktur in deviceInfos (mit Verschmelzung)",
+        "ru": "Настройка декодированной структуры в deviceInfos (с Merge)",
+        "pt": "Definir estrutura decodificada no dispositivoInfos (com fusão)",
+        "nl": "Gedecodeerde structuur instellen in apparaatInfos (met samenvoegen)",
+        "fr": "Définir la structure décodée dans l'appareilInfos (avec Merge)",
+        "it": "Impostare la struttura decodificata in DeviceInfos (con fusione)",
+        "es": "Establecer estructura decodificada en el dispositivoInfos (con Merge)",
+        "pl": "Ustaw dekodowaną strukturę w deviceInfos (z połączeniem)",
+        "uk": "Настроювання декодованої структури в пристроїІнфос (з торговою маркою)",
+        "zh-cn": "在设备Infos( 合并) 中设置解码结构"
+      },
       "1.6.3": {
         "en": "Names of states changed (Downlink Raw)\nChange setObjectNotExistsAsync to extendObjectAsync for Raw Data",
         "de": "Namen der geänderten Zustände (Downlink Raw)\nÄnderungssatz ObjectNotExistsAsync erweitert ObjectAsync für Rohdaten",
@@ -80,19 +93,6 @@
         "pl": "dodaj folder \"uplink.revening.version _ ids\" do writecommands",
         "uk": "додати папку \"uplink.remaining.version_ids\" для записукоманд",
         "zh-cn": "添加文件夹“ uplink. remaining.version_ ids” 以写入命令"
-      },
-      "1.5.5": {
-        "en": "add CRC-8",
-        "de": "cRC-8 hinzufügen",
-        "ru": "добавить CRC-8",
-        "pt": "adicionar CRC-8",
-        "nl": "cRC-8 toevoegen",
-        "fr": "ajouter CRC-8",
-        "it": "aggiungere CRC-8",
-        "es": "añadir CRC-8",
-        "pl": "dodaj CRC- 8",
-        "uk": "додати CRC-8",
-        "zh-cn": "添加CRC-8"
       }
     },
     "titleLang": {
