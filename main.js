@@ -25,6 +25,7 @@ class Lorawan extends utils.Adapter {
         // this.on("objectChange", this.onObjectChange.bind(this));
         this.on('message', this.onMessage.bind(this));
         this.on('unload', this.onUnload.bind(this));
+        this.on('fileChange', this.onFileChange.bind(this));
         this.origin = {
             ttn: 'ttn',
             chirpstack: 'chirpstack',
@@ -32,6 +33,11 @@ class Lorawan extends utils.Adapter {
 
         // Simulation variables
         this.simulation = {};
+    }
+
+    onFileChange(id, fileName, size) {
+        // restart adapter after upload
+        //this.restart();
     }
 
     /**
