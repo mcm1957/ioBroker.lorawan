@@ -25,7 +25,6 @@ class Lorawan extends utils.Adapter {
         // this.on("objectChange", this.onObjectChange.bind(this));
         this.on('message', this.onMessage.bind(this));
         this.on('unload', this.onUnload.bind(this));
-        this.on('fileChange', this.onFileChange.bind(this));
         this.origin = {
             ttn: 'ttn',
             chirpstack: 'chirpstack',
@@ -35,9 +34,6 @@ class Lorawan extends utils.Adapter {
         this.simulation = {};
     }
 
-    async onFileChange(id, fileName, size) {
-        this.log.error(`[onFileChange]: id: ${id}, fileName: ${fileName}, size: ${size}`);
-    }
     /**
      * Is called when databases are connected and adapter received configuration.
      */
