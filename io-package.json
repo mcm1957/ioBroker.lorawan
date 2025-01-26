@@ -350,6 +350,15 @@
       "native": {}
     },
     {
+      "_id": "",
+      "type": "meta",
+      "common": {
+        "name": "Downlink files",
+        "role": "meta.user"
+      },
+      "native": {}
+    },
+    {
       "_id": "info.connection",
       "type": "state",
       "common": {

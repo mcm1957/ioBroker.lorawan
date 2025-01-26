@@ -25,7 +25,7 @@ class Lorawan extends utils.Adapter {
         // this.on("objectChange", this.onObjectChange.bind(this));
         this.on('message', this.onMessage.bind(this));
         this.on('unload', this.onUnload.bind(this));
-
+        this.on('fileChange', this.onFileChange.bind(this));
         this.origin = {
             ttn: 'ttn',
             chirpstack: 'chirpstack',
@@ -35,6 +35,9 @@ class Lorawan extends utils.Adapter {
         this.simulation = {};
     }
 
+    async onFileChange(id, fileName, size) {
+        this.log.error(`[onFileChange]: id: ${id}, fileName: ${fileName}, size: ${size}`);
+    }
     /**
      * Is called when databases are connected and adapter received configuration.
      */
@@ -68,10 +71,11 @@ class Lorawan extends utils.Adapter {
             this.log.silly(
                 `the active downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`,
             );
-
+            /*
             setTimeout(async () => {
                 await this.startSimulation();
             }, 5000);
+            */
             /*this.simulation.timeout = setTimeout(async () => {
 				const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/f1c0ae0e-b4a2-4547-b360-7cfa15e85734/command/down";
 				const message = {devEui:"f1c0ae0e-b4a2-4547-b360-7cfa15e85734",confirmed:false,fPort:1,data:"AAA"};
