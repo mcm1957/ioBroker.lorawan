@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.4",
+    "version": "1.6.5",
     "news": {
+      "1.6.5": {
+        "en": "export and import downlinkconmfigs with filemanager",
+        "de": "export und import von downlinkconmfigs mit filemanager",
+        "ru": "экспортные и импортные скидки с файловым менеджером",
+        "pt": "exportação e importação downlinkconmfigs com filemanager",
+        "nl": "downlinkconfigs exporteren en importeren met filemanager",
+        "fr": "exporter et importer des liens vers le bas avec filemanager",
+        "it": "esportazione e importazione downlinkconmfig con filemanager",
+        "es": "exportar e importar downlinkconmfigs con filemanager",
+        "pl": "eksport i import downlinkconmfigs z fileman",
+        "uk": "експорт і імпорт sdlinkconmfigs з файловmanager",
+        "zh-cn": "以文件管理器导出和导入下行链路conmfigs"
+      },
       "1.6.4": {
         "en": "Set decoded Structure in deviceInfos (with Merge)",
         "de": "Set decodierte Struktur in deviceInfos (mit Verschmelzung)",
@@ -80,19 +93,6 @@
         "pl": "zmiana odpowiedzi nagłówka",
         "uk": "зміна спонтана",
         "zh-cn": "更改信头响应"
-      },
-      "1.5.6": {
-        "en": "add folder \"uplink.remaining.version_ids\" to writecommands",
-        "de": "ordner \"uplink.remaining.version_ids\" zu schreibenbefehlen hinzufügen",
-        "ru": "добавить папку \"uplink.remaining.version_ids\" в написание",
-        "pt": "adicionar pasta \"uplink.remaining.version_ids\" para writecommands",
-        "nl": "map \"uplink.resting.version_ids\" toevoegen aan schrijfopdrachten",
-        "fr": "ajouter le dossier \"uplink.remaining.version_ids\" aux commandes d'écriture",
-        "it": "aggiungere la cartella \"uplink.remaining.version_ids\" per scriverecomandi",
-        "es": "añadir carpeta \"uplink.remaining.version_ids\" para escribircommands",
-        "pl": "dodaj folder \"uplink.revening.version _ ids\" do writecommands",
-        "uk": "додати папку \"uplink.remaining.version_ids\" для записукоманд",
-        "zh-cn": "添加文件夹“ uplink. remaining.version_ ids” 以写入命令"
       }
     },
     "titleLang": {

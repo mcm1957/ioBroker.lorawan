@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.6.5 (2025-01-26)
 * (BenAhrdt) export and import downlinkconmfigs with filemanager
 
 ### 1.6.4 (2025-01-21)
