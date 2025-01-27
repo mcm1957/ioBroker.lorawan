@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.5",
+    "version": "1.6.6",
     "news": {
+      "1.6.6": {
+        "en": "start with known profiles",
+        "de": "beginnen mit bekannten profilen",
+        "ru": "начать с известных профилей",
+        "pt": "começar com perfis conhecidos",
+        "nl": "beginnen met bekende profielen",
+        "fr": "commencer par des profils connus",
+        "it": "iniziare con i profili noti",
+        "es": "empezar con perfiles conocidos",
+        "pl": "zacząć od znanych profili",
+        "uk": "початок з відомих профілів",
+        "zh-cn": "以已知配置文件开始"
+      },
       "1.6.5": {
         "en": "export and import downlinkconmfigs with filemanager",
         "de": "export und import von downlinkconmfigs mit filemanager",
@@ -80,19 +93,6 @@
         "pl": "update eslint",
         "uk": "оновлення eslint",
         "zh-cn": "更新埃斯林特"
-      },
-      "1.5.7": {
-        "en": "change header responsive",
-        "de": "wechselkopf-reaktion",
-        "ru": "изменения заголовка",
-        "pt": "mudança de cabeçalho responsivo",
-        "nl": "verandering header responsive",
-        "fr": "réponse au changement d'en-tête",
-        "it": "cambiamento intestazione reattiva",
-        "es": "cambio de encabezado sensible",
-        "pl": "zmiana odpowiedzi nagłówka",
-        "uk": "зміна спонтана",
-        "zh-cn": "更改信头响应"
       }
     },
     "titleLang": {

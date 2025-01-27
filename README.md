@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.6.6 (2025-01-27)
 * (BenAhrdt) start with known profiles
 
 ### 1.6.5 (2025-01-26)
