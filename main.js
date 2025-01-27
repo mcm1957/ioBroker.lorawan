@@ -35,9 +35,9 @@ class Lorawan extends utils.Adapter {
         this.simulation = {};
     }
 
-    onFileChange(id, fileName, size) {
+    onFileChange(_id, _fileName, _size) {
         // restart adapter after upload
-        this.log.debug(`[onFileChange]: id: ${id}, fileName: ${fileName}, size: ${size}`);
+        //this.restart();
     }
 
     /**

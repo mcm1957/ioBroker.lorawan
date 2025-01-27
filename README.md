@@ -24,7 +24,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
-* (BenAhrdt) start with known profiles and restart with new config after upload
+* (BenAhrdt) start with known profiles
 
 ### 1.6.5 (2025-01-26)
 * (BenAhrdt) export and import downlinkconmfigs with filemanager
