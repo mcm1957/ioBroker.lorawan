@@ -354,7 +354,7 @@
       "type": "meta",
       "common": {
         "name": "Downlink files",
-        "role": "meta.user"
+        "type": "meta.user"
       },
       "native": {}
     },
