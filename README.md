@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.7.0 (2025-02-18)
 * (BenAhrdt) add Volt to assignhandler with unit "V"
 * (BenAhrdt) update dependency for admin and js-controller
 * (BenAhrdt) update release script dependecie to 3.8

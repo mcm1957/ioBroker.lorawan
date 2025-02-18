@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.6.6",
+    "version": "1.7.0",
     "news": {
+      "1.7.0": {
+        "en": "add Volt to assignhandler with unit \"V\"\nupdate dependency for admin and js-controller\nupdate release script dependecie to 3.8",
+        "de": "volt zuzuordnende Handler mit Einheit \"V\" hinzufügen\naktualisierung der abhängigkeit von admin und js-controller\nupdate release script abhängigecie to 3.8",
+        "ru": "добавить Volt для цедентификатора с блоком \"V\"\nобновление зависимости для admin и js-controller\nобновление сценария выхода зависит от 3,8",
+        "pt": "adicionar Volt ao asignhandler com unidade \"V\"\ndependência de atualização para admin e js-controller\nupdate script dependcie to 3.8",
+        "nl": "voeg Volt toe aan de toewijsmachine met eenheid \"V\"\nupdate afhankelijkheid voor admin en js-controller\nupdate release script afhankelijk van 3,8",
+        "fr": "ajouter Volt à l'adjudant avec l'unité \"V\"\nmettre à jour la dépendance pour admin et js-controller\nmettre à jour le script de sortie de dépendance à 3.8",
+        "it": "aggiungere Volt a assegnatore con unità \"V\"\naggiornamento della dipendenza da admin e js-controller\naggiornamento dello script di rilascio dipendeecie a 3.8",
+        "es": "añadir Volt al cedente con unidad \"V\"\nactualización dependencia para administración y js-controller\nactualización script dependcie de 3.8",
+        "pl": "dodać Volt do assignhandlera z jednostką \"V\"\naktualizacja zależności dla administratora i kontrolera js-\nupdate release script dependecie to 3.8",
+        "uk": "додати Волт до приставки з блоком \"В\"\nоновлення залежності для адміністратора та js-controller\nоновити сценарій релізу залежно від 3,8",
+        "zh-cn": "添加Volt 以指定“ V” 单元的手列\n更新管理员和js控制器的依赖性\n将发布脚本依赖性更新到 3. 8"
+      },
       "1.6.6": {
         "en": "start with known profiles",
         "de": "beginnen mit bekannten profilen",
@@ -80,19 +93,6 @@
         "pl": "korekta roli w odniesieniu do stanu ExtenalTemperatur",
         "uk": "корекція ролі для держави ExtenalTemperatur",
         "zh-cn": "校正状态ExtenalTemperatur的作用"
-      },
-      "1.6.0": {
-        "en": "update eslint",
-        "de": "update eslint",
-        "ru": "обновление eslint",
-        "pt": "atualização eslint",
-        "nl": "eslint bijwerken",
-        "fr": "mettre à jour eslint",
-        "it": "aggiornamento eslint",
-        "es": "update eslint",
-        "pl": "update eslint",
-        "uk": "оновлення eslint",
-        "zh-cn": "更新埃斯林特"
       }
     },
     "titleLang": {
