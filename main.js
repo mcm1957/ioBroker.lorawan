@@ -75,7 +75,9 @@ class Lorawan extends utils.Adapter {
             );
             /*
             setTimeout(async () => {
+                this.log.debug('vor Simulation');
                 await this.startSimulation();
+                this.log.debug('nach Simulation');
             }, 5000);
             */
             /*this.simulation.timeout = setTimeout(async () => {
@@ -191,53 +193,52 @@ class Lorawan extends utils.Adapter {
         // Chipstack
         const topic = 'application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up';
         const message = {
-            deduplicationId: '96e4a065-ad5e-402d-a997-7b261072a33c',
-            time: '2024-01-21T17:01:36.641008+00:00',
+            deduplicationId: '6abe80d5-96a0-43c6-a098-2959cdbbf932',
+            time: '2025-02-18T13:49:19.477286+00:00',
             deviceInfo: {
                 tenantId: '52f14cd4-c6f1-4fbd-8f87-4025e1d49242',
                 tenantName: 'ChirpStack',
-                applicationId: 'd63c10b6-9263-4ab3-9299-4308fa19a2ad',
-                applicationName: 'Benjamin Schmidt',
-                deviceProfileId: '0b46400f-37ec-4f17-8005-168b06159347',
+                applicationId: 'bac5ba56-f9c6-4d98-a609-8366e048495d',
+                applicationName: 'Pool',
+                deviceProfileId: 'e847fd4b-a87e-452c-91b8-a4fbaa51acfa',
                 deviceProfileName: 'Dragino Feuchtesenor',
                 deviceName: 'Skimmer',
                 devEui: 'a84041f621857cd2',
                 deviceClassEnabled: 'CLASS_A',
                 tags: {},
             },
-            devAddr: '01fd9738',
+            devAddr: '01cdf20a',
             adr: true,
             dr: 5,
-            fCnt: 2,
+            fCnt: 169,
             fPort: 2,
             confirmed: false,
-            data: 'DPYBAAD//wAA',
+            data: 'DPYBAZ///AA9',
             object: {
-                Test: { zweite: { dritte: { a: 4 } } },
-                soilconductivity: 0.0,
-                soiltemperature: -0.1,
                 volt: 3.318,
-                soilmoisture: 0.0,
+                soiltemperature: -0.4,
+                soilconductivity: 61,
+                devicetype: 'Dragino',
+                soilmoisture: 41.5,
             },
             rxInfo: [
                 {
-                    gatewayId: '50303541b0344750',
-                    uplinkId: 39169,
-                    gwTime: '2024-01-21T17:01:36.641008+00:00',
-                    nsTime: '2024-01-21T17:01:37.695656999+00:00',
-                    rssi: -89,
-                    snr: 6.25,
-                    rfChain: 1,
-                    location: { latitude: 50.69344693065449, longitude: 8.476783633232118 },
-                    context: 'qESemw==',
-                    metadata: { region_config_id: 'eu868', region_common_name: 'EU868' },
+                    gatewayId: '503035416e314750',
+                    uplinkId: 3073,
+                    gwTime: '2025-02-18T13:49:19.477286+00:00',
+                    rssi: -110,
+                    snr: 2,
+                    channel: 7,
+                    location: { latitude: 50.693467319817266, longitude: 8.47676753997803 },
+                    context: 'woEwlA==',
                     crcStatus: 'CRC_OK',
                 },
             ],
             txInfo: {
-                frequency: 868100000,
+                frequency: 867900000,
                 modulation: { lora: { bandwidth: 125000, spreadingFactor: 7, codeRate: 'CR_4_5' } },
             },
+            regionConfigId: 'eu868',
         };
         //const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/command/down";
         //const message = {"devEui":"a84041f621857cd2","confirmed":false,"fPort":1,"data":"AQAqMA=="};
@@ -275,6 +276,9 @@ class Lorawan extends utils.Adapter {
         // DOWN
         //const topic = "application/59bcc5a7-59e2-4481-9615-fc4e58791915/device/70b3d52dd300ed31/command/down";
         //const message = {"devEui": "70b3d52dd300ed31", "confirmed": false,"fPort": 1,"data": "DQEYDQEY"};
+
+        this.log.debug(`incomming topic: ${topic}`);
+        this.log.debug(`incomming message: ${JSON.stringify(message)}`);
 
         await this.messagehandler?.handleMessage(topic, message);
     }
