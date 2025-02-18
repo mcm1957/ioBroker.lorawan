@@ -24,9 +24,8 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
+* (BenAhrdt) add Volt to assignhandler with unit "V"
 * (BenAhrdt) update dependency for admin and js-controller
-
-### **WORK IN PROGRESS**
 * (BenAhrdt) update release script dependecie to 3.8
 
 ### 1.6.6 (2025-01-27)
