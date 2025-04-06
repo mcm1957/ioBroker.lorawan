@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.7.1",
+    "version": "1.8.0",
     "news": {
+      "1.8.0": {
+        "en": "update dependencies and time / timestamp in deviceinfos",
+        "de": "aktualisierung von abhängigkeiten und zeit / zeitstempel in deviceinfos",
+        "ru": "зависимости обновления и время / временная метка в deviceinfos",
+        "pt": "dependências de atualização e tempo / timestamp no deviceinfos",
+        "nl": "afhankelijkheden en tijd / tijdstempel in apparaatinfo's bijwerken",
+        "fr": "mettre à jour les dépendances et l'heure / timestamp dans deviceinfos",
+        "it": "aggiornamento dipendenze e tempo / timestamp in deviceinfos",
+        "es": "actualizar las dependencias y el tiempo / timetamp en deviceinfos",
+        "pl": "aktualizacja zależności i czasu / znacznika czasu w deviceinfos",
+        "uk": "оновлення залежностей і часу / часовий апарат",
+        "zh-cn": "更新设备信息中的依赖性和时间/ 时间戳"
+      },
       "1.7.1": {
         "en": "change timewriting in deviceinfos at chirpstack",
         "de": "zeitschreiben in deviceinfos bei chirpstack ändern",
@@ -80,19 +93,6 @@
         "pl": "Zmienione nazwy państw (Downlink Raw)\nZmień zestaw ObjectNotExistsAsync do rozszerzenia ObjectAsync for raw Data",
         "uk": "Назви змінених держав (Downlink Raw)\nЗмінення Об'єктNotExistsAsync для розширення Об'єктАсинк для сирих даних",
         "zh-cn": "更改州名( 下link Raw)\n更改设置 要扩展的对象“非外来”Async 原始数据对象同步"
-      },
-      "1.6.2": {
-        "en": "Bugfix creation of deviceinfo",
-        "de": "Bugfix Erstellung von deviceinfo",
-        "ru": "Bugfix создание deviceinfo",
-        "pt": "Criação de Bugfix de deviceinfo",
-        "nl": "Bugfix aanmaken van apparaatinfo",
-        "fr": "Bugfix création de périphériqueinfo",
-        "it": "Bugfix creazione di deviceinfo",
-        "es": "Creación de bugfix del dispositivoinfo",
-        "pl": "Bugfix tworzenie deviceinfo",
-        "uk": "Створення пристроюinfo",
-        "zh-cn": "设备信息的错误修正创建"
       }
     },
     "titleLang": {
