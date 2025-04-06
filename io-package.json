@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.8.0",
+    "version": "1.8.1",
     "news": {
+      "1.8.1": {
+        "en": "chaned format time in device info",
+        "de": "chaned format time in device info",
+        "ru": "время в формате chaned in device info",
+        "pt": "tempo de formato chaned em informações do dispositivo",
+        "nl": "gechanteerde opmaaktijd in apparaatinformatie",
+        "fr": "temps de format channed dans l'information de l'appareil",
+        "it": "chaned format time in informazioni sul dispositivo",
+        "es": "tiempo de formato enmarcado en la información del dispositivo",
+        "pl": "chaned format time in device info",
+        "uk": "chaned формат часу в пристрої інформація",
+        "zh-cn": "设备信息中显示的格式时间"
+      },
       "1.8.0": {
         "en": "update dependencies and time / timestamp in deviceinfos",
         "de": "aktualisierung von abhängigkeiten und zeit / zeitstempel in deviceinfos",
@@ -80,19 +93,6 @@
         "pl": "Ustaw dekodowaną strukturę w deviceInfos (z połączeniem)",
         "uk": "Настроювання декодованої структури в пристроїІнфос (з торговою маркою)",
         "zh-cn": "在设备Infos( 合并) 中设置解码结构"
-      },
-      "1.6.3": {
-        "en": "Names of states changed (Downlink Raw)\nChange setObjectNotExistsAsync to extendObjectAsync for Raw Data",
-        "de": "Namen der geänderten Zustände (Downlink Raw)\nÄnderungssatz ObjectNotExistsAsync erweitert ObjectAsync für Rohdaten",
-        "ru": "Изменились названия государств (Downlink Raw)\nИзменение ObjectNotExistsAsync ObjectAsync для первичных данных",
-        "pt": "Nomes de estados alterados (Downlink Raw)\nConjunto de alterações ObjectNotExistsAsync para estender ObjectAsync para dados brutos",
-        "nl": "Namen van statuss veranderd (Downlink Raw)\nVerander set ObjectNotExistsAsync uit te breiden ObjectAsync voor ruwe gegevens",
-        "fr": "Noms des états modifiés (Downlink Raw)\nModifier l'ensemble ObjetNotExistsAsync pour étendre ObjetAsync pour les données brutes",
-        "it": "I nomi degli stati cambiati (Downlink Raw)\nModifica set ObjectNotExistsAsync per estendere ObjectAsync per dati raw",
-        "es": "Los nombres de los estados cambiaron (Downlink Raw)\nCambio ObjectNotExistsAsync para extender ObjectAsync for Raw Data",
-        "pl": "Zmienione nazwy państw (Downlink Raw)\nZmień zestaw ObjectNotExistsAsync do rozszerzenia ObjectAsync for raw Data",
-        "uk": "Назви змінених держав (Downlink Raw)\nЗмінення Об'єктNotExistsAsync для розширення Об'єктАсинк для сирих даних",
-        "zh-cn": "更改州名( 下link Raw)\n更改设置 要扩展的对象“非外来”Async 原始数据对象同步"
       }
     },
     "titleLang": {
