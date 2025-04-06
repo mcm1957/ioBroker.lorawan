@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "news": {
+      "1.7.1": {
+        "en": "change timewriting in deviceinfos at chirpstack",
+        "de": "zeitschreiben in deviceinfos bei chirpstack ändern",
+        "ru": "изменение таймрайтинга в deviceinfos в chirpstack",
+        "pt": "mudar o tempo em deviceinfos no chirpstack",
+        "nl": "wijzigen tijdschrift in apparaatinfo's op tjirpstack",
+        "fr": "modifier timewriting dans deviceinfos à chirpstack",
+        "it": "cambiamento timewriting in deviceinfos a chirpstack",
+        "es": "cambiar el tiempo de escritura en el dispositivoinfos en chirpstack",
+        "pl": "zmiana czasu zapisu w deviceinfos w chirpstock",
+        "uk": "змінити часопис в пристрої",
+        "zh-cn": "在 chirpstack 设备信息中更改时间记录"
+      },
       "1.7.0": {
         "en": "add Volt to assignhandler with unit \"V\"\nupdate dependency for admin and js-controller\nupdate release script dependecie to 3.8",
         "de": "volt zuzuordnende Handler mit Einheit \"V\" hinzufügen\naktualisierung der abhängigkeit von admin und js-controller\nupdate release script abhängigecie to 3.8",
@@ -80,19 +93,6 @@
         "pl": "Bugfix tworzenie deviceinfo",
         "uk": "Створення пристроюinfo",
         "zh-cn": "设备信息的错误修正创建"
-      },
-      "1.6.1": {
-        "en": "correction of role for state ExtenalTemperatur",
-        "de": "korrektur der Rolle für Zustand ExtenalTemperatur",
-        "ru": "коррекция роли для государства ExtenalTemperatur",
-        "pt": "correção de papel para o estado ExtenalTemperatur",
-        "nl": "correctie van de rol van staat ExtenalTemperatur",
-        "fr": "correction du rôle de l'État ExtenalTemperatur",
-        "it": "correzione del ruolo per stato ExtenalTemperatur",
-        "es": "correcciones del papel para el estado ExtenalTemperatur",
-        "pl": "korekta roli w odniesieniu do stanu ExtenalTemperatur",
-        "uk": "корекція ролі для держави ExtenalTemperatur",
-        "zh-cn": "校正状态ExtenalTemperatur的作用"
       }
     },
     "titleLang": {
