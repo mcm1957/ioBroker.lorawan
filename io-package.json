@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.8.1",
+    "version": "1.8.2",
     "news": {
+      "1.8.2": {
+        "en": "Defaultvalues for push und replace (TTN)",
+        "de": "Standardwerte für Push und ersetzen (TTN)",
+        "ru": "Дефолтные значения для push und replace (TTN)",
+        "pt": "Valores padrão para push und substituir (TTN)",
+        "nl": "Standaardwaarden voor push und replace (TTN)",
+        "fr": "Valeurs par défaut pour push und remplacer (TTN)",
+        "it": "Valori di default per push und sostituire (TTN)",
+        "es": "Valores predeterminados para push und replace (TTN)",
+        "pl": "Defaultvalues for push und replace (TTN)",
+        "uk": "Значення за замовчуванням для заміни унду (TTN)",
+        "zh-cn": "Push und 替换的默认值 (TTN)"
+      },
       "1.8.1": {
         "en": "chaned format time in device info",
         "de": "chaned format time in device info",
@@ -80,19 +93,6 @@
         "pl": "eksport i import downlinkconmfigs z fileman",
         "uk": "експорт і імпорт sdlinkconmfigs з файловmanager",
         "zh-cn": "以文件管理器导出和导入下行链路conmfigs"
-      },
-      "1.6.4": {
-        "en": "Set decoded Structure in deviceInfos (with Merge)",
-        "de": "Set decodierte Struktur in deviceInfos (mit Verschmelzung)",
-        "ru": "Настройка декодированной структуры в deviceInfos (с Merge)",
-        "pt": "Definir estrutura decodificada no dispositivoInfos (com fusão)",
-        "nl": "Gedecodeerde structuur instellen in apparaatInfos (met samenvoegen)",
-        "fr": "Définir la structure décodée dans l'appareilInfos (avec Merge)",
-        "it": "Impostare la struttura decodificata in DeviceInfos (con fusione)",
-        "es": "Establecer estructura decodificada en el dispositivoInfos (con Merge)",
-        "pl": "Ustaw dekodowaną strukturę w deviceInfos (z połączeniem)",
-        "uk": "Настроювання декодованої структури в пристроїІнфос (з торговою маркою)",
-        "zh-cn": "在设备Infos( 合并) 中设置解码结构"
       }
     },
     "titleLang": {
