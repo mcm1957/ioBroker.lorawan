@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.8.2",
+    "version": "1.9.0",
     "news": {
+      "1.9.0": {
+        "en": "Change default fpr push and replace",
+        "de": "Ändern Sie Standard-Fpr-Push und ersetzen",
+        "ru": "Изменение по умолчанию fpr push и замена",
+        "pt": "Alterar padrão fpr push e substituir",
+        "nl": "Standaard fpr-push wijzigen en vervangen",
+        "fr": "Modifier fpr par défaut pousser et remplacer",
+        "it": "Modificare la pressione fpr predefinita e sostituire",
+        "es": "Cambiar el empuje de fpr predeterminado y reemplazar",
+        "pl": "Zmień domyślne wciśnięcie i zastąpienie fpr",
+        "uk": "Зміна за замовчуванням fpr push і замінити",
+        "zh-cn": "更改默认的 fpr 键并替换"
+      },
       "1.8.2": {
         "en": "Defaultvalues for push und replace (TTN)",
         "de": "Standardwerte für Push und ersetzen (TTN)",
@@ -80,19 +93,6 @@
         "pl": "zacząć od znanych profili",
         "uk": "початок з відомих профілів",
         "zh-cn": "以已知配置文件开始"
-      },
-      "1.6.5": {
-        "en": "export and import downlinkconmfigs with filemanager",
-        "de": "export und import von downlinkconmfigs mit filemanager",
-        "ru": "экспортные и импортные скидки с файловым менеджером",
-        "pt": "exportação e importação downlinkconmfigs com filemanager",
-        "nl": "downlinkconfigs exporteren en importeren met filemanager",
-        "fr": "exporter et importer des liens vers le bas avec filemanager",
-        "it": "esportazione e importazione downlinkconmfig con filemanager",
-        "es": "exportar e importar downlinkconmfigs con filemanager",
-        "pl": "eksport i import downlinkconmfigs z fileman",
-        "uk": "експорт і імпорт sdlinkconmfigs з файловmanager",
-        "zh-cn": "以文件管理器导出和导入下行链路conmfigs"
       }
     },
     "titleLang": {

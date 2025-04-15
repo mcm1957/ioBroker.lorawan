@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.9.0 (2025-04-15)
 * (BenAhrdt) Change default fpr push and replace
 
 ### 1.8.2 (2025-04-15)
