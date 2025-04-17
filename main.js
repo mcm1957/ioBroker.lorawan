@@ -353,6 +353,35 @@ class Lorawan extends utils.Adapter {
                             } catch (error) {
                                 this.log.warn(`Cant send invalid downlinks. Error: ${error}`);
                             }
+                        } else if (changeInfo?.changedState === 'CustomSend') {
+                            if (state.val !== '') {
+                                const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo, suffix);
+                                const downlinkConfig =
+                                    this.downlinkConfighandler?.activeDownlinkConfigs[
+                                        changeInfo.bestMatchForDeviceType
+                                    ];
+                                const Statevalues = state.val.split(',');
+                                const PayloadInHex = Statevalues[0];
+                                const Port = Statevalues[1] ? Statevalues[1] : downlinkConfig.port;
+                                const Priority = Statevalues[2] ? Statevalues[2] : downlinkConfig.priority;
+
+                                await this.writeNextSend(changeInfo, PayloadInHex);
+                                if (
+                                    !changeInfo?.bestMatchForDeviceType ||
+                                    this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType]
+                                        .sendWithUplink === 'disabled'
+                                ) {
+                                    const downlink = this.downlinkConfighandler?.getDownlink(
+                                        { port: Port, priority: Priority },
+                                        PayloadInHex,
+                                        changeInfo,
+                                    );
+                                    if (downlink !== undefined) {
+                                        await this.sendDownlink(downlinkTopic, JSON.stringify(downlink), changeInfo);
+                                    }
+                                }
+                            }
+                            this.setState(id, state.val, true);
                         } else {
                             const downlinkTopic = this.downlinkConfighandler?.getDownlinkTopic(changeInfo, suffix);
                             const downlinkParameter = this.downlinkConfighandler?.getDownlinkParameter(changeInfo, {});
