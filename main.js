@@ -361,19 +361,35 @@ class Lorawan extends utils.Adapter {
                                         changeInfo.bestMatchForDeviceType
                                     ];
                                 const Statevalues = state.val.split(',');
-                                const PayloadInHex = Statevalues[0];
-                                const Port = Statevalues[1] ? Statevalues[1] : downlinkConfig.port;
-                                const Priority = Statevalues[2] ? Statevalues[2] : downlinkConfig.priority;
-
-                                await this.writeNextSend(changeInfo, PayloadInHex);
+                                const StateElements = {
+                                    PayloadInHex: Statevalues[0],
+                                    Port: Statevalues[1] ? parseInt(Statevalues[1]) : downlinkConfig.port,
+                                    Confirmed: Statevalues[2]
+                                        ? Statevalues[2] === 'true'
+                                            ? true
+                                            : false
+                                        : downlinkConfig.confirmed,
+                                    Priority: Statevalues[3] ? Statevalues[3] : downlinkConfig.priority,
+                                };
+                                // Query for righte type
+                                for (const element of Object.values(StateElements)) {
+                                    this.log.warn(typeof element);
+                                    this.log.warn(element);
+                                }
+                                // Write into nextSend
+                                await this.writeNextSend(changeInfo, StateElements.PayloadInHex);
                                 if (
                                     !changeInfo?.bestMatchForDeviceType ||
                                     this.downlinkConfighandler?.activeDownlinkConfigs[changeInfo.bestMatchForDeviceType]
                                         .sendWithUplink === 'disabled'
                                 ) {
                                     const downlink = this.downlinkConfighandler?.getDownlink(
-                                        { port: Port, priority: Priority },
-                                        PayloadInHex,
+                                        {
+                                            port: StateElements.Port,
+                                            confirmed: StateElements.Confirmed,
+                                            priority: StateElements.Priority,
+                                        },
+                                        StateElements.PayloadInHex,
                                         changeInfo,
                                     );
                                     if (downlink !== undefined) {
