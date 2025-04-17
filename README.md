@@ -25,6 +25,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 -->
 ### **WORK IN PROGRESS**
 * (BenAhrdt) Add CustomSend to Control folder
+* (BenAhrdt) update Profile for 16ASPM
 
 ### 1.9.0 (2025-04-15)
 * (BenAhrdt) Change default fpr push and replace
