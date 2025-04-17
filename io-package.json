@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "news": {
+      "1.10.0": {
+        "en": "Add CustomSend to Control folder\nupdate Profile for 16ASPM",
+        "de": "Fügen Sie CustomSend in Kontrollordner\nupdate Profil für 16ASPM",
+        "ru": "Добавить CustomSend в папку Control\nобновление профиля для 16ASPM",
+        "pt": "Adicionar CustomSend à pasta de controle\natualização Perfil para 16ASPM",
+        "nl": "Aangepaste verzenden toevoegen aan de controlemap\nprofiel voor 16ASPM bijwerken",
+        "fr": "Ajouter CustomSend au dossier de contrôle\nmettre à jour le profil de 16ASPM",
+        "it": "Aggiungi CustomSend alla cartella Controllo\naggiornamento Profilo per 16ASPM",
+        "es": "Añadir CustomSend a la carpeta Control\nperfil de actualización para 16ASPM",
+        "pl": "Dodaj folder Własny Wyślij do sterowania\naktualizacja profilu dla 16ASPM",
+        "uk": "Додати налаштування\nпрофіль оновлення для 16ASPM",
+        "zh-cn": "添加自定义发送到控制文件夹\n16ASPM 的更新配置"
+      },
       "1.9.0": {
         "en": "Change default fpr push and replace",
         "de": "Ändern Sie Standard-Fpr-Push und ersetzen",
@@ -80,19 +93,6 @@
         "pl": "dodać Volt do assignhandlera z jednostką \"V\"\naktualizacja zależności dla administratora i kontrolera js-\nupdate release script dependecie to 3.8",
         "uk": "додати Волт до приставки з блоком \"В\"\nоновлення залежності для адміністратора та js-controller\nоновити сценарій релізу залежно від 3,8",
         "zh-cn": "添加Volt 以指定“ V” 单元的手列\n更新管理员和js控制器的依赖性\n将发布脚本依赖性更新到 3. 8"
-      },
-      "1.6.6": {
-        "en": "start with known profiles",
-        "de": "beginnen mit bekannten profilen",
-        "ru": "начать с известных профилей",
-        "pt": "começar com perfis conhecidos",
-        "nl": "beginnen met bekende profielen",
-        "fr": "commencer par des profils connus",
-        "it": "iniziare con i profili noti",
-        "es": "empezar con perfiles conocidos",
-        "pl": "zacząć od znanych profili",
-        "uk": "початок з відомих профілів",
-        "zh-cn": "以已知配置文件开始"
       }
     },
     "titleLang": {

@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.10.0 (2025-04-17)
 * (BenAhrdt) Add CustomSend to Control folder
 * (BenAhrdt) update Profile for 16ASPM
 
