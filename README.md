@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) update dependencie to node >= 20
+
 ### 1.10.1 (2025-04-17)
 * (BenAhrdt) Improove Custom Send
 
