@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.1",
+    "version": "1.10.2",
     "news": {
+      "1.10.2": {
+        "en": "update dependencie to node >= 20\nimproove timestamp in deviceInformation, if its not present in message (eg. manualy send via TTN)",
+        "de": "update abhängigencier to node >= 20\nimproove timestamp in deviceInformation, wenn seine nicht in Nachricht vorhanden (z.B. manuell per TTN senden)",
+        "ru": "обновление зависимых узлов >= 20\nимпровизировать временную метку в устройстве Информация, если она не присутствует в сообщении (например, вручную отправить через TTN)",
+        "pt": "dependência de atualização para o nó >= 20\ntempostamp improove no dispositivoInformação, se não estiver presente na mensagem (por exemplo, envio manual via TTN)",
+        "nl": "update afhankelijk van knooppunt 20\nimproove tijdstempel in apparaatInformatie, als het niet aanwezig is in bericht (bijv. handmatig verzenden via TTN)",
+        "fr": "mettre à jour dependencie to node >= 20\nimproove horodatage dans l'appareilInformations, si elle n'est pas présente dans le message (p. ex., envoi manuel via TTN)",
+        "it": "aggiornamento della dipendenza dal nodo 20\nimproove timestamp in deviceInformation, se non è presente nel messaggio (ad esempio manuale invia via TTN)",
+        "es": "actualización dependecie de nodo √= 20\nimroove timestamp in deviceInformation, if its not present in message (eg. manualy send via TTN)",
+        "pl": "aktualizacja zależnego do węzła > = 20\nimproove timestamp in deviceInformation, if its not present in message (np. manualy send via TTN)",
+        "uk": "оновлення залежності до вершини >= 20 хв\nувімкнено часовий штамп в пристроїІнформація, якщо його не присутні в повідомленнях (наприклад, вручну відправити через TTN)",
+        "zh-cn": "更新依赖到节点qq 20 (简体中文)\n如果信息未在信件中出现(例如通过 TTN 的手动发送), 设备中的不规则时间戳"
+      },
       "1.10.1": {
         "en": "Improove Custom Send",
         "de": "Improove Custom Senden",
@@ -80,19 +93,6 @@
         "pl": "aktualizacja zależności i czasu / znacznika czasu w deviceinfos",
         "uk": "оновлення залежностей і часу / часовий апарат",
         "zh-cn": "更新设备信息中的依赖性和时间/ 时间戳"
-      },
-      "1.7.1": {
-        "en": "change timewriting in deviceinfos at chirpstack",
-        "de": "zeitschreiben in deviceinfos bei chirpstack ändern",
-        "ru": "изменение таймрайтинга в deviceinfos в chirpstack",
-        "pt": "mudar o tempo em deviceinfos no chirpstack",
-        "nl": "wijzigen tijdschrift in apparaatinfo's op tjirpstack",
-        "fr": "modifier timewriting dans deviceinfos à chirpstack",
-        "it": "cambiamento timewriting in deviceinfos a chirpstack",
-        "es": "cambiar el tiempo de escritura en el dispositivoinfos en chirpstack",
-        "pl": "zmiana czasu zapisu w deviceinfos w chirpstock",
-        "uk": "змінити часопис в пристрої",
-        "zh-cn": "在 chirpstack 设备信息中更改时间记录"
       }
     },
     "titleLang": {

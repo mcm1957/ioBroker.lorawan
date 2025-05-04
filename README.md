@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.10.2 (2025-05-04)
 * (BenAhrdt) update dependencie to node >= 20
 * (BenAhrdt) improove timestamp in deviceInformation, if its not present in message (eg. manualy send via TTN)
 
