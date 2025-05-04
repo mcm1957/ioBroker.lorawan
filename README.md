@@ -25,6 +25,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 -->
 ### **WORK IN PROGRESS**
 * (BenAhrdt) update dependencie to node >= 20
+* (BenAhrdt) improove timestamp in deviceInformation, if its not present in message (eg. manualy send via TTN)
 
 ### 1.10.1 (2025-04-17)
 * (BenAhrdt) Improove Custom Send
