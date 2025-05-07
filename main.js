@@ -372,9 +372,10 @@ class Lorawan extends utils.Adapter {
                                     Priority: Statevalues[3] ? Statevalues[3] : downlinkConfig.priority,
                                 };
                                 // Query for righte type
+                                this.log.debug('The following values are detected at input of custom send state');
                                 for (const element of Object.values(StateElements)) {
-                                    this.log.warn(typeof element);
-                                    this.log.warn(element);
+                                    this.log.debug(typeof element);
+                                    this.log.debug(element);
                                 }
                                 // Write into nextSend
                                 await this.writeNextSend(changeInfo, StateElements.PayloadInHex);
