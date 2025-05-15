@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.3",
+    "version": "1.10.4",
     "news": {
+      "1.10.4": {
+        "en": "set new roles and bugfix role in downlink.control at startup",
+        "de": "neue rollen und bugfix rolle in downlink setzen. steuerung beim start",
+        "ru": "установить новые роли и роль исправления ошибок в нисходящей линии связи. контроль в стартапе",
+        "pt": "definir novos papéis e bugfix papel no downlink. controle na inicialização",
+        "nl": "nieuwe rollen en bugfix rol in downlink. controle bij opstarten",
+        "fr": "définir de nouveaux rôles et bugfix dans downlink. contrôle au démarrage",
+        "it": "impostare nuovi ruoli e bugfix ruolo in downlink. controllo all'avvio",
+        "es": "establecer nuevos roles y papel de bugfix en el enlace descendente. control al inicio",
+        "pl": "ustawić nowe role i rolę bugfix w downlink. kontrola przy starcie",
+        "uk": "встановити нові ролі і роль у знімку. контроль запуску",
+        "zh-cn": "在下行链路中设置新角色和bugfix角色。 启动时的控制"
+      },
       "1.10.3": {
         "en": "set logging for custom send from warning to debug",
         "de": "set protokollierung für benutzerdefinierte senden von warnung bis debug",
@@ -80,19 +93,6 @@
         "pl": "Defaultvalues for push und replace (TTN)",
         "uk": "Значення за замовчуванням для заміни унду (TTN)",
         "zh-cn": "Push und 替换的默认值 (TTN)"
-      },
-      "1.8.1": {
-        "en": "chaned format time in device info",
-        "de": "chaned format time in device info",
-        "ru": "время в формате chaned in device info",
-        "pt": "tempo de formato chaned em informações do dispositivo",
-        "nl": "gechanteerde opmaaktijd in apparaatinformatie",
-        "fr": "temps de format channed dans l'information de l'appareil",
-        "it": "chaned format time in informazioni sul dispositivo",
-        "es": "tiempo de formato enmarcado en la información del dispositivo",
-        "pl": "chaned format time in device info",
-        "uk": "chaned формат часу в пристрої інформація",
-        "zh-cn": "设备信息中显示的格式时间"
       }
     },
     "titleLang": {
