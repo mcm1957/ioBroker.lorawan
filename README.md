@@ -25,8 +25,6 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 -->
 ### **WORK IN PROGRESS**
 * (BenAhrdt) add role for Low Battery
-
-### **WORK IN PROGRESS**
 * (BenAhrdt) add role value.battery to state BatteryPercent
 
 ### 1.10.4 (2025-05-15)
