@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) set new roles and bugfix role in downlink.control at startup
+
 ### 1.10.3 (2025-05-07)
 * (BenAhrdt) set logging for custom send from warning to debug
 

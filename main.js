@@ -73,7 +73,7 @@ class Lorawan extends utils.Adapter {
             this.log.silly(
                 `the active downlinkconfigs are: ${JSON.stringify(this.downlinkConfighandler.activeDownlinkConfigs)}`,
             );
-            /*
+            /*            
             setTimeout(async () => {
                 this.log.debug('vor Simulation');
                 await this.startSimulation();
@@ -189,7 +189,7 @@ class Lorawan extends utils.Adapter {
         // ACK
         //const topic = "v3/hafi-ttn-lorawan@ttn/devices/eui-a84041162183f8fb/down/ack";
         //const message = {"end_device_ids":{"device_id":"eui-a84041162183f8fb","application_ids":{"application_id":"hafi-ttn-lorawan"},"dev_eui":"A84041162183F8FB","join_eui":"A840410000000101","dev_addr":"260B141A"},"correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY","gs:uplink:01HP6D1A9X4WAA3SFMXH4ESSMV"],"received_at":"2024-02-09T07:41:41.776887672Z","downlink_ack":{"session_key_id":"AY2MUrmnuovS8DCZAfYmsA==","f_port":1,"f_cnt":21,"frm_payload":"AQAAeA==","confirmed":true,"priority":"NORMAL","correlation_ids":["as:downlink:01HP6D18MQXJN90J5B07DC11HY"],"confirmed_retry":{"attempt":1}}};
-
+        /*
         // Chipstack
         const topic = 'application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/event/up';
         const message = {
@@ -239,7 +239,76 @@ class Lorawan extends utils.Adapter {
                 modulation: { lora: { bandwidth: 125000, spreadingFactor: 7, codeRate: 'CR_4_5' } },
             },
             regionConfigId: 'eu868',
+        };*/
+
+        // Chipstack
+        const topic = 'application/bbea74d6-1fc5-4238-af20-d2aecdbb4f8e/device/70b3d52dd301b3cc/event/up';
+        const message = {
+            deduplicationId: '1d94e6d8-25cc-4099-ab45-4a7f7faa1634',
+            time: '2025-05-15T13:22:08.891648+00:00',
+            deviceInfo: {
+                tenantId: '52f14cd4-c6f1-4fbd-8f87-4025e1d49242',
+                tenantName: 'ChirpStack',
+                applicationId: 'bbea74d6-1fc5-4238-af20-d2aecdbb4f8e',
+                applicationName: 'Heizen',
+                deviceProfileId: 'aedb4f09-8644-430b-a088-47519f01530b',
+                deviceProfileName: 'MClimate Vicki',
+                deviceName: 'ThermostatKinderzimmerRika',
+                devEui: '70b3d52dd301b3cc',
+                deviceClassEnabled: 'CLASS_A',
+                tags: {},
+            },
+            devAddr: '01b6c24b',
+            adr: true,
+            dr: 5,
+            fCnt: 38547,
+            fPort: 2,
+            confirmed: false,
+            data: 'RADjUgC5gRKfTt7eEfAw',
+            object: {
+                CalibrationFailed: false,
+                ValveOpenness: 0,
+                MotorRange: 478,
+                ChildLock: false,
+                Reason: 81,
+                RelativeHumidity: 30.47,
+                BatteryVoltage: 3.5,
+                AttachedBackplate: true,
+                extSensorTemperature: 22.7,
+                TargetTemperature: 18,
+                PerceiveAsOnline: true,
+                BrokenSensor: false,
+                AntiFreezeProtection: false,
+                HighMotorConsumption: false,
+                Device: 'Vicki',
+                SensorTemperature: 23.06,
+                targetTemperatureFloat: 18.5,
+                MotorPosition: 478,
+                OpenWindow: false,
+                LowMotorConsumption: false,
+            },
+            rxInfo: [
+                {
+                    gatewayId: '503035416e314750',
+                    uplinkId: 55809,
+                    gwTime: '2025-05-15T13:22:08.891648+00:00',
+                    nsTime: '2025-05-15T13:22:08.927071564+00:00',
+                    rssi: -81,
+                    snr: 7.5,
+                    channel: 2,
+                    rfChain: 1,
+                    location: { latitude: 50.693467319817266, longitude: 8.47676753997803 },
+                    context: 'YOhWvA==',
+                    crcStatus: 'CRC_OK',
+                },
+            ],
+            txInfo: {
+                frequency: 868500000,
+                modulation: { lora: { bandwidth: 125000, spreadingFactor: 7, codeRate: 'CR_4_5' } },
+            },
+            regionConfigId: 'eu868',
         };
+
         //const topic = "application/d63c10b6-9263-4ab3-9299-4308fa19a2ad/device/a84041f621857cd2/command/down";
         //const message = {"devEui":"a84041f621857cd2","confirmed":false,"fPort":1,"data":"AQAqMA=="};
 
