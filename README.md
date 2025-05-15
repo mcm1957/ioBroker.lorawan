@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add role value.battery to state BatteryPercent
+
 ### 1.10.4 (2025-05-15)
 * (BenAhrdt) set new roles and bugfix role in downlink.control at startup
 
