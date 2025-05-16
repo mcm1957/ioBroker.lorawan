@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) change State Opened to role sensor.window for zigbee / matter stndard
+
 ### 1.10.5 (2025-05-15)
 * (BenAhrdt) add role for Low Battery
 * (BenAhrdt) add role value.battery to state BatteryPercent
