@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.5",
+    "version": "1.10.6",
     "news": {
+      "1.10.6": {
+        "en": "change State Opened to role sensor.window for zigbee / matter stndard",
+        "de": "änderung Staat Geöffnet auf Rollensensor. Fenster für Zickbee / Materie Stndard",
+        "ru": "изменить государство Открыт для ролевого датчика. Окно для Zigbee / Matter Stndard",
+        "pt": "estado Aberto ao sensor de função. janela para zigbee / stndard de matéria",
+        "nl": "status wijzigen Open voor rolsensor. venster voor zigbee / materie stndard",
+        "fr": "changement d'État Ouvert au capteur de rôle. fenêtre pour zigbee / matière stndard",
+        "it": "cambiamento Stato Aperto al sensore di ruolo. finestra per zigbee / materia stndard",
+        "es": "estado Abierto al sensor de rol. ventana para zigbee / materia stndard",
+        "pl": "zmiana stanu Otwarty na czujnik ról. okno dla zigbee / materia stndard",
+        "uk": "змінити стан Призначений для датчика ролі. вікно для zigbee / матерія stndard",
+        "zh-cn": "变化状态 向角色传感器开放. Zigbee / 物质 Stndard 窗口"
+      },
       "1.10.5": {
         "en": "add role for Low Battery\nadd role value.battery to state BatteryPercent",
         "de": "rolle für Low Battery hinzufügen\nrollenwert hinzufügen.Batterie zum Zustand BatteryPercent",
@@ -80,19 +93,6 @@
         "pl": "Dodaj folder Własny Wyślij do sterowania\naktualizacja profilu dla 16ASPM",
         "uk": "Додати налаштування\nпрофіль оновлення для 16ASPM",
         "zh-cn": "添加自定义发送到控制文件夹\n16ASPM 的更新配置"
-      },
-      "1.9.0": {
-        "en": "Change default fpr push and replace",
-        "de": "Ändern Sie Standard-Fpr-Push und ersetzen",
-        "ru": "Изменение по умолчанию fpr push и замена",
-        "pt": "Alterar padrão fpr push e substituir",
-        "nl": "Standaard fpr-push wijzigen en vervangen",
-        "fr": "Modifier fpr par défaut pousser et remplacer",
-        "it": "Modificare la pressione fpr predefinita e sostituire",
-        "es": "Cambiar el empuje de fpr predeterminado y reemplazar",
-        "pl": "Zmień domyślne wciśnięcie i zastąpienie fpr",
-        "uk": "Зміна за замовчуванням fpr push і замінити",
-        "zh-cn": "更改默认的 fpr 键并替换"
       }
     },
     "titleLang": {
