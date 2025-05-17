@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.7",
+    "version": "1.10.8",
     "news": {
+      "1.10.8": {
+        "en": "add some states for Mode",
+        "de": "einige Zustände für Mode hinzufügen",
+        "ru": "добавить несколько состояний в режим",
+        "pt": "adicionar alguns estados para o modo",
+        "nl": "enkele statussen toevoegen voor modus",
+        "fr": "ajouter quelques états pour Mode",
+        "it": "aggiungere alcuni stati per la modalità",
+        "es": "añadir algunos estados para Modo",
+        "pl": "dodaj kilka stanów dla Mode",
+        "uk": "додати деякі стани для режиму",
+        "zh-cn": "为模式添加一些状态"
+      },
       "1.10.7": {
         "en": "add some roles",
         "de": "einige rollen hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "aktualizacja zależnego do węzła > = 20\nimproove timestamp in deviceInformation, if its not present in message (np. manualy send via TTN)",
         "uk": "оновлення залежності до вершини >= 20 хв\nувімкнено часовий штамп в пристроїІнформація, якщо його не присутні в повідомленнях (наприклад, вручну відправити через TTN)",
         "zh-cn": "更新依赖到节点qq 20 (简体中文)\n如果信息未在信件中出现(例如通过 TTN 的手动发送), 设备中的不规则时间戳"
-      },
-      "1.10.1": {
-        "en": "Improove Custom Send",
-        "de": "Improove Custom Senden",
-        "ru": "Improove Custom отправляется",
-        "pt": "Enviar personalizado",
-        "nl": "Aangepast versturen improoveren",
-        "fr": "Imprimer l'envoi personnalisé",
-        "it": "Invia su ordinazione",
-        "es": "Improove Custom Send",
-        "pl": "Improove Custom Wyślij",
-        "uk": "Настроювання на замовлення",
-        "zh-cn": "自定义发送"
       }
     },
     "titleLang": {
