@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.8",
+    "version": "1.10.9",
     "news": {
+      "1.10.9": {
+        "en": "correct lower case for targetTemperatureFloat\nremove role switch in case of send with uplink and collect",
+        "de": "korrekter Unterkasten für TargetTemperature Float\nrollenschalter entfernen, wenn sie mit uplink senden und sammeln",
+        "ru": "правильный нижний регистр для целевой температуры плавать\nудалить переключатель ролей в случае отправки с восходящей ссылкой и собрать",
+        "pt": "caso inferior correto para alvoTemperatura Float\nremover o interruptor de função no caso de enviar com uplink e coletar",
+        "nl": "corrigeer kleine letters voor targetTemperatuur Zwevend\nrole switch verwijderen in geval van verzenden met uplink en verzamelen",
+        "fr": "le cas inférieur correct pour cibleTempérature Flotte\nsupprimer le commutateur de rôle en cas d'envoi avec uplink et collecter",
+        "it": "corretto caso inferiore per targetTemperature Float\nrimuovere l'interruttore di ruolo in caso di invio con uplink e raccogliere",
+        "es": "caso inferior correcto para targetTemperature Float\neliminar el interruptor de función en caso de enviar con enlace ascendente y recoger",
+        "pl": "poprawny dolny przypadek dla Celu Temperatura Płyń\nusuń przełącznik ról w przypadku wysłania z łącza i zbierać",
+        "uk": "виправлено нижній випадок для цілейTemperature Флоат\nвидалення перемикача ролі в разі відправки за допомогою посилання і збору",
+        "zh-cn": "目标小写正确 浮点\n如果发送时带有上行链路并收集, 请删除角色切换"
+      },
       "1.10.8": {
         "en": "add some states for Mode",
         "de": "einige Zustände für Mode hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "ustaw logowanie dla własnego wysyłania z ostrzeżenia do debugowania",
         "uk": "установити заголовок для налаштовуваного відправки з попередження на debug",
         "zh-cn": "设置自定义从警告发送到调试的日志"
-      },
-      "1.10.2": {
-        "en": "update dependencie to node >= 20\nimproove timestamp in deviceInformation, if its not present in message (eg. manualy send via TTN)",
-        "de": "update abhängigencier to node >= 20\nimproove timestamp in deviceInformation, wenn seine nicht in Nachricht vorhanden (z.B. manuell per TTN senden)",
-        "ru": "обновление зависимых узлов >= 20\nимпровизировать временную метку в устройстве Информация, если она не присутствует в сообщении (например, вручную отправить через TTN)",
-        "pt": "dependência de atualização para o nó >= 20\ntempostamp improove no dispositivoInformação, se não estiver presente na mensagem (por exemplo, envio manual via TTN)",
-        "nl": "update afhankelijk van knooppunt 20\nimproove tijdstempel in apparaatInformatie, als het niet aanwezig is in bericht (bijv. handmatig verzenden via TTN)",
-        "fr": "mettre à jour dependencie to node >= 20\nimproove horodatage dans l'appareilInformations, si elle n'est pas présente dans le message (p. ex., envoi manuel via TTN)",
-        "it": "aggiornamento della dipendenza dal nodo 20\nimproove timestamp in deviceInformation, se non è presente nel messaggio (ad esempio manuale invia via TTN)",
-        "es": "actualización dependecie de nodo √= 20\nimroove timestamp in deviceInformation, if its not present in message (eg. manualy send via TTN)",
-        "pl": "aktualizacja zależnego do węzła > = 20\nimproove timestamp in deviceInformation, if its not present in message (np. manualy send via TTN)",
-        "uk": "оновлення залежності до вершини >= 20 хв\nувімкнено часовий штамп в пристроїІнформація, якщо його не присутні в повідомленнях (наприклад, вручну відправити через TTN)",
-        "zh-cn": "更新依赖到节点qq 20 (简体中文)\n如果信息未在信件中出现(例如通过 TTN 的手动发送), 设备中的不规则时间戳"
       }
     },
     "titleLang": {
