@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add some roles
+
 ### 1.10.6 (2025-05-16)
 * (BenAhrdt) change State Opened to role sensor.window for zigbee / matter stndard
 
