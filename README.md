@@ -23,6 +23,10 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) correct lower case for targetTemperatureFloat
+* (BenAhrdt) remove role switch in case of send with uplink and collect
+
 ### 1.10.8 (2025-05-17)
 * (BenAhrdt) add some states for Mode
 
