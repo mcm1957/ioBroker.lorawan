@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.9",
+    "version": "1.10.10",
     "news": {
+      "1.10.10": {
+        "en": "update assignhandler",
+        "de": "update assignhandler",
+        "ru": "обновление цессионария",
+        "pt": "atualização asignhandler",
+        "nl": "update awardhandler",
+        "fr": "mettre à jour le gestionnaire d'attribution",
+        "it": "aggiornamento assegnatore",
+        "es": "actualización de cedente",
+        "pl": "update assignhandler",
+        "uk": "оновлення assignhandler",
+        "zh-cn": "更新指派手"
+      },
       "1.10.9": {
         "en": "correct lower case for targetTemperatureFloat\nremove role switch in case of send with uplink and collect",
         "de": "korrekter Unterkasten für TargetTemperature Float\nrollenschalter entfernen, wenn sie mit uplink senden und sammeln",
@@ -80,19 +93,6 @@
         "pl": "ustawić nowe role i rolę bugfix w downlink. kontrola przy starcie",
         "uk": "встановити нові ролі і роль у знімку. контроль запуску",
         "zh-cn": "在下行链路中设置新角色和bugfix角色。 启动时的控制"
-      },
-      "1.10.3": {
-        "en": "set logging for custom send from warning to debug",
-        "de": "set protokollierung für benutzerdefinierte senden von warnung bis debug",
-        "ru": "настройка регистрации для отправки с предупреждения на отладку",
-        "pt": "set logging para envio personalizado de aviso para depuração",
-        "nl": "loggen instellen voor aangepaste verzending van waarschuwing naar debug",
-        "fr": "définir l'enregistrement pour l'envoi personnalisé de l'avertissement à débug",
-        "it": "set logging per invio personalizzato da avvertimento a debug",
-        "es": "set logging para envío personalizado de advertencia a depuración",
-        "pl": "ustaw logowanie dla własnego wysyłania z ostrzeżenia do debugowania",
-        "uk": "установити заголовок для налаштовуваного відправки з попередження на debug",
-        "zh-cn": "设置自定义从警告发送到调试的日志"
       }
     },
     "titleLang": {
