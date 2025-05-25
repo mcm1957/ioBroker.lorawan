@@ -24,6 +24,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### 1.10.10 (2025-05-18)
+* (BenAhrdt) add roles for uplinks from dnt-lw-etrv
+
+### 1.10.10 (2025-05-18)
 * (BenAhrdt) update assignhandler
 
 ### 1.10.9 (2025-05-17)
