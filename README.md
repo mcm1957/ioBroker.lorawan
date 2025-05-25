@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.10.11 (2025-05-25)
 * (BenAhrdt) Round to convert only integers to HEX
 * (BenAhrdt) add roles for uplinks from dnt-lw-etrv
 

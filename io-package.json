@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.10",
+    "version": "1.10.11",
     "news": {
+      "1.10.11": {
+        "en": "Round to convert only integers to HEX\nadd roles for uplinks from dnt-lw-etrv",
+        "de": "Rund um nur ganze Zahlen in HEX zu konvertieren\nrollen für uplinks aus dnt-lw-etrv hinzufügen",
+        "ru": "Конвертировать только целые числа в HEX\nдобавить роли для восходящих ссылок из dnt-lw-etrv",
+        "pt": "Rodada para converter apenas inteiros para HEX\nadicionar papéis para uplinks de dnt-lw-etrv",
+        "nl": "Rond om alleen gehele getallen naar HEX te converteren\nrolletjes toevoegen voor uplinks van dnt-lw-etrv",
+        "fr": "Rond pour convertir seulement des entiers en HEX\najouter des rôles pour les liens ascendants de dnt-lw-etrv",
+        "it": "Tondo per convertire solo interi a HEX\naggiungere ruoli per uplink da dnt-lw-etrv",
+        "es": "Ronda para convertir sólo enteros a HEX\nañadir roles para enlaces de dnt-lw-etrv",
+        "pl": "Okrągłe konwertowanie tylko liczb całkowitych do HEX\ndodaj role dla uplinks od dnt- lw- etrv",
+        "uk": "Круглий, щоб конвертувати тільки цілі в HEX\nдодати ролі для посилань з dnt-lw-etrv",
+        "zh-cn": "圆只将整数转换为 HEX\n从 dnt-lw- etrv 添加上行链接的角色"
+      },
       "1.10.10": {
         "en": "update assignhandler",
         "de": "update assignhandler",
@@ -80,19 +93,6 @@
         "pl": "dodać rolę dla niskiej baterii\ndodaj wartość role.bateria do stanu BatteryProcent",
         "uk": "додати роль для низької батареї\nдодати значення ролі.battery до державного акумулятора",
         "zh-cn": "为低电池添加角色\n添加角色值。 电池到状态电池Percent"
-      },
-      "1.10.4": {
-        "en": "set new roles and bugfix role in downlink.control at startup",
-        "de": "neue rollen und bugfix rolle in downlink setzen. steuerung beim start",
-        "ru": "установить новые роли и роль исправления ошибок в нисходящей линии связи. контроль в стартапе",
-        "pt": "definir novos papéis e bugfix papel no downlink. controle na inicialização",
-        "nl": "nieuwe rollen en bugfix rol in downlink. controle bij opstarten",
-        "fr": "définir de nouveaux rôles et bugfix dans downlink. contrôle au démarrage",
-        "it": "impostare nuovi ruoli e bugfix ruolo in downlink. controllo all'avvio",
-        "es": "establecer nuevos roles y papel de bugfix en el enlace descendente. control al inicio",
-        "pl": "ustawić nowe role i rolę bugfix w downlink. kontrola przy starcie",
-        "uk": "встановити нові ролі і роль у знімку. контроль запуску",
-        "zh-cn": "在下行链路中设置新角色和bugfix角色。 启动时的控制"
       }
     },
     "titleLang": {
