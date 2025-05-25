@@ -24,6 +24,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
+* (BenAhrdt) Round to convert only integers to HEX
 * (BenAhrdt) add roles for uplinks from dnt-lw-etrv
 
 ### 1.10.10 (2025-05-18)
