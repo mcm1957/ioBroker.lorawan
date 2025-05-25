@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### 1.10.10 (2025-05-18)
+### **WORK IN PROGRESS**
 * (BenAhrdt) add roles for uplinks from dnt-lw-etrv
 
 ### 1.10.10 (2025-05-18)
