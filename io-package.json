@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.11",
+    "version": "1.10.12",
     "news": {
+      "1.10.12": {
+        "en": "update Testing to 24.x",
+        "de": "update Testen auf 24.x",
+        "ru": "обновление Testing to 24.x",
+        "pt": "testes de atualização para 24.x",
+        "nl": "update Testen naar 24.x",
+        "fr": "mettre à jour Test à 24.x",
+        "it": "test di aggiornamento a 24.x",
+        "es": "testing a 24.x",
+        "pl": "update Testing to 24.x",
+        "uk": "оновлення Тестування до 24.x",
+        "zh-cn": "更新到 24.x"
+      },
       "1.10.11": {
         "en": "Round to convert only integers to HEX\nadd roles for uplinks from dnt-lw-etrv",
         "de": "Rund um nur ganze Zahlen in HEX zu konvertieren\nrollen für uplinks aus dnt-lw-etrv hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "zmiana stanu Otwarty na czujnik ról. okno dla zigbee / materia stndard",
         "uk": "змінити стан Призначений для датчика ролі. вікно для zigbee / матерія stndard",
         "zh-cn": "变化状态 向角色传感器开放. Zigbee / 物质 Stndard 窗口"
-      },
-      "1.10.5": {
-        "en": "add role for Low Battery\nadd role value.battery to state BatteryPercent",
-        "de": "rolle für Low Battery hinzufügen\nrollenwert hinzufügen.Batterie zum Zustand BatteryPercent",
-        "ru": "добавить роль в Low Battery\nдобавить role value.battery в государственный аккумулятор",
-        "pt": "adicionar papel para bateria baixa\nadicionar valor de papel.battery ao estado BatteryPercent",
-        "nl": "rol toevoegen voor lage batterij\nrolwaarde.battery toevoegen aan status BatteryPercent",
-        "fr": "ajouter un rôle pour la batterie basse\najouter la valeur de rôle.batterie à l'état BatteriePourcentage",
-        "it": "aggiungere il ruolo per batteria bassa\naggiungere valore ruolo.battery a stato BatteryPercent",
-        "es": "añadir papel para Batería Baja\nañadir valor de papel.batería para el estado",
-        "pl": "dodać rolę dla niskiej baterii\ndodaj wartość role.bateria do stanu BatteryProcent",
-        "uk": "додати роль для низької батареї\nдодати значення ролі.battery до державного акумулятора",
-        "zh-cn": "为低电池添加角色\n添加角色值。 电池到状态电池Percent"
       }
     },
     "titleLang": {
