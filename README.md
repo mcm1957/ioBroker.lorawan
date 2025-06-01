@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) update dependencie for mqtt in 5.13.0
+
 ### 1.10.12 (2025-05-30)
 * (BenAhrdt) update Testing to 24.x
 
