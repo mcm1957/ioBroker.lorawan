@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.12",
+    "version": "1.10.13",
     "news": {
+      "1.10.13": {
+        "en": "update dependencie for mqtt in 5.13.0",
+        "de": "update-abhängigkeit für mqtt in 5.13.0",
+        "ru": "зависимость обновления для mqtt в 5.13.0",
+        "pt": "dependência de atualização para mqtt em 5.13.0",
+        "nl": "update afhankelijk van mqtt in 5.13.0",
+        "fr": "update dependencie pour mqtt dans 5.13.0",
+        "it": "aggiornamento indipendenza per mqtt in 5.13.0",
+        "es": "actualización dependecie para mqtt en 5.13.0",
+        "pl": "aktualizacja zależności dla mqtt w 5.13.0",
+        "uk": "оновлення залежності для mqtt в 5.13.0",
+        "zh-cn": "更新 mqtt 的依赖性"
+      },
       "1.10.12": {
         "en": "update Testing to 24.x",
         "de": "update Testen auf 24.x",
@@ -80,19 +93,6 @@
         "pl": "dodaj kilka ról",
         "uk": "додати деякі ролі",
         "zh-cn": "添加一些角色"
-      },
-      "1.10.6": {
-        "en": "change State Opened to role sensor.window for zigbee / matter stndard",
-        "de": "änderung Staat Geöffnet auf Rollensensor. Fenster für Zickbee / Materie Stndard",
-        "ru": "изменить государство Открыт для ролевого датчика. Окно для Zigbee / Matter Stndard",
-        "pt": "estado Aberto ao sensor de função. janela para zigbee / stndard de matéria",
-        "nl": "status wijzigen Open voor rolsensor. venster voor zigbee / materie stndard",
-        "fr": "changement d'État Ouvert au capteur de rôle. fenêtre pour zigbee / matière stndard",
-        "it": "cambiamento Stato Aperto al sensore di ruolo. finestra per zigbee / materia stndard",
-        "es": "estado Abierto al sensor de rol. ventana para zigbee / materia stndard",
-        "pl": "zmiana stanu Otwarty na czujnik ról. okno dla zigbee / materia stndard",
-        "uk": "змінити стан Призначений для датчика ролі. вікно для zigbee / матерія stndard",
-        "zh-cn": "变化状态 向角色传感器开放. Zigbee / 物质 Stndard 窗口"
       }
     },
     "titleLang": {
