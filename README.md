@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add some roles for uplink states
+
 ### 1.10.13 (2025-06-01)
 * (BenAhrdt) update dependencie for mqtt in 5.13.0
 
