@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.13",
+    "version": "1.10.14",
     "news": {
+      "1.10.14": {
+        "en": "bugfix jsonconfig schema\nadd some roles for uplink states",
+        "de": "bugfix jsonconfig schema\neinige rollen für uplink-staaten hinzufügen",
+        "ru": "схема jsonconfig\nдобавить некоторые роли в uplink",
+        "pt": "esquema de configuração do bugfix jsonconfig\nadicionar algumas funções para estados de uplink",
+        "nl": "bugfix jsonconfig schema\nenkele rollen toevoegen voor uplink states",
+        "fr": "bugfix jsonconfig schéma\najouter quelques rôles pour les états uplink",
+        "it": "bugfix jsonconfig schema\naggiungere alcuni ruoli per gli stati uplink",
+        "es": "bugfix jsonconfig schema\nañadir algunos papeles para los estados de enlace",
+        "pl": "bugfix jsonconfig schema\ndodaj kilka ról dla stanów łączących",
+        "uk": "javascript licenses api веб-сайт\nдодати деякі ролі для uplink станів",
+        "zh-cn": "bugfix jsonconfig 计划\n为上行链接状态添加一些角色"
+      },
       "1.10.13": {
         "en": "update dependencie for mqtt in 5.13.0",
         "de": "update-abhängigkeit für mqtt in 5.13.0",
@@ -80,19 +93,6 @@
         "pl": "dodaj kilka stanów dla Mode",
         "uk": "додати деякі стани для режиму",
         "zh-cn": "为模式添加一些状态"
-      },
-      "1.10.7": {
-        "en": "add some roles",
-        "de": "einige rollen hinzufügen",
-        "ru": "добавьте несколько ролей",
-        "pt": "adicionar alguns papéis",
-        "nl": "enkele rollen toevoegen",
-        "fr": "ajouter quelques rôles",
-        "it": "aggiungere alcuni ruoli",
-        "es": "añadir algunas funciones",
-        "pl": "dodaj kilka ról",
-        "uk": "додати деякі ролі",
-        "zh-cn": "添加一些角色"
       }
     },
     "titleLang": {
