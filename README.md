@@ -24,6 +24,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
+* (BenAhrdt) bugfix jsonconfig schema
 * (BenAhrdt) add some roles for uplink states
 
 ### 1.10.13 (2025-06-01)
