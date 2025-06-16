@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.14",
+    "version": "1.10.15",
     "news": {
+      "1.10.15": {
+        "en": "add some roles and Units",
+        "de": "einige Rollen und Einheiten hinzufügen",
+        "ru": "добавить несколько ролей и единиц",
+        "pt": "adicionar algumas funções e unidades",
+        "nl": "enkele rollen en eenheden toevoegen",
+        "fr": "ajouter quelques rôles et unités",
+        "it": "aggiungere alcuni ruoli e unità",
+        "es": "añadir algunas funciones y dependencias",
+        "pl": "dodać kilka ról i jednostek",
+        "uk": "додати деякі ролі і блоки",
+        "zh-cn": "增加一些角色和单位"
+      },
       "1.10.14": {
         "en": "bugfix jsonconfig schema\nadd some roles for uplink states",
         "de": "bugfix jsonconfig schema\neinige rollen für uplink-staaten hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "poprawny dolny przypadek dla Celu Temperatura Płyń\nusuń przełącznik ról w przypadku wysłania z łącza i zbierać",
         "uk": "виправлено нижній випадок для цілейTemperature Флоат\nвидалення перемикача ролі в разі відправки за допомогою посилання і збору",
         "zh-cn": "目标小写正确 浮点\n如果发送时带有上行链路并收集, 请删除角色切换"
-      },
-      "1.10.8": {
-        "en": "add some states for Mode",
-        "de": "einige Zustände für Mode hinzufügen",
-        "ru": "добавить несколько состояний в режим",
-        "pt": "adicionar alguns estados para o modo",
-        "nl": "enkele statussen toevoegen voor modus",
-        "fr": "ajouter quelques états pour Mode",
-        "it": "aggiungere alcuni stati per la modalità",
-        "es": "añadir algunos estados para Modo",
-        "pl": "dodaj kilka stanów dla Mode",
-        "uk": "додати деякі стани для режиму",
-        "zh-cn": "为模式添加一些状态"
       }
     },
     "titleLang": {

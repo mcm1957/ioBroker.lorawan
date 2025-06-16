@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.10.15 (2025-06-16)
 * (BenAhrdt) add some roles and Units
 
 ### 1.10.14 (2025-06-10)
