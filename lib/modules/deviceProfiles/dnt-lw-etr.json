@@ -1,6 +1,6 @@
 {
    "deviceType":"dnt-lw-etrv",
-   "sendWithUplink":"enabled",
+   "sendWithUplink":"enabled & collect",
    "port":10,
    "priority":"NORMAL",
    "confirmed":false,
