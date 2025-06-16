@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.15",
+    "version": "1.10.16",
     "news": {
+      "1.10.16": {
+        "en": "add profile for dnt-lw-etrv",
+        "de": "profil für dnt-lw-etrv hinzufügen",
+        "ru": "добавить профиль для dnt-lw-etrv",
+        "pt": "adicionar perfil para o dnt-lw-etrv",
+        "nl": "profiel toevoegen voor dnt-lw-etrv",
+        "fr": "ajouter un profil pour dnt-lw-etrv",
+        "it": "aggiungere il profilo per dnt-lw-etrv",
+        "es": "añadir perfil para dnt-lw-etrv",
+        "pl": "dodaj profil dla dnt- lw- etrv",
+        "uk": "додати профіль для dnt-lw-etrv",
+        "zh-cn": "为 dnt-lw- etrv 添加配置文件"
+      },
       "1.10.15": {
         "en": "add some roles and Units",
         "de": "einige Rollen und Einheiten hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "update assignhandler",
         "uk": "оновлення assignhandler",
         "zh-cn": "更新指派手"
-      },
-      "1.10.9": {
-        "en": "correct lower case for targetTemperatureFloat\nremove role switch in case of send with uplink and collect",
-        "de": "korrekter Unterkasten für TargetTemperature Float\nrollenschalter entfernen, wenn sie mit uplink senden und sammeln",
-        "ru": "правильный нижний регистр для целевой температуры плавать\nудалить переключатель ролей в случае отправки с восходящей ссылкой и собрать",
-        "pt": "caso inferior correto para alvoTemperatura Float\nremover o interruptor de função no caso de enviar com uplink e coletar",
-        "nl": "corrigeer kleine letters voor targetTemperatuur Zwevend\nrole switch verwijderen in geval van verzenden met uplink en verzamelen",
-        "fr": "le cas inférieur correct pour cibleTempérature Flotte\nsupprimer le commutateur de rôle en cas d'envoi avec uplink et collecter",
-        "it": "corretto caso inferiore per targetTemperature Float\nrimuovere l'interruttore di ruolo in caso di invio con uplink e raccogliere",
-        "es": "caso inferior correcto para targetTemperature Float\neliminar el interruptor de función en caso de enviar con enlace ascendente y recoger",
-        "pl": "poprawny dolny przypadek dla Celu Temperatura Płyń\nusuń przełącznik ról w przypadku wysłania z łącza i zbierać",
-        "uk": "виправлено нижній випадок для цілейTemperature Флоат\nвидалення перемикача ролі в разі відправки за допомогою посилання і збору",
-        "zh-cn": "目标小写正确 浮点\n如果发送时带有上行链路并收集, 请删除角色切换"
       }
     },
     "titleLang": {
