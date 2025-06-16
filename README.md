@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add some roles and Units
+
 ### 1.10.14 (2025-06-10)
 * (BenAhrdt) bugfix jsonconfig schema
 * (BenAhrdt) add some roles for uplink states
