@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.16",
+    "version": "1.10.17",
     "news": {
+      "1.10.17": {
+        "en": "bugfix profile for dnt-lw-etrv",
+        "de": "bugfix profil für dnt-lw-etrv",
+        "ru": "профиль bugfix для dnt-lw-etrv",
+        "pt": "perfil de correção de erros para o dnt-lw-etrv",
+        "nl": "bugfix-profiel voor dnt-lw-etrv",
+        "fr": "profil de bugfix pour dnt-lw-etrv",
+        "it": "profilo bugfix per dnt-lw-etrv",
+        "es": "perfil de bugfix para dnt-lw-etrv",
+        "pl": "profil bugfix dla dnt- lw- etrv",
+        "uk": "javascript licenses api веб-сайт go1.13.8",
+        "zh-cn": "dnt-lw-etrv 的错误修正配置文件"
+      },
       "1.10.16": {
         "en": "add profile for dnt-lw-etrv",
         "de": "profil für dnt-lw-etrv hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "Okrągłe konwertowanie tylko liczb całkowitych do HEX\ndodaj role dla uplinks od dnt- lw- etrv",
         "uk": "Круглий, щоб конвертувати тільки цілі в HEX\nдодати ролі для посилань з dnt-lw-etrv",
         "zh-cn": "圆只将整数转换为 HEX\n从 dnt-lw- etrv 添加上行链接的角色"
-      },
-      "1.10.10": {
-        "en": "update assignhandler",
-        "de": "update assignhandler",
-        "ru": "обновление цессионария",
-        "pt": "atualização asignhandler",
-        "nl": "update awardhandler",
-        "fr": "mettre à jour le gestionnaire d'attribution",
-        "it": "aggiornamento assegnatore",
-        "es": "actualización de cedente",
-        "pl": "update assignhandler",
-        "uk": "оновлення assignhandler",
-        "zh-cn": "更新指派手"
       }
     },
     "titleLang": {
