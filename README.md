@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) add profile for dnt-lw-etrv
+
 ### 1.10.15 (2025-06-16)
 * (BenAhrdt) add some roles and Units
 
