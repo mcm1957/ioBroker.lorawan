@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.17",
+    "version": "1.10.18",
     "news": {
+      "1.10.18": {
+        "en": "add role to valve openess in vicki",
+        "de": "rolle bei ventilöffner in vicki",
+        "ru": "добавить роль клапана открывается в vicki",
+        "pt": "adicionar papel à abertura da válvula em vicki",
+        "nl": "rol toevoegen aan klepopeness in vicki",
+        "fr": "ajouter un rôle à l'ouverture de la valve dans vicki",
+        "it": "aggiungere il ruolo alla valvola apre in vicki",
+        "es": "añadir papel a la apertura de la válvula en vicki",
+        "pl": "dodać rolę do otworu zaworu w vicki",
+        "uk": "додати роль у відкритті клапана в vicki",
+        "zh-cn": "在vicki的阀门打开器中添加角色"
+      },
       "1.10.17": {
         "en": "bugfix profile for dnt-lw-etrv",
         "de": "bugfix profil für dnt-lw-etrv",
@@ -80,19 +93,6 @@
         "pl": "update Testing to 24.x",
         "uk": "оновлення Тестування до 24.x",
         "zh-cn": "更新到 24.x"
-      },
-      "1.10.11": {
-        "en": "Round to convert only integers to HEX\nadd roles for uplinks from dnt-lw-etrv",
-        "de": "Rund um nur ganze Zahlen in HEX zu konvertieren\nrollen für uplinks aus dnt-lw-etrv hinzufügen",
-        "ru": "Конвертировать только целые числа в HEX\nдобавить роли для восходящих ссылок из dnt-lw-etrv",
-        "pt": "Rodada para converter apenas inteiros para HEX\nadicionar papéis para uplinks de dnt-lw-etrv",
-        "nl": "Rond om alleen gehele getallen naar HEX te converteren\nrolletjes toevoegen voor uplinks van dnt-lw-etrv",
-        "fr": "Rond pour convertir seulement des entiers en HEX\najouter des rôles pour les liens ascendants de dnt-lw-etrv",
-        "it": "Tondo per convertire solo interi a HEX\naggiungere ruoli per uplink da dnt-lw-etrv",
-        "es": "Ronda para convertir sólo enteros a HEX\nañadir roles para enlaces de dnt-lw-etrv",
-        "pl": "Okrągłe konwertowanie tylko liczb całkowitych do HEX\ndodaj role dla uplinks od dnt- lw- etrv",
-        "uk": "Круглий, щоб конвертувати тільки цілі в HEX\nдодати ролі для посилань з dnt-lw-etrv",
-        "zh-cn": "圆只将整数转换为 HEX\n从 dnt-lw- etrv 添加上行链接的角色"
       }
     },
     "titleLang": {
