@@ -23,6 +23,9 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) improove handling of limits for downlinks
+
 ### 1.10.18 (2025-07-23)
 * (BenAhrdt) add role to valve openess in vicki
 
