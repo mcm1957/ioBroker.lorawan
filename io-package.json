@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.18",
+    "version": "1.10.19",
     "news": {
+      "1.10.19": {
+        "en": "improove handling of limits for downlinks",
+        "de": "unproove handhabung von grenzwerten für downlinks",
+        "ru": "импровизированная обработка лимитов для нисходящих ссылок",
+        "pt": "manipulação improvisada de limites para ligações",
+        "nl": "improove behandeling van limieten voor downlinks",
+        "fr": "d'improviser la manipulation des limites pour les liaisons descendantes",
+        "it": "gestione improvvisa dei limiti per i downlink",
+        "es": "la manipulación de los límites de los enlaces",
+        "pl": "improove obchodzenie się z limitami dla połączeń w dół",
+        "uk": "непроверта обробка лімітів для посилань",
+        "zh-cn": "下行链路限制的操作"
+      },
       "1.10.18": {
         "en": "add role to valve openess in vicki",
         "de": "rolle bei ventilöffner in vicki",
@@ -80,19 +93,6 @@
         "pl": "aktualizacja zależności dla mqtt w 5.13.0",
         "uk": "оновлення залежності для mqtt в 5.13.0",
         "zh-cn": "更新 mqtt 的依赖性"
-      },
-      "1.10.12": {
-        "en": "update Testing to 24.x",
-        "de": "update Testen auf 24.x",
-        "ru": "обновление Testing to 24.x",
-        "pt": "testes de atualização para 24.x",
-        "nl": "update Testen naar 24.x",
-        "fr": "mettre à jour Test à 24.x",
-        "it": "test di aggiornamento a 24.x",
-        "es": "testing a 24.x",
-        "pl": "update Testing to 24.x",
-        "uk": "оновлення Тестування до 24.x",
-        "zh-cn": "更新到 24.x"
       }
     },
     "titleLang": {
