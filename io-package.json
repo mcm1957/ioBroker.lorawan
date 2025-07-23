@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.19",
+    "version": "1.10.20",
     "news": {
+      "1.10.20": {
+        "en": "backflip handling limits",
+        "de": "zurück zur übersicht",
+        "ru": "ограничения на обработку оборотов",
+        "pt": "limites de manipulação de retrorrefletores",
+        "nl": "limieten voor het gebruik van backflip",
+        "fr": "limites de manipulation de backflip",
+        "it": "limiti di gestione del backflip",
+        "es": "límites de manipulación de backflip",
+        "pl": "limity obsługi wstecznej",
+        "uk": "лінії обробки застібки",
+        "zh-cn": "后窗体处理限制"
+      },
       "1.10.19": {
         "en": "improove handling of limits for downlinks",
         "de": "unproove handhabung von grenzwerten für downlinks",
@@ -80,19 +93,6 @@
         "pl": "bugfix jsonconfig schema\ndodaj kilka ról dla stanów łączących",
         "uk": "javascript licenses api веб-сайт\nдодати деякі ролі для uplink станів",
         "zh-cn": "bugfix jsonconfig 计划\n为上行链接状态添加一些角色"
-      },
-      "1.10.13": {
-        "en": "update dependencie for mqtt in 5.13.0",
-        "de": "update-abhängigkeit für mqtt in 5.13.0",
-        "ru": "зависимость обновления для mqtt в 5.13.0",
-        "pt": "dependência de atualização para mqtt em 5.13.0",
-        "nl": "update afhankelijk van mqtt in 5.13.0",
-        "fr": "update dependencie pour mqtt dans 5.13.0",
-        "it": "aggiornamento indipendenza per mqtt in 5.13.0",
-        "es": "actualización dependecie para mqtt en 5.13.0",
-        "pl": "aktualizacja zależności dla mqtt w 5.13.0",
-        "uk": "оновлення залежності для mqtt в 5.13.0",
-        "zh-cn": "更新 mqtt 的依赖性"
       }
     },
     "titleLang": {
