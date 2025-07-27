@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.10.22 (2025-07-27)
 * (BenAhrdt) config notification and / or logging in case of connection state to LNS
 
 ### 1.10.21 (2025-07-27)

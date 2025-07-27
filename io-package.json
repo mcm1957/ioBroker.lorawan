@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.21",
+    "version": "1.10.22",
     "news": {
+      "1.10.22": {
+        "en": "config notification and / or logging in case of connection state to LNS",
+        "de": "config Benachrichtigung und / oder Protokollierung bei Verbindungszustand zu LNS",
+        "ru": "конфигурация уведомления и/или регистрации в случае состояния подключения к LNS",
+        "pt": "notificação de configuração e / ou registro em caso de estado de conexão para LNS",
+        "nl": "config notificatie en/of loggen in geval van verbindingstoestand met LNS",
+        "fr": "config notification et / ou l'enregistrement en cas d'état de connexion à LNS",
+        "it": "config notifica e / o registrazione in caso di stato di connessione a LNS",
+        "es": "config notificación y / o registro en caso de estado de conexión a LNS",
+        "pl": "powiadomienia o konfigu lub logowania w przypadku stanu połączenia z LNS",
+        "uk": "конфігурація повідомлень та / або входу у разі з'єднання",
+        "zh-cn": "在连接状态下与 LNS 进行配置通知和/ 或记录"
+      },
       "1.10.21": {
         "en": "add extSersorTemperature unit \"°C\"",
         "de": "extSersorTemperatureinheit \"°C\" hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "dodaj profil dla dnt- lw- etrv",
         "uk": "додати профіль для dnt-lw-etrv",
         "zh-cn": "为 dnt-lw- etrv 添加配置文件"
-      },
-      "1.10.15": {
-        "en": "add some roles and Units",
-        "de": "einige Rollen und Einheiten hinzufügen",
-        "ru": "добавить несколько ролей и единиц",
-        "pt": "adicionar algumas funções e unidades",
-        "nl": "enkele rollen en eenheden toevoegen",
-        "fr": "ajouter quelques rôles et unités",
-        "it": "aggiungere alcuni ruoli e unità",
-        "es": "añadir algunas funciones y dependencias",
-        "pl": "dodać kilka ról i jednostek",
-        "uk": "додати деякі ролі і блоки",
-        "zh-cn": "增加一些角色和单位"
       }
     },
     "titleLang": {
