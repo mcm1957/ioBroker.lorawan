@@ -19,6 +19,8 @@
 	"OriginInformation": "Set the origin of the expected data",
 	"origin":"origin",
 	"originTooltip": "select the origin of your data",
+	"notificationActivation": "notification activation",
+	"notificationTooltip": "activate or deactivate the notification",
 	"downlinkConfig": "Donwlink-konfiguration",
 	"name": "name",
 	"nameTooltip": "insert the name of the state, for this dowlink",
@@ -88,5 +90,7 @@
 	"customControlJsonActive" : "\"control-custom\"-JSON",
 	"customControlJsonActiveTooltip" : "With this function you add the desired JSON on the custom entrie from the control channel",
 	"customDeleteDesciption": "To delete an entry, please enter the entry with content \"null\".",
-	"customDeleteDescriptionImageTooltip": "Information about removing an existing entry."
+	"customDeleteDescriptionImageTooltip": "Information about removing an existing entry.",
+	"notification": "notification",
+	"no notification": "no notification"
 }

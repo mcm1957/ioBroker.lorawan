@@ -88,5 +88,11 @@
     "customControlJsonActive": "\"controllo-personalizzato\"-JSON",
     "customControlJsonActiveTooltip": "Con questa funzione aggiungi il JSON desiderato alla voce personalizzata dal canale di controllo",
     "customDeleteDesciption": "Per eliminare una voce, inserire la voce con il contenuto \"null\".",
-    "customDeleteDescriptionImageTooltip": "Informazioni sulla rimozione di una voce esistente."
+    "customDeleteDescriptionImageTooltip": "Informazioni sulla rimozione di una voce esistente.",
+    "notificationActivation": "Attivazione della notifica",
+    "notificationTooltip": "attivare o disattivare la notifica",
+    "no notifiaction": "Notifica di Keine",
+    "notifiaction": "notifica",
+    "notification": "notifica",
+    "no notification": "nessuna notifica"
 }

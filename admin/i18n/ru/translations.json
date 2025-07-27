@@ -88,5 +88,11 @@
     "customControlJsonActive": "«контроль-пользовательский»-JSON",
     "customControlJsonActiveTooltip": "С помощью этой функции вы добавляете желаемый JSON в пользовательскую запись из канала управления.",
     "customDeleteDesciption": "Чтобы удалить запись, введите запись с содержимым «null».",
-    "customDeleteDescriptionImageTooltip": "Информация об удалении существующей записи."
+    "customDeleteDescriptionImageTooltip": "Информация об удалении существующей записи.",
+    "notificationActivation": "активация уведомления",
+    "notificationTooltip": "активировать или деактивировать уведомление",
+    "no notifiaction": "Кейн уведомление",
+    "notifiaction": "уведомление",
+    "notification": "уведомление",
+    "no notification": "Нет уведомления"
 }

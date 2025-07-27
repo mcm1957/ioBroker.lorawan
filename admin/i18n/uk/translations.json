@@ -88,5 +88,11 @@
     "customControlJsonActive": "\"control-custom\"-JSON",
     "customControlJsonActiveTooltip": "За допомогою цієї функції ви додаєте потрібний JSON до спеціального запису з каналу керування",
     "customDeleteDesciption": "Щоб видалити запис, будь ласка, введіть запис із вмістом \"null\".",
-    "customDeleteDescriptionImageTooltip": "Інформація про видалення існуючого запису."
+    "customDeleteDescriptionImageTooltip": "Інформація про видалення існуючого запису.",
+    "notificationActivation": "Активація сповіщень",
+    "notificationTooltip": "активуйте або деактивувати повідомлення",
+    "no notifiaction": "Повідомлення про Keine",
+    "notifiaction": "сповіщення",
+    "notification": "сповіщення",
+    "no notification": "Ніякого сповіщення"
 }

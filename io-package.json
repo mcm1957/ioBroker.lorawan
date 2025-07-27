@@ -333,6 +333,7 @@
     "password": "",
     "ssl": true,
     "origin": "ttn",
+    "notificationActivation": "notification",
     "downlinkConfig": [],
     "customDecodedJsonActive": false,
     "customConfigurationJsonActive": false,

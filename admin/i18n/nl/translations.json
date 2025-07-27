@@ -88,5 +88,11 @@
     "customControlJsonActive": "\"control-custom\"-JSON",
     "customControlJsonActiveTooltip": "Met deze functie voeg je de gewenste JSON toe aan de custom entry vanuit het control channel",
     "customDeleteDesciption": "Om een ​​vermelding te verwijderen, voert u de vermelding in met de inhoud \"null\".",
-    "customDeleteDescriptionImageTooltip": "Informatie over het verwijderen van een bestaand item."
+    "customDeleteDescriptionImageTooltip": "Informatie over het verwijderen van een bestaand item.",
+    "notificationActivation": "Activering van melding",
+    "notificationTooltip": "de melding activeren of deactiveren",
+    "no notifiaction": "Keine -kennisgeving",
+    "notifiaction": "kennisgeving",
+    "notification": "kennisgeving",
+    "no notification": "Geen melding"
 }

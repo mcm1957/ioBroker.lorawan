@@ -88,5 +88,11 @@
     "customControlJsonActive": "“控制-自定义”-JSON",
     "customControlJsonActiveTooltip": "使用此函数，您可以从控制通道在自定义条目上添加所需的 JSON",
     "customDeleteDesciption": "要删除条目，请输入内容为“null”的条目。",
-    "customDeleteDescriptionImageTooltip": "有关删除现有条目的信息。"
+    "customDeleteDescriptionImageTooltip": "有关删除现有条目的信息。",
+    "notificationActivation": "通知激活",
+    "notificationTooltip": "激活或停用通知",
+    "no notifiaction": "Keine通知",
+    "notifiaction": "通知",
+    "notification": "通知",
+    "no notification": "没有通知"
 }

@@ -88,5 +88,9 @@
     "customControlJsonActive": "„control-custom“-JSON",
     "customControlJsonActiveTooltip": "Mit dieser Funktion fügen Sie den gewünschten JSON zum common.custom-Objekt der states aus dem control channel hinzu",
     "customDeleteDesciption": "Um einen Eintrag zu löschen, geben Sie bitte den Eintrag mit dem Inhalt „null“ ein.",
-    "customDeleteDescriptionImageTooltip": "Informationen zum Entfernen eines vorhandenen Eintrags."
+    "customDeleteDescriptionImageTooltip": "Informationen zum Entfernen eines vorhandenen Eintrags.",
+    "notificationActivation": "Benachrichtigungsaktivierung",
+    "notificationTooltip": "Aktivieren oder deaktivieren Sie die Benachrichtigung",
+    "no notification": "Keine Benachrichtigung",
+    "notification": "Benachrichtigung"
 }

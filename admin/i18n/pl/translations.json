@@ -88,5 +88,11 @@
     "customControlJsonActive": "„kontrola niestandardowa” - JSON",
     "customControlJsonActiveTooltip": "Dzięki tej funkcji dodajesz żądany JSON do niestandardowego wpisu z kanału kontrolnego",
     "customDeleteDesciption": "Aby usunąć wpis, wprowadź wpis o treści „null”.",
-    "customDeleteDescriptionImageTooltip": "Informacja o usunięciu istniejącego wpisu."
+    "customDeleteDescriptionImageTooltip": "Informacja o usunięciu istniejącego wpisu.",
+    "notificationActivation": "Aktywacja powiadomienia",
+    "notificationTooltip": "aktywuj lub dezaktywuj powiadomienie",
+    "no notifiaction": "Powiadomienie Keine",
+    "notifiaction": "powiadomienie",
+    "notification": "powiadomienie",
+    "no notification": "Brak powiadomienia"
 }

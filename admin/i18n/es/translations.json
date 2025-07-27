@@ -88,5 +88,11 @@
     "customControlJsonActive": "\"control-personalizado\"-JSON",
     "customControlJsonActiveTooltip": "Con esta función agrega el JSON deseado en la entrada personalizada del canal de control",
     "customDeleteDesciption": "Para eliminar una entrada, ingrese la entrada con contenido \"nulo\".",
-    "customDeleteDescriptionImageTooltip": "Información sobre cómo eliminar una entrada existente."
+    "customDeleteDescriptionImageTooltip": "Información sobre cómo eliminar una entrada existente.",
+    "notificationActivation": "activación de notificación",
+    "notificationTooltip": "activar o desactivar la notificación",
+    "no notifiaction": "notificación de keine",
+    "notifiaction": "notificación",
+    "notification": "notificación",
+    "no notification": "Sin notificación"
 }
