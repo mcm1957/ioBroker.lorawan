@@ -23,7 +23,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.10.21 (2025-07-27)
 * (BenAhrdt) add extSersorTemperature unit "°C"
 
 ### 1.10.20 (2025-07-23)

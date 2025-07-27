@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "lorawan",
-    "version": "1.10.20",
+    "version": "1.10.21",
     "news": {
+      "1.10.21": {
+        "en": "add extSersorTemperature unit \"°C\"",
+        "de": "extSersorTemperatureinheit \"°C\" hinzufügen",
+        "ru": "добавить экстерсорный температурный блок \"°С\"",
+        "pt": "adicionar extSersorTemperature unit \"°C\"",
+        "nl": "extSersorTemperatuur-eenheid \"°C\" toevoegen",
+        "fr": "ajouter extSersorUnité de température \"°C\"",
+        "it": "aggiungere extSersorunità di temperatura \"°C\"",
+        "es": "añadir extSersorTemperatura unidad \"°C\"",
+        "pl": "dodać extSersorTemperatura jednostki \"°C\"",
+        "uk": "додати extSersorTemperature unit \"°C\"",
+        "zh-cn": "添加extSersorTemperature 单位“°C”"
+      },
       "1.10.20": {
         "en": "backflip handling limits",
         "de": "zurück zur übersicht",
@@ -80,19 +93,6 @@
         "pl": "dodać kilka ról i jednostek",
         "uk": "додати деякі ролі і блоки",
         "zh-cn": "增加一些角色和单位"
-      },
-      "1.10.14": {
-        "en": "bugfix jsonconfig schema\nadd some roles for uplink states",
-        "de": "bugfix jsonconfig schema\neinige rollen für uplink-staaten hinzufügen",
-        "ru": "схема jsonconfig\nдобавить некоторые роли в uplink",
-        "pt": "esquema de configuração do bugfix jsonconfig\nadicionar algumas funções para estados de uplink",
-        "nl": "bugfix jsonconfig schema\nenkele rollen toevoegen voor uplink states",
-        "fr": "bugfix jsonconfig schéma\najouter quelques rôles pour les états uplink",
-        "it": "bugfix jsonconfig schema\naggiungere alcuni ruoli per gli stati uplink",
-        "es": "bugfix jsonconfig schema\nañadir algunos papeles para los estados de enlace",
-        "pl": "bugfix jsonconfig schema\ndodaj kilka ról dla stanów łączących",
-        "uk": "javascript licenses api веб-сайт\nдодати деякі ролі для uplink станів",
-        "zh-cn": "bugfix jsonconfig 计划\n为上行链接状态添加一些角色"
       }
     },
     "titleLang": {
