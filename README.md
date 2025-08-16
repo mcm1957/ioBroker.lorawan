@@ -24,6 +24,7 @@ For now there is documentation in English here: https://wiki.hafenmeister.de
 	### **WORK IN PROGRESS**
 -->
 ### **WORK IN PROGRESS**
+* (BenAhrdt) change dependencies
 * (BenAhrdt) Add pisibility to LoRaWAN 2 HA Bridge
 
 ### 1.10.22 (2025-07-27)
